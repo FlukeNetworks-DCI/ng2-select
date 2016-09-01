@@ -142,10 +142,10 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(425);
-	__webpack_require__(424);
-	__webpack_require__(468);
-	__webpack_require__(451);
+	__webpack_require__(485);
+	__webpack_require__(484);
+	__webpack_require__(531);
+	__webpack_require__(512);
 	__webpack_require__(6);
 	module.exports = __webpack_require__(1);
 
@@ -154,71 +154,96 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	/**
-	* @module
-	* @description
-	* Starting point to import all public core APIs.
-	*/
-	__export(__webpack_require__(392));
-	__export(__webpack_require__(399));
-	__export(__webpack_require__(31));
-	var application_ref_1 = __webpack_require__(100);
+	 * @module
+	 * @description
+	 * Entry point from which you should import all public core APIs.
+	 */
+	__export(__webpack_require__(231));
+	__export(__webpack_require__(450));
+	__export(__webpack_require__(20));
+	var application_ref_1 = __webpack_require__(126);
 	exports.createPlatform = application_ref_1.createPlatform;
 	exports.assertPlatform = application_ref_1.assertPlatform;
 	exports.disposePlatform = application_ref_1.disposePlatform;
 	exports.getPlatform = application_ref_1.getPlatform;
 	exports.coreBootstrap = application_ref_1.coreBootstrap;
 	exports.coreLoadAndBootstrap = application_ref_1.coreLoadAndBootstrap;
-	exports.createNgZone = application_ref_1.createNgZone;
 	exports.PlatformRef = application_ref_1.PlatformRef;
 	exports.ApplicationRef = application_ref_1.ApplicationRef;
-	var application_tokens_1 = __webpack_require__(59);
+	exports.enableProdMode = application_ref_1.enableProdMode;
+	exports.lockRunMode = application_ref_1.lockRunMode;
+	exports.isDevMode = application_ref_1.isDevMode;
+	exports.createPlatformFactory = application_ref_1.createPlatformFactory;
+	var application_tokens_1 = __webpack_require__(73);
 	exports.APP_ID = application_tokens_1.APP_ID;
-	exports.APP_INITIALIZER = application_tokens_1.APP_INITIALIZER;
 	exports.PACKAGE_ROOT_URL = application_tokens_1.PACKAGE_ROOT_URL;
 	exports.PLATFORM_INITIALIZER = application_tokens_1.PLATFORM_INITIALIZER;
-	__export(__webpack_require__(400));
-	__export(__webpack_require__(398));
-	__export(__webpack_require__(388));
-	var debug_node_1 = __webpack_require__(184);
+	exports.APP_BOOTSTRAP_LISTENER = application_tokens_1.APP_BOOTSTRAP_LISTENER;
+	var application_init_1 = __webpack_require__(125);
+	exports.APP_INITIALIZER = application_init_1.APP_INITIALIZER;
+	exports.ApplicationInitStatus = application_init_1.ApplicationInitStatus;
+	__export(__webpack_require__(451));
+	__export(__webpack_require__(449));
+	__export(__webpack_require__(438));
+	var debug_node_1 = __webpack_require__(218);
 	exports.DebugElement = debug_node_1.DebugElement;
 	exports.DebugNode = debug_node_1.DebugNode;
 	exports.asNativeElements = debug_node_1.asNativeElements;
 	exports.getDebugNode = debug_node_1.getDebugNode;
-	__export(__webpack_require__(114));
-	__export(__webpack_require__(383));
-	__export(__webpack_require__(395));
-	__export(__webpack_require__(394));
-	__export(__webpack_require__(382));
-	__export(__webpack_require__(66));
-	var profile_1 = __webpack_require__(65);
+	__export(__webpack_require__(139));
+	__export(__webpack_require__(433));
+	__export(__webpack_require__(446));
+	__export(__webpack_require__(445));
+	var application_module_1 = __webpack_require__(432);
+	exports.APPLICATION_COMMON_PROVIDERS = application_module_1.APPLICATION_COMMON_PROVIDERS;
+	exports.ApplicationModule = application_module_1.ApplicationModule;
+	var profile_1 = __webpack_require__(83);
 	exports.wtfCreateScope = profile_1.wtfCreateScope;
 	exports.wtfLeave = profile_1.wtfLeave;
 	exports.wtfStartTimeRange = profile_1.wtfStartTimeRange;
 	exports.wtfEndTimeRange = profile_1.wtfEndTimeRange;
-	var lang_1 = __webpack_require__(4);
+	var lang_1 = __webpack_require__(3);
 	exports.Type = lang_1.Type;
-	exports.enableProdMode = lang_1.enableProdMode;
-	var async_1 = __webpack_require__(27);
+	var async_1 = __webpack_require__(132);
 	exports.EventEmitter = async_1.EventEmitter;
-	var exceptions_1 = __webpack_require__(9);
+	var exceptions_1 = __webpack_require__(8);
 	exports.ExceptionHandler = exceptions_1.ExceptionHandler;
 	exports.WrappedException = exceptions_1.WrappedException;
 	exports.BaseException = exceptions_1.BaseException;
-	__export(__webpack_require__(381));
+	__export(__webpack_require__(426));
+	__export(__webpack_require__(214));
+	var animation_player_1 = __webpack_require__(124);
+	exports.AnimationPlayer = animation_player_1.AnimationPlayer;
+	var security_1 = __webpack_require__(239);
+	exports.SanitizationService = security_1.SanitizationService;
+	exports.SecurityContext = security_1.SecurityContext;
 	//# sourceMappingURL=index.js.map
 
 /***/ },
 /* 2 */,
-/* 3 */,
-/* 4 */
+/* 3 */
 /***/ function(module, exports) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	/* WEBPACK VAR INJECTION */(function(global) {/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
@@ -241,11 +266,18 @@
 	    Zone.current.scheduleMicroTask('scheduleMicrotask', fn);
 	}
 	exports.scheduleMicroTask = scheduleMicroTask;
-	exports.IS_DART = false;
 	// Need to declare a new variable for global here since TypeScript
 	// exports the original value of the symbol.
 	var _global = globalScope;
 	exports.global = _global;
+	/**
+	 * Runtime representation a type that a Component or other object is instances of.
+	 *
+	 * An example of a `Type` is `MyCustomComponent` class, which in JavaScript is be represented by
+	 * the `MyCustomComponent` constructor function.
+	 *
+	 * @stable
+	 */
 	exports.Type = Function;
 	function getTypeNameForDebugging(type) {
 	    if (type['name']) {
@@ -256,32 +288,6 @@
 	exports.getTypeNameForDebugging = getTypeNameForDebugging;
 	exports.Math = _global.Math;
 	exports.Date = _global.Date;
-	var _devMode = true;
-	var _modeLocked = false;
-	function lockMode() {
-	    _modeLocked = true;
-	}
-	exports.lockMode = lockMode;
-	/**
-	 * Disable Angular's development mode, which turns off assertions and other
-	 * checks within the framework.
-	 *
-	 * One important assertion this disables verifies that a change detection pass
-	 * does not result in additional changes to any bindings (also known as
-	 * unidirectional data flow).
-	 */
-	function enableProdMode() {
-	    if (_modeLocked) {
-	        // Cannot use BaseException as that ends up importing from facade/lang.
-	        throw 'Cannot enable prod mode after platform setup.';
-	    }
-	    _devMode = false;
-	}
-	exports.enableProdMode = enableProdMode;
-	function assertionsEnabled() {
-	    return _devMode;
-	}
-	exports.assertionsEnabled = assertionsEnabled;
 	// TODO: remove calls to assert in production environment
 	// Note: Can't just export this and import in in other files
 	// as `assert` is a reserved keyword in Dart
@@ -297,19 +303,19 @@
 	}
 	exports.isBlank = isBlank;
 	function isBoolean(obj) {
-	    return typeof obj === "boolean";
+	    return typeof obj === 'boolean';
 	}
 	exports.isBoolean = isBoolean;
 	function isNumber(obj) {
-	    return typeof obj === "number";
+	    return typeof obj === 'number';
 	}
 	exports.isNumber = isNumber;
 	function isString(obj) {
-	    return typeof obj === "string";
+	    return typeof obj === 'string';
 	}
 	exports.isString = isString;
 	function isFunction(obj) {
-	    return typeof obj === "function";
+	    return typeof obj === 'function';
 	}
 	exports.isFunction = isFunction;
 	function isType(obj) {
@@ -326,7 +332,9 @@
 	}
 	exports.isStrictStringMap = isStrictStringMap;
 	function isPromise(obj) {
-	    return obj instanceof _global.Promise;
+	    // allow any Promise/A+ compliant thenable.
+	    // It's up to the caller to ensure that obj.then conforms to the spec
+	    return isPresent(obj) && isFunction(obj.then);
 	}
 	exports.isPromise = isPromise;
 	function isArray(obj) {
@@ -346,14 +354,14 @@
 	    if (token === undefined || token === null) {
 	        return '' + token;
 	    }
-	    if (token.name) {
-	        return token.name;
-	    }
 	    if (token.overriddenName) {
 	        return token.overriddenName;
 	    }
+	    if (token.name) {
+	        return token.name;
+	    }
 	    var res = token.toString();
-	    var newLineIndex = res.indexOf("\n");
+	    var newLineIndex = res.indexOf('\n');
 	    return (newLineIndex === -1) ? res : res.substring(0, newLineIndex);
 	}
 	exports.stringify = stringify;
@@ -446,7 +454,7 @@
 	        this.parts = parts;
 	    }
 	    StringJoiner.prototype.add = function (part) { this.parts.push(part); };
-	    StringJoiner.prototype.toString = function () { return this.parts.join(""); };
+	    StringJoiner.prototype.toString = function () { return this.parts.join(''); };
 	    return StringJoiner;
 	}());
 	exports.StringJoiner = StringJoiner;
@@ -468,7 +476,7 @@
 	    NumberWrapper.parseIntAutoRadix = function (text) {
 	        var result = parseInt(text);
 	        if (isNaN(result)) {
-	            throw new NumberParseError("Invalid integer literal when parsing " + text);
+	            throw new NumberParseError('Invalid integer literal when parsing ' + text);
 	        }
 	        return result;
 	    };
@@ -489,8 +497,7 @@
 	                return result;
 	            }
 	        }
-	        throw new NumberParseError("Invalid integer literal when parsing " + text + " in base " +
-	            radix);
+	        throw new NumberParseError('Invalid integer literal when parsing ' + text + ' in base ' + radix);
 	    };
 	    // TODO: NaN is a valid literal but is returned by parseFloat to indicate an error.
 	    NumberWrapper.parseFloat = function (text) { return parseFloat(text); };
@@ -499,73 +506,24 @@
 	        enumerable: true,
 	        configurable: true
 	    });
+	    NumberWrapper.isNumeric = function (value) { return !isNaN(value - parseFloat(value)); };
 	    NumberWrapper.isNaN = function (value) { return isNaN(value); };
 	    NumberWrapper.isInteger = function (value) { return Number.isInteger(value); };
 	    return NumberWrapper;
 	}());
 	exports.NumberWrapper = NumberWrapper;
 	exports.RegExp = _global.RegExp;
-	var RegExpWrapper = (function () {
-	    function RegExpWrapper() {
-	    }
-	    RegExpWrapper.create = function (regExpStr, flags) {
-	        if (flags === void 0) { flags = ''; }
-	        flags = flags.replace(/g/g, '');
-	        return new _global.RegExp(regExpStr, flags + 'g');
-	    };
-	    RegExpWrapper.firstMatch = function (regExp, input) {
-	        // Reset multimatch regex state
-	        regExp.lastIndex = 0;
-	        return regExp.exec(input);
-	    };
-	    RegExpWrapper.test = function (regExp, input) {
-	        regExp.lastIndex = 0;
-	        return regExp.test(input);
-	    };
-	    RegExpWrapper.matcher = function (regExp, input) {
-	        // Reset regex state for the case
-	        // someone did not loop over all matches
-	        // last time.
-	        regExp.lastIndex = 0;
-	        return { re: regExp, input: input };
-	    };
-	    RegExpWrapper.replaceAll = function (regExp, input, replace) {
-	        var c = regExp.exec(input);
-	        var res = '';
-	        regExp.lastIndex = 0;
-	        var prev = 0;
-	        while (c) {
-	            res += input.substring(prev, c.index);
-	            res += replace(c);
-	            prev = c.index + c[0].length;
-	            regExp.lastIndex = prev;
-	            c = regExp.exec(input);
-	        }
-	        res += input.substring(prev);
-	        return res;
-	    };
-	    return RegExpWrapper;
-	}());
-	exports.RegExpWrapper = RegExpWrapper;
-	var RegExpMatcherWrapper = (function () {
-	    function RegExpMatcherWrapper() {
-	    }
-	    RegExpMatcherWrapper.next = function (matcher) {
-	        return matcher.re.exec(matcher.input);
-	    };
-	    return RegExpMatcherWrapper;
-	}());
-	exports.RegExpMatcherWrapper = RegExpMatcherWrapper;
 	var FunctionWrapper = (function () {
 	    function FunctionWrapper() {
 	    }
 	    FunctionWrapper.apply = function (fn, posArgs) { return fn.apply(null, posArgs); };
+	    FunctionWrapper.bind = function (fn, scope) { return fn.bind(scope); };
 	    return FunctionWrapper;
 	}());
 	exports.FunctionWrapper = FunctionWrapper;
 	// JS has NaN !== NaN
 	function looseIdentical(a, b) {
-	    return a === b || typeof a === "number" && typeof b === "number" && isNaN(a) && isNaN(b);
+	    return a === b || typeof a === 'number' && typeof b === 'number' && isNaN(a) && isNaN(b);
 	}
 	exports.looseIdentical = looseIdentical;
 	// JS considers NaN is the same as NaN for map Key (while NaN !== NaN otherwise)
@@ -583,7 +541,7 @@
 	}
 	exports.normalizeBool = normalizeBool;
 	function isJsObject(o) {
-	    return o !== null && (typeof o === "function" || typeof o === "object");
+	    return o !== null && (typeof o === 'function' || typeof o === 'object');
 	}
 	exports.isJsObject = isJsObject;
 	function print(obj) {
@@ -684,79 +642,170 @@
 	    return value.constructor === type;
 	}
 	exports.hasConstructor = hasConstructor;
-	function bitWiseOr(values) {
-	    return values.reduce(function (a, b) { return a | b; });
-	}
-	exports.bitWiseOr = bitWiseOr;
-	function bitWiseAnd(values) {
-	    return values.reduce(function (a, b) { return a & b; });
-	}
-	exports.bitWiseAnd = bitWiseAnd;
 	function escape(s) {
 	    return _global.encodeURI(s);
 	}
 	exports.escape = escape;
+	function escapeRegExp(s) {
+	    return s.replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
+	}
+	exports.escapeRegExp = escapeRegExp;
 	//# sourceMappingURL=lang.js.map
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
+/* 4 */,
 /* 5 */
-4,
+3,
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
-	__export(__webpack_require__(355));
-	__export(__webpack_require__(143));
-	__export(__webpack_require__(153));
-	__export(__webpack_require__(347));
-	__export(__webpack_require__(352));
+	var core_1 = __webpack_require__(1);
+	var common_directives_1 = __webpack_require__(166);
+	var pipes_1 = __webpack_require__(179);
+	__export(__webpack_require__(179));
+	__export(__webpack_require__(167));
+	__export(__webpack_require__(390));
+	__export(__webpack_require__(166));
+	__export(__webpack_require__(392));
+	var localization_1 = __webpack_require__(108);
+	exports.NgLocalization = localization_1.NgLocalization;
+	var CommonModule = (function () {
+	    function CommonModule() {
+	    }
+	    /** @nocollapse */
+	    CommonModule.decorators = [
+	        { type: core_1.NgModule, args: [{ declarations: [common_directives_1.COMMON_DIRECTIVES, pipes_1.COMMON_PIPES], exports: [common_directives_1.COMMON_DIRECTIVES, pipes_1.COMMON_PIPES] },] },
+	    ];
+	    return CommonModule;
+	}());
+	exports.CommonModule = CommonModule;
 	//# sourceMappingURL=index.js.map
 
 /***/ },
 /* 7 */,
-/* 8 */,
-/* 9 */
-[473, 187, 188, 188],
+/* 8 */
+[535, 221, 222, 222],
+/* 9 */,
 /* 10 */,
-/* 11 */
-[471, 4],
-/* 12 */,
+/* 11 */,
+/* 12 */
+[533, 3],
 /* 13 */,
-/* 14 */
-[471, 5],
+/* 14 */,
 /* 15 */,
 /* 16 */,
 /* 17 */,
 /* 18 */
-[470, 5, 75],
-/* 19 */
+[533, 5],
+/* 19 */,
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	/**
+	 * @module
+	 * @description
+	 * The `di` module provides dependency injection container services.
+	 */
+	var metadata_1 = __webpack_require__(33);
+	exports.HostMetadata = metadata_1.HostMetadata;
+	exports.InjectMetadata = metadata_1.InjectMetadata;
+	exports.InjectableMetadata = metadata_1.InjectableMetadata;
+	exports.OptionalMetadata = metadata_1.OptionalMetadata;
+	exports.SelfMetadata = metadata_1.SelfMetadata;
+	exports.SkipSelfMetadata = metadata_1.SkipSelfMetadata;
+	// we have to reexport * because Dart and TS export two different sets of types
+	__export(__webpack_require__(47));
+	var forward_ref_1 = __webpack_require__(78);
+	exports.forwardRef = forward_ref_1.forwardRef;
+	exports.resolveForwardRef = forward_ref_1.resolveForwardRef;
+	var injector_1 = __webpack_require__(79);
+	exports.Injector = injector_1.Injector;
+	var reflective_injector_1 = __webpack_require__(436);
+	exports.ReflectiveInjector = reflective_injector_1.ReflectiveInjector;
+	var provider_1 = __webpack_require__(128);
+	exports.Binding = provider_1.Binding;
+	exports.ProviderBuilder = provider_1.ProviderBuilder;
+	exports.bind = provider_1.bind;
+	exports.Provider = provider_1.Provider;
+	exports.provide = provider_1.provide;
+	var reflective_provider_1 = __webpack_require__(131);
+	exports.ResolvedReflectiveFactory = reflective_provider_1.ResolvedReflectiveFactory;
+	var reflective_key_1 = __webpack_require__(130);
+	exports.ReflectiveKey = reflective_key_1.ReflectiveKey;
+	var reflective_exceptions_1 = __webpack_require__(129);
+	exports.NoProviderError = reflective_exceptions_1.NoProviderError;
+	exports.AbstractProviderError = reflective_exceptions_1.AbstractProviderError;
+	exports.CyclicDependencyError = reflective_exceptions_1.CyclicDependencyError;
+	exports.InstantiationError = reflective_exceptions_1.InstantiationError;
+	exports.InvalidProviderError = reflective_exceptions_1.InvalidProviderError;
+	exports.NoAnnotationError = reflective_exceptions_1.NoAnnotationError;
+	exports.OutOfBoundsError = reflective_exceptions_1.OutOfBoundsError;
+	var opaque_token_1 = __webpack_require__(219);
+	exports.OpaqueToken = opaque_token_1.OpaqueToken;
+	//# sourceMappingURL=di.js.map
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	/**
 	 * Used to provide a {@link ControlValueAccessor} for form controls.
 	 *
 	 * See {@link DefaultValueAccessor} for how to implement one.
+	 * @experimental
 	 */
-	exports.NG_VALUE_ACCESSOR = 
-	/*@ts2dart_const*/ new core_1.OpaqueToken("NgValueAccessor");
+	exports.NG_VALUE_ACCESSOR = new core_1.OpaqueToken('NgValueAccessor');
 	//# sourceMappingURL=control_value_accessor.js.map
 
 /***/ },
-/* 20 */
+/* 22 */,
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
+	var toPromise_1 = __webpack_require__(516);
+	var collection_1 = __webpack_require__(18);
 	var lang_1 = __webpack_require__(5);
-	var promise_1 = __webpack_require__(75);
-	var async_1 = __webpack_require__(18);
-	var collection_1 = __webpack_require__(14);
 	/**
 	 * Providers for validators to be used for {@link Control}s in a form.
 	 *
@@ -765,8 +814,9 @@
 	 * ### Example
 	 *
 	 * {@example core/forms/ts/ng_validators/ng_validators.ts region='ng_validators'}
+	 * @experimental
 	 */
-	exports.NG_VALIDATORS = new core_1.OpaqueToken("NgValidators");
+	exports.NG_VALIDATORS = new core_1.OpaqueToken('NgValidators');
 	/**
 	 * Providers for asynchronous validators to be used for {@link Control}s
 	 * in a form.
@@ -774,9 +824,10 @@
 	 * Provide this using `multi: true` to add validators.
 	 *
 	 * See {@link NG_VALIDATORS} for more details.
+	 *
+	 * @experimental
 	 */
-	exports.NG_ASYNC_VALIDATORS = 
-	/*@ts2dart_const*/ new core_1.OpaqueToken("NgAsyncValidators");
+	exports.NG_ASYNC_VALIDATORS = new core_1.OpaqueToken('NgAsyncValidators');
 	/**
 	 * Provides a set of validators used by form controls.
 	 *
@@ -788,6 +839,8 @@
 	 * ```typescript
 	 * var loginControl = new Control("", Validators.required)
 	 * ```
+	 *
+	 * @experimental
 	 */
 	var Validators = (function () {
 	    function Validators() {
@@ -796,8 +849,8 @@
 	     * Validator that requires controls to have a non-empty value.
 	     */
 	    Validators.required = function (control) {
-	        return lang_1.isBlank(control.value) || (lang_1.isString(control.value) && control.value == "") ?
-	            { "required": true } :
+	        return lang_1.isBlank(control.value) || (lang_1.isString(control.value) && control.value == '') ?
+	            { 'required': true } :
 	            null;
 	    };
 	    /**
@@ -809,7 +862,7 @@
 	                return null;
 	            var v = control.value;
 	            return v.length < minLength ?
-	                { "minlength": { "requiredLength": minLength, "actualLength": v.length } } :
+	                { 'minlength': { 'requiredLength': minLength, 'actualLength': v.length } } :
 	                null;
 	        };
 	    };
@@ -822,7 +875,7 @@
 	                return null;
 	            var v = control.value;
 	            return v.length > maxLength ?
-	                { "maxlength": { "requiredLength": maxLength, "actualLength": v.length } } :
+	                { 'maxlength': { 'requiredLength': maxLength, 'actualLength': v.length } } :
 	                null;
 	        };
 	    };
@@ -836,7 +889,7 @@
 	            var regex = new RegExp("^" + pattern + "$");
 	            var v = control.value;
 	            return regex.test(v) ? null :
-	                { "pattern": { "requiredPattern": "^" + pattern + "$", "actualValue": v } };
+	                { 'pattern': { 'requiredPattern': "^" + pattern + "$", 'actualValue': v } };
 	        };
 	    };
 	    /**
@@ -865,14 +918,14 @@
 	            return null;
 	        return function (control) {
 	            var promises = _executeAsyncValidators(control, presentValidators).map(_convertToPromise);
-	            return promise_1.PromiseWrapper.all(promises).then(_mergeErrors);
+	            return Promise.all(promises).then(_mergeErrors);
 	        };
 	    };
 	    return Validators;
 	}());
 	exports.Validators = Validators;
 	function _convertToPromise(obj) {
-	    return promise_1.PromiseWrapper.isPromise(obj) ? obj : async_1.ObservableWrapper.toPromise(obj);
+	    return lang_1.isPromise(obj) ? obj : toPromise_1.toPromise.call(obj);
 	}
 	function _executeValidators(control, validators) {
 	    return validators.map(function (v) { return v(control); });
@@ -889,17 +942,24 @@
 	//# sourceMappingURL=validators.js.map
 
 /***/ },
-/* 21 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
+	var exceptions_1 = __webpack_require__(30);
 	var lang_1 = __webpack_require__(5);
-	var exceptions_1 = __webpack_require__(23);
 	var InvalidPipeArgumentException = (function (_super) {
 	    __extends(InvalidPipeArgumentException, _super);
 	    function InvalidPipeArgumentException(type, value) {
@@ -911,27 +971,38 @@
 	//# sourceMappingURL=invalid_pipe_argument_exception.js.map
 
 /***/ },
-/* 22 */,
-/* 23 */
-[473, 150, 151, 151],
-/* 24 */,
 /* 25 */,
-/* 26 */
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */
+[535, 174, 175, 175],
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var exceptions_1 = __webpack_require__(23);
-	var abstract_control_directive_1 = __webpack_require__(76);
+	var exceptions_1 = __webpack_require__(30);
+	var abstract_control_directive_1 = __webpack_require__(97);
 	/**
 	 * A base class that all control directive extend.
 	 * It binds a {@link Control} object to a DOM element.
 	 *
 	 * Used internally by Angular forms.
+	 *
+	 * @experimental
 	 */
 	var NgControl = (function (_super) {
 	    __extends(NgControl, _super);
@@ -956,208 +1027,19 @@
 	//# sourceMappingURL=ng_control.js.map
 
 /***/ },
-/* 27 */
-[470, 4, 387],
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var collection_1 = __webpack_require__(14);
-	var lang_1 = __webpack_require__(5);
-	var exceptions_1 = __webpack_require__(23);
-	var validators_1 = __webpack_require__(20);
-	var default_value_accessor_1 = __webpack_require__(49);
-	var number_value_accessor_1 = __webpack_require__(84);
-	var checkbox_value_accessor_1 = __webpack_require__(48);
-	var select_control_value_accessor_1 = __webpack_require__(51);
-	var radio_control_value_accessor_1 = __webpack_require__(50);
-	var normalize_validator_1 = __webpack_require__(351);
-	function controlPath(name, parent) {
-	    var p = collection_1.ListWrapper.clone(parent.path);
-	    p.push(name);
-	    return p;
-	}
-	exports.controlPath = controlPath;
-	function setUpControl(control, dir) {
-	    if (lang_1.isBlank(control))
-	        _throwError(dir, "Cannot find control");
-	    if (lang_1.isBlank(dir.valueAccessor))
-	        _throwError(dir, "No value accessor for");
-	    control.validator = validators_1.Validators.compose([control.validator, dir.validator]);
-	    control.asyncValidator = validators_1.Validators.composeAsync([control.asyncValidator, dir.asyncValidator]);
-	    dir.valueAccessor.writeValue(control.value);
-	    // view -> model
-	    dir.valueAccessor.registerOnChange(function (newValue) {
-	        dir.viewToModelUpdate(newValue);
-	        control.updateValue(newValue, { emitModelToViewChange: false });
-	        control.markAsDirty();
-	    });
-	    // model -> view
-	    control.registerOnChange(function (newValue) { return dir.valueAccessor.writeValue(newValue); });
-	    // touched
-	    dir.valueAccessor.registerOnTouched(function () { return control.markAsTouched(); });
-	}
-	exports.setUpControl = setUpControl;
-	function setUpControlGroup(control, dir) {
-	    if (lang_1.isBlank(control))
-	        _throwError(dir, "Cannot find control");
-	    control.validator = validators_1.Validators.compose([control.validator, dir.validator]);
-	    control.asyncValidator = validators_1.Validators.composeAsync([control.asyncValidator, dir.asyncValidator]);
-	}
-	exports.setUpControlGroup = setUpControlGroup;
-	function _throwError(dir, message) {
-	    var path = dir.path.join(" -> ");
-	    throw new exceptions_1.BaseException(message + " '" + path + "'");
-	}
-	function composeValidators(validators) {
-	    return lang_1.isPresent(validators) ? validators_1.Validators.compose(validators.map(normalize_validator_1.normalizeValidator)) : null;
-	}
-	exports.composeValidators = composeValidators;
-	function composeAsyncValidators(validators) {
-	    return lang_1.isPresent(validators) ? validators_1.Validators.composeAsync(validators.map(normalize_validator_1.normalizeAsyncValidator)) :
-	        null;
-	}
-	exports.composeAsyncValidators = composeAsyncValidators;
-	function isPropertyUpdated(changes, viewModel) {
-	    if (!collection_1.StringMapWrapper.contains(changes, "model"))
-	        return false;
-	    var change = changes["model"];
-	    if (change.isFirstChange())
-	        return true;
-	    return !lang_1.looseIdentical(viewModel, change.currentValue);
-	}
-	exports.isPropertyUpdated = isPropertyUpdated;
-	// TODO: vsavkin remove it once https://github.com/angular/angular/issues/3011 is implemented
-	function selectValueAccessor(dir, valueAccessors) {
-	    if (lang_1.isBlank(valueAccessors))
-	        return null;
-	    var defaultAccessor;
-	    var builtinAccessor;
-	    var customAccessor;
-	    valueAccessors.forEach(function (v) {
-	        if (lang_1.hasConstructor(v, default_value_accessor_1.DefaultValueAccessor)) {
-	            defaultAccessor = v;
-	        }
-	        else if (lang_1.hasConstructor(v, checkbox_value_accessor_1.CheckboxControlValueAccessor) ||
-	            lang_1.hasConstructor(v, number_value_accessor_1.NumberValueAccessor) ||
-	            lang_1.hasConstructor(v, select_control_value_accessor_1.SelectControlValueAccessor) ||
-	            lang_1.hasConstructor(v, radio_control_value_accessor_1.RadioControlValueAccessor)) {
-	            if (lang_1.isPresent(builtinAccessor))
-	                _throwError(dir, "More than one built-in value accessor matches");
-	            builtinAccessor = v;
-	        }
-	        else {
-	            if (lang_1.isPresent(customAccessor))
-	                _throwError(dir, "More than one custom value accessor matches");
-	            customAccessor = v;
-	        }
-	    });
-	    if (lang_1.isPresent(customAccessor))
-	        return customAccessor;
-	    if (lang_1.isPresent(builtinAccessor))
-	        return builtinAccessor;
-	    if (lang_1.isPresent(defaultAccessor))
-	        return defaultAccessor;
-	    _throwError(dir, "No valid value accessor for");
-	    return null;
-	}
-	exports.selectValueAccessor = selectValueAccessor;
-	//# sourceMappingURL=shared.js.map
-
-/***/ },
-/* 29 */,
-/* 30 */,
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	/**
-	* @module
-	* @description
-	* The `di` module provides dependency injection container services.
-	*/
-	var metadata_1 = __webpack_require__(33);
-	exports.InjectMetadata = metadata_1.InjectMetadata;
-	exports.OptionalMetadata = metadata_1.OptionalMetadata;
-	exports.InjectableMetadata = metadata_1.InjectableMetadata;
-	exports.SelfMetadata = metadata_1.SelfMetadata;
-	exports.HostMetadata = metadata_1.HostMetadata;
-	exports.SkipSelfMetadata = metadata_1.SkipSelfMetadata;
-	exports.DependencyMetadata = metadata_1.DependencyMetadata;
-	// we have to reexport * because Dart and TS export two different sets of types
-	__export(__webpack_require__(32));
-	var forward_ref_1 = __webpack_require__(62);
-	exports.forwardRef = forward_ref_1.forwardRef;
-	exports.resolveForwardRef = forward_ref_1.resolveForwardRef;
-	var injector_1 = __webpack_require__(104);
-	exports.Injector = injector_1.Injector;
-	var reflective_injector_1 = __webpack_require__(186);
-	exports.ReflectiveInjector = reflective_injector_1.ReflectiveInjector;
-	var provider_1 = __webpack_require__(105);
-	exports.Binding = provider_1.Binding;
-	exports.ProviderBuilder = provider_1.ProviderBuilder;
-	exports.bind = provider_1.bind;
-	exports.Provider = provider_1.Provider;
-	exports.provide = provider_1.provide;
-	var reflective_provider_1 = __webpack_require__(108);
-	exports.ResolvedReflectiveFactory = reflective_provider_1.ResolvedReflectiveFactory;
-	exports.ReflectiveDependency = reflective_provider_1.ReflectiveDependency;
-	var reflective_key_1 = __webpack_require__(107);
-	exports.ReflectiveKey = reflective_key_1.ReflectiveKey;
-	var reflective_exceptions_1 = __webpack_require__(106);
-	exports.NoProviderError = reflective_exceptions_1.NoProviderError;
-	exports.AbstractProviderError = reflective_exceptions_1.AbstractProviderError;
-	exports.CyclicDependencyError = reflective_exceptions_1.CyclicDependencyError;
-	exports.InstantiationError = reflective_exceptions_1.InstantiationError;
-	exports.InvalidProviderError = reflective_exceptions_1.InvalidProviderError;
-	exports.NoAnnotationError = reflective_exceptions_1.NoAnnotationError;
-	exports.OutOfBoundsError = reflective_exceptions_1.OutOfBoundsError;
-	var opaque_token_1 = __webpack_require__(386);
-	exports.OpaqueToken = opaque_token_1.OpaqueToken;
-	//# sourceMappingURL=di.js.map
-
-/***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var metadata_1 = __webpack_require__(33);
-	var decorators_1 = __webpack_require__(67);
-	/**
-	 * Factory for creating {@link InjectMetadata}.
-	 */
-	exports.Inject = decorators_1.makeParamDecorator(metadata_1.InjectMetadata);
-	/**
-	 * Factory for creating {@link OptionalMetadata}.
-	 */
-	exports.Optional = decorators_1.makeParamDecorator(metadata_1.OptionalMetadata);
-	/**
-	 * Factory for creating {@link InjectableMetadata}.
-	 */
-	exports.Injectable = decorators_1.makeDecorator(metadata_1.InjectableMetadata);
-	/**
-	 * Factory for creating {@link SelfMetadata}.
-	 */
-	exports.Self = decorators_1.makeParamDecorator(metadata_1.SelfMetadata);
-	/**
-	 * Factory for creating {@link HostMetadata}.
-	 */
-	exports.Host = decorators_1.makeParamDecorator(metadata_1.HostMetadata);
-	/**
-	 * Factory for creating {@link SkipSelfMetadata}.
-	 */
-	exports.SkipSelf = decorators_1.makeParamDecorator(metadata_1.SkipSelfMetadata);
-	//# sourceMappingURL=decorators.js.map
-
-/***/ },
+/* 32 */,
 /* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(4);
+	var lang_1 = __webpack_require__(3);
 	/**
 	 * A parameter metadata that specifies a dependency.
 	 *
@@ -1175,7 +1057,7 @@
 	 * }
 	 *
 	 * var injector = Injector.resolveAndCreate([
-	 *  provide("MyEngine", {useClass: Engine}),
+	 *  {provide: "MyEngine", useClass: Engine},
 	 *  Car
 	 * ]);
 	 *
@@ -1197,7 +1079,7 @@
 	 * var injector = Injector.resolveAndCreate([Engine, Car]);
 	 * expect(injector.get(Car).engine instanceof Engine).toBe(true);
 	 * ```
-	 * @ts2dart_const
+	 * @stable
 	 */
 	var InjectMetadata = (function () {
 	    function InjectMetadata(token) {
@@ -1227,7 +1109,7 @@
 	 * var injector = Injector.resolveAndCreate([Car]);
 	 * expect(injector.get(Car).engine).toBeNull();
 	 * ```
-	 * @ts2dart_const
+	 * @stable
 	 */
 	var OptionalMetadata = (function () {
 	    function OptionalMetadata() {
@@ -1239,7 +1121,7 @@
 	/**
 	 * `DependencyMetadata` is used by the framework to extend DI.
 	 * This is internal to Angular and should not be used directly.
-	 * @ts2dart_const
+	 * @stable
 	 */
 	var DependencyMetadata = (function () {
 	    function DependencyMetadata() {
@@ -1282,7 +1164,7 @@
 	 * var injector = Injector.resolveAndCreate([NeedsService, UsefulService]);
 	 * expect(() => injector.get(NeedsService)).toThrowError();
 	 * ```
-	 * @ts2dart_const
+	 * @stable
 	 */
 	var InjectableMetadata = (function () {
 	    function InjectableMetadata() {
@@ -1316,7 +1198,7 @@
 	 * var child = inj.resolveAndCreateChild([NeedsDependency]);
 	 * expect(() => child.get(NeedsDependency)).toThrowError();
 	 * ```
-	 * @ts2dart_const
+	 * @stable
 	 */
 	var SelfMetadata = (function () {
 	    function SelfMetadata() {
@@ -1349,7 +1231,7 @@
 	 * var inj = Injector.resolveAndCreate([Dependency, NeedsDependency]);
 	 * expect(() => inj.get(NeedsDependency)).toThrowError();
 	 * ```
-	 * @ts2dart_const
+	 * @stable
 	 */
 	var SkipSelfMetadata = (function () {
 	    function SkipSelfMetadata() {
@@ -1411,7 +1293,7 @@
 	 *
 	 * bootstrap(App);
 	 *```
-	 * @ts2dart_const
+	 * @stable
 	 */
 	var HostMetadata = (function () {
 	    function HostMetadata() {
@@ -1424,8 +1306,258 @@
 
 /***/ },
 /* 34 */,
-/* 35 */,
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var Subject_1 = __webpack_require__(42);
+	var Observable_1 = __webpack_require__(55);
+	exports.Observable = Observable_1.Observable;
+	var Subject_2 = __webpack_require__(42);
+	exports.Subject = Subject_2.Subject;
+	/**
+	 * Use by directives and components to emit custom Events.
+	 *
+	 * ### Examples
+	 *
+	 * In the following example, `Zippy` alternatively emits `open` and `close` events when its
+	 * title gets clicked:
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'zippy',
+	 *   template: `
+	 *   <div class="zippy">
+	 *     <div (click)="toggle()">Toggle</div>
+	 *     <div [hidden]="!visible">
+	 *       <ng-content></ng-content>
+	 *     </div>
+	 *  </div>`})
+	 * export class Zippy {
+	 *   visible: boolean = true;
+	 *   @Output() open: EventEmitter<any> = new EventEmitter();
+	 *   @Output() close: EventEmitter<any> = new EventEmitter();
+	 *
+	 *   toggle() {
+	 *     this.visible = !this.visible;
+	 *     if (this.visible) {
+	 *       this.open.emit(null);
+	 *     } else {
+	 *       this.close.emit(null);
+	 *     }
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * The events payload can be accessed by the parameter `$event` on the components output event
+	 * handler:
+	 *
+	 * ```
+	 * <zippy (open)="onOpen($event)" (close)="onClose($event)"></zippy>
+	 * ```
+	 *
+	 * Uses Rx.Observable but provides an adapter to make it work as specified here:
+	 * https://github.com/jhusain/observable-spec
+	 *
+	 * Once a reference implementation of the spec is available, switch to it.
+	 * @stable
+	 */
+	var EventEmitter = (function (_super) {
+	    __extends(EventEmitter, _super);
+	    /**
+	     * Creates an instance of [EventEmitter], which depending on [isAsync],
+	     * delivers events synchronously or asynchronously.
+	     */
+	    function EventEmitter(isAsync) {
+	        if (isAsync === void 0) { isAsync = false; }
+	        _super.call(this);
+	        this.__isAsync = isAsync;
+	    }
+	    EventEmitter.prototype.emit = function (value) { _super.prototype.next.call(this, value); };
+	    /**
+	     * @deprecated - use .emit(value) instead
+	     */
+	    EventEmitter.prototype.next = function (value) { _super.prototype.next.call(this, value); };
+	    EventEmitter.prototype.subscribe = function (generatorOrNext, error, complete) {
+	        var schedulerFn;
+	        var errorFn = function (err) { return null; };
+	        var completeFn = function () { return null; };
+	        if (generatorOrNext && typeof generatorOrNext === 'object') {
+	            schedulerFn = this.__isAsync ? function (value /** TODO #9100 */) {
+	                setTimeout(function () { return generatorOrNext.next(value); });
+	            } : function (value /** TODO #9100 */) { generatorOrNext.next(value); };
+	            if (generatorOrNext.error) {
+	                errorFn = this.__isAsync ? function (err) { setTimeout(function () { return generatorOrNext.error(err); }); } :
+	                    function (err) { generatorOrNext.error(err); };
+	            }
+	            if (generatorOrNext.complete) {
+	                completeFn = this.__isAsync ? function () { setTimeout(function () { return generatorOrNext.complete(); }); } :
+	                    function () { generatorOrNext.complete(); };
+	            }
+	        }
+	        else {
+	            schedulerFn = this.__isAsync ? function (value /** TODO #9100 */) {
+	                setTimeout(function () { return generatorOrNext(value); });
+	            } : function (value /** TODO #9100 */) { generatorOrNext(value); };
+	            if (error) {
+	                errorFn =
+	                    this.__isAsync ? function (err) { setTimeout(function () { return error(err); }); } : function (err) { error(err); };
+	            }
+	            if (complete) {
+	                completeFn =
+	                    this.__isAsync ? function () { setTimeout(function () { return complete(); }); } : function () { complete(); };
+	            }
+	        }
+	        return _super.prototype.subscribe.call(this, schedulerFn, errorFn, completeFn);
+	    };
+	    return EventEmitter;
+	}(Subject_1.Subject));
+	exports.EventEmitter = EventEmitter;
+	//# sourceMappingURL=async.js.map
+
+/***/ },
 /* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var collection_1 = __webpack_require__(18);
+	var exceptions_1 = __webpack_require__(30);
+	var lang_1 = __webpack_require__(5);
+	var validators_1 = __webpack_require__(23);
+	var checkbox_value_accessor_1 = __webpack_require__(60);
+	var default_value_accessor_1 = __webpack_require__(61);
+	var normalize_validator_1 = __webpack_require__(391);
+	var number_value_accessor_1 = __webpack_require__(105);
+	var radio_control_value_accessor_1 = __webpack_require__(62);
+	var select_control_value_accessor_1 = __webpack_require__(63);
+	var select_multiple_control_value_accessor_1 = __webpack_require__(106);
+	function controlPath(name, parent) {
+	    var p = collection_1.ListWrapper.clone(parent.path);
+	    p.push(name);
+	    return p;
+	}
+	exports.controlPath = controlPath;
+	function setUpControl(control, dir) {
+	    if (lang_1.isBlank(control))
+	        _throwError(dir, 'Cannot find control with');
+	    if (lang_1.isBlank(dir.valueAccessor))
+	        _throwError(dir, 'No value accessor for form control with');
+	    control.validator = validators_1.Validators.compose([control.validator, dir.validator]);
+	    control.asyncValidator = validators_1.Validators.composeAsync([control.asyncValidator, dir.asyncValidator]);
+	    dir.valueAccessor.writeValue(control.value);
+	    // view -> model
+	    dir.valueAccessor.registerOnChange(function (newValue) {
+	        dir.viewToModelUpdate(newValue);
+	        control.updateValue(newValue, { emitModelToViewChange: false });
+	        control.markAsDirty();
+	    });
+	    // model -> view
+	    control.registerOnChange(function (newValue) { return dir.valueAccessor.writeValue(newValue); });
+	    // touched
+	    dir.valueAccessor.registerOnTouched(function () { return control.markAsTouched(); });
+	}
+	exports.setUpControl = setUpControl;
+	function setUpControlGroup(control, dir) {
+	    if (lang_1.isBlank(control))
+	        _throwError(dir, 'Cannot find control with');
+	    control.validator = validators_1.Validators.compose([control.validator, dir.validator]);
+	    control.asyncValidator = validators_1.Validators.composeAsync([control.asyncValidator, dir.asyncValidator]);
+	}
+	exports.setUpControlGroup = setUpControlGroup;
+	function _throwError(dir, message) {
+	    var messageEnd;
+	    if (dir.path.length > 1) {
+	        messageEnd = "path: '" + dir.path.join(' -> ') + "'";
+	    }
+	    else if (dir.path[0]) {
+	        messageEnd = "name: '" + dir.path + "'";
+	    }
+	    else {
+	        messageEnd = 'unspecified name';
+	    }
+	    throw new exceptions_1.BaseException(message + " " + messageEnd);
+	}
+	function composeValidators(validators) {
+	    return lang_1.isPresent(validators) ? validators_1.Validators.compose(validators.map(normalize_validator_1.normalizeValidator)) : null;
+	}
+	exports.composeValidators = composeValidators;
+	function composeAsyncValidators(validators) {
+	    return lang_1.isPresent(validators) ? validators_1.Validators.composeAsync(validators.map(normalize_validator_1.normalizeAsyncValidator)) :
+	        null;
+	}
+	exports.composeAsyncValidators = composeAsyncValidators;
+	function isPropertyUpdated(changes, viewModel) {
+	    if (!collection_1.StringMapWrapper.contains(changes, 'model'))
+	        return false;
+	    var change = changes['model'];
+	    if (change.isFirstChange())
+	        return true;
+	    return !lang_1.looseIdentical(viewModel, change.currentValue);
+	}
+	exports.isPropertyUpdated = isPropertyUpdated;
+	// TODO: vsavkin remove it once https://github.com/angular/angular/issues/3011 is implemented
+	function selectValueAccessor(dir, valueAccessors) {
+	    if (lang_1.isBlank(valueAccessors))
+	        return null;
+	    var defaultAccessor;
+	    var builtinAccessor;
+	    var customAccessor;
+	    valueAccessors.forEach(function (v) {
+	        if (lang_1.hasConstructor(v, default_value_accessor_1.DefaultValueAccessor)) {
+	            defaultAccessor = v;
+	        }
+	        else if (lang_1.hasConstructor(v, checkbox_value_accessor_1.CheckboxControlValueAccessor) || lang_1.hasConstructor(v, number_value_accessor_1.NumberValueAccessor) ||
+	            lang_1.hasConstructor(v, select_control_value_accessor_1.SelectControlValueAccessor) ||
+	            lang_1.hasConstructor(v, select_multiple_control_value_accessor_1.SelectMultipleControlValueAccessor) ||
+	            lang_1.hasConstructor(v, radio_control_value_accessor_1.RadioControlValueAccessor)) {
+	            if (lang_1.isPresent(builtinAccessor))
+	                _throwError(dir, 'More than one built-in value accessor matches form control with');
+	            builtinAccessor = v;
+	        }
+	        else {
+	            if (lang_1.isPresent(customAccessor))
+	                _throwError(dir, 'More than one custom value accessor matches form control with');
+	            customAccessor = v;
+	        }
+	    });
+	    if (lang_1.isPresent(customAccessor))
+	        return customAccessor;
+	    if (lang_1.isPresent(builtinAccessor))
+	        return builtinAccessor;
+	    if (lang_1.isPresent(defaultAccessor))
+	        return defaultAccessor;
+	    _throwError(dir, 'No valid value accessor for form control with');
+	    return null;
+	}
+	exports.selectValueAccessor = selectValueAccessor;
+	//# sourceMappingURL=shared.js.map
+
+/***/ },
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1434,13 +1566,13 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Observable_1 = __webpack_require__(43);
-	var Subscriber_1 = __webpack_require__(344);
-	var Subscription_1 = __webpack_require__(135);
-	var SubjectSubscription_1 = __webpack_require__(453);
-	var rxSubscriber_1 = __webpack_require__(138);
-	var throwError_1 = __webpack_require__(459);
-	var ObjectUnsubscribedError_1 = __webpack_require__(455);
+	var Observable_1 = __webpack_require__(55);
+	var Subscriber_1 = __webpack_require__(386);
+	var Subscription_1 = __webpack_require__(160);
+	var SubjectSubscription_1 = __webpack_require__(514);
+	var rxSubscriber_1 = __webpack_require__(161);
+	var throwError_1 = __webpack_require__(522);
+	var ObjectUnsubscribedError_1 = __webpack_require__(518);
 	/**
 	 * @class Subject<T>
 	 */
@@ -1636,21 +1768,30 @@
 	//# sourceMappingURL=Subject.js.map
 
 /***/ },
-/* 37 */,
-/* 38 */
+/* 43 */,
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var abstract_control_directive_1 = __webpack_require__(76);
+	var abstract_control_directive_1 = __webpack_require__(97);
 	/**
 	 * A directive that contains multiple {@link NgControl}s.
 	 *
 	 * Only used by the forms module.
+	 *
+	 * @experimental
 	 */
 	var ControlContainer = (function (_super) {
 	    __extends(ControlContainer, _super);
@@ -1679,67 +1820,205 @@
 	//# sourceMappingURL=control_container.js.map
 
 /***/ },
-/* 39 */,
-/* 40 */
+/* 45 */,
+/* 46 */,
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var decorators_1 = __webpack_require__(84);
+	var metadata_1 = __webpack_require__(33);
+	/**
+	 * Factory for creating {@link InjectMetadata}.
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Inject = decorators_1.makeParamDecorator(metadata_1.InjectMetadata);
+	/**
+	 * Factory for creating {@link OptionalMetadata}.
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Optional = decorators_1.makeParamDecorator(metadata_1.OptionalMetadata);
+	/**
+	 * Factory for creating {@link InjectableMetadata}.
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Injectable = decorators_1.makeDecorator(metadata_1.InjectableMetadata);
+	/**
+	 * Factory for creating {@link SelfMetadata}.
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Self = decorators_1.makeParamDecorator(metadata_1.SelfMetadata);
+	/**
+	 * Factory for creating {@link HostMetadata}.
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Host = decorators_1.makeParamDecorator(metadata_1.HostMetadata);
+	/**
+	 * Factory for creating {@link SkipSelfMetadata}.
+	 * @stable
+	 * @Annotation
+	 */
+	exports.SkipSelf = decorators_1.makeParamDecorator(metadata_1.SkipSelfMetadata);
+	//# sourceMappingURL=decorators.js.map
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
-	var async_1 = __webpack_require__(27);
-	var reflection_1 = __webpack_require__(66);
-	var component_factory_1 = __webpack_require__(189);
-	var decorators_1 = __webpack_require__(32);
+	var di_1 = __webpack_require__(20);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
 	/**
-	 * Low-level service for loading {@link ComponentFactory}s, which
-	 * can later be used to create and render a Component instance.
+	 * Indicates that a component is still being loaded in a synchronous compile.
+	 *
+	 * @stable
 	 */
-	var ComponentResolver = (function () {
-	    function ComponentResolver() {
+	var ComponentStillLoadingError = (function (_super) {
+	    __extends(ComponentStillLoadingError, _super);
+	    function ComponentStillLoadingError(compType) {
+	        _super.call(this, "Can't compile synchronously as " + lang_1.stringify(compType) + " is still being loaded!");
+	        this.compType = compType;
 	    }
-	    return ComponentResolver;
+	    return ComponentStillLoadingError;
+	}(exceptions_1.BaseException));
+	exports.ComponentStillLoadingError = ComponentStillLoadingError;
+	/**
+	 * Combination of NgModuleFactory and ComponentFactorys.
+	 *
+	 * @experimental
+	 */
+	var ModuleWithComponentFactories = (function () {
+	    function ModuleWithComponentFactories(ngModuleFactory, componentFactories) {
+	        this.ngModuleFactory = ngModuleFactory;
+	        this.componentFactories = componentFactories;
+	    }
+	    return ModuleWithComponentFactories;
 	}());
-	exports.ComponentResolver = ComponentResolver;
-	function _isComponentFactory(type) {
-	    return type instanceof component_factory_1.ComponentFactory;
+	exports.ModuleWithComponentFactories = ModuleWithComponentFactories;
+	function _throwError() {
+	    throw new exceptions_1.BaseException("Runtime compiler is not loaded");
 	}
-	var ReflectorComponentResolver = (function (_super) {
-	    __extends(ReflectorComponentResolver, _super);
-	    function ReflectorComponentResolver() {
-	        _super.apply(this, arguments);
+	/**
+	 * Low-level service for running the angular compiler duirng runtime
+	 * to create {@link ComponentFactory}s, which
+	 * can later be used to create and render a Component instance.
+	 *
+	 * Each `@NgModule` provides an own `Compiler` to its injector,
+	 * that will use the directives/pipes of the ng module for compilation
+	 * of components.
+	 * @stable
+	 */
+	var Compiler = (function () {
+	    function Compiler() {
 	    }
-	    ReflectorComponentResolver.prototype.resolveComponent = function (componentType) {
-	        var metadatas = reflection_1.reflector.annotations(componentType);
-	        var componentFactory = metadatas.find(_isComponentFactory);
-	        if (lang_1.isBlank(componentFactory)) {
-	            throw new exceptions_1.BaseException("No precompiled component " + lang_1.stringify(componentType) + " found");
-	        }
-	        return async_1.PromiseWrapper.resolve(componentFactory);
+	    /**
+	     * Loads the template and styles of a component and returns the associated `ComponentFactory`.
+	     */
+	    Compiler.prototype.compileComponentAsync = function (component, ngModule) {
+	        if (ngModule === void 0) { ngModule = null; }
+	        throw _throwError();
 	    };
-	    ReflectorComponentResolver.prototype.clearCache = function () { };
-	    ReflectorComponentResolver.decorators = [
-	        { type: decorators_1.Injectable },
-	    ];
-	    return ReflectorComponentResolver;
-	}(ComponentResolver));
-	exports.ReflectorComponentResolver = ReflectorComponentResolver;
-	//# sourceMappingURL=component_resolver.js.map
+	    /**
+	     * Compiles the given component. All templates have to be either inline or compiled via
+	     * `compileComponentAsync` before. Otherwise throws a {@link ComponentStillLoadingError}.
+	     */
+	    Compiler.prototype.compileComponentSync = function (component, ngModule) {
+	        if (ngModule === void 0) { ngModule = null; }
+	        throw _throwError();
+	    };
+	    /**
+	     * Compiles the given NgModule and all of its components. All templates of the components listed
+	     * in `entryComponents`
+	     * have to be inlined. Otherwise throws a {@link ComponentStillLoadingError}.
+	     */
+	    Compiler.prototype.compileModuleSync = function (moduleType) { throw _throwError(); };
+	    /**
+	     * Compiles the given NgModule and all of its components
+	     */
+	    Compiler.prototype.compileModuleAsync = function (moduleType) {
+	        throw _throwError();
+	    };
+	    /**
+	     * Same as {@link compileModuleSync} put also creates ComponentFactories for all components.
+	     */
+	    Compiler.prototype.compileModuleAndAllComponentsSync = function (moduleType) {
+	        throw _throwError();
+	    };
+	    /**
+	     * Same as {@link compileModuleAsync} put also creates ComponentFactories for all components.
+	     */
+	    Compiler.prototype.compileModuleAndAllComponentsAsync = function (moduleType) {
+	        throw _throwError();
+	    };
+	    /**
+	     * Clears all caches
+	     */
+	    Compiler.prototype.clearCache = function () { };
+	    /**
+	     * Clears the cache for the given component/ngModule.
+	     */
+	    Compiler.prototype.clearCacheFor = function (type) { };
+	    return Compiler;
+	}());
+	exports.Compiler = Compiler;
+	/**
+	 * Token to provide CompilerOptions in the platform injector.
+	 *
+	 * @experimental
+	 */
+	exports.COMPILER_OPTIONS = new di_1.OpaqueToken('compilerOptions');
+	/**
+	 * A factory for creating a Compiler
+	 *
+	 * @experimental
+	 */
+	var CompilerFactory = (function () {
+	    function CompilerFactory() {
+	    }
+	    return CompilerFactory;
+	}());
+	exports.CompilerFactory = CompilerFactory;
+	//# sourceMappingURL=compiler.js.map
 
 /***/ },
-/* 41 */,
-/* 42 */,
-/* 43 */
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var root_1 = __webpack_require__(44);
-	var observable_1 = __webpack_require__(454);
-	var toSubscriber_1 = __webpack_require__(460);
+	var root_1 = __webpack_require__(56);
+	var observable_1 = __webpack_require__(517);
+	var toSubscriber_1 = __webpack_require__(523);
 	/**
 	 * A representation of any set of values over any amount of time. This the most basic building block
 	 * of RxJS.
@@ -1873,7 +2152,7 @@
 	//# sourceMappingURL=Observable.js.map
 
 /***/ },
-/* 44 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module, global) {"use strict";
@@ -1894,18 +2173,25 @@
 	    exports.root = freeGlobal;
 	}
 	//# sourceMappingURL=root.js.map
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(142)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(165)(module), (function() { return this; }())))
 
 /***/ },
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
-	var control_value_accessor_1 = __webpack_require__(19);
+	var control_value_accessor_1 = __webpack_require__(21);
 	exports.CHECKBOX_VALUE_ACCESSOR = {
 	    provide: control_value_accessor_1.NG_VALUE_ACCESSOR,
 	    useExisting: core_1.forwardRef(function () { return CheckboxControlValueAccessor; }),
@@ -1923,6 +2209,7 @@
 	    };
 	    CheckboxControlValueAccessor.prototype.registerOnChange = function (fn) { this.onChange = fn; };
 	    CheckboxControlValueAccessor.prototype.registerOnTouched = function (fn) { this.onTouched = fn; };
+	    /** @nocollapse */
 	    CheckboxControlValueAccessor.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: 'input[type=checkbox][ngControl],input[type=checkbox][ngFormControl],input[type=checkbox][ngModel]',
@@ -1930,6 +2217,7 @@
 	                    providers: [exports.CHECKBOX_VALUE_ACCESSOR]
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    CheckboxControlValueAccessor.ctorParameters = [
 	        { type: core_1.Renderer, },
 	        { type: core_1.ElementRef, },
@@ -1940,15 +2228,21 @@
 	//# sourceMappingURL=checkbox_value_accessor.js.map
 
 /***/ },
-/* 49 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var control_value_accessor_1 = __webpack_require__(19);
-	exports.DEFAULT_VALUE_ACCESSOR = 
-	/* @ts2dart_Provider */ {
+	var control_value_accessor_1 = __webpack_require__(21);
+	exports.DEFAULT_VALUE_ACCESSOR = {
 	    provide: control_value_accessor_1.NG_VALUE_ACCESSOR,
 	    useExisting: core_1.forwardRef(function () { return DefaultValueAccessor; }),
 	    multi: true
@@ -1966,6 +2260,7 @@
 	    };
 	    DefaultValueAccessor.prototype.registerOnChange = function (fn) { this.onChange = fn; };
 	    DefaultValueAccessor.prototype.registerOnTouched = function (fn) { this.onTouched = fn; };
+	    /** @nocollapse */
 	    DefaultValueAccessor.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: 'input:not([type=checkbox])[ngControl],textarea[ngControl],input:not([type=checkbox])[ngFormControl],textarea[ngFormControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]',
@@ -1973,9 +2268,10 @@
 	                    // https://github.com/angular/angular/issues/3011 is implemented
 	                    // selector: '[ngControl],[ngModel],[ngFormControl]',
 	                    host: { '(input)': 'onChange($event.target.value)', '(blur)': 'onTouched()' },
-	                    bindings: [exports.DEFAULT_VALUE_ACCESSOR]
+	                    providers: [exports.DEFAULT_VALUE_ACCESSOR]
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    DefaultValueAccessor.ctorParameters = [
 	        { type: core_1.Renderer, },
 	        { type: core_1.ElementRef, },
@@ -1986,15 +2282,22 @@
 	//# sourceMappingURL=default_value_accessor.js.map
 
 /***/ },
-/* 50 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
+	var collection_1 = __webpack_require__(18);
 	var lang_1 = __webpack_require__(5);
-	var collection_1 = __webpack_require__(14);
-	var control_value_accessor_1 = __webpack_require__(19);
-	var ng_control_1 = __webpack_require__(26);
+	var control_value_accessor_1 = __webpack_require__(21);
+	var ng_control_1 = __webpack_require__(31);
 	exports.RADIO_VALUE_ACCESSOR = {
 	    provide: control_value_accessor_1.NG_VALUE_ACCESSOR,
 	    useExisting: core_1.forwardRef(function () { return RadioControlValueAccessor; }),
@@ -2017,12 +2320,18 @@
 	        collection_1.ListWrapper.removeAt(this._accessors, indexToRemove);
 	    };
 	    RadioControlRegistry.prototype.select = function (accessor) {
+	        var _this = this;
 	        this._accessors.forEach(function (c) {
-	            if (c[0].control.root === accessor._control.control.root && c[1] !== accessor) {
+	            if (_this._isSameGroup(c, accessor) && c[1] !== accessor) {
 	                c[1].fireUncheck();
 	            }
 	        });
 	    };
+	    RadioControlRegistry.prototype._isSameGroup = function (controlPair, accessor) {
+	        return controlPair[0].control.root === accessor._control.control.root &&
+	            controlPair[1].name === accessor.name;
+	    };
+	    /** @nocollapse */
 	    RadioControlRegistry.decorators = [
 	        { type: core_1.Injectable },
 	    ];
@@ -2031,6 +2340,8 @@
 	exports.RadioControlRegistry = RadioControlRegistry;
 	/**
 	 * The value provided by the forms API for radio buttons.
+	 *
+	 * @experimental
 	 */
 	var RadioButtonState = (function () {
 	    function RadioButtonState(checked, value) {
@@ -2070,6 +2381,7 @@
 	    };
 	    RadioControlValueAccessor.prototype.fireUncheck = function () { this._fn(new RadioButtonState(false, this._state.value)); };
 	    RadioControlValueAccessor.prototype.registerOnTouched = function (fn) { this.onTouched = fn; };
+	    /** @nocollapse */
 	    RadioControlValueAccessor.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: 'input[type=radio][ngControl],input[type=radio][ngFormControl],input[type=radio][ngModel]',
@@ -2077,12 +2389,14 @@
 	                    providers: [exports.RADIO_VALUE_ACCESSOR]
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    RadioControlValueAccessor.ctorParameters = [
 	        { type: core_1.Renderer, },
 	        { type: core_1.ElementRef, },
 	        { type: RadioControlRegistry, },
 	        { type: core_1.Injector, },
 	    ];
+	    /** @nocollapse */
 	    RadioControlValueAccessor.propDecorators = {
 	        'name': [{ type: core_1.Input },],
 	    };
@@ -2092,14 +2406,21 @@
 	//# sourceMappingURL=radio_control_value_accessor.js.map
 
 /***/ },
-/* 51 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
+	var collection_1 = __webpack_require__(18);
 	var lang_1 = __webpack_require__(5);
-	var collection_1 = __webpack_require__(14);
-	var control_value_accessor_1 = __webpack_require__(19);
+	var control_value_accessor_1 = __webpack_require__(21);
 	exports.SELECT_VALUE_ACCESSOR = {
 	    provide: control_value_accessor_1.NG_VALUE_ACCESSOR,
 	    useExisting: core_1.forwardRef(function () { return SelectControlValueAccessor; }),
@@ -2109,11 +2430,11 @@
 	    if (lang_1.isBlank(id))
 	        return "" + value;
 	    if (!lang_1.isPrimitive(value))
-	        value = "Object";
+	        value = 'Object';
 	    return lang_1.StringWrapper.slice(id + ": " + value, 0, 50);
 	}
 	function _extractId(valueString) {
-	    return valueString.split(":")[0];
+	    return valueString.split(':')[0];
 	}
 	var SelectControlValueAccessor = (function () {
 	    function SelectControlValueAccessor(_renderer, _elementRef) {
@@ -2133,7 +2454,10 @@
 	    };
 	    SelectControlValueAccessor.prototype.registerOnChange = function (fn) {
 	        var _this = this;
-	        this.onChange = function (valueString) { fn(_this._getOptionValue(valueString)); };
+	        this.onChange = function (valueString) {
+	            _this.value = valueString;
+	            fn(_this._getOptionValue(valueString));
+	        };
 	    };
 	    SelectControlValueAccessor.prototype.registerOnTouched = function (fn) { this.onTouched = fn; };
 	    /** @internal */
@@ -2152,13 +2476,15 @@
 	        var value = this._optionMap.get(_extractId(valueString));
 	        return lang_1.isPresent(value) ? value : valueString;
 	    };
+	    /** @nocollapse */
 	    SelectControlValueAccessor.decorators = [
 	        { type: core_1.Directive, args: [{
-	                    selector: 'select[ngControl],select[ngFormControl],select[ngModel]',
+	                    selector: 'select:not([multiple])[ngControl],select:not([multiple])[ngFormControl],select:not([multiple])[ngModel]',
 	                    host: { '(change)': 'onChange($event.target.value)', '(blur)': 'onTouched()' },
 	                    providers: [exports.SELECT_VALUE_ACCESSOR]
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    SelectControlValueAccessor.ctorParameters = [
 	        { type: core_1.Renderer, },
 	        { type: core_1.ElementRef, },
@@ -2204,14 +2530,17 @@
 	            this._select.writeValue(this._select.value);
 	        }
 	    };
+	    /** @nocollapse */
 	    NgSelectOption.decorators = [
 	        { type: core_1.Directive, args: [{ selector: 'option' },] },
 	    ];
+	    /** @nocollapse */
 	    NgSelectOption.ctorParameters = [
 	        { type: core_1.ElementRef, },
 	        { type: core_1.Renderer, },
 	        { type: SelectControlValueAccessor, decorators: [{ type: core_1.Optional }, { type: core_1.Host },] },
 	    ];
+	    /** @nocollapse */
 	    NgSelectOption.propDecorators = {
 	        'ngValue': [{ type: core_1.Input, args: ['ngValue',] },],
 	        'value': [{ type: core_1.Input, args: ['value',] },],
@@ -2222,32 +2551,39 @@
 	//# sourceMappingURL=select_control_value_accessor.js.map
 
 /***/ },
-/* 52 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
+	var PromiseObservable_1 = __webpack_require__(515);
+	var async_1 = __webpack_require__(35);
+	var collection_1 = __webpack_require__(18);
 	var lang_1 = __webpack_require__(5);
-	var async_1 = __webpack_require__(18);
-	var promise_1 = __webpack_require__(75);
-	var collection_1 = __webpack_require__(14);
 	/**
 	 * Indicates that a Control is valid, i.e. that no errors exist in the input value.
 	 */
-	exports.VALID = "VALID";
+	exports.VALID = 'VALID';
 	/**
 	 * Indicates that a Control is invalid, i.e. that an error exists in the input value.
 	 */
-	exports.INVALID = "INVALID";
+	exports.INVALID = 'INVALID';
 	/**
 	 * Indicates that a Control is pending, i.e. that async validation is occurring and
 	 * errors are not yet available for the input value.
 	 */
-	exports.PENDING = "PENDING";
+	exports.PENDING = 'PENDING';
 	function isControl(control) {
 	    return control instanceof AbstractControl;
 	}
@@ -2256,12 +2592,11 @@
 	    if (lang_1.isBlank(path))
 	        return null;
 	    if (!(path instanceof Array)) {
-	        path = path.split("/");
+	        path = path.split('/');
 	    }
 	    if (path instanceof Array && collection_1.ListWrapper.isEmpty(path))
 	        return null;
-	    return path
-	        .reduce(function (v, name) {
+	    return path.reduce(function (v, name) {
 	        if (v instanceof ControlGroup) {
 	            return lang_1.isPresent(v.controls[name]) ? v.controls[name] : null;
 	        }
@@ -2275,10 +2610,10 @@
 	    }, control);
 	}
 	function toObservable(r) {
-	    return promise_1.PromiseWrapper.isPromise(r) ? async_1.ObservableWrapper.fromPromise(r) : r;
+	    return lang_1.isPromise(r) ? PromiseObservable_1.PromiseObservable.create(r) : r;
 	}
 	/**
-	 *
+	 * @experimental
 	 */
 	var AbstractControl = (function () {
 	    function AbstractControl(validator, asyncValidator) {
@@ -2374,8 +2709,8 @@
 	            this._runAsyncValidator(emitEvent);
 	        }
 	        if (emitEvent) {
-	            async_1.ObservableWrapper.callEmit(this._valueChanges, this._value);
-	            async_1.ObservableWrapper.callEmit(this._statusChanges, this._status);
+	            this._valueChanges.emit(this._value);
+	            this._statusChanges.emit(this._status);
 	        }
 	        if (lang_1.isPresent(this._parent) && !onlySelf) {
 	            this._parent.updateValueAndValidity({ onlySelf: onlySelf, emitEvent: emitEvent });
@@ -2390,12 +2725,12 @@
 	            this._status = exports.PENDING;
 	            this._cancelExistingSubscription();
 	            var obs = toObservable(this.asyncValidator(this));
-	            this._asyncValidationSubscription = async_1.ObservableWrapper.subscribe(obs, function (res) { return _this.setErrors(res, { emitEvent: emitEvent }); });
+	            this._asyncValidationSubscription = obs.subscribe({ next: function (res) { return _this.setErrors(res, { emitEvent: emitEvent }); } });
 	        }
 	    };
 	    AbstractControl.prototype._cancelExistingSubscription = function () {
 	        if (lang_1.isPresent(this._asyncValidationSubscription)) {
-	            async_1.ObservableWrapper.dispose(this._asyncValidationSubscription);
+	            this._asyncValidationSubscription.unsubscribe();
 	        }
 	    };
 	    /**
@@ -2427,7 +2762,7 @@
 	        this._errors = errors;
 	        this._status = this._calculateStatus();
 	        if (emitEvent) {
-	            async_1.ObservableWrapper.callEmit(this._statusChanges, this._status);
+	            this._statusChanges.emit(this._status);
 	        }
 	        if (lang_1.isPresent(this._parent)) {
 	            this._parent._updateControlsErrors();
@@ -2498,6 +2833,8 @@
 	 * validation function.
 	 *
 	 * ### Example ([live demo](http://plnkr.co/edit/23DESOpbNnBpBHZt1BR4?p=preview))
+	 *
+	 * @experimental
 	 */
 	var Control = (function (_super) {
 	    __extends(Control, _super);
@@ -2558,6 +2895,8 @@
 	 * controls, but is of variable length.
 	 *
 	 * ### Example ([live demo](http://plnkr.co/edit/23DESOpbNnBpBHZt1BR4?p=preview))
+	 *
+	 * @experimental
 	 */
 	var ControlGroup = (function (_super) {
 	    __extends(ControlGroup, _super);
@@ -2573,16 +2912,26 @@
 	        this.updateValueAndValidity({ onlySelf: true, emitEvent: false });
 	    }
 	    /**
-	     * Add a control to this group.
+	     * Register a control with the group's list of controls.
 	     */
-	    ControlGroup.prototype.addControl = function (name, control) {
+	    ControlGroup.prototype.registerControl = function (name, control) {
 	        this.controls[name] = control;
 	        control.setParent(this);
 	    };
 	    /**
+	     * Add a control to this group.
+	     */
+	    ControlGroup.prototype.addControl = function (name, control) {
+	        this.registerControl(name, control);
+	        this.updateValueAndValidity();
+	    };
+	    /**
 	     * Remove a control from this group.
 	     */
-	    ControlGroup.prototype.removeControl = function (name) { collection_1.StringMapWrapper.delete(this.controls, name); };
+	    ControlGroup.prototype.removeControl = function (name) {
+	        collection_1.StringMapWrapper.delete(this.controls, name);
+	        this.updateValueAndValidity();
+	    };
 	    /**
 	     * Mark the named control as non-optional.
 	     */
@@ -2667,6 +3016,8 @@
 	 * as broken change detection.
 	 *
 	 * ### Example ([live demo](http://plnkr.co/edit/23DESOpbNnBpBHZt1BR4?p=preview))
+	 *
+	 * @experimental
 	 */
 	var ControlArray = (function (_super) {
 	    __extends(ControlArray, _super);
@@ -2731,9 +3082,16 @@
 	//# sourceMappingURL=model.js.map
 
 /***/ },
-/* 53 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	/**
@@ -2751,6 +3109,8 @@
 	 * `http://example.com/foo` as an equivalent URL.
 	 *
 	 * See these two classes for more.
+	 *
+	 * @stable
 	 */
 	var LocationStrategy = (function () {
 	    function LocationStrategy() {
@@ -2783,25 +3143,35 @@
 	 *
 	 * bootstrap(AppCmp, [
 	 *   ROUTER_PROVIDERS,
-	 *   provide(APP_BASE_HREF, {useValue: '/my/app'})
+	 *   {provide: APP_BASE_HREF, useValue: '/my/app'}
 	 * ]);
 	 * ```
+	 * @stable
 	 */
 	exports.APP_BASE_HREF = new core_1.OpaqueToken('appBaseHref');
 	//# sourceMappingURL=location_strategy.js.map
 
 /***/ },
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var di_1 = __webpack_require__(31);
-	var lang_1 = __webpack_require__(4);
+	var lang_1 = __webpack_require__(3);
+	var di_1 = __webpack_require__(20);
 	/**
 	 * A DI Token representing a unique string id assigned to the application by Angular and used
 	 * primarily for prefixing application attributes and CSS styles when
@@ -2810,16 +3180,18 @@
 	 * If you need to avoid randomly generated value to be used as an application id, you can provide
 	 * a custom value via a DI provider <!-- TODO: provider --> configuring the root {@link Injector}
 	 * using this token.
+	 * @experimental
 	 */
 	exports.APP_ID = new di_1.OpaqueToken('AppId');
 	function _appIdRandomProviderFactory() {
 	    return "" + _randomChar() + _randomChar() + _randomChar();
 	}
+	exports._appIdRandomProviderFactory = _appIdRandomProviderFactory;
 	/**
 	 * Providers that will generate a random APP_ID_TOKEN.
+	 * @experimental
 	 */
-	exports.APP_ID_RANDOM_PROVIDER = 
-	/*@ts2dart_const*/ /* @ts2dart_Provider */ {
+	exports.APP_ID_RANDOM_PROVIDER = {
 	    provide: exports.APP_ID,
 	    useFactory: _appIdRandomProviderFactory,
 	    deps: []
@@ -2829,152 +3201,255 @@
 	}
 	/**
 	 * A function that will be executed when a platform is initialized.
+	 * @experimental
 	 */
-	exports.PLATFORM_INITIALIZER = 
-	/*@ts2dart_const*/ new di_1.OpaqueToken("Platform Initializer");
+	exports.PLATFORM_INITIALIZER = new di_1.OpaqueToken('Platform Initializer');
 	/**
-	 * A function that will be executed when an application is initialized.
+	 * All callbacks provided via this token will be called for every component that is bootstrapped.
+	 * Signature of the callback:
+	 *
+	 * `(componentRef: ComponentRef) => void`.
+	 *
+	 * @experimental
 	 */
-	exports.APP_INITIALIZER = 
-	/*@ts2dart_const*/ new di_1.OpaqueToken("Application Initializer");
+	exports.APP_BOOTSTRAP_LISTENER = new di_1.OpaqueToken('appBootstrapListener');
 	/**
 	 * A token which indicates the root directory of the application
+	 * @experimental
 	 */
-	exports.PACKAGE_ROOT_URL = 
-	/*@ts2dart_const*/ new di_1.OpaqueToken("Application Packages Root URL");
+	exports.PACKAGE_ROOT_URL = new di_1.OpaqueToken('Application Packages Root URL');
 	//# sourceMappingURL=application_tokens.js.map
 
 /***/ },
-/* 60 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var iterable_differs_1 = __webpack_require__(182);
-	var default_iterable_differ_1 = __webpack_require__(102);
-	var keyvalue_differs_1 = __webpack_require__(183);
-	var default_keyvalue_differ_1 = __webpack_require__(181);
-	var default_keyvalue_differ_2 = __webpack_require__(181);
-	exports.DefaultKeyValueDifferFactory = default_keyvalue_differ_2.DefaultKeyValueDifferFactory;
-	exports.KeyValueChangeRecord = default_keyvalue_differ_2.KeyValueChangeRecord;
-	var default_iterable_differ_2 = __webpack_require__(102);
-	exports.DefaultIterableDifferFactory = default_iterable_differ_2.DefaultIterableDifferFactory;
-	exports.CollectionChangeRecord = default_iterable_differ_2.CollectionChangeRecord;
-	var constants_1 = __webpack_require__(61);
-	exports.ChangeDetectionStrategy = constants_1.ChangeDetectionStrategy;
-	exports.CHANGE_DETECTION_STRATEGY_VALUES = constants_1.CHANGE_DETECTION_STRATEGY_VALUES;
-	exports.ChangeDetectorState = constants_1.ChangeDetectorState;
-	exports.CHANGE_DETECTOR_STATE_VALUES = constants_1.CHANGE_DETECTOR_STATE_VALUES;
-	exports.isDefaultChangeDetectionStrategy = constants_1.isDefaultChangeDetectionStrategy;
-	var change_detector_ref_1 = __webpack_require__(384);
-	exports.ChangeDetectorRef = change_detector_ref_1.ChangeDetectorRef;
-	var iterable_differs_2 = __webpack_require__(182);
-	exports.IterableDiffers = iterable_differs_2.IterableDiffers;
-	var keyvalue_differs_2 = __webpack_require__(183);
-	exports.KeyValueDiffers = keyvalue_differs_2.KeyValueDiffers;
-	var default_iterable_differ_3 = __webpack_require__(102);
-	exports.DefaultIterableDiffer = default_iterable_differ_3.DefaultIterableDiffer;
-	var change_detection_util_1 = __webpack_require__(101);
-	exports.WrappedValue = change_detection_util_1.WrappedValue;
-	exports.ValueUnwrapper = change_detection_util_1.ValueUnwrapper;
+	var default_iterable_differ_1 = __webpack_require__(127);
+	var default_keyvalue_differ_1 = __webpack_require__(215);
+	var iterable_differs_1 = __webpack_require__(216);
+	var keyvalue_differs_1 = __webpack_require__(217);
+	var change_detection_util_1 = __webpack_require__(75);
 	exports.SimpleChange = change_detection_util_1.SimpleChange;
+	exports.UNINITIALIZED = change_detection_util_1.UNINITIALIZED;
+	exports.ValueUnwrapper = change_detection_util_1.ValueUnwrapper;
+	exports.WrappedValue = change_detection_util_1.WrappedValue;
 	exports.devModeEqual = change_detection_util_1.devModeEqual;
 	exports.looseIdentical = change_detection_util_1.looseIdentical;
-	exports.uninitialized = change_detection_util_1.uninitialized;
+	var change_detector_ref_1 = __webpack_require__(434);
+	exports.ChangeDetectorRef = change_detector_ref_1.ChangeDetectorRef;
+	var constants_1 = __webpack_require__(76);
+	exports.CHANGE_DETECTION_STRATEGY_VALUES = constants_1.CHANGE_DETECTION_STRATEGY_VALUES;
+	exports.ChangeDetectionStrategy = constants_1.ChangeDetectionStrategy;
+	exports.ChangeDetectorStatus = constants_1.ChangeDetectorStatus;
+	exports.isDefaultChangeDetectionStrategy = constants_1.isDefaultChangeDetectionStrategy;
+	var default_iterable_differ_2 = __webpack_require__(127);
+	exports.CollectionChangeRecord = default_iterable_differ_2.CollectionChangeRecord;
+	exports.DefaultIterableDifferFactory = default_iterable_differ_2.DefaultIterableDifferFactory;
+	var default_iterable_differ_3 = __webpack_require__(127);
+	exports.DefaultIterableDiffer = default_iterable_differ_3.DefaultIterableDiffer;
+	var default_keyvalue_differ_2 = __webpack_require__(215);
+	exports.DefaultKeyValueDifferFactory = default_keyvalue_differ_2.DefaultKeyValueDifferFactory;
+	exports.KeyValueChangeRecord = default_keyvalue_differ_2.KeyValueChangeRecord;
+	var iterable_differs_2 = __webpack_require__(216);
+	exports.IterableDiffers = iterable_differs_2.IterableDiffers;
+	var keyvalue_differs_2 = __webpack_require__(217);
+	exports.KeyValueDiffers = keyvalue_differs_2.KeyValueDiffers;
 	/**
 	 * Structural diffing for `Object`s and `Map`s.
 	 */
-	exports.keyValDiff = 
-	/*@ts2dart_const*/ [new default_keyvalue_differ_1.DefaultKeyValueDifferFactory()];
+	exports.keyValDiff = [new default_keyvalue_differ_1.DefaultKeyValueDifferFactory()];
 	/**
 	 * Structural diffing for `Iterable` types such as `Array`s.
 	 */
-	exports.iterableDiff = 
-	/*@ts2dart_const*/ [new default_iterable_differ_1.DefaultIterableDifferFactory()];
+	exports.iterableDiff = [new default_iterable_differ_1.DefaultIterableDifferFactory()];
 	exports.defaultIterableDiffers = new iterable_differs_1.IterableDiffers(exports.iterableDiff);
 	exports.defaultKeyValueDiffers = new keyvalue_differs_1.KeyValueDiffers(exports.keyValDiff);
 	//# sourceMappingURL=change_detection.js.map
 
 /***/ },
-/* 61 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-	var lang_1 = __webpack_require__(4);
 	/**
-	 * Describes the current state of the change detector.
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
 	 */
-	(function (ChangeDetectorState) {
+	"use strict";
+	var collection_1 = __webpack_require__(12);
+	var lang_1 = __webpack_require__(3);
+	var lang_2 = __webpack_require__(3);
+	exports.looseIdentical = lang_2.looseIdentical;
+	exports.UNINITIALIZED = {
+	    toString: function () { return 'CD_INIT_VALUE'; }
+	};
+	function devModeEqual(a, b) {
+	    if (collection_1.isListLikeIterable(a) && collection_1.isListLikeIterable(b)) {
+	        return collection_1.areIterablesEqual(a, b, devModeEqual);
+	    }
+	    else if (!collection_1.isListLikeIterable(a) && !lang_1.isPrimitive(a) && !collection_1.isListLikeIterable(b) && !lang_1.isPrimitive(b)) {
+	        return true;
+	    }
+	    else {
+	        return lang_1.looseIdentical(a, b);
+	    }
+	}
+	exports.devModeEqual = devModeEqual;
+	/**
+	 * Indicates that the result of a {@link PipeMetadata} transformation has changed even though the
+	 * reference
+	 * has not changed.
+	 *
+	 * The wrapped value will be unwrapped by change detection, and the unwrapped value will be stored.
+	 *
+	 * Example:
+	 *
+	 * ```
+	 * if (this._latestValue === this._latestReturnedValue) {
+	 *    return this._latestReturnedValue;
+	 *  } else {
+	 *    this._latestReturnedValue = this._latestValue;
+	 *    return WrappedValue.wrap(this._latestValue); // this will force update
+	 *  }
+	 * ```
+	 * @stable
+	 */
+	var WrappedValue = (function () {
+	    function WrappedValue(wrapped) {
+	        this.wrapped = wrapped;
+	    }
+	    WrappedValue.wrap = function (value) { return new WrappedValue(value); };
+	    return WrappedValue;
+	}());
+	exports.WrappedValue = WrappedValue;
+	/**
+	 * Helper class for unwrapping WrappedValue s
+	 */
+	var ValueUnwrapper = (function () {
+	    function ValueUnwrapper() {
+	        this.hasWrappedValue = false;
+	    }
+	    ValueUnwrapper.prototype.unwrap = function (value) {
+	        if (value instanceof WrappedValue) {
+	            this.hasWrappedValue = true;
+	            return value.wrapped;
+	        }
+	        return value;
+	    };
+	    ValueUnwrapper.prototype.reset = function () { this.hasWrappedValue = false; };
+	    return ValueUnwrapper;
+	}());
+	exports.ValueUnwrapper = ValueUnwrapper;
+	/**
+	 * Represents a basic change from a previous to a new value.
+	 * @stable
+	 */
+	var SimpleChange = (function () {
+	    function SimpleChange(previousValue, currentValue) {
+	        this.previousValue = previousValue;
+	        this.currentValue = currentValue;
+	    }
 	    /**
-	     * `NeverChecked` means that the change detector has not been checked yet, and
-	     * initialization methods should be called during detection.
+	     * Check whether the new value is the first value assigned.
 	     */
-	    ChangeDetectorState[ChangeDetectorState["NeverChecked"] = 0] = "NeverChecked";
+	    SimpleChange.prototype.isFirstChange = function () { return this.previousValue === exports.UNINITIALIZED; };
+	    return SimpleChange;
+	}());
+	exports.SimpleChange = SimpleChange;
+	//# sourceMappingURL=change_detection_util.js.map
+
+/***/ },
+/* 76 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var lang_1 = __webpack_require__(3);
+	/**
+	 * Describes within the change detector which strategy will be used the next time change
+	 * detection is triggered.
+	 * @stable
+	 */
+	(function (ChangeDetectionStrategy) {
 	    /**
-	     * `CheckedBefore` means that the change detector has successfully completed at least
-	     * one detection previously.
+	     * `OnPush` means that the change detector's mode will be set to `CheckOnce` during hydration.
 	     */
-	    ChangeDetectorState[ChangeDetectorState["CheckedBefore"] = 1] = "CheckedBefore";
+	    ChangeDetectionStrategy[ChangeDetectionStrategy["OnPush"] = 0] = "OnPush";
+	    /**
+	     * `Default` means that the change detector's mode will be set to `CheckAlways` during hydration.
+	     */
+	    ChangeDetectionStrategy[ChangeDetectionStrategy["Default"] = 1] = "Default";
+	})(exports.ChangeDetectionStrategy || (exports.ChangeDetectionStrategy = {}));
+	var ChangeDetectionStrategy = exports.ChangeDetectionStrategy;
+	/**
+	 * Describes the status of the detector.
+	 */
+	(function (ChangeDetectorStatus) {
+	    /**
+	     * `CheckedOnce` means that after calling detectChanges the mode of the change detector
+	     * will become `Checked`.
+	     */
+	    ChangeDetectorStatus[ChangeDetectorStatus["CheckOnce"] = 0] = "CheckOnce";
+	    /**
+	     * `Checked` means that the change detector should be skipped until its mode changes to
+	     * `CheckOnce`.
+	     */
+	    ChangeDetectorStatus[ChangeDetectorStatus["Checked"] = 1] = "Checked";
+	    /**
+	     * `CheckAlways` means that after calling detectChanges the mode of the change detector
+	     * will remain `CheckAlways`.
+	     */
+	    ChangeDetectorStatus[ChangeDetectorStatus["CheckAlways"] = 2] = "CheckAlways";
+	    /**
+	     * `Detached` means that the change detector sub tree is not a part of the main tree and
+	     * should be skipped.
+	     */
+	    ChangeDetectorStatus[ChangeDetectorStatus["Detached"] = 3] = "Detached";
 	    /**
 	     * `Errored` means that the change detector encountered an error checking a binding
 	     * or calling a directive lifecycle method and is now in an inconsistent state. Change
 	     * detectors in this state will no longer detect changes.
 	     */
-	    ChangeDetectorState[ChangeDetectorState["Errored"] = 2] = "Errored";
-	})(exports.ChangeDetectorState || (exports.ChangeDetectorState = {}));
-	var ChangeDetectorState = exports.ChangeDetectorState;
-	/**
-	 * Describes within the change detector which strategy will be used the next time change
-	 * detection is triggered.
-	 */
-	(function (ChangeDetectionStrategy) {
+	    ChangeDetectorStatus[ChangeDetectorStatus["Errored"] = 4] = "Errored";
 	    /**
-	     * `CheckedOnce` means that after calling detectChanges the mode of the change detector
-	     * will become `Checked`.
+	     * `Destroyed` means that the change detector is destroyed.
 	     */
-	    ChangeDetectionStrategy[ChangeDetectionStrategy["CheckOnce"] = 0] = "CheckOnce";
-	    /**
-	     * `Checked` means that the change detector should be skipped until its mode changes to
-	     * `CheckOnce`.
-	     */
-	    ChangeDetectionStrategy[ChangeDetectionStrategy["Checked"] = 1] = "Checked";
-	    /**
-	     * `CheckAlways` means that after calling detectChanges the mode of the change detector
-	     * will remain `CheckAlways`.
-	     */
-	    ChangeDetectionStrategy[ChangeDetectionStrategy["CheckAlways"] = 2] = "CheckAlways";
-	    /**
-	     * `Detached` means that the change detector sub tree is not a part of the main tree and
-	     * should be skipped.
-	     */
-	    ChangeDetectionStrategy[ChangeDetectionStrategy["Detached"] = 3] = "Detached";
-	    /**
-	     * `OnPush` means that the change detector's mode will be set to `CheckOnce` during hydration.
-	     */
-	    ChangeDetectionStrategy[ChangeDetectionStrategy["OnPush"] = 4] = "OnPush";
-	    /**
-	     * `Default` means that the change detector's mode will be set to `CheckAlways` during hydration.
-	     */
-	    ChangeDetectionStrategy[ChangeDetectionStrategy["Default"] = 5] = "Default";
-	})(exports.ChangeDetectionStrategy || (exports.ChangeDetectionStrategy = {}));
-	var ChangeDetectionStrategy = exports.ChangeDetectionStrategy;
+	    ChangeDetectorStatus[ChangeDetectorStatus["Destroyed"] = 5] = "Destroyed";
+	})(exports.ChangeDetectorStatus || (exports.ChangeDetectorStatus = {}));
+	var ChangeDetectorStatus = exports.ChangeDetectorStatus;
 	/**
 	 * List of possible {@link ChangeDetectionStrategy} values.
 	 */
 	exports.CHANGE_DETECTION_STRATEGY_VALUES = [
-	    ChangeDetectionStrategy.CheckOnce,
-	    ChangeDetectionStrategy.Checked,
-	    ChangeDetectionStrategy.CheckAlways,
-	    ChangeDetectionStrategy.Detached,
 	    ChangeDetectionStrategy.OnPush,
-	    ChangeDetectionStrategy.Default
+	    ChangeDetectionStrategy.Default,
 	];
 	/**
-	 * List of possible {@link ChangeDetectorState} values.
+	 * List of possible {@link ChangeDetectorStatus} values.
 	 */
-	exports.CHANGE_DETECTOR_STATE_VALUES = [
-	    ChangeDetectorState.NeverChecked,
-	    ChangeDetectorState.CheckedBefore,
-	    ChangeDetectorState.Errored
+	exports.CHANGE_DETECTOR_STATUS_VALUES = [
+	    ChangeDetectorStatus.CheckOnce,
+	    ChangeDetectorStatus.Checked,
+	    ChangeDetectorStatus.CheckAlways,
+	    ChangeDetectorStatus.Detached,
+	    ChangeDetectorStatus.Errored,
+	    ChangeDetectorStatus.Destroyed,
 	];
 	function isDefaultChangeDetectionStrategy(changeDetectionStrategy) {
 	    return lang_1.isBlank(changeDetectionStrategy) ||
@@ -2984,11 +3459,47 @@
 	//# sourceMappingURL=constants.js.map
 
 /***/ },
-/* 62 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(4);
+	var decorators_1 = __webpack_require__(47);
+	var lang_1 = __webpack_require__(3);
+	var Console = (function () {
+	    function Console() {
+	    }
+	    Console.prototype.log = function (message) { lang_1.print(message); };
+	    // Note: for reporting errors use `DOM.logError()` as it is platform specific
+	    Console.prototype.warn = function (message) { lang_1.warn(message); };
+	    /** @nocollapse */
+	    Console.decorators = [
+	        { type: decorators_1.Injectable },
+	    ];
+	    return Console;
+	}());
+	exports.Console = Console;
+	//# sourceMappingURL=console.js.map
+
+/***/ },
+/* 78 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var lang_1 = __webpack_require__(3);
 	/**
 	 * Allows to refer to references which are not yet defined.
 	 *
@@ -2999,6 +3510,7 @@
 	 *
 	 * ### Example
 	 * {@example core/di/ts/forward_ref/forward_ref.ts region='forward_ref'}
+	 * @experimental
 	 */
 	function forwardRef(forwardRefFn) {
 	    forwardRefFn.__forward_ref__ = forwardRef;
@@ -3020,6 +3532,7 @@
 	 * ```
 	 *
 	 * See: {@link forwardRef}
+	 * @experimental
 	 */
 	function resolveForwardRef(type) {
 	    if (lang_1.isFunction(type) && type.hasOwnProperty('__forward_ref__') &&
@@ -3034,9 +3547,152 @@
 	//# sourceMappingURL=forward_ref.js.map
 
 /***/ },
-/* 63 */
+/* 79 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var _THROW_IF_NOT_FOUND = new Object();
+	exports.THROW_IF_NOT_FOUND = _THROW_IF_NOT_FOUND;
+	var _NullInjector = (function () {
+	    function _NullInjector() {
+	    }
+	    _NullInjector.prototype.get = function (token, notFoundValue) {
+	        if (notFoundValue === void 0) { notFoundValue = _THROW_IF_NOT_FOUND; }
+	        if (notFoundValue === _THROW_IF_NOT_FOUND) {
+	            throw new exceptions_1.BaseException("No provider for " + lang_1.stringify(token) + "!");
+	        }
+	        return notFoundValue;
+	    };
+	    return _NullInjector;
+	}());
+	/**
+	 * @stable
+	 */
+	var Injector = (function () {
+	    function Injector() {
+	    }
+	    /**
+	     * Retrieves an instance from the injector based on the provided token.
+	     * If not found:
+	     * - Throws {@link NoProviderError} if no `notFoundValue` that is not equal to
+	     * Injector.THROW_IF_NOT_FOUND is given
+	     * - Returns the `notFoundValue` otherwise
+	     *
+	     * ### Example ([live demo](http://plnkr.co/edit/HeXSHg?p=preview))
+	     *
+	     * ```typescript
+	     * var injector = ReflectiveInjector.resolveAndCreate([
+	     *   {provide: "validToken", useValue: "Value"}
+	     * ]);
+	     * expect(injector.get("validToken")).toEqual("Value");
+	     * expect(() => injector.get("invalidToken")).toThrowError();
+	     * ```
+	     *
+	     * `Injector` returns itself when given `Injector` as a token.
+	     *
+	     * ```typescript
+	     * var injector = ReflectiveInjector.resolveAndCreate([]);
+	     * expect(injector.get(Injector)).toBe(injector);
+	     * ```
+	     */
+	    Injector.prototype.get = function (token, notFoundValue) { return exceptions_1.unimplemented(); };
+	    Injector.THROW_IF_NOT_FOUND = _THROW_IF_NOT_FOUND;
+	    Injector.NULL = new _NullInjector();
+	    return Injector;
+	}());
+	exports.Injector = Injector;
+	//# sourceMappingURL=injector.js.map
+
+/***/ },
+/* 80 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	/**
+	 * @stable
+	 */
+	var NoComponentFactoryError = (function (_super) {
+	    __extends(NoComponentFactoryError, _super);
+	    function NoComponentFactoryError(component) {
+	        _super.call(this, "No component factory found for " + lang_1.stringify(component));
+	        this.component = component;
+	    }
+	    return NoComponentFactoryError;
+	}(exceptions_1.BaseException));
+	exports.NoComponentFactoryError = NoComponentFactoryError;
+	var _NullComponentFactoryResolver = (function () {
+	    function _NullComponentFactoryResolver() {
+	    }
+	    _NullComponentFactoryResolver.prototype.resolveComponentFactory = function (component) {
+	        throw new NoComponentFactoryError(component);
+	    };
+	    return _NullComponentFactoryResolver;
+	}());
+	/**
+	 * @stable
+	 */
+	var ComponentFactoryResolver = (function () {
+	    function ComponentFactoryResolver() {
+	    }
+	    ComponentFactoryResolver.NULL = new _NullComponentFactoryResolver();
+	    return ComponentFactoryResolver;
+	}());
+	exports.ComponentFactoryResolver = ComponentFactoryResolver;
+	var CodegenComponentFactoryResolver = (function () {
+	    function CodegenComponentFactoryResolver(factories, _parent) {
+	        this._parent = _parent;
+	        this._factories = new Map();
+	        for (var i = 0; i < factories.length; i++) {
+	            var factory = factories[i];
+	            this._factories.set(factory.componentType, factory);
+	        }
+	    }
+	    CodegenComponentFactoryResolver.prototype.resolveComponentFactory = function (component) {
+	        var result = this._factories.get(component);
+	        if (!result) {
+	            result = this._parent.resolveComponentFactory(component);
+	        }
+	        return result;
+	    };
+	    return CodegenComponentFactoryResolver;
+	}());
+	exports.CodegenComponentFactoryResolver = CodegenComponentFactoryResolver;
+	//# sourceMappingURL=component_factory_resolver.js.map
+
+/***/ },
+/* 81 */
 /***/ function(module, exports) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	(function (ViewType) {
 	    // A view that contains the host element with bound component directive.
@@ -3053,21 +3709,28 @@
 	//# sourceMappingURL=view_type.js.map
 
 /***/ },
-/* 64 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var security_1 = __webpack_require__(200);
-	var lang_1 = __webpack_require__(4);
-	var collection_1 = __webpack_require__(11);
-	var exceptions_1 = __webpack_require__(9);
-	var element_1 = __webpack_require__(109);
-	var exceptions_2 = __webpack_require__(110);
-	var change_detection_1 = __webpack_require__(60);
-	var api_1 = __webpack_require__(113);
-	var application_tokens_1 = __webpack_require__(59);
-	var decorators_1 = __webpack_require__(32);
-	var change_detection_util_1 = __webpack_require__(101);
+	var application_tokens_1 = __webpack_require__(73);
+	var change_detection_1 = __webpack_require__(74);
+	var change_detection_util_1 = __webpack_require__(75);
+	var decorators_1 = __webpack_require__(47);
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var api_1 = __webpack_require__(138);
+	var security_1 = __webpack_require__(239);
+	var element_1 = __webpack_require__(134);
+	var exceptions_2 = __webpack_require__(135);
 	var ViewUtils = (function () {
 	    function ViewUtils(_renderer, _appId, sanitizer) {
 	        this._renderer = _renderer;
@@ -3078,16 +3741,19 @@
 	    /**
 	     * Used by the generated code
 	     */
-	    ViewUtils.prototype.createRenderComponentType = function (templateUrl, slotCount, encapsulation, styles) {
-	        return new api_1.RenderComponentType(this._appId + "-" + this._nextCompTypeId++, templateUrl, slotCount, encapsulation, styles);
+	    // TODO (matsko): add typing for the animation function
+	    ViewUtils.prototype.createRenderComponentType = function (templateUrl, slotCount, encapsulation, styles, animations) {
+	        return new api_1.RenderComponentType(this._appId + "-" + this._nextCompTypeId++, templateUrl, slotCount, encapsulation, styles, animations);
 	    };
 	    /** @internal */
 	    ViewUtils.prototype.renderComponent = function (renderComponentType) {
 	        return this._renderer.renderComponent(renderComponentType);
 	    };
+	    /** @nocollapse */
 	    ViewUtils.decorators = [
 	        { type: decorators_1.Injectable },
 	    ];
+	    /** @nocollapse */
 	    ViewUtils.ctorParameters = [
 	        { type: api_1.RootRenderer, },
 	        { type: undefined, decorators: [{ type: decorators_1.Inject, args: [application_tokens_1.APP_ID,] },] },
@@ -3155,8 +3821,7 @@
 	                c3 + _toStringWithNull(a4) + c4 + _toStringWithNull(a5) + c5;
 	        case 6:
 	            return c0 + _toStringWithNull(a1) + c1 + _toStringWithNull(a2) + c2 + _toStringWithNull(a3) +
-	                c3 + _toStringWithNull(a4) + c4 + _toStringWithNull(a5) + c5 + _toStringWithNull(a6) +
-	                c6;
+	                c3 + _toStringWithNull(a4) + c4 + _toStringWithNull(a5) + c5 + _toStringWithNull(a6) + c6;
 	        case 7:
 	            return c0 + _toStringWithNull(a1) + c1 + _toStringWithNull(a2) + c2 + _toStringWithNull(a3) +
 	                c3 + _toStringWithNull(a4) + c4 + _toStringWithNull(a5) + c5 + _toStringWithNull(a6) +
@@ -3168,8 +3833,7 @@
 	        case 9:
 	            return c0 + _toStringWithNull(a1) + c1 + _toStringWithNull(a2) + c2 + _toStringWithNull(a3) +
 	                c3 + _toStringWithNull(a4) + c4 + _toStringWithNull(a5) + c5 + _toStringWithNull(a6) +
-	                c6 + _toStringWithNull(a7) + c7 + _toStringWithNull(a8) + c8 + _toStringWithNull(a9) +
-	                c9;
+	                c6 + _toStringWithNull(a7) + c7 + _toStringWithNull(a8) + c8 + _toStringWithNull(a9) + c9;
 	        default:
 	            throw new exceptions_1.BaseException("Does not support more than 9 expressions");
 	    }
@@ -3190,32 +3854,6 @@
 	    }
 	}
 	exports.checkBinding = checkBinding;
-	function arrayLooseIdentical(a, b) {
-	    if (a.length != b.length)
-	        return false;
-	    for (var i = 0; i < a.length; ++i) {
-	        if (!lang_1.looseIdentical(a[i], b[i]))
-	            return false;
-	    }
-	    return true;
-	}
-	exports.arrayLooseIdentical = arrayLooseIdentical;
-	function mapLooseIdentical(m1, m2) {
-	    var k1 = collection_1.StringMapWrapper.keys(m1);
-	    var k2 = collection_1.StringMapWrapper.keys(m2);
-	    if (k1.length != k2.length) {
-	        return false;
-	    }
-	    var key;
-	    for (var i = 0; i < k1.length; i++) {
-	        key = k1[i];
-	        if (!lang_1.looseIdentical(m1[key], m2[key])) {
-	            return false;
-	        }
-	    }
-	    return true;
-	}
-	exports.mapLooseIdentical = mapLooseIdentical;
 	function castByValue(input, value) {
 	    return input;
 	}
@@ -3224,8 +3862,7 @@
 	exports.EMPTY_MAP = {};
 	function pureProxy1(fn) {
 	    var result;
-	    var v0;
-	    v0 = change_detection_util_1.uninitialized;
+	    var v0 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0) {
 	        if (!lang_1.looseIdentical(v0, p0)) {
 	            v0 = p0;
@@ -3237,8 +3874,8 @@
 	exports.pureProxy1 = pureProxy1;
 	function pureProxy2(fn) {
 	    var result;
-	    var v0, v1;
-	    v0 = v1 = change_detection_util_1.uninitialized;
+	    var v0 = change_detection_util_1.UNINITIALIZED;
+	    var v1 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0, p1) {
 	        if (!lang_1.looseIdentical(v0, p0) || !lang_1.looseIdentical(v1, p1)) {
 	            v0 = p0;
@@ -3251,8 +3888,9 @@
 	exports.pureProxy2 = pureProxy2;
 	function pureProxy3(fn) {
 	    var result;
-	    var v0, v1, v2;
-	    v0 = v1 = v2 = change_detection_util_1.uninitialized;
+	    var v0 = change_detection_util_1.UNINITIALIZED;
+	    var v1 = change_detection_util_1.UNINITIALIZED;
+	    var v2 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0, p1, p2) {
 	        if (!lang_1.looseIdentical(v0, p0) || !lang_1.looseIdentical(v1, p1) || !lang_1.looseIdentical(v2, p2)) {
 	            v0 = p0;
@@ -3267,7 +3905,7 @@
 	function pureProxy4(fn) {
 	    var result;
 	    var v0, v1, v2, v3;
-	    v0 = v1 = v2 = v3 = change_detection_util_1.uninitialized;
+	    v0 = v1 = v2 = v3 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0, p1, p2, p3) {
 	        if (!lang_1.looseIdentical(v0, p0) || !lang_1.looseIdentical(v1, p1) || !lang_1.looseIdentical(v2, p2) ||
 	            !lang_1.looseIdentical(v3, p3)) {
@@ -3284,7 +3922,7 @@
 	function pureProxy5(fn) {
 	    var result;
 	    var v0, v1, v2, v3, v4;
-	    v0 = v1 = v2 = v3 = v4 = change_detection_util_1.uninitialized;
+	    v0 = v1 = v2 = v3 = v4 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0, p1, p2, p3, p4) {
 	        if (!lang_1.looseIdentical(v0, p0) || !lang_1.looseIdentical(v1, p1) || !lang_1.looseIdentical(v2, p2) ||
 	            !lang_1.looseIdentical(v3, p3) || !lang_1.looseIdentical(v4, p4)) {
@@ -3302,7 +3940,7 @@
 	function pureProxy6(fn) {
 	    var result;
 	    var v0, v1, v2, v3, v4, v5;
-	    v0 = v1 = v2 = v3 = v4 = v5 = change_detection_util_1.uninitialized;
+	    v0 = v1 = v2 = v3 = v4 = v5 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0, p1, p2, p3, p4, p5) {
 	        if (!lang_1.looseIdentical(v0, p0) || !lang_1.looseIdentical(v1, p1) || !lang_1.looseIdentical(v2, p2) ||
 	            !lang_1.looseIdentical(v3, p3) || !lang_1.looseIdentical(v4, p4) || !lang_1.looseIdentical(v5, p5)) {
@@ -3321,7 +3959,7 @@
 	function pureProxy7(fn) {
 	    var result;
 	    var v0, v1, v2, v3, v4, v5, v6;
-	    v0 = v1 = v2 = v3 = v4 = v5 = v6 = change_detection_util_1.uninitialized;
+	    v0 = v1 = v2 = v3 = v4 = v5 = v6 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0, p1, p2, p3, p4, p5, p6) {
 	        if (!lang_1.looseIdentical(v0, p0) || !lang_1.looseIdentical(v1, p1) || !lang_1.looseIdentical(v2, p2) ||
 	            !lang_1.looseIdentical(v3, p3) || !lang_1.looseIdentical(v4, p4) || !lang_1.looseIdentical(v5, p5) ||
@@ -3342,7 +3980,7 @@
 	function pureProxy8(fn) {
 	    var result;
 	    var v0, v1, v2, v3, v4, v5, v6, v7;
-	    v0 = v1 = v2 = v3 = v4 = v5 = v6 = v7 = change_detection_util_1.uninitialized;
+	    v0 = v1 = v2 = v3 = v4 = v5 = v6 = v7 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0, p1, p2, p3, p4, p5, p6, p7) {
 	        if (!lang_1.looseIdentical(v0, p0) || !lang_1.looseIdentical(v1, p1) || !lang_1.looseIdentical(v2, p2) ||
 	            !lang_1.looseIdentical(v3, p3) || !lang_1.looseIdentical(v4, p4) || !lang_1.looseIdentical(v5, p5) ||
@@ -3364,7 +4002,7 @@
 	function pureProxy9(fn) {
 	    var result;
 	    var v0, v1, v2, v3, v4, v5, v6, v7, v8;
-	    v0 = v1 = v2 = v3 = v4 = v5 = v6 = v7 = v8 = change_detection_util_1.uninitialized;
+	    v0 = v1 = v2 = v3 = v4 = v5 = v6 = v7 = v8 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0, p1, p2, p3, p4, p5, p6, p7, p8) {
 	        if (!lang_1.looseIdentical(v0, p0) || !lang_1.looseIdentical(v1, p1) || !lang_1.looseIdentical(v2, p2) ||
 	            !lang_1.looseIdentical(v3, p3) || !lang_1.looseIdentical(v4, p4) || !lang_1.looseIdentical(v5, p5) ||
@@ -3387,7 +4025,7 @@
 	function pureProxy10(fn) {
 	    var result;
 	    var v0, v1, v2, v3, v4, v5, v6, v7, v8, v9;
-	    v0 = v1 = v2 = v3 = v4 = v5 = v6 = v7 = v8 = v9 = change_detection_util_1.uninitialized;
+	    v0 = v1 = v2 = v3 = v4 = v5 = v6 = v7 = v8 = v9 = change_detection_util_1.UNINITIALIZED;
 	    return function (p0, p1, p2, p3, p4, p5, p6, p7, p8, p9) {
 	        if (!lang_1.looseIdentical(v0, p0) || !lang_1.looseIdentical(v1, p1) || !lang_1.looseIdentical(v2, p2) ||
 	            !lang_1.looseIdentical(v3, p3) || !lang_1.looseIdentical(v4, p4) || !lang_1.looseIdentical(v5, p5) ||
@@ -3412,16 +4050,22 @@
 	//# sourceMappingURL=view_utils.js.map
 
 /***/ },
-/* 65 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var impl = __webpack_require__(396);
-	// Change exports to const once https://github.com/angular/ts2dart/issues/150
+	var wtf_impl_1 = __webpack_require__(447);
 	/**
 	 * True if WTF is enabled.
 	 */
-	exports.wtfEnabled = impl.detectWTF();
+	exports.wtfEnabled = wtf_impl_1.detectWTF();
 	function noopScope(arg0, arg1) {
 	    return null;
 	}
@@ -3453,8 +4097,9 @@
 	 * needs to be fixed before the app should be profiled. Add try-finally only when you expect that
 	 * an exception is expected during normal execution while profiling.
 	 *
+	 * @experimental
 	 */
-	exports.wtfCreateScope = exports.wtfEnabled ? impl.createScope : function (signature, flags) { return noopScope; };
+	exports.wtfCreateScope = exports.wtfEnabled ? wtf_impl_1.createScope : function (signature, flags) { return noopScope; };
 	/**
 	 * Used to mark end of Scope.
 	 *
@@ -3462,8 +4107,9 @@
 	 * - `returnValue` (optional) to be passed to the WTF.
 	 *
 	 * Returns the `returnValue for easy chaining.
+	 * @experimental
 	 */
-	exports.wtfLeave = exports.wtfEnabled ? impl.leave : function (s, r) { return r; };
+	exports.wtfLeave = exports.wtfEnabled ? wtf_impl_1.leave : function (s, r) { return r; };
 	/**
 	 * Used to mark Async start. Async are similar to scope but they don't have to be strictly nested.
 	 * The return value is used in the call to [endAsync]. Async ranges only work if WTF has been
@@ -3475,41 +4121,31 @@
 	 *          wtfEndTimeRange(s);
 	 *        });
 	 *     }
+	 * @experimental
 	 */
-	exports.wtfStartTimeRange = exports.wtfEnabled ? impl.startTimeRange : function (rangeType, action) { return null; };
+	exports.wtfStartTimeRange = exports.wtfEnabled ? wtf_impl_1.startTimeRange : function (rangeType, action) { return null; };
 	/**
 	 * Ends a async time range operation.
 	 * [range] is the return value from [wtfStartTimeRange] Async ranges only work if WTF has been
 	 * enabled.
+	 * @experimental
 	 */
-	exports.wtfEndTimeRange = exports.wtfEnabled ? impl.endTimeRange : function (r) {
-	    return null;
-	};
+	exports.wtfEndTimeRange = exports.wtfEnabled ? wtf_impl_1.endTimeRange : function (r) { return null; };
 	//# sourceMappingURL=profile.js.map
 
 /***/ },
-/* 66 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-	var reflector_1 = __webpack_require__(199);
-	var reflector_2 = __webpack_require__(199);
-	exports.Reflector = reflector_2.Reflector;
-	exports.ReflectionInfo = reflector_2.ReflectionInfo;
-	var reflection_capabilities_1 = __webpack_require__(198);
 	/**
-	 * The {@link Reflector} used internally in Angular to access metadata
-	 * about symbols.
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
 	 */
-	exports.reflector = new reflector_1.Reflector(new reflection_capabilities_1.ReflectionCapabilities());
-	//# sourceMappingURL=reflection.js.map
-
-/***/ },
-/* 67 */
-/***/ function(module, exports, __webpack_require__) {
-
 	"use strict";
-	var lang_1 = __webpack_require__(4);
+	var lang_1 = __webpack_require__(3);
 	var _nextClassId = 0;
 	function extractAnnotation(annotation) {
 	    if (lang_1.isFunction(annotation) && annotation.hasOwnProperty('annotation')) {
@@ -3528,11 +4164,11 @@
 	    }
 	    else if (fnOrArray instanceof Array) {
 	        var annotations = fnOrArray;
-	        var fn = fnOrArray[fnOrArray.length - 1];
+	        var annoLength = annotations.length - 1;
+	        var fn = fnOrArray[annoLength];
 	        if (!lang_1.isFunction(fn)) {
 	            throw new Error("Last position of Class method array must be Function in key " + key + " was '" + lang_1.stringify(fn) + "'");
 	        }
-	        var annoLength = annotations.length - 1;
 	        if (annoLength != fn.length) {
 	            throw new Error("Number of annotations (" + annoLength + ") does not match number of arguments (" + fn.length + ") in the function: " + lang_1.stringify(fn));
 	        }
@@ -3640,6 +4276,7 @@
 	 *   }
 	 * });
 	 * ```
+	 * @stable
 	 */
 	function Class(clsDef) {
 	    var constructor = applyParams(clsDef.hasOwnProperty('constructor') ? clsDef.constructor : undefined, 'constructor');
@@ -3686,8 +4323,7 @@
 	            var chainAnnotation = lang_1.isFunction(this) && this.annotations instanceof Array ? this.annotations : [];
 	            chainAnnotation.push(annotationInstance);
 	            var TypeDecorator = function TypeDecorator(cls) {
-	                var annotations = Reflect.getOwnMetadata('annotations', cls);
-	                annotations = annotations || [];
+	                var annotations = Reflect.getOwnMetadata('annotations', cls) || [];
 	                annotations.push(annotationInstance);
 	                Reflect.defineMetadata('annotations', annotations, cls);
 	                return cls;
@@ -3720,8 +4356,7 @@
 	            return ParamDecorator;
 	        }
 	        function ParamDecorator(cls, unusedKey, index) {
-	            var parameters = Reflect.getMetadata('parameters', cls);
-	            parameters = parameters || [];
+	            var parameters = Reflect.getMetadata('parameters', cls) || [];
 	            // there might be gaps if some in between parameters do not have annotations.
 	            // we pad with nulls.
 	            while (parameters.length <= index) {
@@ -3752,8 +4387,7 @@
 	        }
 	        else {
 	            return function PropDecorator(target, name) {
-	                var meta = Reflect.getOwnMetadata('propMetadata', target.constructor);
-	                meta = meta || {};
+	                var meta = Reflect.getOwnMetadata('propMetadata', target.constructor) || {};
 	                meta[name] = meta[name] || [];
 	                meta[name].unshift(decoratorInstance);
 	                Reflect.defineMetadata('propMetadata', meta, target.constructor);
@@ -3768,20 +4402,34 @@
 	//# sourceMappingURL=decorators.js.map
 
 /***/ },
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
+	var collection_1 = __webpack_require__(18);
 	var lang_1 = __webpack_require__(5);
-	var collection_1 = __webpack_require__(14);
-	var _WHEN_DEFAULT = new Object();
+	var _CASE_DEFAULT = new Object();
+	// TODO: remove when fully deprecated
+	var _warned = false;
 	var SwitchView = (function () {
 	    function SwitchView(_viewContainerRef, _templateRef) {
 	        this._viewContainerRef = _viewContainerRef;
@@ -3795,7 +4443,7 @@
 	var NgSwitch = (function () {
 	    function NgSwitch() {
 	        this._useDefault = false;
-	        this._valueViews = new collection_1.Map();
+	        this._valueViews = new Map();
 	        this._activeViews = [];
 	    }
 	    Object.defineProperty(NgSwitch.prototype, "ngSwitch", {
@@ -3807,7 +4455,7 @@
 	            var views = this._valueViews.get(value);
 	            if (lang_1.isBlank(views)) {
 	                this._useDefault = true;
-	                views = lang_1.normalizeBlank(this._valueViews.get(_WHEN_DEFAULT));
+	                views = lang_1.normalizeBlank(this._valueViews.get(_CASE_DEFAULT));
 	            }
 	            this._activateViews(views);
 	            this._switchValue = value;
@@ -3816,14 +4464,14 @@
 	        configurable: true
 	    });
 	    /** @internal */
-	    NgSwitch.prototype._onWhenValueChanged = function (oldWhen, newWhen, view) {
-	        this._deregisterView(oldWhen, view);
-	        this._registerView(newWhen, view);
-	        if (oldWhen === this._switchValue) {
+	    NgSwitch.prototype._onCaseValueChanged = function (oldCase, newCase, view) {
+	        this._deregisterView(oldCase, view);
+	        this._registerView(newCase, view);
+	        if (oldCase === this._switchValue) {
 	            view.destroy();
 	            collection_1.ListWrapper.remove(this._activeViews, view);
 	        }
-	        else if (newWhen === this._switchValue) {
+	        else if (newCase === this._switchValue) {
 	            if (this._useDefault) {
 	                this._useDefault = false;
 	                this._emptyAllActiveViews();
@@ -3834,7 +4482,7 @@
 	        // Switch to default when there is no more active ViewContainers
 	        if (this._activeViews.length === 0 && !this._useDefault) {
 	            this._useDefault = true;
-	            this._activateViews(this._valueViews.get(_WHEN_DEFAULT));
+	            this._activateViews(this._valueViews.get(_CASE_DEFAULT));
 	        }
 	    };
 	    /** @internal */
@@ -3866,8 +4514,8 @@
 	    };
 	    /** @internal */
 	    NgSwitch.prototype._deregisterView = function (value, view) {
-	        // `_WHEN_DEFAULT` is used a marker for non-registered whens
-	        if (value === _WHEN_DEFAULT)
+	        // `_CASE_DEFAULT` is used a marker for non-registered cases
+	        if (value === _CASE_DEFAULT)
 	            return;
 	        var views = this._valueViews.get(value);
 	        if (views.length == 1) {
@@ -3877,46 +4525,72 @@
 	            collection_1.ListWrapper.remove(views, view);
 	        }
 	    };
+	    /** @nocollapse */
 	    NgSwitch.decorators = [
-	        { type: core_1.Directive, args: [{ selector: '[ngSwitch]', inputs: ['ngSwitch'] },] },
+	        { type: core_1.Directive, args: [{ selector: '[ngSwitch]' },] },
 	    ];
+	    /** @nocollapse */
+	    NgSwitch.propDecorators = {
+	        'ngSwitch': [{ type: core_1.Input },],
+	    };
 	    return NgSwitch;
 	}());
 	exports.NgSwitch = NgSwitch;
-	var NgSwitchWhen = (function () {
-	    function NgSwitchWhen(viewContainer, templateRef, ngSwitch) {
-	        // `_WHEN_DEFAULT` is used as a marker for a not yet initialized value
+	var NgSwitchCase = (function () {
+	    function NgSwitchCase(viewContainer, templateRef, ngSwitch) {
+	        // `_CASE_DEFAULT` is used as a marker for a not yet initialized value
 	        /** @internal */
-	        this._value = _WHEN_DEFAULT;
+	        this._value = _CASE_DEFAULT;
 	        this._switch = ngSwitch;
 	        this._view = new SwitchView(viewContainer, templateRef);
 	    }
-	    Object.defineProperty(NgSwitchWhen.prototype, "ngSwitchWhen", {
+	    Object.defineProperty(NgSwitchCase.prototype, "ngSwitchCase", {
 	        set: function (value) {
-	            this._switch._onWhenValueChanged(this._value, value, this._view);
+	            this._switch._onCaseValueChanged(this._value, value, this._view);
 	            this._value = value;
 	        },
 	        enumerable: true,
 	        configurable: true
 	    });
-	    NgSwitchWhen.decorators = [
-	        { type: core_1.Directive, args: [{ selector: '[ngSwitchWhen]', inputs: ['ngSwitchWhen'] },] },
+	    Object.defineProperty(NgSwitchCase.prototype, "ngSwitchWhen", {
+	        set: function (value) {
+	            if (!_warned) {
+	                _warned = true;
+	                console.warn('*ngSwitchWhen is deprecated and will be removed. Use *ngSwitchCase instead');
+	            }
+	            this._switch._onCaseValueChanged(this._value, value, this._view);
+	            this._value = value;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    /** @nocollapse */
+	    NgSwitchCase.decorators = [
+	        { type: core_1.Directive, args: [{ selector: '[ngSwitchCase],[ngSwitchWhen]' },] },
 	    ];
-	    NgSwitchWhen.ctorParameters = [
+	    /** @nocollapse */
+	    NgSwitchCase.ctorParameters = [
 	        { type: core_1.ViewContainerRef, },
 	        { type: core_1.TemplateRef, },
 	        { type: NgSwitch, decorators: [{ type: core_1.Host },] },
 	    ];
-	    return NgSwitchWhen;
+	    /** @nocollapse */
+	    NgSwitchCase.propDecorators = {
+	        'ngSwitchCase': [{ type: core_1.Input },],
+	        'ngSwitchWhen': [{ type: core_1.Input },],
+	    };
+	    return NgSwitchCase;
 	}());
-	exports.NgSwitchWhen = NgSwitchWhen;
+	exports.NgSwitchCase = NgSwitchCase;
 	var NgSwitchDefault = (function () {
 	    function NgSwitchDefault(viewContainer, templateRef, sswitch) {
-	        sswitch._registerView(_WHEN_DEFAULT, new SwitchView(viewContainer, templateRef));
+	        sswitch._registerView(_CASE_DEFAULT, new SwitchView(viewContainer, templateRef));
 	    }
+	    /** @nocollapse */
 	    NgSwitchDefault.decorators = [
 	        { type: core_1.Directive, args: [{ selector: '[ngSwitchDefault]' },] },
 	    ];
+	    /** @nocollapse */
 	    NgSwitchDefault.ctorParameters = [
 	        { type: core_1.ViewContainerRef, },
 	        { type: core_1.TemplateRef, },
@@ -3928,70 +4602,25 @@
 	//# sourceMappingURL=ng_switch.js.map
 
 /***/ },
-/* 75 */
-/***/ function(module, exports) {
-
-	"use strict";
-	var PromiseCompleter = (function () {
-	    function PromiseCompleter() {
-	        var _this = this;
-	        this.promise = new Promise(function (res, rej) {
-	            _this.resolve = res;
-	            _this.reject = rej;
-	        });
-	    }
-	    return PromiseCompleter;
-	}());
-	exports.PromiseCompleter = PromiseCompleter;
-	var PromiseWrapper = (function () {
-	    function PromiseWrapper() {
-	    }
-	    PromiseWrapper.resolve = function (obj) { return Promise.resolve(obj); };
-	    PromiseWrapper.reject = function (obj, _) { return Promise.reject(obj); };
-	    // Note: We can't rename this method into `catch`, as this is not a valid
-	    // method name in Dart.
-	    PromiseWrapper.catchError = function (promise, onError) {
-	        return promise.catch(onError);
-	    };
-	    PromiseWrapper.all = function (promises) {
-	        if (promises.length == 0)
-	            return Promise.resolve([]);
-	        return Promise.all(promises);
-	    };
-	    PromiseWrapper.then = function (promise, success, rejection) {
-	        return promise.then(success, rejection);
-	    };
-	    PromiseWrapper.wrap = function (computation) {
-	        return new Promise(function (res, rej) {
-	            try {
-	                res(computation());
-	            }
-	            catch (e) {
-	                rej(e);
-	            }
-	        });
-	    };
-	    PromiseWrapper.scheduleMicrotask = function (computation) {
-	        PromiseWrapper.then(PromiseWrapper.resolve(null), computation, function (_) { });
-	    };
-	    PromiseWrapper.isPromise = function (obj) { return obj instanceof Promise; };
-	    PromiseWrapper.completer = function () { return new PromiseCompleter(); };
-	    return PromiseWrapper;
-	}());
-	exports.PromiseWrapper = PromiseWrapper;
-	//# sourceMappingURL=promise.js.map
-
-/***/ },
-/* 76 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
+	var exceptions_1 = __webpack_require__(30);
 	var lang_1 = __webpack_require__(5);
-	var exceptions_1 = __webpack_require__(23);
 	/**
 	 * Base class for control directives.
 	 *
 	 * Only used internally in the forms module.
+	 *
+	 * @experimental
 	 */
 	var AbstractControlDirective = (function () {
 	    function AbstractControlDirective() {
@@ -4049,9 +4678,16 @@
 	//# sourceMappingURL=abstract_control_directive.js.map
 
 /***/ },
-/* 77 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -4059,11 +4695,10 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var core_1 = __webpack_require__(1);
-	var control_container_1 = __webpack_require__(38);
-	var shared_1 = __webpack_require__(28);
-	var validators_1 = __webpack_require__(20);
-	exports.controlGroupProvider = 
-	/*@ts2dart_const*/ /* @ts2dart_Provider */ {
+	var validators_1 = __webpack_require__(23);
+	var control_container_1 = __webpack_require__(44);
+	var shared_1 = __webpack_require__(36);
+	exports.controlGroupProvider = {
 	    provide: control_container_1.ControlContainer,
 	    useExisting: core_1.forwardRef(function () { return NgControlGroup; })
 	};
@@ -4111,6 +4746,7 @@
 	        enumerable: true,
 	        configurable: true
 	    });
+	    /** @nocollapse */
 	    NgControlGroup.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[ngControlGroup]',
@@ -4119,10 +4755,11 @@
 	                    exportAs: 'ngForm'
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    NgControlGroup.ctorParameters = [
 	        { type: control_container_1.ControlContainer, decorators: [{ type: core_1.Host }, { type: core_1.SkipSelf },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
 	    ];
 	    return NgControlGroup;
 	}(control_container_1.ControlContainer));
@@ -4130,9 +4767,16 @@
 	//# sourceMappingURL=ng_control_group.js.map
 
 /***/ },
-/* 78 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -4140,14 +4784,13 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var core_1 = __webpack_require__(1);
-	var async_1 = __webpack_require__(18);
-	var control_container_1 = __webpack_require__(38);
-	var ng_control_1 = __webpack_require__(26);
-	var control_value_accessor_1 = __webpack_require__(19);
-	var shared_1 = __webpack_require__(28);
-	var validators_1 = __webpack_require__(20);
-	exports.controlNameBinding = 
-	/*@ts2dart_const*/ /* @ts2dart_Provider */ {
+	var async_1 = __webpack_require__(35);
+	var validators_1 = __webpack_require__(23);
+	var control_container_1 = __webpack_require__(44);
+	var control_value_accessor_1 = __webpack_require__(21);
+	var ng_control_1 = __webpack_require__(31);
+	var shared_1 = __webpack_require__(36);
+	exports.controlNameBinding = {
 	    provide: ng_control_1.NgControl,
 	    useExisting: core_1.forwardRef(function () { return NgControlName; })
 	};
@@ -4176,7 +4819,7 @@
 	    NgControlName.prototype.ngOnDestroy = function () { this.formDirective.removeControl(this); };
 	    NgControlName.prototype.viewToModelUpdate = function (newValue) {
 	        this.viewModel = newValue;
-	        async_1.ObservableWrapper.callEmit(this.update, newValue);
+	        this.update.emit(newValue);
 	    };
 	    Object.defineProperty(NgControlName.prototype, "path", {
 	        get: function () { return shared_1.controlPath(this.name, this._parent); },
@@ -4194,7 +4837,9 @@
 	        configurable: true
 	    });
 	    Object.defineProperty(NgControlName.prototype, "asyncValidator", {
-	        get: function () { return shared_1.composeAsyncValidators(this._asyncValidators); },
+	        get: function () {
+	            return shared_1.composeAsyncValidators(this._asyncValidators);
+	        },
 	        enumerable: true,
 	        configurable: true
 	    });
@@ -4203,20 +4848,22 @@
 	        enumerable: true,
 	        configurable: true
 	    });
+	    /** @nocollapse */
 	    NgControlName.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[ngControl]',
-	                    bindings: [exports.controlNameBinding],
+	                    providers: [exports.controlNameBinding],
 	                    inputs: ['name: ngControl', 'model: ngModel'],
 	                    outputs: ['update: ngModelChange'],
 	                    exportAs: 'ngForm'
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    NgControlName.ctorParameters = [
 	        { type: control_container_1.ControlContainer, decorators: [{ type: core_1.Host }, { type: core_1.SkipSelf },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [control_value_accessor_1.NG_VALUE_ACCESSOR,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [control_value_accessor_1.NG_VALUE_ACCESSOR,] },] },
 	    ];
 	    return NgControlName;
 	}(ng_control_1.NgControl));
@@ -4224,13 +4871,20 @@
 	//# sourceMappingURL=ng_control_name.js.map
 
 /***/ },
-/* 79 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
-	var ng_control_1 = __webpack_require__(26);
 	var lang_1 = __webpack_require__(5);
+	var ng_control_1 = __webpack_require__(31);
 	var NgControlStatus = (function () {
 	    function NgControlStatus(cd) {
 	        this._cd = cd;
@@ -4277,6 +4931,7 @@
 	        enumerable: true,
 	        configurable: true
 	    });
+	    /** @nocollapse */
 	    NgControlStatus.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[ngControl],[ngModel],[ngFormControl]',
@@ -4290,6 +4945,7 @@
 	                    }
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    NgControlStatus.ctorParameters = [
 	        { type: ng_control_1.NgControl, decorators: [{ type: core_1.Self },] },
 	    ];
@@ -4299,9 +4955,16 @@
 	//# sourceMappingURL=ng_control_status.js.map
 
 /***/ },
-/* 80 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -4309,22 +4972,40 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var core_1 = __webpack_require__(1);
-	var async_1 = __webpack_require__(18);
-	var collection_1 = __webpack_require__(14);
+	var async_1 = __webpack_require__(35);
+	var collection_1 = __webpack_require__(18);
 	var lang_1 = __webpack_require__(5);
-	var control_container_1 = __webpack_require__(38);
-	var model_1 = __webpack_require__(52);
-	var shared_1 = __webpack_require__(28);
-	var validators_1 = __webpack_require__(20);
-	exports.formDirectiveProvider = 
-	/*@ts2dart_const*/ { provide: control_container_1.ControlContainer, useExisting: core_1.forwardRef(function () { return NgForm; }) };
+	var model_1 = __webpack_require__(64);
+	var validators_1 = __webpack_require__(23);
+	var control_container_1 = __webpack_require__(44);
+	var shared_1 = __webpack_require__(36);
+	exports.formDirectiveProvider = {
+	    provide: control_container_1.ControlContainer,
+	    useExisting: core_1.forwardRef(function () { return NgForm; })
+	};
+	var _formWarningDisplayed = false;
+	var resolvedPromise = Promise.resolve(null);
 	var NgForm = (function (_super) {
 	    __extends(NgForm, _super);
 	    function NgForm(validators, asyncValidators) {
 	        _super.call(this);
+	        this._submitted = false;
 	        this.ngSubmit = new async_1.EventEmitter();
+	        this._displayWarning();
 	        this.form = new model_1.ControlGroup({}, null, shared_1.composeValidators(validators), shared_1.composeAsyncValidators(asyncValidators));
 	    }
+	    NgForm.prototype._displayWarning = function () {
+	        // TODO(kara): Update this when the new forms module becomes the default
+	        if (!_formWarningDisplayed) {
+	            _formWarningDisplayed = true;
+	            console.warn("\n      *It looks like you're using the old forms module. This will be opt-in in the next RC, and\n      will eventually be removed in favor of the new forms module. For more information, see:\n      https://docs.google.com/document/d/1RIezQqE4aEhBRmArIAS1mRIZtWFf6JxN_7B4meyWK0Y/preview\n    ");
+	        }
+	    };
+	    Object.defineProperty(NgForm.prototype, "submitted", {
+	        get: function () { return this._submitted; },
+	        enumerable: true,
+	        configurable: true
+	    });
 	    Object.defineProperty(NgForm.prototype, "formDirective", {
 	        get: function () { return this; },
 	        enumerable: true,
@@ -4347,42 +5028,40 @@
 	    });
 	    NgForm.prototype.addControl = function (dir) {
 	        var _this = this;
-	        async_1.PromiseWrapper.scheduleMicrotask(function () {
+	        resolvedPromise.then(function () {
 	            var container = _this._findContainer(dir.path);
 	            var ctrl = new model_1.Control();
 	            shared_1.setUpControl(ctrl, dir);
-	            container.addControl(dir.name, ctrl);
+	            container.registerControl(dir.name, ctrl);
 	            ctrl.updateValueAndValidity({ emitEvent: false });
 	        });
 	    };
 	    NgForm.prototype.getControl = function (dir) { return this.form.find(dir.path); };
 	    NgForm.prototype.removeControl = function (dir) {
 	        var _this = this;
-	        async_1.PromiseWrapper.scheduleMicrotask(function () {
+	        resolvedPromise.then(function () {
 	            var container = _this._findContainer(dir.path);
 	            if (lang_1.isPresent(container)) {
 	                container.removeControl(dir.name);
-	                container.updateValueAndValidity({ emitEvent: false });
 	            }
 	        });
 	    };
 	    NgForm.prototype.addControlGroup = function (dir) {
 	        var _this = this;
-	        async_1.PromiseWrapper.scheduleMicrotask(function () {
+	        resolvedPromise.then(function () {
 	            var container = _this._findContainer(dir.path);
 	            var group = new model_1.ControlGroup({});
 	            shared_1.setUpControlGroup(group, dir);
-	            container.addControl(dir.name, group);
+	            container.registerControl(dir.name, group);
 	            group.updateValueAndValidity({ emitEvent: false });
 	        });
 	    };
 	    NgForm.prototype.removeControlGroup = function (dir) {
 	        var _this = this;
-	        async_1.PromiseWrapper.scheduleMicrotask(function () {
+	        resolvedPromise.then(function () {
 	            var container = _this._findContainer(dir.path);
 	            if (lang_1.isPresent(container)) {
 	                container.removeControl(dir.name);
-	                container.updateValueAndValidity({ emitEvent: false });
 	            }
 	        });
 	    };
@@ -4391,13 +5070,14 @@
 	    };
 	    NgForm.prototype.updateModel = function (dir, value) {
 	        var _this = this;
-	        async_1.PromiseWrapper.scheduleMicrotask(function () {
+	        resolvedPromise.then(function () {
 	            var ctrl = _this.form.find(dir.path);
 	            ctrl.updateValue(value);
 	        });
 	    };
 	    NgForm.prototype.onSubmit = function () {
-	        async_1.ObservableWrapper.callEmit(this.ngSubmit, null);
+	        this._submitted = true;
+	        this.ngSubmit.emit(null);
 	        return false;
 	    };
 	    /** @internal */
@@ -4405,10 +5085,11 @@
 	        path.pop();
 	        return collection_1.ListWrapper.isEmpty(path) ? this.form : this.form.find(path);
 	    };
+	    /** @nocollapse */
 	    NgForm.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: 'form:not([ngNoForm]):not([ngFormModel]),ngForm,[ngForm]',
-	                    bindings: [exports.formDirectiveProvider],
+	                    providers: [exports.formDirectiveProvider],
 	                    host: {
 	                        '(submit)': 'onSubmit()',
 	                    },
@@ -4416,9 +5097,10 @@
 	                    exportAs: 'ngForm'
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    NgForm.ctorParameters = [
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
 	    ];
 	    return NgForm;
 	}(control_container_1.ControlContainer));
@@ -4426,9 +5108,16 @@
 	//# sourceMappingURL=ng_form.js.map
 
 /***/ },
-/* 81 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -4436,14 +5125,13 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var core_1 = __webpack_require__(1);
-	var collection_1 = __webpack_require__(14);
-	var async_1 = __webpack_require__(18);
-	var ng_control_1 = __webpack_require__(26);
-	var validators_1 = __webpack_require__(20);
-	var control_value_accessor_1 = __webpack_require__(19);
-	var shared_1 = __webpack_require__(28);
-	exports.formControlBinding = 
-	/*@ts2dart_const*/ /* @ts2dart_Provider */ {
+	var async_1 = __webpack_require__(35);
+	var collection_1 = __webpack_require__(18);
+	var validators_1 = __webpack_require__(23);
+	var control_value_accessor_1 = __webpack_require__(21);
+	var ng_control_1 = __webpack_require__(31);
+	var shared_1 = __webpack_require__(36);
+	exports.formControlBinding = {
 	    provide: ng_control_1.NgControl,
 	    useExisting: core_1.forwardRef(function () { return NgFormControl; })
 	};
@@ -4477,7 +5165,9 @@
 	        configurable: true
 	    });
 	    Object.defineProperty(NgFormControl.prototype, "asyncValidator", {
-	        get: function () { return shared_1.composeAsyncValidators(this._asyncValidators); },
+	        get: function () {
+	            return shared_1.composeAsyncValidators(this._asyncValidators);
+	        },
 	        enumerable: true,
 	        configurable: true
 	    });
@@ -4488,24 +5178,26 @@
 	    });
 	    NgFormControl.prototype.viewToModelUpdate = function (newValue) {
 	        this.viewModel = newValue;
-	        async_1.ObservableWrapper.callEmit(this.update, newValue);
+	        this.update.emit(newValue);
 	    };
 	    NgFormControl.prototype._isControlChanged = function (changes) {
-	        return collection_1.StringMapWrapper.contains(changes, "form");
+	        return collection_1.StringMapWrapper.contains(changes, 'form');
 	    };
+	    /** @nocollapse */
 	    NgFormControl.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[ngFormControl]',
-	                    bindings: [exports.formControlBinding],
+	                    providers: [exports.formControlBinding],
 	                    inputs: ['form: ngFormControl', 'model: ngModel'],
 	                    outputs: ['update: ngModelChange'],
 	                    exportAs: 'ngForm'
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    NgFormControl.ctorParameters = [
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [control_value_accessor_1.NG_VALUE_ACCESSOR,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [control_value_accessor_1.NG_VALUE_ACCESSOR,] },] },
 	    ];
 	    return NgFormControl;
 	}(ng_control_1.NgControl));
@@ -4513,9 +5205,16 @@
 	//# sourceMappingURL=ng_form_control.js.map
 
 /***/ },
-/* 82 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -4523,31 +5222,40 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var core_1 = __webpack_require__(1);
+	var async_1 = __webpack_require__(35);
+	var collection_1 = __webpack_require__(18);
+	var exceptions_1 = __webpack_require__(30);
 	var lang_1 = __webpack_require__(5);
-	var collection_1 = __webpack_require__(14);
-	var exceptions_1 = __webpack_require__(23);
-	var async_1 = __webpack_require__(18);
-	var control_container_1 = __webpack_require__(38);
-	var shared_1 = __webpack_require__(28);
-	var validators_1 = __webpack_require__(20);
-	exports.formDirectiveProvider = 
-	/*@ts2dart_const*/ /* @ts2dart_Provider */ {
+	var validators_1 = __webpack_require__(23);
+	var control_container_1 = __webpack_require__(44);
+	var shared_1 = __webpack_require__(36);
+	exports.formDirectiveProvider = {
 	    provide: control_container_1.ControlContainer,
 	    useExisting: core_1.forwardRef(function () { return NgFormModel; })
 	};
+	var _formModelWarningDisplayed = false;
 	var NgFormModel = (function (_super) {
 	    __extends(NgFormModel, _super);
 	    function NgFormModel(_validators, _asyncValidators) {
 	        _super.call(this);
 	        this._validators = _validators;
 	        this._asyncValidators = _asyncValidators;
+	        this._submitted = false;
 	        this.form = null;
 	        this.directives = [];
 	        this.ngSubmit = new async_1.EventEmitter();
+	        this._displayWarning();
 	    }
+	    NgFormModel.prototype._displayWarning = function () {
+	        // TODO(kara): Update this when the new forms module becomes the default
+	        if (!_formModelWarningDisplayed) {
+	            _formModelWarningDisplayed = true;
+	            console.warn("\n      *It looks like you're using the old forms module. This will be opt-in in the next RC, and\n      will eventually be removed in favor of the new forms module. For more information, see:\n      https://docs.google.com/document/d/1RIezQqE4aEhBRmArIAS1mRIZtWFf6JxN_7B4meyWK0Y/preview\n    ");
+	        }
+	    };
 	    NgFormModel.prototype.ngOnChanges = function (changes) {
 	        this._checkFormPresent();
-	        if (collection_1.StringMapWrapper.contains(changes, "form")) {
+	        if (collection_1.StringMapWrapper.contains(changes, 'form')) {
 	            var sync = shared_1.composeValidators(this._validators);
 	            this.form.validator = validators_1.Validators.compose([this.form.validator, sync]);
 	            var async = shared_1.composeAsyncValidators(this._asyncValidators);
@@ -4556,6 +5264,11 @@
 	        }
 	        this._updateDomValue();
 	    };
+	    Object.defineProperty(NgFormModel.prototype, "submitted", {
+	        get: function () { return this._submitted; },
+	        enumerable: true,
+	        configurable: true
+	    });
 	    Object.defineProperty(NgFormModel.prototype, "formDirective", {
 	        get: function () { return this; },
 	        enumerable: true,
@@ -4593,7 +5306,8 @@
 	        ctrl.updateValue(value);
 	    };
 	    NgFormModel.prototype.onSubmit = function () {
-	        async_1.ObservableWrapper.callEmit(this.ngSubmit, null);
+	        this._submitted = true;
+	        this.ngSubmit.emit(null);
 	        return false;
 	    };
 	    /** @internal */
@@ -4609,19 +5323,21 @@
 	            throw new exceptions_1.BaseException("ngFormModel expects a form. Please pass one in. Example: <form [ngFormModel]=\"myCoolForm\">");
 	        }
 	    };
+	    /** @nocollapse */
 	    NgFormModel.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[ngFormModel]',
-	                    bindings: [exports.formDirectiveProvider],
+	                    providers: [exports.formDirectiveProvider],
 	                    inputs: ['form: ngFormModel'],
 	                    host: { '(submit)': 'onSubmit()' },
 	                    outputs: ['ngSubmit'],
 	                    exportAs: 'ngForm'
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    NgFormModel.ctorParameters = [
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
 	    ];
 	    return NgFormModel;
 	}(control_container_1.ControlContainer));
@@ -4629,9 +5345,16 @@
 	//# sourceMappingURL=ng_form_model.js.map
 
 /***/ },
-/* 83 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -4639,14 +5362,13 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var core_1 = __webpack_require__(1);
-	var async_1 = __webpack_require__(18);
-	var control_value_accessor_1 = __webpack_require__(19);
-	var ng_control_1 = __webpack_require__(26);
-	var model_1 = __webpack_require__(52);
-	var validators_1 = __webpack_require__(20);
-	var shared_1 = __webpack_require__(28);
-	exports.formControlBinding = 
-	/*@ts2dart_const*/ /* @ts2dart_Provider */ {
+	var async_1 = __webpack_require__(35);
+	var model_1 = __webpack_require__(64);
+	var validators_1 = __webpack_require__(23);
+	var control_value_accessor_1 = __webpack_require__(21);
+	var ng_control_1 = __webpack_require__(31);
+	var shared_1 = __webpack_require__(36);
+	exports.formControlBinding = {
 	    provide: ng_control_1.NgControl,
 	    useExisting: core_1.forwardRef(function () { return NgModel; })
 	};
@@ -4690,27 +5412,31 @@
 	        configurable: true
 	    });
 	    Object.defineProperty(NgModel.prototype, "asyncValidator", {
-	        get: function () { return shared_1.composeAsyncValidators(this._asyncValidators); },
+	        get: function () {
+	            return shared_1.composeAsyncValidators(this._asyncValidators);
+	        },
 	        enumerable: true,
 	        configurable: true
 	    });
 	    NgModel.prototype.viewToModelUpdate = function (newValue) {
 	        this.viewModel = newValue;
-	        async_1.ObservableWrapper.callEmit(this.update, newValue);
+	        this.update.emit(newValue);
 	    };
+	    /** @nocollapse */
 	    NgModel.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[ngModel]:not([ngControl]):not([ngFormControl])',
-	                    bindings: [exports.formControlBinding],
+	                    providers: [exports.formControlBinding],
 	                    inputs: ['model: ngModel'],
 	                    outputs: ['update: ngModelChange'],
 	                    exportAs: 'ngForm'
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    NgModel.ctorParameters = [
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [control_value_accessor_1.NG_VALUE_ACCESSOR,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [validators_1.NG_ASYNC_VALIDATORS,] },] },
+	        { type: Array, decorators: [{ type: core_1.Optional }, { type: core_1.Self }, { type: core_1.Inject, args: [control_value_accessor_1.NG_VALUE_ACCESSOR,] },] },
 	    ];
 	    return NgModel;
 	}(ng_control_1.NgControl));
@@ -4718,13 +5444,20 @@
 	//# sourceMappingURL=ng_model.js.map
 
 /***/ },
-/* 84 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var control_value_accessor_1 = __webpack_require__(19);
+	var control_value_accessor_1 = __webpack_require__(21);
 	exports.NUMBER_VALUE_ACCESSOR = {
 	    provide: control_value_accessor_1.NG_VALUE_ACCESSOR,
 	    useExisting: core_1.forwardRef(function () { return NumberValueAccessor; }),
@@ -4738,12 +5471,15 @@
 	        this.onTouched = function () { };
 	    }
 	    NumberValueAccessor.prototype.writeValue = function (value) {
-	        this._renderer.setElementProperty(this._elementRef.nativeElement, 'value', value);
+	        // The value needs to be normalized for IE9, otherwise it is set to 'null' when null
+	        var normalizedValue = lang_1.isBlank(value) ? '' : value;
+	        this._renderer.setElementProperty(this._elementRef.nativeElement, 'value', normalizedValue);
 	    };
 	    NumberValueAccessor.prototype.registerOnChange = function (fn) {
 	        this.onChange = function (value) { fn(value == '' ? null : lang_1.NumberWrapper.parseFloat(value)); };
 	    };
 	    NumberValueAccessor.prototype.registerOnTouched = function (fn) { this.onTouched = fn; };
+	    /** @nocollapse */
 	    NumberValueAccessor.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: 'input[type=number][ngControl],input[type=number][ngFormControl],input[type=number][ngModel]',
@@ -4752,9 +5488,10 @@
 	                        '(input)': 'onChange($event.target.value)',
 	                        '(blur)': 'onTouched()'
 	                    },
-	                    bindings: [exports.NUMBER_VALUE_ACCESSOR]
+	                    providers: [exports.NUMBER_VALUE_ACCESSOR]
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    NumberValueAccessor.ctorParameters = [
 	        { type: core_1.Renderer, },
 	        { type: core_1.ElementRef, },
@@ -4765,22 +5502,216 @@
 	//# sourceMappingURL=number_value_accessor.js.map
 
 /***/ },
-/* 85 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var core_1 = __webpack_require__(1);
+	var collection_1 = __webpack_require__(18);
+	var lang_1 = __webpack_require__(5);
+	var control_value_accessor_1 = __webpack_require__(21);
+	exports.SELECT_MULTIPLE_VALUE_ACCESSOR = {
+	    provide: control_value_accessor_1.NG_VALUE_ACCESSOR,
+	    useExisting: core_1.forwardRef(function () { return SelectMultipleControlValueAccessor; }),
+	    multi: true
+	};
+	function _buildValueString(id, value) {
+	    if (lang_1.isBlank(id))
+	        return "" + value;
+	    if (lang_1.isString(value))
+	        value = "'" + value + "'";
+	    if (!lang_1.isPrimitive(value))
+	        value = 'Object';
+	    return lang_1.StringWrapper.slice(id + ": " + value, 0, 50);
+	}
+	function _extractId(valueString) {
+	    return valueString.split(':')[0];
+	}
+	/** Mock interface for HTMLCollection */
+	var HTMLCollection = (function () {
+	    function HTMLCollection() {
+	    }
+	    return HTMLCollection;
+	}());
+	var SelectMultipleControlValueAccessor = (function () {
+	    function SelectMultipleControlValueAccessor() {
+	        /** @internal */
+	        this._optionMap = new Map();
+	        /** @internal */
+	        this._idCounter = 0;
+	        this.onChange = function (_) { };
+	        this.onTouched = function () { };
+	    }
+	    SelectMultipleControlValueAccessor.prototype.writeValue = function (value) {
+	        var _this = this;
+	        this.value = value;
+	        if (value == null)
+	            return;
+	        var values = value;
+	        // convert values to ids
+	        var ids = values.map(function (v) { return _this._getOptionId(v); });
+	        this._optionMap.forEach(function (opt, o) { opt._setSelected(ids.indexOf(o.toString()) > -1); });
+	    };
+	    SelectMultipleControlValueAccessor.prototype.registerOnChange = function (fn) {
+	        var _this = this;
+	        this.onChange = function (_) {
+	            var selected = [];
+	            if (_.hasOwnProperty('selectedOptions')) {
+	                var options = _.selectedOptions;
+	                for (var i = 0; i < options.length; i++) {
+	                    var opt = options.item(i);
+	                    var val = _this._getOptionValue(opt.value);
+	                    selected.push(val);
+	                }
+	            }
+	            else {
+	                var options = _.options;
+	                for (var i = 0; i < options.length; i++) {
+	                    var opt = options.item(i);
+	                    if (opt.selected) {
+	                        var val = _this._getOptionValue(opt.value);
+	                        selected.push(val);
+	                    }
+	                }
+	            }
+	            fn(selected);
+	        };
+	    };
+	    SelectMultipleControlValueAccessor.prototype.registerOnTouched = function (fn) { this.onTouched = fn; };
+	    /** @internal */
+	    SelectMultipleControlValueAccessor.prototype._registerOption = function (value) {
+	        var id = (this._idCounter++).toString();
+	        this._optionMap.set(id, value);
+	        return id;
+	    };
+	    /** @internal */
+	    SelectMultipleControlValueAccessor.prototype._getOptionId = function (value) {
+	        for (var _i = 0, _a = collection_1.MapWrapper.keys(this._optionMap); _i < _a.length; _i++) {
+	            var id = _a[_i];
+	            if (lang_1.looseIdentical(this._optionMap.get(id)._value, value))
+	                return id;
+	        }
+	        return null;
+	    };
+	    /** @internal */
+	    SelectMultipleControlValueAccessor.prototype._getOptionValue = function (valueString) {
+	        var opt = this._optionMap.get(_extractId(valueString));
+	        return lang_1.isPresent(opt) ? opt._value : valueString;
+	    };
+	    /** @nocollapse */
+	    SelectMultipleControlValueAccessor.decorators = [
+	        { type: core_1.Directive, args: [{
+	                    selector: 'select[multiple][ngControl],select[multiple][ngFormControl],select[multiple][ngModel]',
+	                    host: { '(change)': 'onChange($event.target)', '(blur)': 'onTouched()' },
+	                    providers: [exports.SELECT_MULTIPLE_VALUE_ACCESSOR]
+	                },] },
+	    ];
+	    /** @nocollapse */
+	    SelectMultipleControlValueAccessor.ctorParameters = [];
+	    return SelectMultipleControlValueAccessor;
+	}());
+	exports.SelectMultipleControlValueAccessor = SelectMultipleControlValueAccessor;
+	var NgSelectMultipleOption = (function () {
+	    function NgSelectMultipleOption(_element, _renderer, _select) {
+	        this._element = _element;
+	        this._renderer = _renderer;
+	        this._select = _select;
+	        if (lang_1.isPresent(this._select)) {
+	            this.id = this._select._registerOption(this);
+	        }
+	    }
+	    Object.defineProperty(NgSelectMultipleOption.prototype, "ngValue", {
+	        set: function (value) {
+	            if (this._select == null)
+	                return;
+	            this._value = value;
+	            this._setElementValue(_buildValueString(this.id, value));
+	            this._select.writeValue(this._select.value);
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(NgSelectMultipleOption.prototype, "value", {
+	        set: function (value) {
+	            if (lang_1.isPresent(this._select)) {
+	                this._value = value;
+	                this._setElementValue(_buildValueString(this.id, value));
+	                this._select.writeValue(this._select.value);
+	            }
+	            else {
+	                this._setElementValue(value);
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    /** @internal */
+	    NgSelectMultipleOption.prototype._setElementValue = function (value) {
+	        this._renderer.setElementProperty(this._element.nativeElement, 'value', value);
+	    };
+	    /** @internal */
+	    NgSelectMultipleOption.prototype._setSelected = function (selected) {
+	        this._renderer.setElementProperty(this._element.nativeElement, 'selected', selected);
+	    };
+	    NgSelectMultipleOption.prototype.ngOnDestroy = function () {
+	        if (lang_1.isPresent(this._select)) {
+	            this._select._optionMap.delete(this.id);
+	            this._select.writeValue(this._select.value);
+	        }
+	    };
+	    /** @nocollapse */
+	    NgSelectMultipleOption.decorators = [
+	        { type: core_1.Directive, args: [{ selector: 'option' },] },
+	    ];
+	    /** @nocollapse */
+	    NgSelectMultipleOption.ctorParameters = [
+	        { type: core_1.ElementRef, },
+	        { type: core_1.Renderer, },
+	        { type: SelectMultipleControlValueAccessor, decorators: [{ type: core_1.Optional }, { type: core_1.Host },] },
+	    ];
+	    /** @nocollapse */
+	    NgSelectMultipleOption.propDecorators = {
+	        'ngValue': [{ type: core_1.Input, args: ['ngValue',] },],
+	        'value': [{ type: core_1.Input, args: ['value',] },],
+	    };
+	    return NgSelectMultipleOption;
+	}());
+	exports.NgSelectMultipleOption = NgSelectMultipleOption;
+	exports.SELECT_DIRECTIVES = [SelectMultipleControlValueAccessor, NgSelectMultipleOption];
+	//# sourceMappingURL=select_multiple_control_value_accessor.js.map
+
+/***/ },
+/* 107 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var validators_1 = __webpack_require__(20);
-	var REQUIRED = validators_1.Validators.required;
+	var validators_1 = __webpack_require__(23);
+	exports.REQUIRED = validators_1.Validators.required;
 	exports.REQUIRED_VALIDATOR = {
 	    provide: validators_1.NG_VALIDATORS,
-	    useValue: REQUIRED,
+	    useValue: exports.REQUIRED,
 	    multi: true
 	};
 	var RequiredValidator = (function () {
 	    function RequiredValidator() {
 	    }
+	    /** @nocollapse */
 	    RequiredValidator.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[required][ngControl],[required][ngFormControl],[required][ngModel]',
@@ -4807,14 +5738,16 @@
 	        this._validator = validators_1.Validators.minLength(lang_1.NumberWrapper.parseInt(minLength, 10));
 	    }
 	    MinLengthValidator.prototype.validate = function (c) { return this._validator(c); };
+	    /** @nocollapse */
 	    MinLengthValidator.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[minlength][ngControl],[minlength][ngFormControl],[minlength][ngModel]',
 	                    providers: [exports.MIN_LENGTH_VALIDATOR]
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    MinLengthValidator.ctorParameters = [
-	        { type: undefined, decorators: [{ type: core_1.Attribute, args: ["minlength",] },] },
+	        { type: undefined, decorators: [{ type: core_1.Attribute, args: ['minlength',] },] },
 	    ];
 	    return MinLengthValidator;
 	}());
@@ -4836,30 +5769,20 @@
 	        this._validator = validators_1.Validators.maxLength(lang_1.NumberWrapper.parseInt(maxLength, 10));
 	    }
 	    MaxLengthValidator.prototype.validate = function (c) { return this._validator(c); };
+	    /** @nocollapse */
 	    MaxLengthValidator.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[maxlength][ngControl],[maxlength][ngFormControl],[maxlength][ngModel]',
 	                    providers: [exports.MAX_LENGTH_VALIDATOR]
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    MaxLengthValidator.ctorParameters = [
-	        { type: undefined, decorators: [{ type: core_1.Attribute, args: ["maxlength",] },] },
+	        { type: undefined, decorators: [{ type: core_1.Attribute, args: ['maxlength',] },] },
 	    ];
 	    return MaxLengthValidator;
 	}());
 	exports.MaxLengthValidator = MaxLengthValidator;
-	/**
-	 * A Directive that adds the `pattern` validator to any controls marked with the
-	 * `pattern` attribute, via the {@link NG_VALIDATORS} binding. Uses attribute value
-	 * as the regex to validate Control value against.  Follows pattern attribute
-	 * semantics; i.e. regex must match entire Control value.
-	 *
-	 * ### Example
-	 *
-	 * ```
-	 * <input [ngControl]="fullName" pattern="[a-zA-Z ]*">
-	 * ```
-	 */
 	exports.PATTERN_VALIDATOR = {
 	    provide: validators_1.NG_VALIDATORS,
 	    useExisting: core_1.forwardRef(function () { return PatternValidator; }),
@@ -4870,14 +5793,16 @@
 	        this._validator = validators_1.Validators.pattern(pattern);
 	    }
 	    PatternValidator.prototype.validate = function (c) { return this._validator(c); };
+	    /** @nocollapse */
 	    PatternValidator.decorators = [
 	        { type: core_1.Directive, args: [{
 	                    selector: '[pattern][ngControl],[pattern][ngFormControl],[pattern][ngModel]',
 	                    providers: [exports.PATTERN_VALIDATOR]
 	                },] },
 	    ];
+	    /** @nocollapse */
 	    PatternValidator.ctorParameters = [
-	        { type: undefined, decorators: [{ type: core_1.Attribute, args: ["pattern",] },] },
+	        { type: undefined, decorators: [{ type: core_1.Attribute, args: ['pattern',] },] },
 	    ];
 	    return PatternValidator;
 	}());
@@ -4885,29 +5810,80 @@
 	//# sourceMappingURL=validators.js.map
 
 /***/ },
-/* 86 */
+/* 108 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * @experimental
+	 */
+	var NgLocalization = (function () {
+	    function NgLocalization() {
+	    }
+	    return NgLocalization;
+	}());
+	exports.NgLocalization = NgLocalization;
+	/**
+	 * Returns the plural category for a given value.
+	 * - "=value" when the case exists,
+	 * - the plural category otherwise
+	 *
+	 * @internal
+	 */
+	function getPluralCategory(value, cases, ngLocalization) {
+	    var nbCase = "=" + value;
+	    return cases.indexOf(nbCase) > -1 ? nbCase : ngLocalization.getPluralCategory(value);
+	}
+	exports.getPluralCategory = getPluralCategory;
+	//# sourceMappingURL=localization.js.map
+
+/***/ },
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
-	var async_1 = __webpack_require__(18);
-	var location_strategy_1 = __webpack_require__(53);
+	var location_strategy_1 = __webpack_require__(65);
 	var Location = (function () {
 	    function Location(platformStrategy) {
 	        var _this = this;
-	        this.platformStrategy = platformStrategy;
 	        /** @internal */
-	        this._subject = new async_1.EventEmitter();
-	        var browserBaseHref = this.platformStrategy.getBaseHref();
+	        this._subject = new core_1.EventEmitter();
+	        this._platformStrategy = platformStrategy;
+	        var browserBaseHref = this._platformStrategy.getBaseHref();
 	        this._baseHref = Location.stripTrailingSlash(_stripIndexHtml(browserBaseHref));
-	        this.platformStrategy.onPopState(function (ev) {
-	            async_1.ObservableWrapper.callEmit(_this._subject, { 'url': _this.path(), 'pop': true, 'type': ev.type });
-	        });
+	        this._platformStrategy.onPopState(function (ev) { _this._subject.emit({ 'url': _this.path(true), 'pop': true, 'type': ev.type }); });
 	    }
 	    /**
 	     * Returns the normalized URL path.
 	     */
-	    Location.prototype.path = function () { return this.normalize(this.platformStrategy.path()); };
+	    // TODO: vsavkin. Remove the boolean flag and always include hash once the deprecated router is
+	    // removed.
+	    Location.prototype.path = function (includeHash) {
+	        if (includeHash === void 0) { includeHash = false; }
+	        return this.normalize(this._platformStrategy.path(includeHash));
+	    };
+	    /**
+	     * Normalizes the given path and compares to the current normalized path.
+	     */
+	    Location.prototype.isCurrentPathEqualTo = function (path, query) {
+	        if (query === void 0) { query = ''; }
+	        return this.path() == this.normalize(path + Location.normalizeQueryParams(query));
+	    };
 	    /**
 	     * Given a string representing a URL, returns the normalized URL path without leading or
 	     * trailing slashes
@@ -4925,7 +5901,7 @@
 	        if (url.length > 0 && !url.startsWith('/')) {
 	            url = '/' + url;
 	        }
-	        return this.platformStrategy.prepareExternalUrl(url);
+	        return this._platformStrategy.prepareExternalUrl(url);
 	    };
 	    // TODO: rename this method to pushState
 	    /**
@@ -4934,7 +5910,7 @@
 	     */
 	    Location.prototype.go = function (path, query) {
 	        if (query === void 0) { query = ''; }
-	        this.platformStrategy.pushState(null, '', path, query);
+	        this._platformStrategy.pushState(null, '', path, query);
 	    };
 	    /**
 	     * Changes the browsers URL to the normalized version of the given URL, and replaces
@@ -4942,23 +5918,23 @@
 	     */
 	    Location.prototype.replaceState = function (path, query) {
 	        if (query === void 0) { query = ''; }
-	        this.platformStrategy.replaceState(null, '', path, query);
+	        this._platformStrategy.replaceState(null, '', path, query);
 	    };
 	    /**
 	     * Navigates forward in the platform's history.
 	     */
-	    Location.prototype.forward = function () { this.platformStrategy.forward(); };
+	    Location.prototype.forward = function () { this._platformStrategy.forward(); };
 	    /**
 	     * Navigates back in the platform's history.
 	     */
-	    Location.prototype.back = function () { this.platformStrategy.back(); };
+	    Location.prototype.back = function () { this._platformStrategy.back(); };
 	    /**
 	     * Subscribe to the platform's `popState` events.
 	     */
 	    Location.prototype.subscribe = function (onNext, onThrow, onReturn) {
 	        if (onThrow === void 0) { onThrow = null; }
 	        if (onReturn === void 0) { onReturn = null; }
-	        return async_1.ObservableWrapper.subscribe(this._subject, onNext, onThrow, onReturn);
+	        return this._subject.subscribe({ next: onNext, error: onThrow, complete: onReturn });
 	    };
 	    /**
 	     * Given a string of url parameters, prepend with '?' if needed, otherwise return parameters as
@@ -5001,9 +5977,11 @@
 	        }
 	        return url;
 	    };
+	    /** @nocollapse */
 	    Location.decorators = [
 	        { type: core_1.Injectable },
 	    ];
+	    /** @nocollapse */
 	    Location.ctorParameters = [
 	        { type: location_strategy_1.LocationStrategy, },
 	    ];
@@ -5026,49 +6004,58 @@
 	//# sourceMappingURL=location.js.map
 
 /***/ },
-/* 87 */
+/* 110 */
 /***/ function(module, exports) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	/**
-	* This class should not be used directly by an application developer. Instead, use
-	* {@link Location}.
-	*
-	* `PlatformLocation` encapsulates all calls to DOM apis, which allows the Router to be platform
-	* agnostic.
-	* This means that we can have different implementation of `PlatformLocation` for the different
-	* platforms
-	* that angular supports. For example, the default `PlatformLocation` is {@link
-	* BrowserPlatformLocation},
-	* however when you run your app in a WebWorker you use {@link WebWorkerPlatformLocation}.
-	*
-	* The `PlatformLocation` class is used directly by all implementations of {@link LocationStrategy}
-	* when
-	* they need to interact with the DOM apis like pushState, popState, etc...
-	*
-	* {@link LocationStrategy} in turn is used by the {@link Location} service which is used directly
-	* by
-	* the {@link Router} in order to navigate between routes. Since all interactions between {@link
-	* Router} /
-	* {@link Location} / {@link LocationStrategy} and DOM apis flow through the `PlatformLocation`
-	* class
-	* they are all platform independent.
-	*/
+	 * This class should not be used directly by an application developer. Instead, use
+	 * {@link Location}.
+	 *
+	 * `PlatformLocation` encapsulates all calls to DOM apis, which allows the Router to be platform
+	 * agnostic.
+	 * This means that we can have different implementation of `PlatformLocation` for the different
+	 * platforms
+	 * that angular supports. For example, the default `PlatformLocation` is {@link
+	 * BrowserPlatformLocation},
+	 * however when you run your app in a WebWorker you use {@link WebWorkerPlatformLocation}.
+	 *
+	 * The `PlatformLocation` class is used directly by all implementations of {@link LocationStrategy}
+	 * when
+	 * they need to interact with the DOM apis like pushState, popState, etc...
+	 *
+	 * {@link LocationStrategy} in turn is used by the {@link Location} service which is used directly
+	 * by
+	 * the {@link Router} in order to navigate between routes. Since all interactions between {@link
+	 * Router} /
+	 * {@link Location} / {@link LocationStrategy} and DOM apis flow through the `PlatformLocation`
+	 * class
+	 * they are all platform independent.
+	 *
+	 * @stable
+	 */
 	var PlatformLocation = (function () {
 	    function PlatformLocation() {
 	    }
 	    Object.defineProperty(PlatformLocation.prototype, "pathname", {
-	        /* abstract */ get: function () { return null; },
+	        get: function () { return null; },
 	        enumerable: true,
 	        configurable: true
 	    });
 	    Object.defineProperty(PlatformLocation.prototype, "search", {
-	        /* abstract */ get: function () { return null; },
+	        get: function () { return null; },
 	        enumerable: true,
 	        configurable: true
 	    });
 	    Object.defineProperty(PlatformLocation.prototype, "hash", {
-	        /* abstract */ get: function () { return null; },
+	        get: function () { return null; },
 	        enumerable: true,
 	        configurable: true
 	    });
@@ -5078,77 +6065,262 @@
 	//# sourceMappingURL=platform_location.js.map
 
 /***/ },
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	/**
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationPlayer = (function () {
+	    function AnimationPlayer() {
+	    }
+	    Object.defineProperty(AnimationPlayer.prototype, "parentPlayer", {
+	        get: function () { throw new exceptions_1.BaseException('NOT IMPLEMENTED: Base Class'); },
+	        set: function (player) {
+	            throw new exceptions_1.BaseException('NOT IMPLEMENTED: Base Class');
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return AnimationPlayer;
+	}());
+	exports.AnimationPlayer = AnimationPlayer;
+	var NoOpAnimationPlayer = (function () {
+	    function NoOpAnimationPlayer() {
+	        var _this = this;
+	        this._subscriptions = [];
+	        this._started = false;
+	        this.parentPlayer = null;
+	        lang_1.scheduleMicroTask(function () { return _this._onFinish(); });
+	    }
+	    /** @internal */
+	    NoOpAnimationPlayer.prototype._onFinish = function () {
+	        this._subscriptions.forEach(function (entry) { entry(); });
+	        this._subscriptions = [];
+	    };
+	    NoOpAnimationPlayer.prototype.onDone = function (fn) { this._subscriptions.push(fn); };
+	    NoOpAnimationPlayer.prototype.hasStarted = function () { return this._started; };
+	    NoOpAnimationPlayer.prototype.init = function () { };
+	    NoOpAnimationPlayer.prototype.play = function () { this._started = true; };
+	    NoOpAnimationPlayer.prototype.pause = function () { };
+	    NoOpAnimationPlayer.prototype.restart = function () { };
+	    NoOpAnimationPlayer.prototype.finish = function () { this._onFinish(); };
+	    NoOpAnimationPlayer.prototype.destroy = function () { };
+	    NoOpAnimationPlayer.prototype.reset = function () { };
+	    NoOpAnimationPlayer.prototype.setPosition = function (p /** TODO #9100 */) { };
+	    NoOpAnimationPlayer.prototype.getPosition = function () { return 0; };
+	    return NoOpAnimationPlayer;
+	}());
+	exports.NoOpAnimationPlayer = NoOpAnimationPlayer;
+	//# sourceMappingURL=animation_player.js.map
+
+/***/ },
+/* 125 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var lang_1 = __webpack_require__(3);
+	var di_1 = __webpack_require__(20);
+	/**
+	 * A function that will be executed when an application is initialized.
+	 * @experimental
+	 */
+	exports.APP_INITIALIZER = new di_1.OpaqueToken('Application Initializer');
+	var ApplicationInitStatus = (function () {
+	    function ApplicationInitStatus(appInits) {
+	        var _this = this;
+	        this._done = false;
+	        var asyncInitPromises = [];
+	        if (appInits) {
+	            for (var i = 0; i < appInits.length; i++) {
+	                var initResult = appInits[i]();
+	                if (lang_1.isPromise(initResult)) {
+	                    asyncInitPromises.push(initResult);
+	                }
+	            }
+	        }
+	        this._donePromise = Promise.all(asyncInitPromises).then(function () { _this._done = true; });
+	        if (asyncInitPromises.length === 0) {
+	            this._done = true;
+	        }
+	    }
+	    Object.defineProperty(ApplicationInitStatus.prototype, "done", {
+	        get: function () { return this._done; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ApplicationInitStatus.prototype, "donePromise", {
+	        get: function () { return this._donePromise; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    /** @nocollapse */
+	    ApplicationInitStatus.decorators = [
+	        { type: di_1.Injectable },
+	    ];
+	    /** @nocollapse */
+	    ApplicationInitStatus.ctorParameters = [
+	        { type: Array, decorators: [{ type: di_1.Inject, args: [exports.APP_INITIALIZER,] }, { type: di_1.Optional },] },
+	    ];
+	    return ApplicationInitStatus;
+	}());
+	exports.ApplicationInitStatus = ApplicationInitStatus;
+	//# sourceMappingURL=application_init.js.map
+
+/***/ },
+/* 126 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var ng_zone_1 = __webpack_require__(115);
-	var lang_1 = __webpack_require__(4);
-	var di_1 = __webpack_require__(31);
-	var application_tokens_1 = __webpack_require__(59);
-	var async_1 = __webpack_require__(27);
-	var collection_1 = __webpack_require__(11);
-	var testability_1 = __webpack_require__(114);
-	var component_resolver_1 = __webpack_require__(40);
-	var exceptions_1 = __webpack_require__(9);
-	var console_1 = __webpack_require__(103);
-	var profile_1 = __webpack_require__(65);
-	/**
-	 * Create an Angular zone.
-	 */
-	function createNgZone() {
-	    return new ng_zone_1.NgZone({ enableLongStackTrace: lang_1.assertionsEnabled() });
-	}
-	exports.createNgZone = createNgZone;
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var application_init_1 = __webpack_require__(125);
+	var application_tokens_1 = __webpack_require__(73);
+	var console_1 = __webpack_require__(77);
+	var di_1 = __webpack_require__(20);
+	var compiler_1 = __webpack_require__(48);
+	var component_factory_1 = __webpack_require__(223);
+	var component_factory_resolver_1 = __webpack_require__(80);
+	var profile_1 = __webpack_require__(83);
+	var testability_1 = __webpack_require__(139);
+	var ng_zone_1 = __webpack_require__(140);
+	var _devMode = true;
+	var _runModeLocked = false;
 	var _platform;
-	var _inPlatformCreate = false;
+	/**
+	 * Disable Angular's development mode, which turns off assertions and other
+	 * checks within the framework.
+	 *
+	 * One important assertion this disables verifies that a change detection pass
+	 * does not result in additional changes to any bindings (also known as
+	 * unidirectional data flow).
+	 *
+	 * @experimental APIs related to application bootstrap are currently under review.
+	 */
+	function enableProdMode() {
+	    if (_runModeLocked) {
+	        // Cannot use BaseException as that ends up importing from facade/lang.
+	        throw new exceptions_1.BaseException('Cannot enable prod mode after platform setup.');
+	    }
+	    _devMode = false;
+	}
+	exports.enableProdMode = enableProdMode;
+	/**
+	 * Locks the run mode of Angular. After this has been called,
+	 * it can't be changed any more. I.e. `isDevMode()` will always
+	 * return the same value.
+	 *
+	 * @deprecated This is a noop now. {@link isDevMode} automatically locks the run mode on first call.
+	 */
+	function lockRunMode() {
+	    console.warn('lockRunMode() is deprecated and not needed any more.');
+	}
+	exports.lockRunMode = lockRunMode;
+	/**
+	 * Returns whether Angular is in development mode. After called once,
+	 * the value is locked and won't change any more.
+	 *
+	 * By default, this is true, unless a user calls `enableProdMode` before calling this.
+	 *
+	 * @experimental APIs related to application bootstrap are currently under review.
+	 */
+	function isDevMode() {
+	    _runModeLocked = true;
+	    return _devMode;
+	}
+	exports.isDevMode = isDevMode;
 	/**
 	 * Creates a platform.
 	 * Platforms have to be eagerly created via this function.
+	 *
+	 * @experimental APIs related to application bootstrap are currently under review.
 	 */
 	function createPlatform(injector) {
-	    if (_inPlatformCreate) {
-	        throw new exceptions_1.BaseException('Already creating a platform...');
-	    }
 	    if (lang_1.isPresent(_platform) && !_platform.disposed) {
-	        throw new exceptions_1.BaseException("There can be only one platform. Destroy the previous one to create a new one.");
+	        throw new exceptions_1.BaseException('There can be only one platform. Destroy the previous one to create a new one.');
 	    }
-	    lang_1.lockMode();
-	    _inPlatformCreate = true;
-	    try {
-	        _platform = injector.get(PlatformRef);
-	    }
-	    finally {
-	        _inPlatformCreate = false;
-	    }
+	    _platform = injector.get(PlatformRef);
+	    var inits = injector.get(application_tokens_1.PLATFORM_INITIALIZER, null);
+	    if (lang_1.isPresent(inits))
+	        inits.forEach(function (init) { return init(); });
 	    return _platform;
 	}
 	exports.createPlatform = createPlatform;
 	/**
+	 * Creates a factory for a platform
+	 *
+	 * @experimental APIs related to application bootstrap are currently under review.
+	 */
+	function createPlatformFactory(parentPlaformFactory, name, providers) {
+	    if (providers === void 0) { providers = []; }
+	    var marker = new di_1.OpaqueToken("Platform: " + name);
+	    return function (extraProviders) {
+	        if (extraProviders === void 0) { extraProviders = []; }
+	        if (!getPlatform()) {
+	            if (parentPlaformFactory) {
+	                parentPlaformFactory(providers.concat(extraProviders).concat({ provide: marker, useValue: true }));
+	            }
+	            else {
+	                createPlatform(di_1.ReflectiveInjector.resolveAndCreate(providers.concat(extraProviders).concat({ provide: marker, useValue: true })));
+	            }
+	        }
+	        return assertPlatform(marker);
+	    };
+	}
+	exports.createPlatformFactory = createPlatformFactory;
+	/**
 	 * Checks that there currently is a platform
 	 * which contains the given token as a provider.
+	 *
+	 * @experimental APIs related to application bootstrap are currently under review.
 	 */
 	function assertPlatform(requiredToken) {
 	    var platform = getPlatform();
 	    if (lang_1.isBlank(platform)) {
-	        throw new exceptions_1.BaseException('Not platform exists!');
+	        throw new exceptions_1.BaseException('No platform exists!');
 	    }
 	    if (lang_1.isPresent(platform) && lang_1.isBlank(platform.injector.get(requiredToken, null))) {
 	        throw new exceptions_1.BaseException('A platform with a different configuration has been created. Please destroy it first.');
@@ -5158,15 +6330,28 @@
 	exports.assertPlatform = assertPlatform;
 	/**
 	 * Dispose the existing platform.
+	 *
+	 * @deprecated Use `destroyPlatform` instead
 	 */
 	function disposePlatform() {
-	    if (lang_1.isPresent(_platform) && !_platform.disposed) {
-	        _platform.dispose();
-	    }
+	    destroyPlatform();
 	}
 	exports.disposePlatform = disposePlatform;
 	/**
+	 * Destroy the existing platform.
+	 *
+	 * @experimental APIs related to application bootstrap are currently under review.
+	 */
+	function destroyPlatform() {
+	    if (lang_1.isPresent(_platform) && !_platform.destroyed) {
+	        _platform.destroy();
+	    }
+	}
+	exports.destroyPlatform = destroyPlatform;
+	/**
 	 * Returns the current platform.
+	 *
+	 * @experimental APIs related to application bootstrap are currently under review.
 	 */
 	function getPlatform() {
 	    return lang_1.isPresent(_platform) && !_platform.disposed ? _platform : null;
@@ -5174,26 +6359,23 @@
 	exports.getPlatform = getPlatform;
 	/**
 	 * Shortcut for ApplicationRef.bootstrap.
-	 * Requires a platform the be created first.
+	 * Requires a platform to be created first.
+	 *
+	 * @deprecated Use {@link bootstrapModuleFactory} instead.
 	 */
-	function coreBootstrap(injector, componentFactory) {
-	    var appRef = injector.get(ApplicationRef);
-	    return appRef.bootstrap(componentFactory);
+	function coreBootstrap(componentFactory, injector) {
+	    throw new exceptions_1.BaseException('coreBootstrap is deprecated. Use bootstrapModuleFactory instead.');
 	}
 	exports.coreBootstrap = coreBootstrap;
 	/**
 	 * Resolves the componentFactory for the given component,
 	 * waits for asynchronous initializers and bootstraps the component.
-	 * Requires a platform the be created first.
+	 * Requires a platform to be created first.
+	 *
+	 * @deprecated Use {@link bootstrapModule} instead.
 	 */
-	function coreLoadAndBootstrap(injector, componentType) {
-	    var appRef = injector.get(ApplicationRef);
-	    return appRef.run(function () {
-	        var componentResolver = injector.get(component_resolver_1.ComponentResolver);
-	        return async_1.PromiseWrapper
-	            .all([componentResolver.resolveComponent(componentType), appRef.waitForAsyncInitializers()])
-	            .then(function (arr) { return appRef.bootstrap(arr[0]); });
-	    });
+	function coreLoadAndBootstrap(componentType, injector) {
+	    throw new exceptions_1.BaseException('coreLoadAndBootstrap is deprecated. Use bootstrapModule instead.');
 	}
 	exports.coreLoadAndBootstrap = coreLoadAndBootstrap;
 	/**
@@ -5203,10 +6385,57 @@
 	 *
 	 * A page's platform is initialized implicitly when {@link bootstrap}() is called, or
 	 * explicitly by calling {@link createPlatform}().
+	 *
+	 * @experimental APIs related to application bootstrap are currently under review.
 	 */
 	var PlatformRef = (function () {
 	    function PlatformRef() {
 	    }
+	    /**
+	     * Creates an instance of an `@NgModule` for the given platform
+	     * for offline compilation.
+	     *
+	     * ## Simple Example
+	     *
+	     * ```typescript
+	     * my_module.ts:
+	     *
+	     * @NgModule({
+	     *   imports: [BrowserModule]
+	     * })
+	     * class MyModule {}
+	     *
+	     * main.ts:
+	     * import {MyModuleNgFactory} from './my_module.ngfactory';
+	     * import {browserPlatform} from '@angular/platform-browser';
+	     *
+	     * let moduleRef = browserPlatform().bootstrapModuleFactory(MyModuleNgFactory);
+	     * ```
+	     *
+	     * @experimental APIs related to application bootstrap are currently under review.
+	     */
+	    PlatformRef.prototype.bootstrapModuleFactory = function (moduleFactory) {
+	        throw exceptions_1.unimplemented();
+	    };
+	    /**
+	     * Creates an instance of an `@NgModule` for a given platform using the given runtime compiler.
+	     *
+	     * ## Simple Example
+	     *
+	     * ```typescript
+	     * @NgModule({
+	     *   imports: [BrowserModule]
+	     * })
+	     * class MyModule {}
+	     *
+	     * let moduleRef = browserPlatform().bootstrapModule(MyModule);
+	     * ```
+	     * @stable
+	     */
+	    PlatformRef.prototype.bootstrapModule = function (moduleType, compilerOptions) {
+	        if (compilerOptions === void 0) { compilerOptions = []; }
+	        throw exceptions_1.unimplemented();
+	    };
 	    Object.defineProperty(PlatformRef.prototype, "injector", {
 	        /**
 	         * Retrieve the platform {@link Injector}, which is the parent injector for
@@ -5218,6 +6447,14 @@
 	    });
 	    ;
 	    Object.defineProperty(PlatformRef.prototype, "disposed", {
+	        /**
+	         * @deprecated Use `destroyed` instead
+	         */
+	        get: function () { throw exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(PlatformRef.prototype, "destroyed", {
 	        get: function () { throw exceptions_1.unimplemented(); },
 	        enumerable: true,
 	        configurable: true
@@ -5225,45 +6462,133 @@
 	    return PlatformRef;
 	}());
 	exports.PlatformRef = PlatformRef;
+	function _callAndReportToExceptionHandler(exceptionHandler, callback) {
+	    try {
+	        var result = callback();
+	        if (lang_1.isPromise(result)) {
+	            return result.catch(function (e) {
+	                exceptionHandler.call(e);
+	                // rethrow as the exception handler might not do it
+	                throw e;
+	            });
+	        }
+	        else {
+	            return result;
+	        }
+	    }
+	    catch (e) {
+	        exceptionHandler.call(e);
+	        // rethrow as the exception handler might not do it
+	        throw e;
+	    }
+	}
 	var PlatformRef_ = (function (_super) {
 	    __extends(PlatformRef_, _super);
 	    function PlatformRef_(_injector) {
 	        _super.call(this);
 	        this._injector = _injector;
-	        /** @internal */
-	        this._applications = [];
-	        /** @internal */
-	        this._disposeListeners = [];
-	        this._disposed = false;
-	        if (!_inPlatformCreate) {
-	            throw new exceptions_1.BaseException('Platforms have to be created via `createPlatform`!');
-	        }
-	        var inits = _injector.get(application_tokens_1.PLATFORM_INITIALIZER, null);
-	        if (lang_1.isPresent(inits))
-	            inits.forEach(function (init) { return init(); });
+	        this._modules = [];
+	        this._destroyListeners = [];
+	        this._destroyed = false;
 	    }
-	    PlatformRef_.prototype.registerDisposeListener = function (dispose) { this._disposeListeners.push(dispose); };
+	    /**
+	     * @deprecated
+	     */
+	    PlatformRef_.prototype.registerDisposeListener = function (dispose) { this.onDestroy(dispose); };
+	    PlatformRef_.prototype.onDestroy = function (callback) { this._destroyListeners.push(callback); };
 	    Object.defineProperty(PlatformRef_.prototype, "injector", {
 	        get: function () { return this._injector; },
 	        enumerable: true,
 	        configurable: true
 	    });
 	    Object.defineProperty(PlatformRef_.prototype, "disposed", {
-	        get: function () { return this._disposed; },
+	        /**
+	         * @deprecated
+	         */
+	        get: function () { return this.destroyed; },
 	        enumerable: true,
 	        configurable: true
 	    });
-	    PlatformRef_.prototype.addApplication = function (appRef) { this._applications.push(appRef); };
-	    PlatformRef_.prototype.dispose = function () {
-	        collection_1.ListWrapper.clone(this._applications).forEach(function (app) { return app.dispose(); });
-	        this._disposeListeners.forEach(function (dispose) { return dispose(); });
-	        this._disposed = true;
+	    Object.defineProperty(PlatformRef_.prototype, "destroyed", {
+	        get: function () { return this._destroyed; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    PlatformRef_.prototype.destroy = function () {
+	        if (this._destroyed) {
+	            throw new exceptions_1.BaseException('The platform has already been destroyed!');
+	        }
+	        collection_1.ListWrapper.clone(this._modules).forEach(function (app) { return app.destroy(); });
+	        this._destroyListeners.forEach(function (dispose) { return dispose(); });
+	        this._destroyed = true;
 	    };
-	    /** @internal */
-	    PlatformRef_.prototype._applicationDisposed = function (app) { collection_1.ListWrapper.remove(this._applications, app); };
+	    /**
+	     * @deprecated
+	     */
+	    PlatformRef_.prototype.dispose = function () { this.destroy(); };
+	    PlatformRef_.prototype.bootstrapModuleFactory = function (moduleFactory) {
+	        return this._bootstrapModuleFactoryWithZone(moduleFactory, null);
+	    };
+	    PlatformRef_.prototype._bootstrapModuleFactoryWithZone = function (moduleFactory, ngZone) {
+	        var _this = this;
+	        // Note: We need to create the NgZone _before_ we instantiate the module,
+	        // as instantiating the module creates some providers eagerly.
+	        // So we create a mini parent injector that just contains the new NgZone and
+	        // pass that as parent to the NgModuleFactory.
+	        if (!ngZone)
+	            ngZone = new ng_zone_1.NgZone({ enableLongStackTrace: isDevMode() });
+	        // Attention: Don't use ApplicationRef.run here,
+	        // as we want to be sure that all possible constructor calls are inside `ngZone.run`!
+	        return ngZone.run(function () {
+	            var ngZoneInjector = di_1.ReflectiveInjector.resolveAndCreate([{ provide: ng_zone_1.NgZone, useValue: ngZone }], _this.injector);
+	            var moduleRef = moduleFactory.create(ngZoneInjector);
+	            var exceptionHandler = moduleRef.injector.get(exceptions_1.ExceptionHandler, null);
+	            if (!exceptionHandler) {
+	                throw new Error('No ExceptionHandler. Is platform module (BrowserModule) included?');
+	            }
+	            moduleRef.onDestroy(function () { return collection_1.ListWrapper.remove(_this._modules, moduleRef); });
+	            ngZone.onError.subscribe({
+	                next: function (error) { exceptionHandler.call(error.error, error.stackTrace); }
+	            });
+	            return _callAndReportToExceptionHandler(exceptionHandler, function () {
+	                var initStatus = moduleRef.injector.get(application_init_1.ApplicationInitStatus);
+	                return initStatus.donePromise.then(function () {
+	                    _this._moduleDoBootstrap(moduleRef);
+	                    return moduleRef;
+	                });
+	            });
+	        });
+	    };
+	    PlatformRef_.prototype.bootstrapModule = function (moduleType, compilerOptions) {
+	        if (compilerOptions === void 0) { compilerOptions = []; }
+	        return this._bootstrapModuleWithZone(moduleType, compilerOptions, null);
+	    };
+	    PlatformRef_.prototype._bootstrapModuleWithZone = function (moduleType, compilerOptions, ngZone) {
+	        var _this = this;
+	        if (compilerOptions === void 0) { compilerOptions = []; }
+	        var compilerFactory = this.injector.get(compiler_1.CompilerFactory);
+	        var compiler = compilerFactory.createCompiler(compilerOptions instanceof Array ? compilerOptions : [compilerOptions]);
+	        return compiler.compileModuleAsync(moduleType)
+	            .then(function (moduleFactory) { return _this._bootstrapModuleFactoryWithZone(moduleFactory, ngZone); });
+	    };
+	    PlatformRef_.prototype._moduleDoBootstrap = function (moduleRef) {
+	        var appRef = moduleRef.injector.get(ApplicationRef);
+	        if (moduleRef.bootstrapFactories.length > 0) {
+	            moduleRef.bootstrapFactories.forEach(function (compFactory) { return appRef.bootstrap(compFactory); });
+	        }
+	        else if (moduleRef.instance.ngDoBootstrap) {
+	            moduleRef.instance.ngDoBootstrap(appRef);
+	        }
+	        else {
+	            throw new exceptions_1.BaseException(("The module " + lang_1.stringify(moduleRef.instance.constructor) + " was bootstrapped, but it does not declare \"@NgModule.bootstrap\" components nor a \"ngDoBootstrap\" method. ") +
+	                "Please define one of these.");
+	        }
+	    };
+	    /** @nocollapse */
 	    PlatformRef_.decorators = [
 	        { type: di_1.Injectable },
 	    ];
+	    /** @nocollapse */
 	    PlatformRef_.ctorParameters = [
 	        { type: di_1.Injector, },
 	    ];
@@ -5274,6 +6599,8 @@
 	 * A reference to an Angular application running on a page.
 	 *
 	 * For more about Angular applications, see the documentation for {@link bootstrap}.
+	 *
+	 * @experimental APIs related to application bootstrap are currently under review.
 	 */
 	var ApplicationRef = (function () {
 	    function ApplicationRef() {
@@ -5281,6 +6608,9 @@
 	    Object.defineProperty(ApplicationRef.prototype, "injector", {
 	        /**
 	         * Retrieve the application {@link Injector}.
+	         *
+	         * @deprecated inject an {@link Injector} directly where needed or use {@link
+	         * NgModuleRef}.injector.
 	         */
 	        get: function () { return exceptions_1.unimplemented(); },
 	        enumerable: true,
@@ -5290,6 +6620,8 @@
 	    Object.defineProperty(ApplicationRef.prototype, "zone", {
 	        /**
 	         * Retrieve the application {@link NgZone}.
+	         *
+	         * @deprecated inject {@link NgZone} instead of calling this getter.
 	         */
 	        get: function () { return exceptions_1.unimplemented(); },
 	        enumerable: true,
@@ -5299,6 +6631,16 @@
 	    Object.defineProperty(ApplicationRef.prototype, "componentTypes", {
 	        /**
 	         * Get a list of component types registered to this application.
+	         * This list is populated even before the component is created.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ;
+	    Object.defineProperty(ApplicationRef.prototype, "components", {
+	        /**
+	         * Get a list of components registered to this application.
 	         */
 	        get: function () { return exceptions_1.unimplemented(); },
 	        enumerable: true,
@@ -5310,60 +6652,39 @@
 	exports.ApplicationRef = ApplicationRef;
 	var ApplicationRef_ = (function (_super) {
 	    __extends(ApplicationRef_, _super);
-	    function ApplicationRef_(_platform, _zone, _injector) {
+	    function ApplicationRef_(_zone, _console, _injector, _exceptionHandler, _componentFactoryResolver, _initStatus, _testabilityRegistry, _testability) {
 	        var _this = this;
 	        _super.call(this);
-	        this._platform = _platform;
 	        this._zone = _zone;
+	        this._console = _console;
 	        this._injector = _injector;
-	        /** @internal */
+	        this._exceptionHandler = _exceptionHandler;
+	        this._componentFactoryResolver = _componentFactoryResolver;
+	        this._initStatus = _initStatus;
+	        this._testabilityRegistry = _testabilityRegistry;
+	        this._testability = _testability;
 	        this._bootstrapListeners = [];
-	        /** @internal */
+	        /**
+	         * @deprecated
+	         */
 	        this._disposeListeners = [];
-	        /** @internal */
 	        this._rootComponents = [];
-	        /** @internal */
 	        this._rootComponentTypes = [];
-	        /** @internal */
 	        this._changeDetectorRefs = [];
-	        /** @internal */
 	        this._runningTick = false;
-	        /** @internal */
 	        this._enforceNoNewChanges = false;
-	        var zone = _injector.get(ng_zone_1.NgZone);
-	        this._enforceNoNewChanges = lang_1.assertionsEnabled();
-	        zone.run(function () { _this._exceptionHandler = _injector.get(exceptions_1.ExceptionHandler); });
-	        this._asyncInitDonePromise = this.run(function () {
-	            var inits = _injector.get(application_tokens_1.APP_INITIALIZER, null);
-	            var asyncInitResults = [];
-	            var asyncInitDonePromise;
-	            if (lang_1.isPresent(inits)) {
-	                for (var i = 0; i < inits.length; i++) {
-	                    var initResult = inits[i]();
-	                    if (lang_1.isPromise(initResult)) {
-	                        asyncInitResults.push(initResult);
-	                    }
-	                }
-	            }
-	            if (asyncInitResults.length > 0) {
-	                asyncInitDonePromise =
-	                    async_1.PromiseWrapper.all(asyncInitResults).then(function (_) { return _this._asyncInitDone = true; });
-	                _this._asyncInitDone = false;
-	            }
-	            else {
-	                _this._asyncInitDone = true;
-	                asyncInitDonePromise = async_1.PromiseWrapper.resolve(true);
-	            }
-	            return asyncInitDonePromise;
-	        });
-	        async_1.ObservableWrapper.subscribe(zone.onError, function (error) {
-	            _this._exceptionHandler.call(error.error, error.stackTrace);
-	        });
-	        async_1.ObservableWrapper.subscribe(this._zone.onMicrotaskEmpty, function (_) { _this._zone.run(function () { _this.tick(); }); });
+	        this._enforceNoNewChanges = isDevMode();
+	        this._zone.onMicrotaskEmpty.subscribe({ next: function () { _this._zone.run(function () { _this.tick(); }); } });
 	    }
+	    /**
+	     * @deprecated
+	     */
 	    ApplicationRef_.prototype.registerBootstrapListener = function (listener) {
 	        this._bootstrapListeners.push(listener);
 	    };
+	    /**
+	     * @deprecated
+	     */
 	    ApplicationRef_.prototype.registerDisposeListener = function (dispose) { this._disposeListeners.push(dispose); };
 	    ApplicationRef_.prototype.registerChangeDetector = function (changeDetector) {
 	        this._changeDetectorRefs.push(changeDetector);
@@ -5371,62 +6692,52 @@
 	    ApplicationRef_.prototype.unregisterChangeDetector = function (changeDetector) {
 	        collection_1.ListWrapper.remove(this._changeDetectorRefs, changeDetector);
 	    };
-	    ApplicationRef_.prototype.waitForAsyncInitializers = function () { return this._asyncInitDonePromise; };
+	    /**
+	     * @deprecated
+	     */
+	    ApplicationRef_.prototype.waitForAsyncInitializers = function () { return this._initStatus.donePromise; };
+	    /**
+	     * @deprecated
+	     */
 	    ApplicationRef_.prototype.run = function (callback) {
 	        var _this = this;
-	        var zone = this.injector.get(ng_zone_1.NgZone);
-	        var result;
-	        // Note: Don't use zone.runGuarded as we want to know about
-	        // the thrown exception!
-	        // Note: the completer needs to be created outside
-	        // of `zone.run` as Dart swallows rejected promises
-	        // via the onError callback of the promise.
-	        var completer = async_1.PromiseWrapper.completer();
-	        zone.run(function () {
-	            try {
-	                result = callback();
-	                if (lang_1.isPromise(result)) {
-	                    async_1.PromiseWrapper.then(result, function (ref) { completer.resolve(ref); }, function (err, stackTrace) {
-	                        completer.reject(err, stackTrace);
-	                        _this._exceptionHandler.call(err, stackTrace);
-	                    });
-	                }
-	            }
-	            catch (e) {
-	                _this._exceptionHandler.call(e, e.stack);
-	                throw e;
-	            }
-	        });
-	        return lang_1.isPromise(result) ? completer.promise : result;
+	        return this._zone.run(function () { return _callAndReportToExceptionHandler(_this._exceptionHandler, callback); });
 	    };
-	    ApplicationRef_.prototype.bootstrap = function (componentFactory) {
+	    ApplicationRef_.prototype.bootstrap = function (componentOrFactory) {
 	        var _this = this;
-	        if (!this._asyncInitDone) {
-	            throw new exceptions_1.BaseException('Cannot bootstrap as there are still asynchronous initializers running. Wait for them using waitForAsyncInitializers().');
+	        if (!this._initStatus.done) {
+	            throw new exceptions_1.BaseException('Cannot bootstrap as there are still asynchronous initializers running. Bootstrap components in the `ngDoBootstrap` method of the root module.');
 	        }
-	        return this.run(function () {
-	            _this._rootComponentTypes.push(componentFactory.componentType);
-	            var compRef = componentFactory.create(_this._injector, [], componentFactory.selector);
-	            compRef.onDestroy(function () { _this._unloadComponent(compRef); });
-	            var testability = compRef.injector.get(testability_1.Testability, null);
-	            if (lang_1.isPresent(testability)) {
-	                compRef.injector.get(testability_1.TestabilityRegistry)
-	                    .registerApplication(compRef.location.nativeElement, testability);
-	            }
-	            _this._loadComponent(compRef);
-	            var c = _this._injector.get(console_1.Console);
-	            if (lang_1.assertionsEnabled()) {
-	                c.log("Angular 2 is running in the development mode. Call enableProdMode() to enable the production mode.");
-	            }
-	            return compRef;
-	        });
+	        var componentFactory;
+	        if (componentOrFactory instanceof component_factory_1.ComponentFactory) {
+	            componentFactory = componentOrFactory;
+	        }
+	        else {
+	            componentFactory = this._componentFactoryResolver.resolveComponentFactory(componentOrFactory);
+	        }
+	        this._rootComponentTypes.push(componentFactory.componentType);
+	        var compRef = componentFactory.create(this._injector, [], componentFactory.selector);
+	        compRef.onDestroy(function () { _this._unloadComponent(compRef); });
+	        var testability = compRef.injector.get(testability_1.Testability, null);
+	        if (lang_1.isPresent(testability)) {
+	            compRef.injector.get(testability_1.TestabilityRegistry)
+	                .registerApplication(compRef.location.nativeElement, testability);
+	        }
+	        this._loadComponent(compRef);
+	        if (isDevMode()) {
+	            this._console.log("Angular 2 is running in the development mode. Call enableProdMode() to enable the production mode.");
+	        }
+	        return compRef;
 	    };
 	    /** @internal */
 	    ApplicationRef_.prototype._loadComponent = function (componentRef) {
 	        this._changeDetectorRefs.push(componentRef.changeDetectorRef);
 	        this.tick();
 	        this._rootComponents.push(componentRef);
-	        this._bootstrapListeners.forEach(function (listener) { return listener(componentRef); });
+	        // Get the listeners lazily to prevent DI cycles.
+	        var listeners = this._injector.get(application_tokens_1.APP_BOOTSTRAP_LISTENER, [])
+	            .concat(this._bootstrapListeners);
+	        listeners.forEach(function (listener) { return listener(componentRef); });
 	    };
 	    /** @internal */
 	    ApplicationRef_.prototype._unloadComponent = function (componentRef) {
@@ -5437,18 +6748,24 @@
 	        collection_1.ListWrapper.remove(this._rootComponents, componentRef);
 	    };
 	    Object.defineProperty(ApplicationRef_.prototype, "injector", {
+	        /**
+	         * @deprecated
+	         */
 	        get: function () { return this._injector; },
 	        enumerable: true,
 	        configurable: true
 	    });
 	    Object.defineProperty(ApplicationRef_.prototype, "zone", {
+	        /**
+	         * @deprecated
+	         */
 	        get: function () { return this._zone; },
 	        enumerable: true,
 	        configurable: true
 	    });
 	    ApplicationRef_.prototype.tick = function () {
 	        if (this._runningTick) {
-	            throw new exceptions_1.BaseException("ApplicationRef.tick is called recursively");
+	            throw new exceptions_1.BaseException('ApplicationRef.tick is called recursively');
 	        }
 	        var s = ApplicationRef_._tickScope();
 	        try {
@@ -5463,142 +6780,62 @@
 	            profile_1.wtfLeave(s);
 	        }
 	    };
-	    ApplicationRef_.prototype.dispose = function () {
+	    ApplicationRef_.prototype.ngOnDestroy = function () {
 	        // TODO(alxhub): Dispose of the NgZone.
 	        collection_1.ListWrapper.clone(this._rootComponents).forEach(function (ref) { return ref.destroy(); });
 	        this._disposeListeners.forEach(function (dispose) { return dispose(); });
-	        this._platform._applicationDisposed(this);
 	    };
+	    /**
+	     * @deprecated
+	     */
+	    ApplicationRef_.prototype.dispose = function () { this.ngOnDestroy(); };
 	    Object.defineProperty(ApplicationRef_.prototype, "componentTypes", {
 	        get: function () { return this._rootComponentTypes; },
 	        enumerable: true,
 	        configurable: true
 	    });
+	    Object.defineProperty(ApplicationRef_.prototype, "components", {
+	        get: function () { return this._rootComponents; },
+	        enumerable: true,
+	        configurable: true
+	    });
 	    /** @internal */
 	    ApplicationRef_._tickScope = profile_1.wtfCreateScope('ApplicationRef#tick()');
+	    /** @nocollapse */
 	    ApplicationRef_.decorators = [
 	        { type: di_1.Injectable },
 	    ];
+	    /** @nocollapse */
 	    ApplicationRef_.ctorParameters = [
-	        { type: PlatformRef_, },
 	        { type: ng_zone_1.NgZone, },
+	        { type: console_1.Console, },
 	        { type: di_1.Injector, },
+	        { type: exceptions_1.ExceptionHandler, },
+	        { type: component_factory_resolver_1.ComponentFactoryResolver, },
+	        { type: application_init_1.ApplicationInitStatus, },
+	        { type: testability_1.TestabilityRegistry, decorators: [{ type: di_1.Optional },] },
+	        { type: testability_1.Testability, decorators: [{ type: di_1.Optional },] },
 	    ];
 	    return ApplicationRef_;
 	}(ApplicationRef));
 	exports.ApplicationRef_ = ApplicationRef_;
-	/**
-	 * @internal
-	 */
-	exports.PLATFORM_CORE_PROVIDERS = 
-	/*@ts2dart_const*/ [
-	    PlatformRef_,
-	    /*@ts2dart_const*/ (
-	    /* @ts2dart_Provider */ { provide: PlatformRef, useExisting: PlatformRef_ })
-	];
-	/**
-	 * @internal
-	 */
-	exports.APPLICATION_CORE_PROVIDERS = [
-	    /* @ts2dart_Provider */ { provide: ng_zone_1.NgZone, useFactory: createNgZone, deps: [] },
-	    ApplicationRef_,
-	    /* @ts2dart_Provider */ { provide: ApplicationRef, useExisting: ApplicationRef_ }
-	];
 	//# sourceMappingURL=application_ref.js.map
 
 /***/ },
-/* 101 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var collection_1 = __webpack_require__(11);
-	var lang_2 = __webpack_require__(4);
-	exports.looseIdentical = lang_2.looseIdentical;
-	exports.uninitialized = new Object();
-	function devModeEqual(a, b) {
-	    if (collection_1.isListLikeIterable(a) && collection_1.isListLikeIterable(b)) {
-	        return collection_1.areIterablesEqual(a, b, devModeEqual);
-	    }
-	    else if (!collection_1.isListLikeIterable(a) && !lang_1.isPrimitive(a) && !collection_1.isListLikeIterable(b) &&
-	        !lang_1.isPrimitive(b)) {
-	        return true;
-	    }
-	    else {
-	        return lang_1.looseIdentical(a, b);
-	    }
-	}
-	exports.devModeEqual = devModeEqual;
-	/**
-	 * Indicates that the result of a {@link PipeMetadata} transformation has changed even though the
-	 * reference
-	 * has not changed.
-	 *
-	 * The wrapped value will be unwrapped by change detection, and the unwrapped value will be stored.
-	 *
-	 * Example:
-	 *
-	 * ```
-	 * if (this._latestValue === this._latestReturnedValue) {
-	 *    return this._latestReturnedValue;
-	 *  } else {
-	 *    this._latestReturnedValue = this._latestValue;
-	 *    return WrappedValue.wrap(this._latestValue); // this will force update
-	 *  }
-	 * ```
-	 */
-	var WrappedValue = (function () {
-	    function WrappedValue(wrapped) {
-	        this.wrapped = wrapped;
-	    }
-	    WrappedValue.wrap = function (value) { return new WrappedValue(value); };
-	    return WrappedValue;
-	}());
-	exports.WrappedValue = WrappedValue;
-	/**
-	 * Helper class for unwrapping WrappedValue s
-	 */
-	var ValueUnwrapper = (function () {
-	    function ValueUnwrapper() {
-	        this.hasWrappedValue = false;
-	    }
-	    ValueUnwrapper.prototype.unwrap = function (value) {
-	        if (value instanceof WrappedValue) {
-	            this.hasWrappedValue = true;
-	            return value.wrapped;
-	        }
-	        return value;
-	    };
-	    ValueUnwrapper.prototype.reset = function () { this.hasWrappedValue = false; };
-	    return ValueUnwrapper;
-	}());
-	exports.ValueUnwrapper = ValueUnwrapper;
-	/**
-	 * Represents a basic change from a previous to a new value.
-	 */
-	var SimpleChange = (function () {
-	    function SimpleChange(previousValue, currentValue) {
-	        this.previousValue = previousValue;
-	        this.currentValue = currentValue;
-	    }
-	    /**
-	     * Check whether the new value is the first value assigned.
-	     */
-	    SimpleChange.prototype.isFirstChange = function () { return this.previousValue === exports.uninitialized; };
-	    return SimpleChange;
-	}());
-	exports.SimpleChange = SimpleChange;
-	//# sourceMappingURL=change_detection_util.js.map
-
-/***/ },
-/* 102 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var exceptions_1 = __webpack_require__(9);
-	var collection_1 = __webpack_require__(11);
-	var lang_1 = __webpack_require__(4);
-	/* @ts2dart_const */
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
 	var DefaultIterableDifferFactory = (function () {
 	    function DefaultIterableDifferFactory() {
 	    }
@@ -5610,6 +6847,9 @@
 	}());
 	exports.DefaultIterableDifferFactory = DefaultIterableDifferFactory;
 	var trackByIdentity = function (index, item) { return item; };
+	/**
+	 * @stable
+	 */
 	var DefaultIterableDiffer = (function () {
 	    function DefaultIterableDiffer(_trackByFn) {
 	        this._trackByFn = _trackByFn;
@@ -5647,6 +6887,55 @@
 	        var record;
 	        for (record = this._itHead; record !== null; record = record._next) {
 	            fn(record);
+	        }
+	    };
+	    DefaultIterableDiffer.prototype.forEachOperation = function (fn) {
+	        var nextIt = this._itHead;
+	        var nextRemove = this._removalsHead;
+	        var addRemoveOffset = 0;
+	        var moveOffsets = null;
+	        while (nextIt || nextRemove) {
+	            // Figure out which is the next record to process
+	            // Order: remove, add, move
+	            var record = !nextRemove ||
+	                nextIt &&
+	                    nextIt.currentIndex < getPreviousIndex(nextRemove, addRemoveOffset, moveOffsets) ?
+	                nextIt :
+	                nextRemove;
+	            var adjPreviousIndex = getPreviousIndex(record, addRemoveOffset, moveOffsets);
+	            var currentIndex = record.currentIndex;
+	            // consume the item, and adjust the addRemoveOffset and update moveDistance if necessary
+	            if (record === nextRemove) {
+	                addRemoveOffset--;
+	                nextRemove = nextRemove._nextRemoved;
+	            }
+	            else {
+	                nextIt = nextIt._next;
+	                if (record.previousIndex == null) {
+	                    addRemoveOffset++;
+	                }
+	                else {
+	                    // INVARIANT:  currentIndex < previousIndex
+	                    if (!moveOffsets)
+	                        moveOffsets = [];
+	                    var localMovePreviousIndex = adjPreviousIndex - addRemoveOffset;
+	                    var localCurrentIndex = currentIndex - addRemoveOffset;
+	                    if (localMovePreviousIndex != localCurrentIndex) {
+	                        for (var i = 0; i < localMovePreviousIndex; i++) {
+	                            var offset = i < moveOffsets.length ? moveOffsets[i] : (moveOffsets[i] = 0);
+	                            var index = offset + i;
+	                            if (localCurrentIndex <= index && index < localMovePreviousIndex) {
+	                                moveOffsets[i] = offset + 1;
+	                            }
+	                        }
+	                        var previousIndex = record.previousIndex;
+	                        moveOffsets[previousIndex] = localCurrentIndex - localMovePreviousIndex;
+	                    }
+	                }
+	            }
+	            if (adjPreviousIndex !== currentIndex) {
+	                fn(record, adjPreviousIndex, currentIndex);
+	            }
 	        }
 	    };
 	    DefaultIterableDiffer.prototype.forEachPreviousItem = function (fn) {
@@ -5725,7 +7014,7 @@
 	        }
 	        else {
 	            index = 0;
-	            collection_1.iterateListLike(collection, function (item) {
+	            collection_1.iterateListLike(collection, function (item /** TODO #9100 */) {
 	                itemTrackBy = _this._trackByFn(index, item);
 	                if (record === null || !lang_1.looseIdentical(record.trackById, itemTrackBy)) {
 	                    record = _this._mismatch(record, item, itemTrackBy, index);
@@ -6066,25 +7355,30 @@
 	    };
 	    DefaultIterableDiffer.prototype.toString = function () {
 	        var list = [];
-	        this.forEachItem(function (record) { return list.push(record); });
+	        this.forEachItem(function (record /** TODO #9100 */) { return list.push(record); });
 	        var previous = [];
-	        this.forEachPreviousItem(function (record) { return previous.push(record); });
+	        this.forEachPreviousItem(function (record /** TODO #9100 */) { return previous.push(record); });
 	        var additions = [];
-	        this.forEachAddedItem(function (record) { return additions.push(record); });
+	        this.forEachAddedItem(function (record /** TODO #9100 */) { return additions.push(record); });
 	        var moves = [];
-	        this.forEachMovedItem(function (record) { return moves.push(record); });
+	        this.forEachMovedItem(function (record /** TODO #9100 */) { return moves.push(record); });
 	        var removals = [];
-	        this.forEachRemovedItem(function (record) { return removals.push(record); });
+	        this.forEachRemovedItem(function (record /** TODO #9100 */) { return removals.push(record); });
 	        var identityChanges = [];
-	        this.forEachIdentityChange(function (record) { return identityChanges.push(record); });
-	        return "collection: " + list.join(', ') + "\n" + "previous: " + previous.join(', ') + "\n" +
-	            "additions: " + additions.join(', ') + "\n" + "moves: " + moves.join(', ') + "\n" +
-	            "removals: " + removals.join(', ') + "\n" + "identityChanges: " +
-	            identityChanges.join(', ') + "\n";
+	        this.forEachIdentityChange(function (record /** TODO #9100 */) { return identityChanges.push(record); });
+	        return 'collection: ' + list.join(', ') + '\n' +
+	            'previous: ' + previous.join(', ') + '\n' +
+	            'additions: ' + additions.join(', ') + '\n' +
+	            'moves: ' + moves.join(', ') + '\n' +
+	            'removals: ' + removals.join(', ') + '\n' +
+	            'identityChanges: ' + identityChanges.join(', ') + '\n';
 	    };
 	    return DefaultIterableDiffer;
 	}());
 	exports.DefaultIterableDiffer = DefaultIterableDiffer;
+	/**
+	 * @stable
+	 */
 	var CollectionChangeRecord = (function () {
 	    function CollectionChangeRecord(item, trackById) {
 	        this.item = item;
@@ -6113,10 +7407,9 @@
 	        this._nextIdentityChange = null;
 	    }
 	    CollectionChangeRecord.prototype.toString = function () {
-	        return this.previousIndex === this.currentIndex ?
-	            lang_1.stringify(this.item) :
-	            lang_1.stringify(this.item) + '[' + lang_1.stringify(this.previousIndex) + '->' +
-	                lang_1.stringify(this.currentIndex) + ']';
+	        return this.previousIndex === this.currentIndex ? lang_1.stringify(this.item) :
+	            lang_1.stringify(this.item) + '[' +
+	                lang_1.stringify(this.previousIndex) + '->' + lang_1.stringify(this.currentIndex) + ']';
 	    };
 	    return CollectionChangeRecord;
 	}());
@@ -6246,86 +7539,37 @@
 	    _DuplicateMap.prototype.toString = function () { return '_DuplicateMap(' + lang_1.stringify(this.map) + ')'; };
 	    return _DuplicateMap;
 	}());
+	function getPreviousIndex(item, addRemoveOffset, moveOffsets) {
+	    var previousIndex = item.previousIndex;
+	    if (previousIndex === null)
+	        return previousIndex;
+	    var moveOffset = 0;
+	    if (moveOffsets && previousIndex < moveOffsets.length) {
+	        moveOffset = moveOffsets[previousIndex];
+	    }
+	    return previousIndex + addRemoveOffset + moveOffset;
+	}
 	//# sourceMappingURL=default_iterable_differ.js.map
 
 /***/ },
-/* 103 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var decorators_1 = __webpack_require__(32);
-	// Note: Need to rename warn as in Dart
-	// class members and imports can't use the same name.
-	var _warnImpl = lang_1.warn;
-	var Console = (function () {
-	    function Console() {
-	    }
-	    Console.prototype.log = function (message) { lang_1.print(message); };
-	    // Note: for reporting errors use `DOM.logError()` as it is platform specific
-	    Console.prototype.warn = function (message) { _warnImpl(message); };
-	    Console.decorators = [
-	        { type: decorators_1.Injectable },
-	    ];
-	    return Console;
-	}());
-	exports.Console = Console;
-	//# sourceMappingURL=console.js.map
-
-/***/ },
-/* 104 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var exceptions_1 = __webpack_require__(9);
-	var _THROW_IF_NOT_FOUND = new Object();
-	exports.THROW_IF_NOT_FOUND = _THROW_IF_NOT_FOUND;
-	var Injector = (function () {
-	    function Injector() {
-	    }
-	    /**
-	     * Retrieves an instance from the injector based on the provided token.
-	     * If not found:
-	     * - Throws {@link NoProviderError} if no `notFoundValue` that is not equal to
-	     * Injector.THROW_IF_NOT_FOUND is given
-	     * - Returns the `notFoundValue` otherwise
-	     *
-	     * ### Example ([live demo](http://plnkr.co/edit/HeXSHg?p=preview))
-	     *
-	     * ```typescript
-	     * var injector = ReflectiveInjector.resolveAndCreate([
-	     *   provide("validToken", {useValue: "Value"})
-	     * ]);
-	     * expect(injector.get("validToken")).toEqual("Value");
-	     * expect(() => injector.get("invalidToken")).toThrowError();
-	     * ```
-	     *
-	     * `Injector` returns itself when given `Injector` as a token.
-	     *
-	     * ```typescript
-	     * var injector = ReflectiveInjector.resolveAndCreate([]);
-	     * expect(injector.get(Injector)).toBe(injector);
-	     * ```
-	     */
-	    Injector.prototype.get = function (token, notFoundValue) { return exceptions_1.unimplemented(); };
-	    Injector.THROW_IF_NOT_FOUND = _THROW_IF_NOT_FOUND;
-	    return Injector;
-	}());
-	exports.Injector = Injector;
-	//# sourceMappingURL=injector.js.map
-
-/***/ },
-/* 105 */
-/***/ function(module, exports, __webpack_require__) {
-
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
 	/**
 	 * Describes how the {@link Injector} should instantiate a given token.
 	 *
@@ -6340,7 +7584,7 @@
 	 *
 	 * expect(injector.get("message")).toEqual('Hello');
 	 * ```
-	 * @ts2dart_const
+	 * @deprecated
 	 */
 	var Provider = (function () {
 	    function Provider(token, _a) {
@@ -6395,7 +7639,6 @@
 	 * See {@link Provider} instead.
 	 *
 	 * @deprecated
-	 * @ts2dart_const
 	 */
 	var Binding = (function (_super) {
 	    __extends(Binding, _super);
@@ -6453,7 +7696,7 @@
 	 * to an existing `token`.
 	 * See {@link ProviderBuilder} for more details.
 	 *
-	 * The `token` is most commonly a class or {@link OpaqueToken-class.html}.
+	 * The `token` is most commonly a class or {@link OpaqueToken}.
 	 *
 	 * @deprecated
 	 */
@@ -6463,6 +7706,7 @@
 	exports.bind = bind;
 	/**
 	 * Helper class for the {@link bind} function.
+	 * @deprecated
 	 */
 	var ProviderBuilder = (function () {
 	    function ProviderBuilder(token) {
@@ -6483,11 +7727,11 @@
 	     *
 	     * var injectorClass = Injector.resolveAndCreate([
 	     *   Car,
-	     *   provide(Vehicle, {useClass: Car})
+	     *   {provide: Vehicle, useClass: Car}
 	     * ]);
 	     * var injectorAlias = Injector.resolveAndCreate([
 	     *   Car,
-	     *   provide(Vehicle, {useExisting: Car})
+	     *   {provide: Vehicle, useExisting: Car}
 	     * ]);
 	     *
 	     * expect(injectorClass.get(Vehicle)).not.toBe(injectorClass.get(Car));
@@ -6510,7 +7754,7 @@
 	     *
 	     * ```typescript
 	     * var injector = Injector.resolveAndCreate([
-	     *   provide('message', {useValue: 'Hello'})
+	     *   {provide: 'message', useValue: 'Hello'}
 	     * ]);
 	     *
 	     * expect(injector.get('message')).toEqual('Hello');
@@ -6535,11 +7779,11 @@
 	     *
 	     * var injectorAlias = Injector.resolveAndCreate([
 	     *   Car,
-	     *   provide(Vehicle, {useExisting: Car})
+	     *   {provide: Vehicle, useExisting: Car}
 	     * ]);
 	     * var injectorClass = Injector.resolveAndCreate([
 	     *   Car,
-	     *   provide(Vehicle, {useClass: Car})
+	     *   {provide: Vehicle, useClass: Car})
 	     * ]);
 	     *
 	     * expect(injectorAlias.get(Vehicle)).toBe(injectorAlias.get(Car));
@@ -6562,8 +7806,8 @@
 	     *
 	     * ```typescript
 	     * var injector = Injector.resolveAndCreate([
-	     *   provide(Number, {useFactory: () => { return 1+2; }}),
-	     *   provide(String, {useFactory: (v) => { return "Value: " + v; }, deps: [Number]})
+	     *   {provide: Number, useFactory: () => { return 1+2; }},
+	     *   {provide: String, useFactory: (v) => { return "Value: " + v; }, deps: [Number]}
 	     * ]);
 	     *
 	     * expect(injector.get(Number)).toEqual(3);
@@ -6585,6 +7829,7 @@
 	 * See {@link Provider} for more details.
 	 *
 	 * <!-- TODO: improve the docs -->
+	 * @deprecated
 	 */
 	function provide(token, _a) {
 	    var useClass = _a.useClass, useValue = _a.useValue, useExisting = _a.useExisting, useFactory = _a.useFactory, deps = _a.deps, multi = _a.multi;
@@ -6601,18 +7846,25 @@
 	//# sourceMappingURL=provider.js.map
 
 /***/ },
-/* 106 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var collection_1 = __webpack_require__(11);
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
 	function findFirstClosedCycle(keys) {
 	    var res = [];
 	    for (var i = 0; i < keys.length; ++i) {
@@ -6620,9 +7872,7 @@
 	            res.push(keys[i]);
 	            return res;
 	        }
-	        else {
-	            res.push(keys[i]);
-	        }
+	        res.push(keys[i]);
 	    }
 	    return res;
 	}
@@ -6630,19 +7880,18 @@
 	    if (keys.length > 1) {
 	        var reversed = findFirstClosedCycle(collection_1.ListWrapper.reversed(keys));
 	        var tokenStrs = reversed.map(function (k) { return lang_1.stringify(k.token); });
-	        return " (" + tokenStrs.join(' -> ') + ")";
+	        return ' (' + tokenStrs.join(' -> ') + ')';
 	    }
-	    else {
-	        return "";
-	    }
+	    return '';
 	}
 	/**
 	 * Base class for all errors arising from misconfigured providers.
+	 * @stable
 	 */
 	var AbstractProviderError = (function (_super) {
 	    __extends(AbstractProviderError, _super);
 	    function AbstractProviderError(injector, key, constructResolvingMessage) {
-	        _super.call(this, "DI Exception");
+	        _super.call(this, 'DI Exception');
 	        this.keys = [key];
 	        this.injectors = [injector];
 	        this.constructResolvingMessage = constructResolvingMessage;
@@ -6662,8 +7911,8 @@
 	}(exceptions_1.BaseException));
 	exports.AbstractProviderError = AbstractProviderError;
 	/**
-	 * Thrown when trying to retrieve a dependency by `Key` from {@link Injector}, but the
-	 * {@link Injector} does not have a {@link Provider} for {@link Key}.
+	 * Thrown when trying to retrieve a dependency by key from {@link Injector}, but the
+	 * {@link Injector} does not have a {@link Provider} for the given key.
 	 *
 	 * ### Example ([live demo](http://plnkr.co/edit/vq8D3FRB9aGbnWJqtEPE?p=preview))
 	 *
@@ -6674,6 +7923,7 @@
 	 *
 	 * expect(() => Injector.resolveAndCreate([A])).toThrowError();
 	 * ```
+	 * @stable
 	 */
 	var NoProviderError = (function (_super) {
 	    __extends(NoProviderError, _super);
@@ -6693,14 +7943,15 @@
 	 *
 	 * ```typescript
 	 * var injector = Injector.resolveAndCreate([
-	 *   provide("one", {useFactory: (two) => "two", deps: [[new Inject("two")]]}),
-	 *   provide("two", {useFactory: (one) => "one", deps: [[new Inject("one")]]})
+	 *   {provide: "one", useFactory: (two) => "two", deps: [[new Inject("two")]]},
+	 *   {provide: "two", useFactory: (one) => "one", deps: [[new Inject("one")]]}
 	 * ]);
 	 *
 	 * expect(() => injector.get("one")).toThrowError();
 	 * ```
 	 *
 	 * Retrieving `A` or `B` throws a `CyclicDependencyError` as the graph above cannot be constructed.
+	 * @stable
 	 */
 	var CyclicDependencyError = (function (_super) {
 	    __extends(CyclicDependencyError, _super);
@@ -6737,11 +7988,12 @@
 	 *   expect(e.originalStack).toBeDefined();
 	 * }
 	 * ```
+	 * @stable
 	 */
 	var InstantiationError = (function (_super) {
 	    __extends(InstantiationError, _super);
 	    function InstantiationError(injector, originalException, originalStack, key) {
-	        _super.call(this, "DI Exception", originalException, originalStack, null);
+	        _super.call(this, 'DI Exception', originalException, originalStack, null);
 	        this.keys = [key];
 	        this.injectors = [injector];
 	    }
@@ -6779,12 +8031,12 @@
 	 * ```typescript
 	 * expect(() => Injector.resolveAndCreate(["not a type"])).toThrowError();
 	 * ```
+	 * @stable
 	 */
 	var InvalidProviderError = (function (_super) {
 	    __extends(InvalidProviderError, _super);
 	    function InvalidProviderError(provider) {
-	        _super.call(this, "Invalid provider - only instances of Provider and Type are allowed, got: " +
-	            provider.toString());
+	        _super.call(this, "Invalid provider - only instances of Provider and Type are allowed, got: " + provider);
 	    }
 	    return InvalidProviderError;
 	}(exceptions_1.BaseException));
@@ -6816,6 +8068,7 @@
 	 *
 	 * expect(() => Injector.resolveAndCreate([A,B])).toThrowError();
 	 * ```
+	 * @stable
 	 */
 	var NoAnnotationError = (function (_super) {
 	    __extends(NoAnnotationError, _super);
@@ -6833,10 +8086,10 @@
 	                signature.push(parameter.map(lang_1.stringify).join(' '));
 	            }
 	        }
-	        return "Cannot resolve all parameters for '" + lang_1.stringify(typeOrFunc) + "'(" +
-	            signature.join(', ') + "). " +
-	            "Make sure that all the parameters are decorated with Inject or have valid type annotations and that '" +
-	            lang_1.stringify(typeOrFunc) + "' is decorated with Injectable.";
+	        return 'Cannot resolve all parameters for \'' + lang_1.stringify(typeOrFunc) + '\'(' +
+	            signature.join(', ') + '). ' +
+	            'Make sure that all the parameters are decorated with Inject or have valid type annotations and that \'' +
+	            lang_1.stringify(typeOrFunc) + '\' is decorated with Injectable.';
 	    };
 	    return NoAnnotationError;
 	}(exceptions_1.BaseException));
@@ -6853,6 +8106,7 @@
 	 *
 	 * expect(() => injector.getAt(100)).toThrowError();
 	 * ```
+	 * @stable
 	 */
 	var OutOfBoundsError = (function (_super) {
 	    __extends(OutOfBoundsError, _super);
@@ -6878,7 +8132,7 @@
 	var MixingMultiProvidersWithRegularProvidersError = (function (_super) {
 	    __extends(MixingMultiProvidersWithRegularProvidersError, _super);
 	    function MixingMultiProvidersWithRegularProvidersError(provider1, provider2) {
-	        _super.call(this, "Cannot mix multi providers and regular providers, got: " + provider1.toString() + " " +
+	        _super.call(this, 'Cannot mix multi providers and regular providers, got: ' + provider1.toString() + ' ' +
 	            provider2.toString());
 	    }
 	    return MixingMultiProvidersWithRegularProvidersError;
@@ -6887,13 +8141,20 @@
 	//# sourceMappingURL=reflective_exceptions.js.map
 
 /***/ },
-/* 107 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
-	var forward_ref_1 = __webpack_require__(62);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var forward_ref_1 = __webpack_require__(78);
 	/**
 	 * A unique object used for retrieving items from the {@link ReflectiveInjector}.
 	 *
@@ -6908,6 +8169,7 @@
 	 * `Key` should not be created directly. {@link ReflectiveInjector} creates keys automatically when
 	 * resolving
 	 * providers.
+	 * @experimental
 	 */
 	var ReflectiveKey = (function () {
 	    /**
@@ -6974,19 +8236,26 @@
 	//# sourceMappingURL=reflective_key.js.map
 
 /***/ },
-/* 108 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var collection_1 = __webpack_require__(11);
-	var reflection_1 = __webpack_require__(66);
-	var reflective_key_1 = __webpack_require__(107);
+	var collection_1 = __webpack_require__(12);
+	var lang_1 = __webpack_require__(3);
+	var reflection_1 = __webpack_require__(136);
+	var forward_ref_1 = __webpack_require__(78);
 	var metadata_1 = __webpack_require__(33);
-	var reflective_exceptions_1 = __webpack_require__(106);
-	var forward_ref_1 = __webpack_require__(62);
-	var provider_1 = __webpack_require__(105);
-	var provider_util_1 = __webpack_require__(185);
+	var provider_1 = __webpack_require__(128);
+	var provider_util_1 = __webpack_require__(220);
+	var reflective_exceptions_1 = __webpack_require__(129);
+	var reflective_key_1 = __webpack_require__(130);
 	/**
 	 * `Dependency` is used by the framework to extend DI.
 	 * This is internal to Angular and should not be used directly.
@@ -7022,6 +8291,7 @@
 	exports.ResolvedReflectiveProvider_ = ResolvedReflectiveProvider_;
 	/**
 	 * An internal resolved representation of a factory function created by resolving {@link Provider}.
+	 * @experimental
 	 */
 	var ResolvedReflectiveFactory = (function () {
 	    function ResolvedReflectiveFactory(
@@ -7162,7 +8432,7 @@
 	    }
 	    return params.map(function (p) { return _extractToken(typeOrFunc, p, params); });
 	}
-	function _extractToken(typeOrFunc, metadata /*any[] | any*/, params) {
+	function _extractToken(typeOrFunc /** TODO #9100 */, metadata /** TODO #9100 */ /*any[] | any*/, params) {
 	    var depProps = [];
 	    var token = null;
 	    var optional = false;
@@ -7211,22 +8481,62 @@
 	        throw new reflective_exceptions_1.NoAnnotationError(typeOrFunc, params);
 	    }
 	}
-	function _createDependency(token, optional, lowerBoundVisibility, upperBoundVisibility, depProps) {
+	function _createDependency(token /** TODO #9100 */, optional /** TODO #9100 */, lowerBoundVisibility /** TODO #9100 */, upperBoundVisibility /** TODO #9100 */, depProps /** TODO #9100 */) {
 	    return new ReflectiveDependency(reflective_key_1.ReflectiveKey.get(token), optional, lowerBoundVisibility, upperBoundVisibility, depProps);
 	}
 	//# sourceMappingURL=reflective_provider.js.map
 
 /***/ },
-/* 109 */
+/* 132 */
+35,
+/* 133 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * Low-level service for loading {@link ComponentFactory}s, which
+	 * can later be used to create and render a Component instance.
+	 *
+	 * @deprecated Use {@link ComponentFactoryResolver} together with {@link
+	 * NgModule}.entryComponents}/{@link Component}.entryComponents or
+	 * {@link ANALYZE_FOR_ENTRY_COMPONENTS} provider for dynamic component creation.
+	 * Use {@link NgModuleFactoryLoader} for lazy loading.
+	 */
+	var ComponentResolver = (function () {
+	    function ComponentResolver() {
+	    }
+	    ComponentResolver.DynamicCompilationDeprecationMsg = 'ComponentResolver is deprecated for dynamic compilation. Use ComponentFactoryResolver together with @NgModule/@Component.entryComponents or ANALYZE_FOR_ENTRY_COMPONENTS provider instead. For runtime compile only, you can also use Compiler.compileComponentSync/Async.';
+	    ComponentResolver.LazyLoadingDeprecationMsg = 'ComponentResolver is deprecated for lazy loading. Use NgModuleFactoryLoader instead.';
+	    return ComponentResolver;
+	}());
+	exports.ComponentResolver = ComponentResolver;
+	//# sourceMappingURL=component_resolver.js.map
+
+/***/ },
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var collection_1 = __webpack_require__(11);
-	var exceptions_1 = __webpack_require__(9);
-	var view_type_1 = __webpack_require__(63);
-	var element_ref_1 = __webpack_require__(192);
-	var view_container_ref_1 = __webpack_require__(194);
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var element_ref_1 = __webpack_require__(226);
+	var view_container_ref_1 = __webpack_require__(229);
+	var view_type_1 = __webpack_require__(81);
 	/**
 	 * An AppElement is created for elements that have a ViewContainerRef,
 	 * a nested component or a <template> element to keep data around
@@ -7277,6 +8587,31 @@
 	        }
 	        return result;
 	    };
+	    AppElement.prototype.moveView = function (view, currentIndex) {
+	        var previousIndex = this.nestedViews.indexOf(view);
+	        if (view.type === view_type_1.ViewType.COMPONENT) {
+	            throw new exceptions_1.BaseException("Component views can't be moved!");
+	        }
+	        var nestedViews = this.nestedViews;
+	        if (nestedViews == null) {
+	            nestedViews = [];
+	            this.nestedViews = nestedViews;
+	        }
+	        collection_1.ListWrapper.removeAt(nestedViews, previousIndex);
+	        collection_1.ListWrapper.insert(nestedViews, currentIndex, view);
+	        var refRenderNode;
+	        if (currentIndex > 0) {
+	            var prevView = nestedViews[currentIndex - 1];
+	            refRenderNode = prevView.lastRootNode;
+	        }
+	        else {
+	            refRenderNode = this.nativeElement;
+	        }
+	        if (lang_1.isPresent(refRenderNode)) {
+	            view.renderer.attachViewAfter(refRenderNode, view.flatRootNodes);
+	        }
+	        view.markContentChildAsMoved(this);
+	    };
 	    AppElement.prototype.attachView = function (view, viewIndex) {
 	        if (view.type === view_type_1.ViewType.COMPONENT) {
 	            throw new exceptions_1.BaseException("Component views can't be moved!");
@@ -7305,7 +8640,7 @@
 	        if (view.type === view_type_1.ViewType.COMPONENT) {
 	            throw new exceptions_1.BaseException("Component views can't be moved!");
 	        }
-	        view.renderer.detachView(view.flatRootNodes);
+	        view.detach();
 	        view.removeFromContentChildren(this);
 	        return view;
 	    };
@@ -7315,16 +8650,24 @@
 	//# sourceMappingURL=element.js.map
 
 /***/ },
-/* 110 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var exceptions_1 = __webpack_require__(9);
+	var change_detection_util_1 = __webpack_require__(75);
+	var exceptions_1 = __webpack_require__(8);
 	/**
 	 * An error thrown if application changes model breaking the top-down data flow.
 	 *
@@ -7357,12 +8700,18 @@
 	 *   }
 	 * }
 	 * ```
+	 * @stable
 	 */
 	var ExpressionChangedAfterItHasBeenCheckedException = (function (_super) {
 	    __extends(ExpressionChangedAfterItHasBeenCheckedException, _super);
 	    function ExpressionChangedAfterItHasBeenCheckedException(oldValue, currValue, context) {
-	        _super.call(this, "Expression has changed after it was checked. " +
-	            ("Previous value: '" + oldValue + "'. Current value: '" + currValue + "'"));
+	        var msg = "Expression has changed after it was checked. Previous value: '" + oldValue + "'. Current value: '" + currValue + "'.";
+	        if (oldValue === change_detection_util_1.UNINITIALIZED) {
+	            msg +=
+	                " It seems like the view has been created after its parent and its children have been dirty checked." +
+	                    " Has it been created in a change detection hook ?";
+	        }
+	        _super.call(this, msg);
 	    }
 	    return ExpressionChangedAfterItHasBeenCheckedException;
 	}(exceptions_1.BaseException));
@@ -7372,6 +8721,7 @@
 	 *
 	 * This error wraps the original exception to attach additional contextual information that can
 	 * be useful for debugging.
+	 * @stable
 	 */
 	var ViewWrappedException = (function (_super) {
 	    __extends(ViewWrappedException, _super);
@@ -7387,6 +8737,7 @@
 	 * This error indicates a bug in the framework.
 	 *
 	 * This is an internal Angular error.
+	 * @stable
 	 */
 	var ViewDestroyedException = (function (_super) {
 	    __extends(ViewDestroyedException, _super);
@@ -7399,94 +8750,45 @@
 	//# sourceMappingURL=exceptions.js.map
 
 /***/ },
-/* 111 */
-/***/ function(module, exports) {
+/* 136 */
+/***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
+	var reflection_capabilities_1 = __webpack_require__(237);
+	var reflector_1 = __webpack_require__(238);
+	var reflector_2 = __webpack_require__(238);
+	exports.ReflectionInfo = reflector_2.ReflectionInfo;
+	exports.Reflector = reflector_2.Reflector;
 	/**
-	 * Defines template and style encapsulation options available for Component's {@link View}.
-	 *
-	 * See {@link ViewMetadata#encapsulation}.
+	 * The {@link Reflector} used internally in Angular to access metadata
+	 * about symbols.
 	 */
-	(function (ViewEncapsulation) {
-	    /**
-	     * Emulate `Native` scoping of styles by adding an attribute containing surrogate id to the Host
-	     * Element and pre-processing the style rules provided via
-	     * {@link ViewMetadata#styles} or {@link ViewMetadata#stylesUrls}, and adding the new Host Element
-	     * attribute to all selectors.
-	     *
-	     * This is the default option.
-	     */
-	    ViewEncapsulation[ViewEncapsulation["Emulated"] = 0] = "Emulated";
-	    /**
-	     * Use the native encapsulation mechanism of the renderer.
-	     *
-	     * For the DOM this means using [Shadow DOM](https://w3c.github.io/webcomponents/spec/shadow/) and
-	     * creating a ShadowRoot for Component's Host Element.
-	     */
-	    ViewEncapsulation[ViewEncapsulation["Native"] = 1] = "Native";
-	    /**
-	     * Don't provide any template or style encapsulation.
-	     */
-	    ViewEncapsulation[ViewEncapsulation["None"] = 2] = "None";
-	})(exports.ViewEncapsulation || (exports.ViewEncapsulation = {}));
-	var ViewEncapsulation = exports.ViewEncapsulation;
-	exports.VIEW_ENCAPSULATION_VALUES = [ViewEncapsulation.Emulated, ViewEncapsulation.Native, ViewEncapsulation.None];
-	/**
-	 * Metadata properties available for configuring Views.
-	 *
-	 * Each Angular component requires a single `@Component` and at least one `@View` annotation. The
-	 * `@View` annotation specifies the HTML template to use, and lists the directives that are active
-	 * within the template.
-	 *
-	 * When a component is instantiated, the template is loaded into the component's shadow root, and
-	 * the expressions and statements in the template are evaluated against the component.
-	 *
-	 * For details on the `@Component` annotation, see {@link ComponentMetadata}.
-	 *
-	 * ### Example
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'greet',
-	 *   template: 'Hello {{name}}!',
-	 *   directives: [GreetUser, Bold]
-	 * })
-	 * class Greet {
-	 *   name: string;
-	 *
-	 *   constructor() {
-	 *     this.name = 'World';
-	 *   }
-	 * }
-	 * ```
-	 * @ts2dart_const
-	 */
-	var ViewMetadata = (function () {
-	    function ViewMetadata(_a) {
-	        var _b = _a === void 0 ? {} : _a, templateUrl = _b.templateUrl, template = _b.template, directives = _b.directives, pipes = _b.pipes, encapsulation = _b.encapsulation, styles = _b.styles, styleUrls = _b.styleUrls;
-	        this.templateUrl = templateUrl;
-	        this.template = template;
-	        this.styleUrls = styleUrls;
-	        this.styles = styles;
-	        this.directives = directives;
-	        this.pipes = pipes;
-	        this.encapsulation = encapsulation;
-	    }
-	    return ViewMetadata;
-	}());
-	exports.ViewMetadata = ViewMetadata;
-	//# sourceMappingURL=view.js.map
+	exports.reflector = new reflector_1.Reflector(new reflection_capabilities_1.ReflectionCapabilities());
+	//# sourceMappingURL=reflection.js.map
 
 /***/ },
-/* 112 */
+/* 137 */
 /***/ function(module, exports) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	/**
-	* Provides read-only access to reflection data about symbols. Used internally by Angular
-	* to power dependency injection and compilation.
-	*/
+	 * Provides read-only access to reflection data about symbols. Used internally by Angular
+	 * to power dependency injection and compilation.
+	 */
 	var ReflectorReader = (function () {
 	    function ReflectorReader() {
 	    }
@@ -7496,18 +8798,30 @@
 	//# sourceMappingURL=reflector_reader.js.map
 
 /***/ },
-/* 113 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var exceptions_1 = __webpack_require__(9);
+	var exceptions_1 = __webpack_require__(8);
+	/**
+	 * @experimental
+	 */
+	// TODO (matsko): add typing for the animation function
 	var RenderComponentType = (function () {
-	    function RenderComponentType(id, templateUrl, slotCount, encapsulation, styles) {
+	    function RenderComponentType(id, templateUrl, slotCount, encapsulation, styles, animations) {
 	        this.id = id;
 	        this.templateUrl = templateUrl;
 	        this.slotCount = slotCount;
 	        this.encapsulation = encapsulation;
 	        this.styles = styles;
+	        this.animations = animations;
 	    }
 	    return RenderComponentType;
 	}());
@@ -7548,6 +8862,9 @@
 	    return RenderDebugInfo;
 	}());
 	exports.RenderDebugInfo = RenderDebugInfo;
+	/**
+	 * @experimental
+	 */
 	var Renderer = (function () {
 	    function Renderer() {
 	    }
@@ -7565,6 +8882,7 @@
 	 * If you are implementing a custom renderer, you must implement this interface.
 	 *
 	 * The default Renderer implementation is `DomRenderer`. Also available is `WebWorkerRenderer`.
+	 * @experimental
 	 */
 	var RootRenderer = (function () {
 	    function RootRenderer() {
@@ -7575,16 +8893,22 @@
 	//# sourceMappingURL=api.js.map
 
 /***/ },
-/* 114 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var collection_1 = __webpack_require__(11);
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
-	var ng_zone_1 = __webpack_require__(115);
-	var async_1 = __webpack_require__(27);
-	var decorators_1 = __webpack_require__(32);
+	var decorators_1 = __webpack_require__(47);
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var ng_zone_1 = __webpack_require__(140);
 	var Testability = (function () {
 	    function Testability(_ngZone) {
 	        this._ngZone = _ngZone;
@@ -7606,17 +8930,21 @@
 	    /** @internal */
 	    Testability.prototype._watchAngularEvents = function () {
 	        var _this = this;
-	        async_1.ObservableWrapper.subscribe(this._ngZone.onUnstable, function (_) {
-	            _this._didWork = true;
-	            _this._isZoneStable = false;
+	        this._ngZone.onUnstable.subscribe({
+	            next: function () {
+	                _this._didWork = true;
+	                _this._isZoneStable = false;
+	            }
 	        });
 	        this._ngZone.runOutsideAngular(function () {
-	            async_1.ObservableWrapper.subscribe(_this._ngZone.onStable, function (_) {
-	                ng_zone_1.NgZone.assertNotInAngularZone();
-	                lang_1.scheduleMicroTask(function () {
-	                    _this._isZoneStable = true;
-	                    _this._runCallbacksIfReady();
-	                });
+	            _this._ngZone.onStable.subscribe({
+	                next: function () {
+	                    ng_zone_1.NgZone.assertNotInAngularZone();
+	                    lang_1.scheduleMicroTask(function () {
+	                        _this._isZoneStable = true;
+	                        _this._runCallbacksIfReady();
+	                    });
+	                }
 	            });
 	        });
 	    };
@@ -7666,9 +8994,11 @@
 	        // TODO(juliemr): implement.
 	        return [];
 	    };
+	    /** @nocollapse */
 	    Testability.decorators = [
 	        { type: decorators_1.Injectable },
 	    ];
+	    /** @nocollapse */
 	    Testability.ctorParameters = [
 	        { type: ng_zone_1.NgZone, },
 	    ];
@@ -7691,14 +9021,15 @@
 	        if (findInAncestors === void 0) { findInAncestors = true; }
 	        return _testabilityGetter.findTestabilityInTree(this, elem, findInAncestors);
 	    };
+	    /** @nocollapse */
 	    TestabilityRegistry.decorators = [
 	        { type: decorators_1.Injectable },
 	    ];
+	    /** @nocollapse */
 	    TestabilityRegistry.ctorParameters = [];
 	    return TestabilityRegistry;
 	}());
 	exports.TestabilityRegistry = TestabilityRegistry;
-	/* @ts2dart_const */
 	var _NoopGetTestability = (function () {
 	    function _NoopGetTestability() {
 	    }
@@ -7710,6 +9041,7 @@
 	}());
 	/**
 	 * Set the {@link GetTestability} implementation used by the Angular testing framework.
+	 * @experimental
 	 */
 	function setTestabilityGetter(getter) {
 	    _testabilityGetter = getter;
@@ -7719,14 +9051,21 @@
 	//# sourceMappingURL=testability.js.map
 
 /***/ },
-/* 115 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var async_1 = __webpack_require__(27);
-	var ng_zone_impl_1 = __webpack_require__(201);
-	var exceptions_1 = __webpack_require__(9);
-	var ng_zone_impl_2 = __webpack_require__(201);
+	var async_1 = __webpack_require__(132);
+	var exceptions_1 = __webpack_require__(8);
+	var ng_zone_impl_1 = __webpack_require__(240);
+	var ng_zone_impl_2 = __webpack_require__(240);
 	exports.NgZoneError = ng_zone_impl_2.NgZoneError;
 	/**
 	 * An injectable service for executing work inside or outside of the Angular zone.
@@ -7798,12 +9137,9 @@
 	 *   }
 	 * }
 	 * ```
+	 * @experimental
 	 */
 	var NgZone = (function () {
-	    /**
-	     * @param {bool} enableLongStackTrace whether to enable long stack trace. They should only be
-	     *               enabled in development mode as they significantly impact perf.
-	     */
 	    function NgZone(_a) {
 	        var _this = this;
 	        var _b = _a.enableLongStackTrace, enableLongStackTrace = _b === void 0 ? false : _b;
@@ -7916,6 +9252,14 @@
 	        enumerable: true,
 	        configurable: true
 	    });
+	    Object.defineProperty(NgZone.prototype, "isStable", {
+	        /**
+	         * Whether there are no outstanding microtasks or microtasks.
+	         */
+	        get: function () { return this._isStable; },
+	        enumerable: true,
+	        configurable: true
+	    });
 	    Object.defineProperty(NgZone.prototype, "hasPendingMicrotasks", {
 	        /**
 	         * Whether there are any outstanding microtasks.
@@ -7969,30 +9313,116 @@
 	//# sourceMappingURL=ng_zone.js.map
 
 /***/ },
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */,
-/* 133 */,
-/* 134 */
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
-	
 	var process = module.exports = {};
+	
+	// cached from whatever global is present so that test runners that stub it
+	// don't break things.  But we need to wrap it in a try catch in case it is
+	// wrapped in strict mode code which doesn't define any globals.  It's inside a
+	// function because try/catches deoptimize in certain engines.
+	
+	var cachedSetTimeout;
+	var cachedClearTimeout;
+	
+	function defaultSetTimout() {
+	    throw new Error('setTimeout has not been defined');
+	}
+	function defaultClearTimeout () {
+	    throw new Error('clearTimeout has not been defined');
+	}
+	(function () {
+	    try {
+	        if (typeof setTimeout === 'function') {
+	            cachedSetTimeout = setTimeout;
+	        } else {
+	            cachedSetTimeout = defaultSetTimout;
+	        }
+	    } catch (e) {
+	        cachedSetTimeout = defaultSetTimout;
+	    }
+	    try {
+	        if (typeof clearTimeout === 'function') {
+	            cachedClearTimeout = clearTimeout;
+	        } else {
+	            cachedClearTimeout = defaultClearTimeout;
+	        }
+	    } catch (e) {
+	        cachedClearTimeout = defaultClearTimeout;
+	    }
+	} ())
+	function runTimeout(fun) {
+	    if (cachedSetTimeout === setTimeout) {
+	        //normal enviroments in sane situations
+	        return setTimeout(fun, 0);
+	    }
+	    // if setTimeout wasn't available but was latter defined
+	    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+	        cachedSetTimeout = setTimeout;
+	        return setTimeout(fun, 0);
+	    }
+	    try {
+	        // when when somebody has screwed with setTimeout but no I.E. maddness
+	        return cachedSetTimeout(fun, 0);
+	    } catch(e){
+	        try {
+	            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+	            return cachedSetTimeout.call(null, fun, 0);
+	        } catch(e){
+	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+	            return cachedSetTimeout.call(this, fun, 0);
+	        }
+	    }
+	
+	
+	}
+	function runClearTimeout(marker) {
+	    if (cachedClearTimeout === clearTimeout) {
+	        //normal enviroments in sane situations
+	        return clearTimeout(marker);
+	    }
+	    // if clearTimeout wasn't available but was latter defined
+	    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+	        cachedClearTimeout = clearTimeout;
+	        return clearTimeout(marker);
+	    }
+	    try {
+	        // when when somebody has screwed with setTimeout but no I.E. maddness
+	        return cachedClearTimeout(marker);
+	    } catch (e){
+	        try {
+	            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+	            return cachedClearTimeout.call(null, marker);
+	        } catch (e){
+	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+	            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+	            return cachedClearTimeout.call(this, marker);
+	        }
+	    }
+	
+	
+	
+	}
 	var queue = [];
 	var draining = false;
 	var currentQueue;
@@ -8017,7 +9447,7 @@
 	    if (draining) {
 	        return;
 	    }
-	    var timeout = setTimeout(cleanUpNextTick);
+	    var timeout = runTimeout(cleanUpNextTick);
 	    draining = true;
 	
 	    var len = queue.length;
@@ -8034,7 +9464,7 @@
 	    }
 	    currentQueue = null;
 	    draining = false;
-	    clearTimeout(timeout);
+	    runClearTimeout(timeout);
 	}
 	
 	process.nextTick = function (fun) {
@@ -8046,7 +9476,7 @@
 	    }
 	    queue.push(new Item(fun, args));
 	    if (queue.length === 1 && !draining) {
-	        setTimeout(drainQueue, 0);
+	        runTimeout(drainQueue);
 	    }
 	};
 	
@@ -8087,16 +9517,16 @@
 
 
 /***/ },
-/* 135 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var isArray_1 = __webpack_require__(457);
-	var isObject_1 = __webpack_require__(458);
-	var isFunction_1 = __webpack_require__(346);
-	var tryCatch_1 = __webpack_require__(461);
-	var errorObject_1 = __webpack_require__(345);
-	var UnsubscriptionError_1 = __webpack_require__(456);
+	var isArray_1 = __webpack_require__(520);
+	var isObject_1 = __webpack_require__(521);
+	var isFunction_1 = __webpack_require__(388);
+	var tryCatch_1 = __webpack_require__(524);
+	var errorObject_1 = __webpack_require__(387);
+	var UnsubscriptionError_1 = __webpack_require__(519);
 	/**
 	 * Represents a disposable resource, such as the execution of an Observable. A
 	 * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -8242,164 +9672,21 @@
 	//# sourceMappingURL=Subscription.js.map
 
 /***/ },
-/* 136 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var root_1 = __webpack_require__(44);
-	var Observable_1 = __webpack_require__(43);
-	/**
-	 * We need this JSDoc comment for affecting ESDoc.
-	 * @extends {Ignored}
-	 * @hide true
-	 */
-	var PromiseObservable = (function (_super) {
-	    __extends(PromiseObservable, _super);
-	    function PromiseObservable(promise, scheduler) {
-	        if (scheduler === void 0) { scheduler = null; }
-	        _super.call(this);
-	        this.promise = promise;
-	        this.scheduler = scheduler;
-	    }
-	    /**
-	     * @param promise
-	     * @param scheduler
-	     * @return {PromiseObservable}
-	     * @static true
-	     * @name fromPromise
-	     * @owner Observable
-	     */
-	    PromiseObservable.create = function (promise, scheduler) {
-	        if (scheduler === void 0) { scheduler = null; }
-	        return new PromiseObservable(promise, scheduler);
-	    };
-	    PromiseObservable.prototype._subscribe = function (subscriber) {
-	        var _this = this;
-	        var promise = this.promise;
-	        var scheduler = this.scheduler;
-	        if (scheduler == null) {
-	            if (this._isScalar) {
-	                if (!subscriber.isUnsubscribed) {
-	                    subscriber.next(this.value);
-	                    subscriber.complete();
-	                }
-	            }
-	            else {
-	                promise.then(function (value) {
-	                    _this.value = value;
-	                    _this._isScalar = true;
-	                    if (!subscriber.isUnsubscribed) {
-	                        subscriber.next(value);
-	                        subscriber.complete();
-	                    }
-	                }, function (err) {
-	                    if (!subscriber.isUnsubscribed) {
-	                        subscriber.error(err);
-	                    }
-	                })
-	                    .then(null, function (err) {
-	                    // escape the promise trap, throw unhandled errors
-	                    root_1.root.setTimeout(function () { throw err; });
-	                });
-	            }
-	        }
-	        else {
-	            if (this._isScalar) {
-	                if (!subscriber.isUnsubscribed) {
-	                    return scheduler.schedule(dispatchNext, 0, { value: this.value, subscriber: subscriber });
-	                }
-	            }
-	            else {
-	                promise.then(function (value) {
-	                    _this.value = value;
-	                    _this._isScalar = true;
-	                    if (!subscriber.isUnsubscribed) {
-	                        subscriber.add(scheduler.schedule(dispatchNext, 0, { value: value, subscriber: subscriber }));
-	                    }
-	                }, function (err) {
-	                    if (!subscriber.isUnsubscribed) {
-	                        subscriber.add(scheduler.schedule(dispatchError, 0, { err: err, subscriber: subscriber }));
-	                    }
-	                })
-	                    .then(null, function (err) {
-	                    // escape the promise trap, throw unhandled errors
-	                    root_1.root.setTimeout(function () { throw err; });
-	                });
-	            }
-	        }
-	    };
-	    return PromiseObservable;
-	}(Observable_1.Observable));
-	exports.PromiseObservable = PromiseObservable;
-	function dispatchNext(arg) {
-	    var value = arg.value, subscriber = arg.subscriber;
-	    if (!subscriber.isUnsubscribed) {
-	        subscriber.next(value);
-	        subscriber.complete();
-	    }
-	}
-	function dispatchError(arg) {
-	    var err = arg.err, subscriber = arg.subscriber;
-	    if (!subscriber.isUnsubscribed) {
-	        subscriber.error(err);
-	    }
-	}
-	//# sourceMappingURL=PromiseObservable.js.map
-
-/***/ },
-/* 137 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var root_1 = __webpack_require__(44);
-	/**
-	 * @param PromiseCtor
-	 * @return {Promise<T>}
-	 * @method toPromise
-	 * @owner Observable
-	 */
-	function toPromise(PromiseCtor) {
-	    var _this = this;
-	    if (!PromiseCtor) {
-	        if (root_1.root.Rx && root_1.root.Rx.config && root_1.root.Rx.config.Promise) {
-	            PromiseCtor = root_1.root.Rx.config.Promise;
-	        }
-	        else if (root_1.root.Promise) {
-	            PromiseCtor = root_1.root.Promise;
-	        }
-	    }
-	    if (!PromiseCtor) {
-	        throw new Error('no Promise impl found');
-	    }
-	    return new PromiseCtor(function (resolve, reject) {
-	        var value;
-	        _this.subscribe(function (x) { return value = x; }, function (err) { return reject(err); }, function () { return resolve(value); });
-	    });
-	}
-	exports.toPromise = toPromise;
-	//# sourceMappingURL=toPromise.js.map
-
-/***/ },
-/* 138 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var root_1 = __webpack_require__(44);
+	var root_1 = __webpack_require__(56);
 	var Symbol = root_1.root.Symbol;
 	exports.$$rxSubscriber = (typeof Symbol === 'function' && typeof Symbol.for === 'function') ?
 	    Symbol.for('rxSubscriber') : '@@rxSubscriber';
 	//# sourceMappingURL=rxSubscriber.js.map
 
 /***/ },
-/* 139 */,
-/* 140 */,
-/* 141 */,
-/* 142 */
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -8415,49 +9702,119 @@
 
 
 /***/ },
-/* 143 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
 	/**
-	* @module
-	* @description
-	* Common directives shipped with Angular.
-	*/
-	var ng_class_1 = __webpack_require__(144);
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var directives_1 = __webpack_require__(167);
+	/**
+	 * A collection of Angular core directives that are likely to be used in each and every Angular
+	 * application. This includes core directives (e.g., NgIf and NgFor), and forms directives (e.g.,
+	 * NgModel).
+	 *
+	 * This collection can be used to quickly enumerate all the built-in directives in the `directives`
+	 * property of the `@Component` decorator.
+	 *
+	 * ### Example
+	 *
+	 * Instead of writing:
+	 *
+	 * ```typescript
+	 * import {NgClass, NgIf, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault, NgModel, NgForm} from
+	 * '@angular/common';
+	 * import {OtherDirective} from './myDirectives';
+	 *
+	 * @Component({
+	 *   selector: 'my-component',
+	 *   templateUrl: 'myComponent.html',
+	 *   directives: [NgClass, NgIf, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault, NgModel, NgForm,
+	 * OtherDirective]
+	 * })
+	 * export class MyComponent {
+	 *   ...
+	 * }
+	 * ```
+	 * one could import all the common directives at once:
+	 *
+	 * ```typescript
+	 * import {COMMON_DIRECTIVES} from '@angular/common';
+	 * import {OtherDirective} from './myDirectives';
+	 *
+	 * @Component({
+	 *   selector: 'my-component',
+	 *   templateUrl: 'myComponent.html',
+	 *   directives: [COMMON_DIRECTIVES, OtherDirective]
+	 * })
+	 * export class MyComponent {
+	 *   ...
+	 * }
+	 * ```
+	 *
+	 * @experimental Contains forms which are experimental.
+	 */
+	exports.COMMON_DIRECTIVES = [directives_1.CORE_DIRECTIVES];
+	//# sourceMappingURL=common_directives.js.map
+
+/***/ },
+/* 167 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * @module
+	 * @description
+	 * Common directives shipped with Angular.
+	 */
+	var core_directives_1 = __webpack_require__(389);
+	exports.CORE_DIRECTIVES = core_directives_1.CORE_DIRECTIVES;
+	var ng_class_1 = __webpack_require__(168);
 	exports.NgClass = ng_class_1.NgClass;
-	var ng_for_1 = __webpack_require__(145);
+	var ng_for_1 = __webpack_require__(169);
 	exports.NgFor = ng_for_1.NgFor;
-	var ng_if_1 = __webpack_require__(146);
+	var ng_if_1 = __webpack_require__(170);
 	exports.NgIf = ng_if_1.NgIf;
-	var ng_template_outlet_1 = __webpack_require__(149);
-	exports.NgTemplateOutlet = ng_template_outlet_1.NgTemplateOutlet;
-	var ng_style_1 = __webpack_require__(148);
-	exports.NgStyle = ng_style_1.NgStyle;
-	var ng_switch_1 = __webpack_require__(74);
-	exports.NgSwitch = ng_switch_1.NgSwitch;
-	exports.NgSwitchWhen = ng_switch_1.NgSwitchWhen;
-	exports.NgSwitchDefault = ng_switch_1.NgSwitchDefault;
-	var ng_plural_1 = __webpack_require__(147);
+	var ng_plural_1 = __webpack_require__(171);
 	exports.NgPlural = ng_plural_1.NgPlural;
 	exports.NgPluralCase = ng_plural_1.NgPluralCase;
-	exports.NgLocalization = ng_plural_1.NgLocalization;
-	__export(__webpack_require__(349));
-	var core_directives_1 = __webpack_require__(348);
-	exports.CORE_DIRECTIVES = core_directives_1.CORE_DIRECTIVES;
+	var ng_style_1 = __webpack_require__(172);
+	exports.NgStyle = ng_style_1.NgStyle;
+	var ng_switch_1 = __webpack_require__(96);
+	exports.NgSwitch = ng_switch_1.NgSwitch;
+	exports.NgSwitchCase = ng_switch_1.NgSwitchCase;
+	exports.NgSwitchDefault = ng_switch_1.NgSwitchDefault;
+	var ng_template_outlet_1 = __webpack_require__(173);
+	exports.NgTemplateOutlet = ng_template_outlet_1.NgTemplateOutlet;
 	//# sourceMappingURL=directives.js.map
 
 /***/ },
-/* 144 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
+	var collection_1 = __webpack_require__(18);
 	var lang_1 = __webpack_require__(5);
-	var collection_1 = __webpack_require__(14);
 	var NgClass = (function () {
 	    function NgClass(_iterableDiffers, _keyValueDiffers, _ngEl, _renderer) {
 	        this._iterableDiffers = _iterableDiffers;
@@ -8476,7 +9833,7 @@
 	        enumerable: true,
 	        configurable: true
 	    });
-	    Object.defineProperty(NgClass.prototype, "rawClass", {
+	    Object.defineProperty(NgClass.prototype, "ngClass", {
 	        set: function (v) {
 	            this._cleanupClasses(this._rawClass);
 	            if (lang_1.isString(v)) {
@@ -8511,7 +9868,6 @@
 	            }
 	        }
 	    };
-	    NgClass.prototype.ngOnDestroy = function () { this._cleanupClasses(this._rawClass); };
 	    NgClass.prototype._cleanupClasses = function (rawClassVal) {
 	        this._applyClasses(rawClassVal, true);
 	        this._applyInitialClasses(false);
@@ -8566,28 +9922,42 @@
 	            }
 	        }
 	    };
+	    /** @nocollapse */
 	    NgClass.decorators = [
-	        { type: core_1.Directive, args: [{ selector: '[ngClass]', inputs: ['rawClass: ngClass', 'initialClasses: class'] },] },
+	        { type: core_1.Directive, args: [{ selector: '[ngClass]' },] },
 	    ];
+	    /** @nocollapse */
 	    NgClass.ctorParameters = [
 	        { type: core_1.IterableDiffers, },
 	        { type: core_1.KeyValueDiffers, },
 	        { type: core_1.ElementRef, },
 	        { type: core_1.Renderer, },
 	    ];
+	    /** @nocollapse */
+	    NgClass.propDecorators = {
+	        'initialClasses': [{ type: core_1.Input, args: ['class',] },],
+	        'ngClass': [{ type: core_1.Input },],
+	    };
 	    return NgClass;
 	}());
 	exports.NgClass = NgClass;
 	//# sourceMappingURL=ng_class.js.map
 
 /***/ },
-/* 145 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
+	var exceptions_1 = __webpack_require__(30);
 	var lang_1 = __webpack_require__(5);
-	var exceptions_1 = __webpack_require__(23);
 	var NgForRow = (function () {
 	    function NgForRow($implicit, index, count) {
 	        this.$implicit = $implicit;
@@ -8624,21 +9994,6 @@
 	        this._iterableDiffers = _iterableDiffers;
 	        this._cdr = _cdr;
 	    }
-	    Object.defineProperty(NgFor.prototype, "ngForOf", {
-	        set: function (value) {
-	            this._ngForOf = value;
-	            if (lang_1.isBlank(this._differ) && lang_1.isPresent(value)) {
-	                try {
-	                    this._differ = this._iterableDiffers.find(value).create(this._cdr, this._ngForTrackBy);
-	                }
-	                catch (e) {
-	                    throw new exceptions_1.BaseException("Cannot find a differ supporting object '" + value + "' of type '" + lang_1.getTypeNameForDebugging(value) + "'. NgFor only supports binding to Iterables such as Arrays.");
-	                }
-	            }
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
 	    Object.defineProperty(NgFor.prototype, "ngForTemplate", {
 	        set: function (value) {
 	            if (lang_1.isPresent(value)) {
@@ -8648,34 +10003,46 @@
 	        enumerable: true,
 	        configurable: true
 	    });
-	    Object.defineProperty(NgFor.prototype, "ngForTrackBy", {
-	        set: function (value) { this._ngForTrackBy = value; },
-	        enumerable: true,
-	        configurable: true
-	    });
+	    NgFor.prototype.ngOnChanges = function (changes) {
+	        if ('ngForOf' in changes) {
+	            // React on ngForOf changes only once all inputs have been initialized
+	            var value = changes['ngForOf'].currentValue;
+	            if (lang_1.isBlank(this._differ) && lang_1.isPresent(value)) {
+	                try {
+	                    this._differ = this._iterableDiffers.find(value).create(this._cdr, this.ngForTrackBy);
+	                }
+	                catch (e) {
+	                    throw new exceptions_1.BaseException("Cannot find a differ supporting object '" + value + "' of type '" + lang_1.getTypeNameForDebugging(value) + "'. NgFor only supports binding to Iterables such as Arrays.");
+	                }
+	            }
+	        }
+	    };
 	    NgFor.prototype.ngDoCheck = function () {
 	        if (lang_1.isPresent(this._differ)) {
-	            var changes = this._differ.diff(this._ngForOf);
+	            var changes = this._differ.diff(this.ngForOf);
 	            if (lang_1.isPresent(changes))
 	                this._applyChanges(changes);
 	        }
 	    };
 	    NgFor.prototype._applyChanges = function (changes) {
 	        var _this = this;
-	        // TODO(rado): check if change detection can produce a change record that is
-	        // easier to consume than current.
-	        var recordViewTuples = [];
-	        changes.forEachRemovedItem(function (removedRecord) {
-	            return recordViewTuples.push(new RecordViewTuple(removedRecord, null));
+	        var insertTuples = [];
+	        changes.forEachOperation(function (item, adjustedPreviousIndex, currentIndex) {
+	            if (item.previousIndex == null) {
+	                var view = _this._viewContainer.createEmbeddedView(_this._templateRef, new NgForRow(null, null, null), currentIndex);
+	                var tuple = new RecordViewTuple(item, view);
+	                insertTuples.push(tuple);
+	            }
+	            else if (currentIndex == null) {
+	                _this._viewContainer.remove(adjustedPreviousIndex);
+	            }
+	            else {
+	                var view = _this._viewContainer.get(adjustedPreviousIndex);
+	                _this._viewContainer.move(view, currentIndex);
+	                var tuple = new RecordViewTuple(item, view);
+	                insertTuples.push(tuple);
+	            }
 	        });
-	        changes.forEachMovedItem(function (movedRecord) {
-	            return recordViewTuples.push(new RecordViewTuple(movedRecord, null));
-	        });
-	        var insertTuples = this._bulkRemove(recordViewTuples);
-	        changes.forEachAddedItem(function (addedRecord) {
-	            return insertTuples.push(new RecordViewTuple(addedRecord, null));
-	        });
-	        this._bulkInsert(insertTuples);
 	        for (var i = 0; i < insertTuples.length; i++) {
 	            this._perViewChange(insertTuples[i].view, insertTuples[i].record);
 	        }
@@ -8692,47 +10059,23 @@
 	    NgFor.prototype._perViewChange = function (view, record) {
 	        view.context.$implicit = record.item;
 	    };
-	    NgFor.prototype._bulkRemove = function (tuples) {
-	        tuples.sort(function (a, b) {
-	            return a.record.previousIndex - b.record.previousIndex;
-	        });
-	        var movedTuples = [];
-	        for (var i = tuples.length - 1; i >= 0; i--) {
-	            var tuple = tuples[i];
-	            // separate moved views from removed views.
-	            if (lang_1.isPresent(tuple.record.currentIndex)) {
-	                tuple.view =
-	                    this._viewContainer.detach(tuple.record.previousIndex);
-	                movedTuples.push(tuple);
-	            }
-	            else {
-	                this._viewContainer.remove(tuple.record.previousIndex);
-	            }
-	        }
-	        return movedTuples;
-	    };
-	    NgFor.prototype._bulkInsert = function (tuples) {
-	        tuples.sort(function (a, b) { return a.record.currentIndex - b.record.currentIndex; });
-	        for (var i = 0; i < tuples.length; i++) {
-	            var tuple = tuples[i];
-	            if (lang_1.isPresent(tuple.view)) {
-	                this._viewContainer.insert(tuple.view, tuple.record.currentIndex);
-	            }
-	            else {
-	                tuple.view = this._viewContainer.createEmbeddedView(this._templateRef, new NgForRow(null, null, null), tuple.record.currentIndex);
-	            }
-	        }
-	        return tuples;
-	    };
+	    /** @nocollapse */
 	    NgFor.decorators = [
-	        { type: core_1.Directive, args: [{ selector: '[ngFor][ngForOf]', inputs: ['ngForTrackBy', 'ngForOf', 'ngForTemplate'] },] },
+	        { type: core_1.Directive, args: [{ selector: '[ngFor][ngForOf]' },] },
 	    ];
+	    /** @nocollapse */
 	    NgFor.ctorParameters = [
 	        { type: core_1.ViewContainerRef, },
 	        { type: core_1.TemplateRef, },
 	        { type: core_1.IterableDiffers, },
 	        { type: core_1.ChangeDetectorRef, },
 	    ];
+	    /** @nocollapse */
+	    NgFor.propDecorators = {
+	        'ngForOf': [{ type: core_1.Input },],
+	        'ngForTrackBy': [{ type: core_1.Input },],
+	        'ngForTemplate': [{ type: core_1.Input },],
+	    };
 	    return NgFor;
 	}());
 	exports.NgFor = NgFor;
@@ -8746,9 +10089,16 @@
 	//# sourceMappingURL=ng_for.js.map
 
 /***/ },
-/* 146 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
@@ -8759,7 +10109,7 @@
 	        this._prevCondition = null;
 	    }
 	    Object.defineProperty(NgIf.prototype, "ngIf", {
-	        set: function (newCondition /* boolean */) {
+	        set: function (newCondition) {
 	            if (newCondition && (lang_1.isBlank(this._prevCondition) || !this._prevCondition)) {
 	                this._prevCondition = true;
 	                this._viewContainer.createEmbeddedView(this._templateRef);
@@ -8772,55 +10122,44 @@
 	        enumerable: true,
 	        configurable: true
 	    });
+	    /** @nocollapse */
 	    NgIf.decorators = [
-	        { type: core_1.Directive, args: [{ selector: '[ngIf]', inputs: ['ngIf'] },] },
+	        { type: core_1.Directive, args: [{ selector: '[ngIf]' },] },
 	    ];
+	    /** @nocollapse */
 	    NgIf.ctorParameters = [
 	        { type: core_1.ViewContainerRef, },
 	        { type: core_1.TemplateRef, },
 	    ];
+	    /** @nocollapse */
+	    NgIf.propDecorators = {
+	        'ngIf': [{ type: core_1.Input },],
+	    };
 	    return NgIf;
 	}());
 	exports.NgIf = NgIf;
 	//# sourceMappingURL=ng_if.js.map
 
 /***/ },
-/* 147 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var collection_1 = __webpack_require__(14);
-	var ng_switch_1 = __webpack_require__(74);
-	var _CATEGORY_DEFAULT = 'other';
-	var NgLocalization = (function () {
-	    function NgLocalization() {
-	    }
-	    return NgLocalization;
-	}());
-	exports.NgLocalization = NgLocalization;
-	var NgPluralCase = (function () {
-	    function NgPluralCase(value, template, viewContainer) {
-	        this.value = value;
-	        this._view = new ng_switch_1.SwitchView(viewContainer, template);
-	    }
-	    NgPluralCase.decorators = [
-	        { type: core_1.Directive, args: [{ selector: '[ngPluralCase]' },] },
-	    ];
-	    NgPluralCase.ctorParameters = [
-	        { type: undefined, decorators: [{ type: core_1.Attribute, args: ['ngPluralCase',] },] },
-	        { type: core_1.TemplateRef, },
-	        { type: core_1.ViewContainerRef, },
-	    ];
-	    return NgPluralCase;
-	}());
-	exports.NgPluralCase = NgPluralCase;
+	var localization_1 = __webpack_require__(108);
+	var ng_switch_1 = __webpack_require__(96);
 	var NgPlural = (function () {
 	    function NgPlural(_localization) {
 	        this._localization = _localization;
-	        this._caseViews = new collection_1.Map();
-	        this.cases = null;
+	        this._caseViews = {};
 	    }
 	    Object.defineProperty(NgPlural.prototype, "ngPlural", {
 	        set: function (value) {
@@ -8830,20 +10169,12 @@
 	        enumerable: true,
 	        configurable: true
 	    });
-	    NgPlural.prototype.ngAfterContentInit = function () {
-	        var _this = this;
-	        this.cases.forEach(function (pluralCase) {
-	            _this._caseViews.set(_this._formatValue(pluralCase), pluralCase._view);
-	        });
-	        this._updateView();
-	    };
+	    NgPlural.prototype.addCase = function (value, switchView) { this._caseViews[value] = switchView; };
 	    /** @internal */
 	    NgPlural.prototype._updateView = function () {
 	        this._clearViews();
-	        var view = this._caseViews.get(this._switchValue);
-	        if (!lang_1.isPresent(view))
-	            view = this._getCategoryView(this._switchValue);
-	        this._activateView(view);
+	        var key = localization_1.getPluralCategory(this._switchValue, Object.keys(this._caseViews), this._localization);
+	        this._activateView(this._caseViews[key]);
 	    };
 	    /** @internal */
 	    NgPlural.prototype._clearViews = function () {
@@ -8857,39 +10188,53 @@
 	        this._activeView = view;
 	        this._activeView.create();
 	    };
-	    /** @internal */
-	    NgPlural.prototype._getCategoryView = function (value) {
-	        var category = this._localization.getPluralCategory(value);
-	        var categoryView = this._caseViews.get(category);
-	        return lang_1.isPresent(categoryView) ? categoryView : this._caseViews.get(_CATEGORY_DEFAULT);
-	    };
-	    /** @internal */
-	    NgPlural.prototype._isValueView = function (pluralCase) { return pluralCase.value[0] === "="; };
-	    /** @internal */
-	    NgPlural.prototype._formatValue = function (pluralCase) {
-	        return this._isValueView(pluralCase) ? this._stripValue(pluralCase.value) : pluralCase.value;
-	    };
-	    /** @internal */
-	    NgPlural.prototype._stripValue = function (value) { return lang_1.NumberWrapper.parseInt(value.substring(1), 10); };
+	    /** @nocollapse */
 	    NgPlural.decorators = [
 	        { type: core_1.Directive, args: [{ selector: '[ngPlural]' },] },
 	    ];
+	    /** @nocollapse */
 	    NgPlural.ctorParameters = [
-	        { type: NgLocalization, },
+	        { type: localization_1.NgLocalization, },
 	    ];
+	    /** @nocollapse */
 	    NgPlural.propDecorators = {
-	        'cases': [{ type: core_1.ContentChildren, args: [NgPluralCase,] },],
 	        'ngPlural': [{ type: core_1.Input },],
 	    };
 	    return NgPlural;
 	}());
 	exports.NgPlural = NgPlural;
+	var NgPluralCase = (function () {
+	    function NgPluralCase(value, template, viewContainer, ngPlural) {
+	        this.value = value;
+	        ngPlural.addCase(value, new ng_switch_1.SwitchView(viewContainer, template));
+	    }
+	    /** @nocollapse */
+	    NgPluralCase.decorators = [
+	        { type: core_1.Directive, args: [{ selector: '[ngPluralCase]' },] },
+	    ];
+	    /** @nocollapse */
+	    NgPluralCase.ctorParameters = [
+	        { type: undefined, decorators: [{ type: core_1.Attribute, args: ['ngPluralCase',] },] },
+	        { type: core_1.TemplateRef, },
+	        { type: core_1.ViewContainerRef, },
+	        { type: NgPlural, decorators: [{ type: core_1.Host },] },
+	    ];
+	    return NgPluralCase;
+	}());
+	exports.NgPluralCase = NgPluralCase;
 	//# sourceMappingURL=ng_plural.js.map
 
 /***/ },
-/* 148 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
@@ -8899,11 +10244,11 @@
 	        this._ngEl = _ngEl;
 	        this._renderer = _renderer;
 	    }
-	    Object.defineProperty(NgStyle.prototype, "rawStyle", {
+	    Object.defineProperty(NgStyle.prototype, "ngStyle", {
 	        set: function (v) {
-	            this._rawStyle = v;
+	            this._ngStyle = v;
 	            if (lang_1.isBlank(this._differ) && lang_1.isPresent(v)) {
-	                this._differ = this._differs.find(this._rawStyle).create(null);
+	                this._differ = this._differs.find(this._ngStyle).create(null);
 	            }
 	        },
 	        enumerable: true,
@@ -8911,7 +10256,7 @@
 	    });
 	    NgStyle.prototype.ngDoCheck = function () {
 	        if (lang_1.isPresent(this._differ)) {
-	            var changes = this._differ.diff(this._rawStyle);
+	            var changes = this._differ.diff(this._ngStyle);
 	            if (lang_1.isPresent(changes)) {
 	                this._applyChanges(changes);
 	            }
@@ -8919,56 +10264,81 @@
 	    };
 	    NgStyle.prototype._applyChanges = function (changes) {
 	        var _this = this;
+	        changes.forEachRemovedItem(function (record) { _this._setStyle(record.key, null); });
 	        changes.forEachAddedItem(function (record) { _this._setStyle(record.key, record.currentValue); });
 	        changes.forEachChangedItem(function (record) { _this._setStyle(record.key, record.currentValue); });
-	        changes.forEachRemovedItem(function (record) { _this._setStyle(record.key, null); });
 	    };
 	    NgStyle.prototype._setStyle = function (name, val) {
-	        this._renderer.setElementStyle(this._ngEl.nativeElement, name, val);
+	        var nameParts = name.split('.');
+	        var nameToSet = nameParts[0];
+	        var valToSet = lang_1.isPresent(val) && nameParts.length === 2 ? "" + val + nameParts[1] : val;
+	        this._renderer.setElementStyle(this._ngEl.nativeElement, nameToSet, valToSet);
 	    };
+	    /** @nocollapse */
 	    NgStyle.decorators = [
-	        { type: core_1.Directive, args: [{ selector: '[ngStyle]', inputs: ['rawStyle: ngStyle'] },] },
+	        { type: core_1.Directive, args: [{ selector: '[ngStyle]' },] },
 	    ];
+	    /** @nocollapse */
 	    NgStyle.ctorParameters = [
 	        { type: core_1.KeyValueDiffers, },
 	        { type: core_1.ElementRef, },
 	        { type: core_1.Renderer, },
 	    ];
+	    /** @nocollapse */
+	    NgStyle.propDecorators = {
+	        'ngStyle': [{ type: core_1.Input },],
+	    };
 	    return NgStyle;
 	}());
 	exports.NgStyle = NgStyle;
 	//# sourceMappingURL=ng_style.js.map
 
 /***/ },
-/* 149 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
-	var lang_1 = __webpack_require__(5);
 	var NgTemplateOutlet = (function () {
 	    function NgTemplateOutlet(_viewContainerRef) {
 	        this._viewContainerRef = _viewContainerRef;
 	    }
-	    Object.defineProperty(NgTemplateOutlet.prototype, "ngTemplateOutlet", {
-	        set: function (templateRef) {
-	            if (lang_1.isPresent(this._insertedViewRef)) {
-	                this._viewContainerRef.remove(this._viewContainerRef.indexOf(this._insertedViewRef));
-	            }
-	            if (lang_1.isPresent(templateRef)) {
-	                this._insertedViewRef = this._viewContainerRef.createEmbeddedView(templateRef);
-	            }
-	        },
+	    Object.defineProperty(NgTemplateOutlet.prototype, "ngOutletContext", {
+	        set: function (context) { this._context = context; },
 	        enumerable: true,
 	        configurable: true
 	    });
+	    Object.defineProperty(NgTemplateOutlet.prototype, "ngTemplateOutlet", {
+	        set: function (templateRef) { this._templateRef = templateRef; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    NgTemplateOutlet.prototype.ngOnChanges = function () {
+	        if (this._viewRef) {
+	            this._viewContainerRef.remove(this._viewContainerRef.indexOf(this._viewRef));
+	        }
+	        if (this._templateRef) {
+	            this._viewRef = this._viewContainerRef.createEmbeddedView(this._templateRef, this._context);
+	        }
+	    };
+	    /** @nocollapse */
 	    NgTemplateOutlet.decorators = [
 	        { type: core_1.Directive, args: [{ selector: '[ngTemplateOutlet]' },] },
 	    ];
+	    /** @nocollapse */
 	    NgTemplateOutlet.ctorParameters = [
 	        { type: core_1.ViewContainerRef, },
 	    ];
+	    /** @nocollapse */
 	    NgTemplateOutlet.propDecorators = {
+	        'ngOutletContext': [{ type: core_1.Input },],
 	        'ngTemplateOutlet': [{ type: core_1.Input },],
 	    };
 	    return NgTemplateOutlet;
@@ -8977,9 +10347,16 @@
 	//# sourceMappingURL=ng_template_outlet.js.map
 
 /***/ },
-/* 150 */
+/* 174 */
 /***/ function(module, exports) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -8987,10 +10364,10 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	/**
-	* A base class for the WrappedException that can be used to identify
-	* a WrappedException from ExceptionHandler without adding circular
-	* dependency.
-	*/
+	 * A base class for the WrappedException that can be used to identify
+	 * a WrappedException from ExceptionHandler without adding circular
+	 * dependency.
+	 */
 	var BaseWrappedException = (function (_super) {
 	    __extends(BaseWrappedException, _super);
 	    function BaseWrappedException(message) {
@@ -9032,11 +10409,18 @@
 	//# sourceMappingURL=base_wrapped_exception.js.map
 
 /***/ },
-/* 151 */
-[472, 5, 150, 14],
-/* 152 */
+/* 175 */
+[534, 174, 18, 5],
+/* 176 */
 /***/ function(module, exports) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	(function (NumberFormatStyle) {
 	    NumberFormatStyle[NumberFormatStyle["Decimal"] = 0] = "Decimal";
@@ -9048,95 +10432,181 @@
 	    function NumberFormatter() {
 	    }
 	    NumberFormatter.format = function (num, locale, style, _a) {
-	        var _b = _a === void 0 ? {} : _a, _c = _b.minimumIntegerDigits, minimumIntegerDigits = _c === void 0 ? 1 : _c, _d = _b.minimumFractionDigits, minimumFractionDigits = _d === void 0 ? 0 : _d, _e = _b.maximumFractionDigits, maximumFractionDigits = _e === void 0 ? 3 : _e, currency = _b.currency, _f = _b.currencyAsSymbol, currencyAsSymbol = _f === void 0 ? false : _f;
-	        var intlOptions = {
+	        var _b = _a === void 0 ? {} : _a, minimumIntegerDigits = _b.minimumIntegerDigits, minimumFractionDigits = _b.minimumFractionDigits, maximumFractionDigits = _b.maximumFractionDigits, currency = _b.currency, _c = _b.currencyAsSymbol, currencyAsSymbol = _c === void 0 ? false : _c;
+	        var options = {
 	            minimumIntegerDigits: minimumIntegerDigits,
 	            minimumFractionDigits: minimumFractionDigits,
-	            maximumFractionDigits: maximumFractionDigits
+	            maximumFractionDigits: maximumFractionDigits,
+	            style: NumberFormatStyle[style].toLowerCase()
 	        };
-	        intlOptions.style = NumberFormatStyle[style].toLowerCase();
 	        if (style == NumberFormatStyle.Currency) {
-	            intlOptions.currency = currency;
-	            intlOptions.currencyDisplay = currencyAsSymbol ? 'symbol' : 'code';
+	            options.currency = currency;
+	            options.currencyDisplay = currencyAsSymbol ? 'symbol' : 'code';
 	        }
-	        return new Intl.NumberFormat(locale, intlOptions).format(num);
+	        return new Intl.NumberFormat(locale, options).format(num);
 	    };
 	    return NumberFormatter;
 	}());
 	exports.NumberFormatter = NumberFormatter;
-	function digitCondition(len) {
-	    return len == 2 ? '2-digit' : 'numeric';
+	var DATE_FORMATS_SPLIT = /((?:[^yMLdHhmsazZEwGjJ']+)|(?:'(?:[^']|'')*')|(?:E+|y+|M+|L+|d+|H+|h+|J+|j+|m+|s+|a|z|Z|G+|w+))(.*)/;
+	var PATTERN_ALIASES = {
+	    yMMMdjms: datePartGetterFactory(combine([
+	        digitCondition('year', 1),
+	        nameCondition('month', 3),
+	        digitCondition('day', 1),
+	        digitCondition('hour', 1),
+	        digitCondition('minute', 1),
+	        digitCondition('second', 1),
+	    ])),
+	    yMdjm: datePartGetterFactory(combine([
+	        digitCondition('year', 1), digitCondition('month', 1), digitCondition('day', 1),
+	        digitCondition('hour', 1), digitCondition('minute', 1)
+	    ])),
+	    yMMMMEEEEd: datePartGetterFactory(combine([
+	        digitCondition('year', 1), nameCondition('month', 4), nameCondition('weekday', 4),
+	        digitCondition('day', 1)
+	    ])),
+	    yMMMMd: datePartGetterFactory(combine([digitCondition('year', 1), nameCondition('month', 4), digitCondition('day', 1)])),
+	    yMMMd: datePartGetterFactory(combine([digitCondition('year', 1), nameCondition('month', 3), digitCondition('day', 1)])),
+	    yMd: datePartGetterFactory(combine([digitCondition('year', 1), digitCondition('month', 1), digitCondition('day', 1)])),
+	    jms: datePartGetterFactory(combine([digitCondition('hour', 1), digitCondition('second', 1), digitCondition('minute', 1)])),
+	    jm: datePartGetterFactory(combine([digitCondition('hour', 1), digitCondition('minute', 1)]))
+	};
+	var DATE_FORMATS = {
+	    yyyy: datePartGetterFactory(digitCondition('year', 4)),
+	    yy: datePartGetterFactory(digitCondition('year', 2)),
+	    y: datePartGetterFactory(digitCondition('year', 1)),
+	    MMMM: datePartGetterFactory(nameCondition('month', 4)),
+	    MMM: datePartGetterFactory(nameCondition('month', 3)),
+	    MM: datePartGetterFactory(digitCondition('month', 2)),
+	    M: datePartGetterFactory(digitCondition('month', 1)),
+	    LLLL: datePartGetterFactory(nameCondition('month', 4)),
+	    dd: datePartGetterFactory(digitCondition('day', 2)),
+	    d: datePartGetterFactory(digitCondition('day', 1)),
+	    HH: digitModifier(hourExtracter(datePartGetterFactory(hour12Modify(digitCondition('hour', 2), false)))),
+	    H: hourExtracter(datePartGetterFactory(hour12Modify(digitCondition('hour', 1), false))),
+	    hh: digitModifier(hourExtracter(datePartGetterFactory(hour12Modify(digitCondition('hour', 2), true)))),
+	    h: hourExtracter(datePartGetterFactory(hour12Modify(digitCondition('hour', 1), true))),
+	    jj: datePartGetterFactory(digitCondition('hour', 2)),
+	    j: datePartGetterFactory(digitCondition('hour', 1)),
+	    mm: digitModifier(datePartGetterFactory(digitCondition('minute', 2))),
+	    m: datePartGetterFactory(digitCondition('minute', 1)),
+	    ss: digitModifier(datePartGetterFactory(digitCondition('second', 2))),
+	    s: datePartGetterFactory(digitCondition('second', 1)),
+	    // while ISO 8601 requires fractions to be prefixed with `.` or `,`
+	    // we can be just safely rely on using `sss` since we currently don't support single or two digit
+	    // fractions
+	    sss: datePartGetterFactory(digitCondition('second', 3)),
+	    EEEE: datePartGetterFactory(nameCondition('weekday', 4)),
+	    EEE: datePartGetterFactory(nameCondition('weekday', 3)),
+	    EE: datePartGetterFactory(nameCondition('weekday', 2)),
+	    E: datePartGetterFactory(nameCondition('weekday', 1)),
+	    a: hourClockExtracter(datePartGetterFactory(hour12Modify(digitCondition('hour', 1), true))),
+	    Z: timeZoneGetter('short'),
+	    z: timeZoneGetter('long'),
+	    ww: datePartGetterFactory({}),
+	    // first Thursday of the year. not support ?
+	    w: datePartGetterFactory({}),
+	    // of the year not support ?
+	    G: datePartGetterFactory(nameCondition('era', 1)),
+	    GG: datePartGetterFactory(nameCondition('era', 2)),
+	    GGG: datePartGetterFactory(nameCondition('era', 3)),
+	    GGGG: datePartGetterFactory(nameCondition('era', 4))
+	};
+	function digitModifier(inner) {
+	    return function (date, locale) {
+	        var result = inner(date, locale);
+	        return result.length == 1 ? '0' + result : result;
+	    };
 	}
-	function nameCondition(len) {
-	    return len < 4 ? 'short' : 'long';
+	function hourClockExtracter(inner) {
+	    return function (date, locale) {
+	        var result = inner(date, locale);
+	        return result.split(' ')[1];
+	    };
 	}
-	function extractComponents(pattern) {
-	    var ret = {};
-	    var i = 0, j;
-	    while (i < pattern.length) {
-	        j = i;
-	        while (j < pattern.length && pattern[j] == pattern[i])
-	            j++;
-	        var len = j - i;
-	        switch (pattern[i]) {
-	            case 'G':
-	                ret.era = nameCondition(len);
-	                break;
-	            case 'y':
-	                ret.year = digitCondition(len);
-	                break;
-	            case 'M':
-	                if (len >= 3)
-	                    ret.month = nameCondition(len);
-	                else
-	                    ret.month = digitCondition(len);
-	                break;
-	            case 'd':
-	                ret.day = digitCondition(len);
-	                break;
-	            case 'E':
-	                ret.weekday = nameCondition(len);
-	                break;
-	            case 'j':
-	                ret.hour = digitCondition(len);
-	                break;
-	            case 'h':
-	                ret.hour = digitCondition(len);
-	                ret.hour12 = true;
-	                break;
-	            case 'H':
-	                ret.hour = digitCondition(len);
-	                ret.hour12 = false;
-	                break;
-	            case 'm':
-	                ret.minute = digitCondition(len);
-	                break;
-	            case 's':
-	                ret.second = digitCondition(len);
-	                break;
-	            case 'z':
-	                ret.timeZoneName = 'long';
-	                break;
-	            case 'Z':
-	                ret.timeZoneName = 'short';
-	                break;
-	        }
-	        i = j;
+	function hourExtracter(inner) {
+	    return function (date, locale) {
+	        var result = inner(date, locale);
+	        return result.split(' ')[0];
+	    };
+	}
+	function timeZoneGetter(timezone) {
+	    // To workaround `Intl` API restriction for single timezone let format with 24 hours
+	    var format = { hour: '2-digit', hour12: false, timeZoneName: timezone };
+	    return function (date, locale) {
+	        var result = new Intl.DateTimeFormat(locale, format).format(date);
+	        // Then extract first 3 letters that related to hours
+	        return result ? result.substring(3) : '';
+	    };
+	}
+	function hour12Modify(options, value) {
+	    options.hour12 = value;
+	    return options;
+	}
+	function digitCondition(prop, len) {
+	    var result = {};
+	    result[prop] = len == 2 ? '2-digit' : 'numeric';
+	    return result;
+	}
+	function nameCondition(prop, len) {
+	    var result = {};
+	    result[prop] = len < 4 ? 'short' : 'long';
+	    return result;
+	}
+	function combine(options) {
+	    var result = {};
+	    options.forEach(function (option) { Object.assign(result, option); });
+	    return result;
+	}
+	function datePartGetterFactory(ret) {
+	    return function (date, locale) {
+	        return new Intl.DateTimeFormat(locale, ret).format(date);
+	    };
+	}
+	var datePartsFormatterCache = new Map();
+	function dateFormatter(format, date, locale) {
+	    var text = '';
+	    var match;
+	    var fn;
+	    var parts = [];
+	    if (PATTERN_ALIASES[format]) {
+	        return PATTERN_ALIASES[format](date, locale);
 	    }
-	    return ret;
+	    if (datePartsFormatterCache.has(format)) {
+	        parts = datePartsFormatterCache.get(format);
+	    }
+	    else {
+	        var matches = DATE_FORMATS_SPLIT.exec(format);
+	        while (format) {
+	            match = DATE_FORMATS_SPLIT.exec(format);
+	            if (match) {
+	                parts = concat(parts, match, 1);
+	                format = parts.pop();
+	            }
+	            else {
+	                parts.push(format);
+	                format = null;
+	            }
+	        }
+	        datePartsFormatterCache.set(format, parts);
+	    }
+	    parts.forEach(function (part) {
+	        fn = DATE_FORMATS[part];
+	        text += fn ? fn(date, locale) :
+	            part === '\'\'' ? '\'' : part.replace(/(^'|'$)/g, '').replace(/''/g, '\'');
+	    });
+	    return text;
 	}
-	var dateFormatterCache = new Map();
+	var slice = [].slice;
+	function concat(array1 /** TODO #9100 */, array2 /** TODO #9100 */, index /** TODO #9100 */) {
+	    return array1.concat(slice.call(array2, index));
+	}
 	var DateFormatter = (function () {
 	    function DateFormatter() {
 	    }
 	    DateFormatter.format = function (date, locale, pattern) {
-	        var key = locale + pattern;
-	        if (dateFormatterCache.has(key)) {
-	            return dateFormatterCache.get(key).format(date);
-	        }
-	        var formatter = new Intl.DateTimeFormat(locale, extractComponents(pattern));
-	        dateFormatterCache.set(key, formatter);
-	        return formatter.format(date);
+	        return dateFormatter(pattern, date, locale);
 	    };
 	    return DateFormatter;
 	}());
@@ -9144,99 +10614,123 @@
 	//# sourceMappingURL=intl.js.map
 
 /***/ },
-/* 153 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	/**
-	* @module
-	* @description
-	* This module is used for handling user input, by defining and building a {@link ControlGroup} that
-	* consists of
-	* {@link Control} objects, and mapping them onto the DOM. {@link Control} objects can then be used
-	* to read information
-	* from the form DOM elements.
-	*
-	* Forms providers are not included in default providers; you must import these providers
-	* explicitly.
-	*/
-	var model_1 = __webpack_require__(52);
-	exports.AbstractControl = model_1.AbstractControl;
-	exports.Control = model_1.Control;
-	exports.ControlGroup = model_1.ControlGroup;
-	exports.ControlArray = model_1.ControlArray;
-	var abstract_control_directive_1 = __webpack_require__(76);
-	exports.AbstractControlDirective = abstract_control_directive_1.AbstractControlDirective;
-	var control_container_1 = __webpack_require__(38);
-	exports.ControlContainer = control_container_1.ControlContainer;
-	var ng_control_name_1 = __webpack_require__(78);
-	exports.NgControlName = ng_control_name_1.NgControlName;
-	var ng_form_control_1 = __webpack_require__(81);
-	exports.NgFormControl = ng_form_control_1.NgFormControl;
-	var ng_model_1 = __webpack_require__(83);
-	exports.NgModel = ng_model_1.NgModel;
-	var ng_control_1 = __webpack_require__(26);
+	var checkbox_value_accessor_1 = __webpack_require__(60);
+	var default_value_accessor_1 = __webpack_require__(61);
+	var ng_control_group_1 = __webpack_require__(98);
+	var ng_control_name_1 = __webpack_require__(99);
+	var ng_control_status_1 = __webpack_require__(100);
+	var ng_form_1 = __webpack_require__(101);
+	var ng_form_control_1 = __webpack_require__(102);
+	var ng_form_model_1 = __webpack_require__(103);
+	var ng_model_1 = __webpack_require__(104);
+	var number_value_accessor_1 = __webpack_require__(105);
+	var radio_control_value_accessor_1 = __webpack_require__(62);
+	var select_control_value_accessor_1 = __webpack_require__(63);
+	var select_multiple_control_value_accessor_1 = __webpack_require__(106);
+	var validators_1 = __webpack_require__(107);
+	var checkbox_value_accessor_2 = __webpack_require__(60);
+	exports.CheckboxControlValueAccessor = checkbox_value_accessor_2.CheckboxControlValueAccessor;
+	var default_value_accessor_2 = __webpack_require__(61);
+	exports.DefaultValueAccessor = default_value_accessor_2.DefaultValueAccessor;
+	var ng_control_1 = __webpack_require__(31);
 	exports.NgControl = ng_control_1.NgControl;
-	var ng_control_group_1 = __webpack_require__(77);
-	exports.NgControlGroup = ng_control_group_1.NgControlGroup;
-	var ng_form_model_1 = __webpack_require__(82);
-	exports.NgFormModel = ng_form_model_1.NgFormModel;
-	var ng_form_1 = __webpack_require__(80);
-	exports.NgForm = ng_form_1.NgForm;
-	var control_value_accessor_1 = __webpack_require__(19);
-	exports.NG_VALUE_ACCESSOR = control_value_accessor_1.NG_VALUE_ACCESSOR;
-	var default_value_accessor_1 = __webpack_require__(49);
-	exports.DefaultValueAccessor = default_value_accessor_1.DefaultValueAccessor;
-	var ng_control_status_1 = __webpack_require__(79);
-	exports.NgControlStatus = ng_control_status_1.NgControlStatus;
-	var checkbox_value_accessor_1 = __webpack_require__(48);
-	exports.CheckboxControlValueAccessor = checkbox_value_accessor_1.CheckboxControlValueAccessor;
-	var select_control_value_accessor_1 = __webpack_require__(51);
-	exports.NgSelectOption = select_control_value_accessor_1.NgSelectOption;
-	exports.SelectControlValueAccessor = select_control_value_accessor_1.SelectControlValueAccessor;
-	var directives_1 = __webpack_require__(350);
-	exports.FORM_DIRECTIVES = directives_1.FORM_DIRECTIVES;
-	exports.RadioButtonState = directives_1.RadioButtonState;
-	var validators_1 = __webpack_require__(20);
-	exports.NG_VALIDATORS = validators_1.NG_VALIDATORS;
-	exports.NG_ASYNC_VALIDATORS = validators_1.NG_ASYNC_VALIDATORS;
-	exports.Validators = validators_1.Validators;
-	var validators_2 = __webpack_require__(85);
-	exports.RequiredValidator = validators_2.RequiredValidator;
-	exports.MinLengthValidator = validators_2.MinLengthValidator;
+	var ng_control_group_2 = __webpack_require__(98);
+	exports.NgControlGroup = ng_control_group_2.NgControlGroup;
+	var ng_control_name_2 = __webpack_require__(99);
+	exports.NgControlName = ng_control_name_2.NgControlName;
+	var ng_control_status_2 = __webpack_require__(100);
+	exports.NgControlStatus = ng_control_status_2.NgControlStatus;
+	var ng_form_2 = __webpack_require__(101);
+	exports.NgForm = ng_form_2.NgForm;
+	var ng_form_control_2 = __webpack_require__(102);
+	exports.NgFormControl = ng_form_control_2.NgFormControl;
+	var ng_form_model_2 = __webpack_require__(103);
+	exports.NgFormModel = ng_form_model_2.NgFormModel;
+	var ng_model_2 = __webpack_require__(104);
+	exports.NgModel = ng_model_2.NgModel;
+	var number_value_accessor_2 = __webpack_require__(105);
+	exports.NumberValueAccessor = number_value_accessor_2.NumberValueAccessor;
+	var radio_control_value_accessor_2 = __webpack_require__(62);
+	exports.RadioButtonState = radio_control_value_accessor_2.RadioButtonState;
+	exports.RadioControlValueAccessor = radio_control_value_accessor_2.RadioControlValueAccessor;
+	var select_control_value_accessor_2 = __webpack_require__(63);
+	exports.NgSelectOption = select_control_value_accessor_2.NgSelectOption;
+	exports.SelectControlValueAccessor = select_control_value_accessor_2.SelectControlValueAccessor;
+	var select_multiple_control_value_accessor_2 = __webpack_require__(106);
+	exports.NgSelectMultipleOption = select_multiple_control_value_accessor_2.NgSelectMultipleOption;
+	exports.SelectMultipleControlValueAccessor = select_multiple_control_value_accessor_2.SelectMultipleControlValueAccessor;
+	var validators_2 = __webpack_require__(107);
 	exports.MaxLengthValidator = validators_2.MaxLengthValidator;
+	exports.MinLengthValidator = validators_2.MinLengthValidator;
 	exports.PatternValidator = validators_2.PatternValidator;
-	var form_builder_1 = __webpack_require__(154);
-	exports.FormBuilder = form_builder_1.FormBuilder;
-	var form_builder_2 = __webpack_require__(154);
-	var radio_control_value_accessor_1 = __webpack_require__(50);
+	exports.RequiredValidator = validators_2.RequiredValidator;
 	/**
-	 * Shorthand set of providers used for building Angular forms.
+	 *
+	 * A list of all the form directives used as part of a `@Component` annotation.
+	 *
+	 *  This is a shorthand for importing them each individually.
 	 *
 	 * ### Example
 	 *
 	 * ```typescript
-	 * bootstrap(MyApp, [FORM_PROVIDERS]);
+	 * @Component({
+	 *   selector: 'my-app',
+	 *   directives: [FORM_DIRECTIVES]
+	 * })
+	 * class MyApp {}
 	 * ```
+	 * @experimental
 	 */
-	exports.FORM_PROVIDERS = [form_builder_2.FormBuilder, radio_control_value_accessor_1.RadioControlRegistry];
-	/**
-	 * See {@link FORM_PROVIDERS} instead.
-	 *
-	 * @deprecated
-	 */
-	exports.FORM_BINDINGS = exports.FORM_PROVIDERS;
-	//# sourceMappingURL=forms.js.map
+	exports.FORM_DIRECTIVES = [
+	    ng_control_name_1.NgControlName,
+	    ng_control_group_1.NgControlGroup,
+	    ng_form_control_1.NgFormControl,
+	    ng_model_1.NgModel,
+	    ng_form_model_1.NgFormModel,
+	    ng_form_1.NgForm,
+	    select_control_value_accessor_1.NgSelectOption,
+	    select_multiple_control_value_accessor_1.NgSelectMultipleOption,
+	    default_value_accessor_1.DefaultValueAccessor,
+	    number_value_accessor_1.NumberValueAccessor,
+	    checkbox_value_accessor_1.CheckboxControlValueAccessor,
+	    select_control_value_accessor_1.SelectControlValueAccessor,
+	    select_multiple_control_value_accessor_1.SelectMultipleControlValueAccessor,
+	    radio_control_value_accessor_1.RadioControlValueAccessor,
+	    ng_control_status_1.NgControlStatus,
+	    validators_1.RequiredValidator,
+	    validators_1.MinLengthValidator,
+	    validators_1.MaxLengthValidator,
+	    validators_1.PatternValidator,
+	];
+	//# sourceMappingURL=directives.js.map
 
 /***/ },
-/* 154 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
-	var collection_1 = __webpack_require__(14);
+	var collection_1 = __webpack_require__(18);
 	var lang_1 = __webpack_require__(5);
-	var modelModule = __webpack_require__(52);
+	var model_1 = __webpack_require__(64);
 	var FormBuilder = (function () {
 	    function FormBuilder() {
 	    }
@@ -9249,10 +10743,10 @@
 	    FormBuilder.prototype.group = function (controlsConfig, extra) {
 	        if (extra === void 0) { extra = null; }
 	        var controls = this._reduceControls(controlsConfig);
-	        var optionals = (lang_1.isPresent(extra) ? collection_1.StringMapWrapper.get(extra, "optionals") : null);
-	        var validator = lang_1.isPresent(extra) ? collection_1.StringMapWrapper.get(extra, "validator") : null;
-	        var asyncValidator = lang_1.isPresent(extra) ? collection_1.StringMapWrapper.get(extra, "asyncValidator") : null;
-	        return new modelModule.ControlGroup(controls, optionals, validator, asyncValidator);
+	        var optionals = (lang_1.isPresent(extra) ? collection_1.StringMapWrapper.get(extra, 'optionals') : null);
+	        var validator = lang_1.isPresent(extra) ? collection_1.StringMapWrapper.get(extra, 'validator') : null;
+	        var asyncValidator = lang_1.isPresent(extra) ? collection_1.StringMapWrapper.get(extra, 'asyncValidator') : null;
+	        return new model_1.ControlGroup(controls, optionals, validator, asyncValidator);
 	    };
 	    /**
 	     * Construct a new {@link Control} with the given `value`,`validator`, and `asyncValidator`.
@@ -9260,7 +10754,7 @@
 	    FormBuilder.prototype.control = function (value, validator, asyncValidator) {
 	        if (validator === void 0) { validator = null; }
 	        if (asyncValidator === void 0) { asyncValidator = null; }
-	        return new modelModule.Control(value, validator, asyncValidator);
+	        return new model_1.Control(value, validator, asyncValidator);
 	    };
 	    /**
 	     * Construct an array of {@link Control}s from the given `controlsConfig` array of
@@ -9271,7 +10765,7 @@
 	        if (validator === void 0) { validator = null; }
 	        if (asyncValidator === void 0) { asyncValidator = null; }
 	        var controls = controlsConfig.map(function (c) { return _this._createControl(c); });
-	        return new modelModule.ControlArray(controls, validator, asyncValidator);
+	        return new model_1.ControlArray(controls, validator, asyncValidator);
 	    };
 	    /** @internal */
 	    FormBuilder.prototype._reduceControls = function (controlsConfig) {
@@ -9284,9 +10778,8 @@
 	    };
 	    /** @internal */
 	    FormBuilder.prototype._createControl = function (controlConfig) {
-	        if (controlConfig instanceof modelModule.Control ||
-	            controlConfig instanceof modelModule.ControlGroup ||
-	            controlConfig instanceof modelModule.ControlArray) {
+	        if (controlConfig instanceof model_1.Control || controlConfig instanceof model_1.ControlGroup ||
+	            controlConfig instanceof model_1.ControlArray) {
 	            return controlConfig;
 	        }
 	        else if (lang_1.isArray(controlConfig)) {
@@ -9299,6 +10792,7 @@
 	            return this.control(controlConfig);
 	        }
 	    };
+	    /** @nocollapse */
 	    FormBuilder.decorators = [
 	        { type: core_1.Injectable },
 	    ];
@@ -9308,29 +10802,78 @@
 	//# sourceMappingURL=form_builder.js.map
 
 /***/ },
-/* 155 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * @module
+	 * @description
+	 * This module provides a set of common Pipes.
+	 */
+	var async_pipe_1 = __webpack_require__(180);
+	exports.AsyncPipe = async_pipe_1.AsyncPipe;
+	var common_pipes_1 = __webpack_require__(395);
+	exports.COMMON_PIPES = common_pipes_1.COMMON_PIPES;
+	var date_pipe_1 = __webpack_require__(181);
+	exports.DatePipe = date_pipe_1.DatePipe;
+	var i18n_plural_pipe_1 = __webpack_require__(182);
+	exports.I18nPluralPipe = i18n_plural_pipe_1.I18nPluralPipe;
+	var i18n_select_pipe_1 = __webpack_require__(183);
+	exports.I18nSelectPipe = i18n_select_pipe_1.I18nSelectPipe;
+	var json_pipe_1 = __webpack_require__(184);
+	exports.JsonPipe = json_pipe_1.JsonPipe;
+	var lowercase_pipe_1 = __webpack_require__(185);
+	exports.LowerCasePipe = lowercase_pipe_1.LowerCasePipe;
+	var number_pipe_1 = __webpack_require__(186);
+	exports.CurrencyPipe = number_pipe_1.CurrencyPipe;
+	exports.DecimalPipe = number_pipe_1.DecimalPipe;
+	exports.PercentPipe = number_pipe_1.PercentPipe;
+	var replace_pipe_1 = __webpack_require__(187);
+	exports.ReplacePipe = replace_pipe_1.ReplacePipe;
+	var slice_pipe_1 = __webpack_require__(188);
+	exports.SlicePipe = slice_pipe_1.SlicePipe;
+	var uppercase_pipe_1 = __webpack_require__(189);
+	exports.UpperCasePipe = uppercase_pipe_1.UpperCasePipe;
+	//# sourceMappingURL=pipes.js.map
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var async_1 = __webpack_require__(18);
-	var invalid_pipe_argument_exception_1 = __webpack_require__(21);
+	var invalid_pipe_argument_exception_1 = __webpack_require__(24);
 	var ObservableStrategy = (function () {
 	    function ObservableStrategy() {
 	    }
 	    ObservableStrategy.prototype.createSubscription = function (async, updateLatestValue) {
-	        return async_1.ObservableWrapper.subscribe(async, updateLatestValue, function (e) { throw e; });
+	        return async.subscribe({ next: updateLatestValue, error: function (e) { throw e; } });
 	    };
-	    ObservableStrategy.prototype.dispose = function (subscription) { async_1.ObservableWrapper.dispose(subscription); };
-	    ObservableStrategy.prototype.onDestroy = function (subscription) { async_1.ObservableWrapper.dispose(subscription); };
+	    ObservableStrategy.prototype.dispose = function (subscription) { subscription.unsubscribe(); };
+	    ObservableStrategy.prototype.onDestroy = function (subscription) { subscription.unsubscribe(); };
 	    return ObservableStrategy;
 	}());
 	var PromiseStrategy = (function () {
 	    function PromiseStrategy() {
 	    }
 	    PromiseStrategy.prototype.createSubscription = function (async, updateLatestValue) {
-	        return async.then(updateLatestValue);
+	        return async.then(updateLatestValue, function (e) { throw e; });
 	    };
 	    PromiseStrategy.prototype.dispose = function (subscription) { };
 	    PromiseStrategy.prototype.onDestroy = function (subscription) { };
@@ -9389,7 +10932,7 @@
 	        if (lang_1.isPromise(obj)) {
 	            return _promiseStrategy;
 	        }
-	        else if (async_1.ObservableWrapper.isObservable(obj)) {
+	        else if (obj.subscribe) {
 	            return _observableStrategy;
 	        }
 	        else {
@@ -9411,10 +10954,11 @@
 	            this._ref.markForCheck();
 	        }
 	    };
+	    /** @nocollapse */
 	    AsyncPipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'async', pure: false },] },
-	        { type: core_1.Injectable },
 	    ];
+	    /** @nocollapse */
 	    AsyncPipe.ctorParameters = [
 	        { type: core_1.ChangeDetectorRef, },
 	    ];
@@ -9424,15 +10968,22 @@
 	//# sourceMappingURL=async_pipe.js.map
 
 /***/ },
-/* 156 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
+	var collection_1 = __webpack_require__(18);
+	var intl_1 = __webpack_require__(176);
 	var lang_1 = __webpack_require__(5);
-	var intl_1 = __webpack_require__(152);
-	var collection_1 = __webpack_require__(14);
-	var invalid_pipe_argument_exception_1 = __webpack_require__(21);
+	var invalid_pipe_argument_exception_1 = __webpack_require__(24);
 	// TODO: move to a global configurable location along with other i18n components.
 	var defaultLocale = 'en-US';
 	var DatePipe = (function () {
@@ -9445,15 +10996,26 @@
 	        if (!this.supports(value)) {
 	            throw new invalid_pipe_argument_exception_1.InvalidPipeArgumentException(DatePipe, value);
 	        }
-	        if (lang_1.isNumber(value)) {
-	            value = lang_1.DateWrapper.fromMillis(value);
+	        if (lang_1.NumberWrapper.isNumeric(value)) {
+	            value = lang_1.DateWrapper.fromMillis(lang_1.NumberWrapper.parseInt(value, 10));
+	        }
+	        else if (lang_1.isString(value)) {
+	            value = lang_1.DateWrapper.fromISOString(value);
 	        }
 	        if (collection_1.StringMapWrapper.contains(DatePipe._ALIASES, pattern)) {
 	            pattern = collection_1.StringMapWrapper.get(DatePipe._ALIASES, pattern);
 	        }
 	        return intl_1.DateFormatter.format(value, defaultLocale, pattern);
 	    };
-	    DatePipe.prototype.supports = function (obj) { return lang_1.isDate(obj) || lang_1.isNumber(obj); };
+	    DatePipe.prototype.supports = function (obj) {
+	        if (lang_1.isDate(obj) || lang_1.NumberWrapper.isNumeric(obj)) {
+	            return true;
+	        }
+	        if (lang_1.isString(obj) && lang_1.isDate(lang_1.DateWrapper.fromISOString(obj))) {
+	            return true;
+	        }
+	        return false;
+	    };
 	    /** @internal */
 	    DatePipe._ALIASES = {
 	        'medium': 'yMMMdjms',
@@ -9465,9 +11027,9 @@
 	        'mediumTime': 'jms',
 	        'shortTime': 'jm'
 	    };
+	    /** @nocollapse */
 	    DatePipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'date', pure: true },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return DatePipe;
 	}());
@@ -9475,30 +11037,42 @@
 	//# sourceMappingURL=date_pipe.js.map
 
 /***/ },
-/* 157 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var invalid_pipe_argument_exception_1 = __webpack_require__(21);
-	var interpolationExp = lang_1.RegExpWrapper.create('#');
+	var localization_1 = __webpack_require__(108);
+	var invalid_pipe_argument_exception_1 = __webpack_require__(24);
+	var _INTERPOLATION_REGEXP = /#/g;
 	var I18nPluralPipe = (function () {
-	    function I18nPluralPipe() {
+	    function I18nPluralPipe(_localization) {
+	        this._localization = _localization;
 	    }
 	    I18nPluralPipe.prototype.transform = function (value, pluralMap) {
-	        var key;
-	        var valueStr;
+	        if (lang_1.isBlank(value))
+	            return '';
 	        if (!lang_1.isStringMap(pluralMap)) {
 	            throw new invalid_pipe_argument_exception_1.InvalidPipeArgumentException(I18nPluralPipe, pluralMap);
 	        }
-	        key = value === 0 || value === 1 ? "=" + value : 'other';
-	        valueStr = lang_1.isPresent(value) ? value.toString() : '';
-	        return lang_1.StringWrapper.replaceAll(pluralMap[key], interpolationExp, valueStr);
+	        var key = localization_1.getPluralCategory(value, Object.keys(pluralMap), this._localization);
+	        return lang_1.StringWrapper.replaceAll(pluralMap[key], _INTERPOLATION_REGEXP, value.toString());
 	    };
+	    /** @nocollapse */
 	    I18nPluralPipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'i18nPlural', pure: true },] },
-	        { type: core_1.Injectable },
+	    ];
+	    /** @nocollapse */
+	    I18nPluralPipe.ctorParameters = [
+	        { type: localization_1.NgLocalization, },
 	    ];
 	    return I18nPluralPipe;
 	}());
@@ -9506,26 +11080,34 @@
 	//# sourceMappingURL=i18n_plural_pipe.js.map
 
 /***/ },
-/* 158 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var collection_1 = __webpack_require__(14);
-	var invalid_pipe_argument_exception_1 = __webpack_require__(21);
+	var invalid_pipe_argument_exception_1 = __webpack_require__(24);
 	var I18nSelectPipe = (function () {
 	    function I18nSelectPipe() {
 	    }
 	    I18nSelectPipe.prototype.transform = function (value, mapping) {
+	        if (lang_1.isBlank(value))
+	            return '';
 	        if (!lang_1.isStringMap(mapping)) {
 	            throw new invalid_pipe_argument_exception_1.InvalidPipeArgumentException(I18nSelectPipe, mapping);
 	        }
-	        return collection_1.StringMapWrapper.contains(mapping, value) ? mapping[value] : mapping['other'];
+	        return mapping.hasOwnProperty(value) ? mapping[value] : '';
 	    };
+	    /** @nocollapse */
 	    I18nSelectPipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'i18nSelect', pure: true },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return I18nSelectPipe;
 	}());
@@ -9533,9 +11115,16 @@
 	//# sourceMappingURL=i18n_select_pipe.js.map
 
 /***/ },
-/* 159 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
@@ -9543,9 +11132,9 @@
 	    function JsonPipe() {
 	    }
 	    JsonPipe.prototype.transform = function (value) { return lang_1.Json.stringify(value); };
+	    /** @nocollapse */
 	    JsonPipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'json', pure: false },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return JsonPipe;
 	}());
@@ -9553,13 +11142,20 @@
 	//# sourceMappingURL=json_pipe.js.map
 
 /***/ },
-/* 160 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var invalid_pipe_argument_exception_1 = __webpack_require__(21);
+	var invalid_pipe_argument_exception_1 = __webpack_require__(24);
 	var LowerCasePipe = (function () {
 	    function LowerCasePipe() {
 	    }
@@ -9571,9 +11167,9 @@
 	        }
 	        return value.toLowerCase();
 	    };
+	    /** @nocollapse */
 	    LowerCasePipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'lowercase' },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return LowerCasePipe;
 	}());
@@ -9581,124 +11177,126 @@
 	//# sourceMappingURL=lowercase_pipe.js.map
 
 /***/ },
-/* 161 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
 	var core_1 = __webpack_require__(1);
+	var intl_1 = __webpack_require__(176);
 	var lang_1 = __webpack_require__(5);
-	var exceptions_1 = __webpack_require__(23);
-	var intl_1 = __webpack_require__(152);
-	var invalid_pipe_argument_exception_1 = __webpack_require__(21);
+	var invalid_pipe_argument_exception_1 = __webpack_require__(24);
 	var defaultLocale = 'en-US';
-	var _re = lang_1.RegExpWrapper.create('^(\\d+)?\\.((\\d+)(\\-(\\d+))?)?$');
-	var NumberPipe = (function () {
-	    function NumberPipe() {
+	var _NUMBER_FORMAT_REGEXP = /^(\d+)?\.((\d+)(\-(\d+))?)?$/;
+	function formatNumber(pipe, value, style, digits, currency, currencyAsSymbol) {
+	    if (currency === void 0) { currency = null; }
+	    if (currencyAsSymbol === void 0) { currencyAsSymbol = false; }
+	    if (lang_1.isBlank(value))
+	        return null;
+	    // Convert strings to numbers
+	    value = lang_1.isString(value) && lang_1.NumberWrapper.isNumeric(value) ? +value : value;
+	    if (!lang_1.isNumber(value)) {
+	        throw new invalid_pipe_argument_exception_1.InvalidPipeArgumentException(pipe, value);
 	    }
-	    /** @internal */
-	    NumberPipe._format = function (value, style, digits, currency, currencyAsSymbol) {
-	        if (currency === void 0) { currency = null; }
-	        if (currencyAsSymbol === void 0) { currencyAsSymbol = false; }
-	        if (lang_1.isBlank(value))
-	            return null;
-	        if (!lang_1.isNumber(value)) {
-	            throw new invalid_pipe_argument_exception_1.InvalidPipeArgumentException(NumberPipe, value);
+	    var minInt;
+	    var minFraction;
+	    var maxFraction;
+	    if (style !== intl_1.NumberFormatStyle.Currency) {
+	        // rely on Intl default for currency
+	        minInt = 1;
+	        minFraction = 0;
+	        maxFraction = 3;
+	    }
+	    if (lang_1.isPresent(digits)) {
+	        var parts = digits.match(_NUMBER_FORMAT_REGEXP);
+	        if (parts === null) {
+	            throw new Error(digits + " is not a valid digit info for number pipes");
 	        }
-	        var minInt = 1, minFraction = 0, maxFraction = 3;
-	        if (lang_1.isPresent(digits)) {
-	            var parts = lang_1.RegExpWrapper.firstMatch(_re, digits);
-	            if (lang_1.isBlank(parts)) {
-	                throw new exceptions_1.BaseException(digits + " is not a valid digit info for number pipes");
-	            }
-	            if (lang_1.isPresent(parts[1])) {
-	                minInt = lang_1.NumberWrapper.parseIntAutoRadix(parts[1]);
-	            }
-	            if (lang_1.isPresent(parts[3])) {
-	                minFraction = lang_1.NumberWrapper.parseIntAutoRadix(parts[3]);
-	            }
-	            if (lang_1.isPresent(parts[5])) {
-	                maxFraction = lang_1.NumberWrapper.parseIntAutoRadix(parts[5]);
-	            }
+	        if (lang_1.isPresent(parts[1])) {
+	            minInt = lang_1.NumberWrapper.parseIntAutoRadix(parts[1]);
 	        }
-	        return intl_1.NumberFormatter.format(value, defaultLocale, style, {
-	            minimumIntegerDigits: minInt,
-	            minimumFractionDigits: minFraction,
-	            maximumFractionDigits: maxFraction,
-	            currency: currency,
-	            currencyAsSymbol: currencyAsSymbol
-	        });
-	    };
-	    NumberPipe.decorators = [
-	        { type: core_1.Injectable },
-	    ];
-	    return NumberPipe;
-	}());
-	exports.NumberPipe = NumberPipe;
-	var DecimalPipe = (function (_super) {
-	    __extends(DecimalPipe, _super);
+	        if (lang_1.isPresent(parts[3])) {
+	            minFraction = lang_1.NumberWrapper.parseIntAutoRadix(parts[3]);
+	        }
+	        if (lang_1.isPresent(parts[5])) {
+	            maxFraction = lang_1.NumberWrapper.parseIntAutoRadix(parts[5]);
+	        }
+	    }
+	    return intl_1.NumberFormatter.format(value, defaultLocale, style, {
+	        minimumIntegerDigits: minInt,
+	        minimumFractionDigits: minFraction,
+	        maximumFractionDigits: maxFraction,
+	        currency: currency,
+	        currencyAsSymbol: currencyAsSymbol
+	    });
+	}
+	var DecimalPipe = (function () {
 	    function DecimalPipe() {
-	        _super.apply(this, arguments);
 	    }
 	    DecimalPipe.prototype.transform = function (value, digits) {
 	        if (digits === void 0) { digits = null; }
-	        return NumberPipe._format(value, intl_1.NumberFormatStyle.Decimal, digits);
+	        return formatNumber(DecimalPipe, value, intl_1.NumberFormatStyle.Decimal, digits);
 	    };
+	    /** @nocollapse */
 	    DecimalPipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'number' },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return DecimalPipe;
-	}(NumberPipe));
+	}());
 	exports.DecimalPipe = DecimalPipe;
-	var PercentPipe = (function (_super) {
-	    __extends(PercentPipe, _super);
+	var PercentPipe = (function () {
 	    function PercentPipe() {
-	        _super.apply(this, arguments);
 	    }
 	    PercentPipe.prototype.transform = function (value, digits) {
 	        if (digits === void 0) { digits = null; }
-	        return NumberPipe._format(value, intl_1.NumberFormatStyle.Percent, digits);
+	        return formatNumber(PercentPipe, value, intl_1.NumberFormatStyle.Percent, digits);
 	    };
+	    /** @nocollapse */
 	    PercentPipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'percent' },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return PercentPipe;
-	}(NumberPipe));
+	}());
 	exports.PercentPipe = PercentPipe;
-	var CurrencyPipe = (function (_super) {
-	    __extends(CurrencyPipe, _super);
+	var CurrencyPipe = (function () {
 	    function CurrencyPipe() {
-	        _super.apply(this, arguments);
 	    }
 	    CurrencyPipe.prototype.transform = function (value, currencyCode, symbolDisplay, digits) {
 	        if (currencyCode === void 0) { currencyCode = 'USD'; }
 	        if (symbolDisplay === void 0) { symbolDisplay = false; }
 	        if (digits === void 0) { digits = null; }
-	        return NumberPipe._format(value, intl_1.NumberFormatStyle.Currency, digits, currencyCode, symbolDisplay);
+	        return formatNumber(CurrencyPipe, value, intl_1.NumberFormatStyle.Currency, digits, currencyCode, symbolDisplay);
 	    };
+	    /** @nocollapse */
 	    CurrencyPipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'currency' },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return CurrencyPipe;
-	}(NumberPipe));
+	}());
 	exports.CurrencyPipe = CurrencyPipe;
 	//# sourceMappingURL=number_pipe.js.map
 
 /***/ },
-/* 162 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var invalid_pipe_argument_exception_1 = __webpack_require__(21);
+	var invalid_pipe_argument_exception_1 = __webpack_require__(24);
 	var ReplacePipe = (function () {
 	    function ReplacePipe() {
 	    }
@@ -9716,10 +11314,8 @@
 	        if (!this._supportedReplacement(replacement)) {
 	            throw new invalid_pipe_argument_exception_1.InvalidPipeArgumentException(ReplacePipe, replacement);
 	        }
-	        // template fails with literal RegExp e.g /pattern/igm
-	        // var rgx = pattern instanceof RegExp ? pattern : RegExpWrapper.create(pattern);
 	        if (lang_1.isFunction(replacement)) {
-	            var rgxPattern = lang_1.isString(pattern) ? lang_1.RegExpWrapper.create(pattern) : pattern;
+	            var rgxPattern = lang_1.isString(pattern) ? new RegExp(pattern, 'g') : pattern;
 	            return lang_1.StringWrapper.replaceAllMapped(input, rgxPattern, replacement);
 	        }
 	        if (pattern instanceof RegExp) {
@@ -9735,9 +11331,9 @@
 	    ReplacePipe.prototype._supportedReplacement = function (replacement) {
 	        return lang_1.isString(replacement) || lang_1.isFunction(replacement);
 	    };
+	    /** @nocollapse */
 	    ReplacePipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'replace' },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return ReplacePipe;
 	}());
@@ -9745,33 +11341,40 @@
 	//# sourceMappingURL=replace_pipe.js.map
 
 /***/ },
-/* 163 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
+	var collection_1 = __webpack_require__(18);
 	var lang_1 = __webpack_require__(5);
-	var collection_1 = __webpack_require__(14);
-	var invalid_pipe_argument_exception_1 = __webpack_require__(21);
+	var invalid_pipe_argument_exception_1 = __webpack_require__(24);
 	var SlicePipe = (function () {
 	    function SlicePipe() {
 	    }
 	    SlicePipe.prototype.transform = function (value, start, end) {
 	        if (end === void 0) { end = null; }
+	        if (lang_1.isBlank(value))
+	            return value;
 	        if (!this.supports(value)) {
 	            throw new invalid_pipe_argument_exception_1.InvalidPipeArgumentException(SlicePipe, value);
 	        }
-	        if (lang_1.isBlank(value))
-	            return value;
 	        if (lang_1.isString(value)) {
 	            return lang_1.StringWrapper.slice(value, start, end);
 	        }
 	        return collection_1.ListWrapper.slice(value, start, end);
 	    };
 	    SlicePipe.prototype.supports = function (obj) { return lang_1.isString(obj) || lang_1.isArray(obj); };
+	    /** @nocollapse */
 	    SlicePipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'slice', pure: false },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return SlicePipe;
 	}());
@@ -9779,13 +11382,20 @@
 	//# sourceMappingURL=slice_pipe.js.map
 
 /***/ },
-/* 164 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var core_1 = __webpack_require__(1);
 	var lang_1 = __webpack_require__(5);
-	var invalid_pipe_argument_exception_1 = __webpack_require__(21);
+	var invalid_pipe_argument_exception_1 = __webpack_require__(24);
 	var UpperCasePipe = (function () {
 	    function UpperCasePipe() {
 	    }
@@ -9797,9 +11407,9 @@
 	        }
 	        return value.toUpperCase();
 	    };
+	    /** @nocollapse */
 	    UpperCasePipe.decorators = [
 	        { type: core_1.Pipe, args: [{ name: 'uppercase' },] },
-	        { type: core_1.Injectable },
 	    ];
 	    return UpperCasePipe;
 	}());
@@ -9807,30 +11417,828 @@
 	//# sourceMappingURL=uppercase_pipe.js.map
 
 /***/ },
-/* 165 */,
-/* 166 */,
-/* 167 */,
-/* 168 */,
-/* 169 */,
-/* 170 */,
-/* 171 */,
-/* 172 */,
-/* 173 */,
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	exports.FILL_STYLE_FLAG = 'true'; // TODO (matsko): change to boolean
+	exports.ANY_STATE = '*';
+	exports.DEFAULT_STATE = '*';
+	exports.EMPTY_STATE = 'void';
+	//# sourceMappingURL=animation_constants.js.map
+
+/***/ },
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var collection_1 = __webpack_require__(11);
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
-	/* @ts2dart_const */
+	var lang_1 = __webpack_require__(3);
+	var math_1 = __webpack_require__(437);
+	var AnimationGroupPlayer = (function () {
+	    function AnimationGroupPlayer(_players) {
+	        var _this = this;
+	        this._players = _players;
+	        this._subscriptions = [];
+	        this._finished = false;
+	        this._started = false;
+	        this.parentPlayer = null;
+	        var count = 0;
+	        var total = this._players.length;
+	        if (total == 0) {
+	            lang_1.scheduleMicroTask(function () { return _this._onFinish(); });
+	        }
+	        else {
+	            this._players.forEach(function (player) {
+	                player.parentPlayer = _this;
+	                player.onDone(function () {
+	                    if (++count >= total) {
+	                        _this._onFinish();
+	                    }
+	                });
+	            });
+	        }
+	    }
+	    AnimationGroupPlayer.prototype._onFinish = function () {
+	        if (!this._finished) {
+	            this._finished = true;
+	            if (!lang_1.isPresent(this.parentPlayer)) {
+	                this.destroy();
+	            }
+	            this._subscriptions.forEach(function (subscription) { return subscription(); });
+	            this._subscriptions = [];
+	        }
+	    };
+	    AnimationGroupPlayer.prototype.init = function () { this._players.forEach(function (player) { return player.init(); }); };
+	    AnimationGroupPlayer.prototype.onDone = function (fn) { this._subscriptions.push(fn); };
+	    AnimationGroupPlayer.prototype.hasStarted = function () { return this._started; };
+	    AnimationGroupPlayer.prototype.play = function () {
+	        if (!lang_1.isPresent(this.parentPlayer)) {
+	            this.init();
+	        }
+	        this._started = true;
+	        this._players.forEach(function (player) { return player.play(); });
+	    };
+	    AnimationGroupPlayer.prototype.pause = function () { this._players.forEach(function (player) { return player.pause(); }); };
+	    AnimationGroupPlayer.prototype.restart = function () { this._players.forEach(function (player) { return player.restart(); }); };
+	    AnimationGroupPlayer.prototype.finish = function () {
+	        this._onFinish();
+	        this._players.forEach(function (player) { return player.finish(); });
+	    };
+	    AnimationGroupPlayer.prototype.destroy = function () {
+	        this._onFinish();
+	        this._players.forEach(function (player) { return player.destroy(); });
+	    };
+	    AnimationGroupPlayer.prototype.reset = function () { this._players.forEach(function (player) { return player.reset(); }); };
+	    AnimationGroupPlayer.prototype.setPosition = function (p /** TODO #9100 */) {
+	        this._players.forEach(function (player) { player.setPosition(p); });
+	    };
+	    AnimationGroupPlayer.prototype.getPosition = function () {
+	        var min = 0;
+	        this._players.forEach(function (player) {
+	            var p = player.getPosition();
+	            min = math_1.Math.min(p, min);
+	        });
+	        return min;
+	    };
+	    return AnimationGroupPlayer;
+	}());
+	exports.AnimationGroupPlayer = AnimationGroupPlayer;
+	//# sourceMappingURL=animation_group_player.js.map
+
+/***/ },
+/* 214 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	/**
+	 * @experimental Animation support is experimental.
+	 */
+	exports.AUTO_STYLE = '*';
+	/**
+	 * Metadata representing the entry of animations.
+	 * Instances of this class are provided via the animation DSL when the {@link trigger trigger
+	 * animation function} is called.
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationEntryMetadata = (function () {
+	    function AnimationEntryMetadata(name, definitions) {
+	        this.name = name;
+	        this.definitions = definitions;
+	    }
+	    return AnimationEntryMetadata;
+	}());
+	exports.AnimationEntryMetadata = AnimationEntryMetadata;
+	/**
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationStateMetadata = (function () {
+	    function AnimationStateMetadata() {
+	    }
+	    return AnimationStateMetadata;
+	}());
+	exports.AnimationStateMetadata = AnimationStateMetadata;
+	/**
+	 * Metadata representing the entry of animations.
+	 * Instances of this class are provided via the animation DSL when the {@link state state animation
+	 * function} is called.
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationStateDeclarationMetadata = (function (_super) {
+	    __extends(AnimationStateDeclarationMetadata, _super);
+	    function AnimationStateDeclarationMetadata(stateNameExpr, styles) {
+	        _super.call(this);
+	        this.stateNameExpr = stateNameExpr;
+	        this.styles = styles;
+	    }
+	    return AnimationStateDeclarationMetadata;
+	}(AnimationStateMetadata));
+	exports.AnimationStateDeclarationMetadata = AnimationStateDeclarationMetadata;
+	/**
+	 * Metadata representing the entry of animations.
+	 * Instances of this class are provided via the animation DSL when the
+	 * {@link transition transition animation function} is called.
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationStateTransitionMetadata = (function (_super) {
+	    __extends(AnimationStateTransitionMetadata, _super);
+	    function AnimationStateTransitionMetadata(stateChangeExpr, steps) {
+	        _super.call(this);
+	        this.stateChangeExpr = stateChangeExpr;
+	        this.steps = steps;
+	    }
+	    return AnimationStateTransitionMetadata;
+	}(AnimationStateMetadata));
+	exports.AnimationStateTransitionMetadata = AnimationStateTransitionMetadata;
+	/**
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationMetadata = (function () {
+	    function AnimationMetadata() {
+	    }
+	    return AnimationMetadata;
+	}());
+	exports.AnimationMetadata = AnimationMetadata;
+	/**
+	 * Metadata representing the entry of animations.
+	 * Instances of this class are provided via the animation DSL when the {@link keyframes keyframes
+	 * animation function} is called.
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationKeyframesSequenceMetadata = (function (_super) {
+	    __extends(AnimationKeyframesSequenceMetadata, _super);
+	    function AnimationKeyframesSequenceMetadata(steps) {
+	        _super.call(this);
+	        this.steps = steps;
+	    }
+	    return AnimationKeyframesSequenceMetadata;
+	}(AnimationMetadata));
+	exports.AnimationKeyframesSequenceMetadata = AnimationKeyframesSequenceMetadata;
+	/**
+	 * Metadata representing the entry of animations.
+	 * Instances of this class are provided via the animation DSL when the {@link style style animation
+	 * function} is called.
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationStyleMetadata = (function (_super) {
+	    __extends(AnimationStyleMetadata, _super);
+	    function AnimationStyleMetadata(styles, offset) {
+	        if (offset === void 0) { offset = null; }
+	        _super.call(this);
+	        this.styles = styles;
+	        this.offset = offset;
+	    }
+	    return AnimationStyleMetadata;
+	}(AnimationMetadata));
+	exports.AnimationStyleMetadata = AnimationStyleMetadata;
+	/**
+	 * Metadata representing the entry of animations.
+	 * Instances of this class are provided via the animation DSL when the {@link animate animate
+	 * animation function} is called.
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationAnimateMetadata = (function (_super) {
+	    __extends(AnimationAnimateMetadata, _super);
+	    function AnimationAnimateMetadata(timings, styles) {
+	        _super.call(this);
+	        this.timings = timings;
+	        this.styles = styles;
+	    }
+	    return AnimationAnimateMetadata;
+	}(AnimationMetadata));
+	exports.AnimationAnimateMetadata = AnimationAnimateMetadata;
+	/**
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationWithStepsMetadata = (function (_super) {
+	    __extends(AnimationWithStepsMetadata, _super);
+	    function AnimationWithStepsMetadata() {
+	        _super.call(this);
+	    }
+	    Object.defineProperty(AnimationWithStepsMetadata.prototype, "steps", {
+	        get: function () { throw new exceptions_1.BaseException('NOT IMPLEMENTED: Base Class'); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return AnimationWithStepsMetadata;
+	}(AnimationMetadata));
+	exports.AnimationWithStepsMetadata = AnimationWithStepsMetadata;
+	/**
+	 * Metadata representing the entry of animations.
+	 * Instances of this class are provided via the animation DSL when the {@link sequence sequence
+	 * animation function} is called.
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationSequenceMetadata = (function (_super) {
+	    __extends(AnimationSequenceMetadata, _super);
+	    function AnimationSequenceMetadata(_steps) {
+	        _super.call(this);
+	        this._steps = _steps;
+	    }
+	    Object.defineProperty(AnimationSequenceMetadata.prototype, "steps", {
+	        get: function () { return this._steps; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return AnimationSequenceMetadata;
+	}(AnimationWithStepsMetadata));
+	exports.AnimationSequenceMetadata = AnimationSequenceMetadata;
+	/**
+	 * Metadata representing the entry of animations.
+	 * Instances of this class are provided via the animation DSL when the {@link group group animation
+	 * function} is called.
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	var AnimationGroupMetadata = (function (_super) {
+	    __extends(AnimationGroupMetadata, _super);
+	    function AnimationGroupMetadata(_steps) {
+	        _super.call(this);
+	        this._steps = _steps;
+	    }
+	    Object.defineProperty(AnimationGroupMetadata.prototype, "steps", {
+	        get: function () { return this._steps; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return AnimationGroupMetadata;
+	}(AnimationWithStepsMetadata));
+	exports.AnimationGroupMetadata = AnimationGroupMetadata;
+	/**
+	 * `animate` is an animation-specific function that is designed to be used inside of Angular2's
+	 * animation
+	 * DSL language. If this information is new, please navigate to the
+	 * {@link ComponentMetadata#animations-anchor component animations metadata
+	 * page} to gain a better understanding of how animations in Angular2 are used.
+	 *
+	 * `animate` specifies an animation step that will apply the provided `styles` data for a given
+	 * amount of
+	 * time based on the provided `timing` expression value. Calls to `animate` are expected to be
+	 * used within {@link sequence an animation sequence}, {@link group group}, or {@link transition
+	 * transition}.
+	 *
+	 * ### Usage
+	 *
+	 * The `animate` function accepts two input parameters: `timing` and `styles`:
+	 *
+	 * - `timing` is a string based value that can be a combination of a duration with optional
+	 * delay and easing values. The format for the expression breaks down to `duration delay easing`
+	 * (therefore a value such as `1s 100ms ease-out` will be parse itself into `duration=1000,
+	 * delay=100, easing=ease-out`.
+	 * If a numeric value is provided then that will be used as the `duration` value in millisecond
+	 * form.
+	 * - `styles` is the style input data which can either be a call to {@link style style} or {@link
+	 * keyframes keyframes}.
+	 * If left empty then the styles from the destination state will be collected and used (this is
+	 * useful when
+	 * describing an animation step that will complete an animation by {@link
+	 * transition#the-final-animate-call animating to the final state}).
+	 *
+	 * ```typescript
+	 * // various functions for specifying timing data
+	 * animate(500, style(...))
+	 * animate("1s", style(...))
+	 * animate("100ms 0.5s", style(...))
+	 * animate("5s ease", style(...))
+	 * animate("5s 10ms cubic-bezier(.17,.67,.88,.1)", style(...))
+	 *
+	 * // either style() of keyframes() can be used
+	 * animate(500, style({ background: "red" }))
+	 * animate(500, keyframes([
+	 *   style({ background: "blue" })),
+	 *   style({ background: "red" }))
+	 * ])
+	 * ```
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/Kez8XGWBxWue7qP7nNvF?p=preview))
+	 *
+	 * {@example core/animation/ts/dsl/animation_example.ts region='Component'}
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	function animate(timing, styles) {
+	    if (styles === void 0) { styles = null; }
+	    var stylesEntry = styles;
+	    if (!lang_1.isPresent(stylesEntry)) {
+	        var EMPTY_STYLE = {};
+	        stylesEntry = new AnimationStyleMetadata([EMPTY_STYLE], 1);
+	    }
+	    return new AnimationAnimateMetadata(timing, stylesEntry);
+	}
+	exports.animate = animate;
+	/**
+	 * `group` is an animation-specific function that is designed to be used inside of Angular2's
+	 * animation
+	 * DSL language. If this information is new, please navigate to the
+	 * {@link ComponentMetadata#animations-anchor component animations metadata
+	 * page} to gain a better understanding of how animations in Angular2 are used.
+	 *
+	 * `group` specifies a list of animation steps that are all run in parallel. Grouped animations
+	 * are useful when a series of styles must be animated/closed off
+	 * at different statrting/ending times.
+	 *
+	 * The `group` function can either be used within a {@link sequence sequence} or a {@link transition
+	 * transition}
+	 * and it will only continue to the next instruction once all of the inner animation steps
+	 * have completed.
+	 *
+	 * ### Usage
+	 *
+	 * The `steps` data that is passed into the `group` animation function can either consist
+	 * of {@link style style} or {@link animate animate} function calls. Each call to `style()` or
+	 * `animate()`
+	 * within a group will be executed instantly (use {@link keyframes keyframes} or a
+	 * {@link animate#usage animate() with a delay value} to offset styles to be applied at a later
+	 * time).
+	 *
+	 * ```typescript
+	 * group([
+	 *   animate("1s", { background: "black" }))
+	 *   animate("2s", { color: "white" }))
+	 * ])
+	 * ```
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/Kez8XGWBxWue7qP7nNvF?p=preview))
+	 *
+	 * {@example core/animation/ts/dsl/animation_example.ts region='Component'}
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	function group(steps) {
+	    return new AnimationGroupMetadata(steps);
+	}
+	exports.group = group;
+	/**
+	 * `sequence` is an animation-specific function that is designed to be used inside of Angular2's
+	 * animation
+	 * DSL language. If this information is new, please navigate to the
+	 * {@link ComponentMetadata#animations-anchor component animations metadata
+	 * page} to gain a better understanding of how animations in Angular2 are used.
+	 *
+	 * `sequence` Specifies a list of animation steps that are run one by one. (`sequence` is used
+	 * by default when an array is passed as animation data into {@link transition transition}.)
+	 *
+	 * The `sequence` function can either be used within a {@link group group} or a {@link transition
+	 * transition}
+	 * and it will only continue to the next instruction once each of the inner animation steps
+	 * have completed.
+	 *
+	 * To perform animation styling in parallel with other animation steps then
+	 * have a look at the {@link group group} animation function.
+	 *
+	 * ### Usage
+	 *
+	 * The `steps` data that is passed into the `sequence` animation function can either consist
+	 * of {@link style style} or {@link animate animate} function calls. A call to `style()` will apply
+	 * the
+	 * provided styling data immediately while a call to `animate()` will apply its styling
+	 * data over a given time depending on its timing data.
+	 *
+	 * ```typescript
+	 * sequence([
+	 *   style({ opacity: 0 })),
+	 *   animate("1s", { opacity: 1 }))
+	 * ])
+	 * ```
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/Kez8XGWBxWue7qP7nNvF?p=preview))
+	 *
+	 * {@example core/animation/ts/dsl/animation_example.ts region='Component'}
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	function sequence(steps) {
+	    return new AnimationSequenceMetadata(steps);
+	}
+	exports.sequence = sequence;
+	/**
+	 * `style` is an animation-specific function that is designed to be used inside of Angular2's
+	 * animation
+	 * DSL language. If this information is new, please navigate to the
+	 * {@link ComponentMetadata#animations-anchor component animations metadata
+	 * page} to gain a better understanding of how animations in Angular2 are used.
+	 *
+	 * `style` declares a key/value object containing CSS properties/styles that can then
+	 * be used for {@link state animation states}, within an {@link sequence animation sequence}, or as
+	 * styling data for both {@link animate animate} and {@link keyframes keyframes}.
+	 *
+	 * ### Usage
+	 *
+	 * `style` takes in a key/value string map as data and expects one or more CSS property/value
+	 * pairs to be defined.
+	 *
+	 * ```typescript
+	 * // string values are used for css properties
+	 * style({ background: "red", color: "blue" })
+	 *
+	 * // numerical (pixel) values are also supported
+	 * style({ width: 100, height: 0 })
+	 * ```
+	 *
+	 * #### Auto-styles (using `*`)
+	 *
+	 * When an asterix (`*`) character is used as a value then it will be detected from the element
+	 * being animated
+	 * and applied as animation data when the animation starts.
+	 *
+	 * This feature proves useful for a state depending on layout and/or environment factors; in such
+	 * cases
+	 * the styles are calculated just before the animation starts.
+	 *
+	 * ```typescript
+	 * // the steps below will animate from 0 to the
+	 * // actual height of the element
+	 * style({ height: 0 }),
+	 * animate("1s", style({ height: "*" }))
+	 * ```
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/Kez8XGWBxWue7qP7nNvF?p=preview))
+	 *
+	 * {@example core/animation/ts/dsl/animation_example.ts region='Component'}
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	function style(tokens) {
+	    var input;
+	    var offset = null;
+	    if (lang_1.isString(tokens)) {
+	        input = [tokens];
+	    }
+	    else {
+	        if (lang_1.isArray(tokens)) {
+	            input = tokens;
+	        }
+	        else {
+	            input = [tokens];
+	        }
+	        input.forEach(function (entry) {
+	            var entryOffset = entry['offset'];
+	            if (lang_1.isPresent(entryOffset)) {
+	                offset = offset == null ? lang_1.NumberWrapper.parseFloat(entryOffset) : offset;
+	            }
+	        });
+	    }
+	    return new AnimationStyleMetadata(input, offset);
+	}
+	exports.style = style;
+	/**
+	 * `state` is an animation-specific function that is designed to be used inside of Angular2's
+	 * animation
+	 * DSL language. If this information is new, please navigate to the
+	 * {@link ComponentMetadata#animations-anchor component animations metadata
+	 * page} to gain a better understanding of how animations in Angular2 are used.
+	 *
+	 * `state` declares an animation state within the given trigger. When a state is
+	 * active within a component then its associated styles will persist on
+	 * the element that the trigger is attached to (even when the animation ends).
+	 *
+	 * To animate between states, have a look at the animation {@link transition transition}
+	 * DSL function. To register states to an animation trigger please have a look
+	 * at the {@link trigger trigger} function.
+	 *
+	 * #### The `void` state
+	 *
+	 * The `void` state value is a reserved word that angular uses to determine when the element is not
+	 * apart
+	 * of the application anymore (e.g. when an `ngIf` evaluates to false then the state of the
+	 * associated element
+	 * is void).
+	 *
+	 * #### The `*` (default) state
+	 *
+	 * The `*` state (when styled) is a fallback state that will be used if
+	 * the state that is being animated is not declared within the trigger.
+	 *
+	 * ### Usage
+	 *
+	 * `state` will declare an animation state with its associated styles
+	 * within the given trigger.
+	 *
+	 * - `stateNameExpr` can be one or more state names separated by commas.
+	 * - `styles` refers to the {@link style styling data} that will be persisted on the element once
+	 * the state
+	 * has been reached.
+	 *
+	 * ```typescript
+	 * // "void" is a reserved name for a state and is used to represent
+	 * // the state in which an element is detached from from the application.
+	 * state("void", style({ height: 0 }))
+	 *
+	 * // user-defined states
+	 * state("closed", style({ height: 0 }))
+	 * state("open, visible", style({ height: "*" }))
+	 * ```
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/Kez8XGWBxWue7qP7nNvF?p=preview))
+	 *
+	 * {@example core/animation/ts/dsl/animation_example.ts region='Component'}
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	function state(stateNameExpr, styles) {
+	    return new AnimationStateDeclarationMetadata(stateNameExpr, styles);
+	}
+	exports.state = state;
+	/**
+	 * `keyframes` is an animation-specific function that is designed to be used inside of Angular2's
+	 * animation
+	 * DSL language. If this information is new, please navigate to the
+	 * {@link ComponentMetadata#animations-anchor component animations metadata
+	 * page} to gain a better understanding of how animations in Angular2 are used.
+	 *
+	 * `keyframes` specifies a collection of {@link style style} entries each optionally characterized
+	 * by an `offset` value.
+	 *
+	 * ### Usage
+	 *
+	 * The `keyframes` animation function is designed to be used alongside the {@link animate animate}
+	 * animation function. Instead of applying animations from where they are
+	 * currently to their destination, keyframes can describe how each style entry is applied
+	 * and at what point within the animation arc (much like CSS Keyframe Animations do).
+	 *
+	 * For each `style()` entry an `offset` value can be set. Doing so allows to specifiy at
+	 * what percentage of the animate time the styles will be applied.
+	 *
+	 * ```typescript
+	 * // the provided offset values describe when each backgroundColor value is applied.
+	 * animate("5s", keyframes([
+	 *   style({ backgroundColor: "red", offset: 0 }),
+	 *   style({ backgroundColor: "blue", offset: 0.2 }),
+	 *   style({ backgroundColor: "orange", offset: 0.3 }),
+	 *   style({ backgroundColor: "black", offset: 1 })
+	 * ]))
+	 * ```
+	 *
+	 * Alternatively, if there are no `offset` values used within the style entries then the offsets
+	 * will
+	 * be calculated automatically.
+	 *
+	 * ```typescript
+	 * animate("5s", keyframes([
+	 *   style({ backgroundColor: "red" }) // offset = 0
+	 *   style({ backgroundColor: "blue" }) // offset = 0.33
+	 *   style({ backgroundColor: "orange" }) // offset = 0.66
+	 *   style({ backgroundColor: "black" }) // offset = 1
+	 * ]))
+	 * ```
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/Kez8XGWBxWue7qP7nNvF?p=preview))
+	 *
+	 * {@example core/animation/ts/dsl/animation_example.ts region='Component'}
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	function keyframes(steps) {
+	    return new AnimationKeyframesSequenceMetadata(steps);
+	}
+	exports.keyframes = keyframes;
+	/**
+	 * `transition` is an animation-specific function that is designed to be used inside of Angular2's
+	 * animation
+	 * DSL language. If this information is new, please navigate to the
+	 * {@link ComponentMetadata#animations-anchor component animations metadata
+	 * page} to gain a better understanding of how animations in Angular2 are used.
+	 *
+	 * `transition` declares the {@link sequence sequence of animation steps} that will be run when the
+	 * provided
+	 * `stateChangeExpr` value is satisfied. The `stateChangeExpr` consists of a `state1 => state2`
+	 * which consists
+	 * of two known states (use an asterix (`*`) to refer to a dynamic starting and/or ending state).
+	 *
+	 * Animation transitions are placed within an {@link trigger animation trigger}. For an transition
+	 * to animate to
+	 * a state value and persist its styles then one or more {@link state animation states} is expected
+	 * to be defined.
+	 *
+	 * ### Usage
+	 *
+	 * An animation transition is kicked off the `stateChangeExpr` predicate evaluates to true based on
+	 * what the
+	 * previous state is and what the current state has become. In other words, if a transition is
+	 * defined that
+	 * matches the old/current state criteria then the associated animation will be triggered.
+	 *
+	 * ```typescript
+	 * // all transition/state changes are defined within an animation trigger
+	 * trigger("myAnimationTrigger", [
+	 *   // if a state is defined then its styles will be persisted when the
+	 *   // animation has fully completed itself
+	 *   state("on", style({ background: "green" })),
+	 *   state("off", style({ background: "grey" })),
+	 *
+	 *   // a transition animation that will be kicked off when the state value
+	 *   // bound to "myAnimationTrigger" changes from "on" to "off"
+	 *   transition("on => off", animate(500)),
+	 *
+	 *   // it is also possible to do run the same animation for both directions
+	 *   transition("on <=> off", animate(500)),
+	 *
+	 *   // or to define multiple states pairs separated by commas
+	 *   transition("on => off, off => void", animate(500)),
+	 *
+	 *   // this is a catch-all state change for when an element is inserted into
+	 *   // the page and the destination state is unknown
+	 *   transition("void => *", [
+	 *     style({ opacity: 0 }),
+	 *     animate(500)
+	 *   ]),
+	 *
+	 *   // this will capture a state change between any states
+	 *   transition("* => *", animate("1s 0s")),
+	 * ])
+	 * ```
+	 *
+	 * The template associated with this component will make use of the `myAnimationTrigger`
+	 * animation trigger by binding to an element within its template code.
+	 *
+	 * ```html
+	 * <!-- somewhere inside of my-component-tpl.html -->
+	 * <div [@myAnimationTrigger]="myStatusExp">...</div>
+	 * ```
+	 *
+	 * #### The final `animate` call
+	 *
+	 * If the final step within the transition steps is a call to `animate()` that **only**
+	 * uses a timing value with **no style data** then it will be automatically used as the final
+	 * animation
+	 * arc for the element to animate itself to the final state. This involves an automatic mix of
+	 * adding/removing CSS styles so that the element will be in the exact state it should be for the
+	 * applied state to be presented correctly.
+	 *
+	 * ```
+	 * // start off by hiding the element, but make sure that it animates properly to whatever state
+	 * // is currently active for "myAnimationTrigger"
+	 * transition("void => *", [
+	 *   style({ opacity: 0 }),
+	 *   animate(500)
+	 * ])
+	 * ```
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/Kez8XGWBxWue7qP7nNvF?p=preview))
+	 *
+	 * {@example core/animation/ts/dsl/animation_example.ts region='Component'}
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	function transition(stateChangeExpr, steps) {
+	    var animationData = lang_1.isArray(steps) ? new AnimationSequenceMetadata(steps) :
+	        steps;
+	    return new AnimationStateTransitionMetadata(stateChangeExpr, animationData);
+	}
+	exports.transition = transition;
+	/**
+	 * `trigger` is an animation-specific function that is designed to be used inside of Angular2's
+	 * animation
+	 * DSL language. If this information is new, please navigate to the
+	 * {@link ComponentMetadata#animations-anchor component animations metadata
+	 * page} to gain a better understanding of how animations in Angular2 are used.
+	 *
+	 * `trigger` Creates an animation trigger which will a list of {@link state state} and {@link
+	 * transition transition}
+	 * entries that will be evaluated when the expression bound to the trigger changes.
+	 *
+	 * Triggers are registered within the component annotation data under the
+	 * {@link ComponentMetadata#animations-anchor animations section}. An animation trigger can
+	 * be placed on an element within a template by referencing the name of the
+	 * trigger followed by the expression value that the trigger is bound to
+	 * (in the form of `[@triggerName]="expression"`.
+	 *
+	 * ### Usage
+	 *
+	 * `trigger` will create an animation trigger reference based on the provided `name` value.
+	 * The provided `animation` value is expected to be an array consisting of {@link state state} and
+	 * {@link transition transition}
+	 * declarations.
+	 *
+	 * ```typescript
+	 * @Component({
+	 *   selector: 'my-component',
+	 *   templateUrl: 'my-component-tpl.html',
+	 *   animations: [
+	 *     trigger("myAnimationTrigger", [
+	 *       state(...),
+	 *       state(...),
+	 *       transition(...),
+	 *       transition(...)
+	 *     ])
+	 *   ]
+	 * })
+	 * class MyComponent {
+	 *   myStatusExp = "something";
+	 * }
+	 * ```
+	 *
+	 * The template associated with this component will make use of the `myAnimationTrigger`
+	 * animation trigger by binding to an element within its template code.
+	 *
+	 * ```html
+	 * <!-- somewhere inside of my-component-tpl.html -->
+	 * <div [@myAnimationTrigger]="myStatusExp">...</div>
+	 * ```
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/Kez8XGWBxWue7qP7nNvF?p=preview))
+	 *
+	 * {@example core/animation/ts/dsl/animation_example.ts region='Component'}
+	 *
+	 * @experimental Animation support is experimental.
+	 */
+	function trigger(name, animation) {
+	    return new AnimationEntryMetadata(name, animation);
+	}
+	exports.trigger = trigger;
+	//# sourceMappingURL=metadata.js.map
+
+/***/ },
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
 	var DefaultKeyValueDifferFactory = (function () {
 	    function DefaultKeyValueDifferFactory() {
 	    }
@@ -9890,17 +12298,13 @@
 	        }
 	    };
 	    DefaultKeyValueDiffer.prototype.diff = function (map) {
-	        if (lang_1.isBlank(map))
-	            map = collection_1.MapWrapper.createFromPairs([]);
-	        if (!(map instanceof Map || lang_1.isJsObject(map))) {
+	        if (!map) {
+	            map = new Map();
+	        }
+	        else if (!(map instanceof Map || lang_1.isJsObject(map))) {
 	            throw new exceptions_1.BaseException("Error trying to diff '" + map + "'");
 	        }
-	        if (this.check(map)) {
-	            return this;
-	        }
-	        else {
-	            return null;
-	        }
+	        return this.check(map) ? this : null;
 	    };
 	    DefaultKeyValueDiffer.prototype.onDestroy = function () { };
 	    DefaultKeyValueDiffer.prototype.check = function (map) {
@@ -9913,23 +12317,19 @@
 	        var seqChanged = false;
 	        this._forEach(map, function (value, key) {
 	            var newSeqRecord;
-	            if (oldSeqRecord !== null && key === oldSeqRecord.key) {
+	            if (oldSeqRecord && key === oldSeqRecord.key) {
 	                newSeqRecord = oldSeqRecord;
-	                if (!lang_1.looseIdentical(value, oldSeqRecord.currentValue)) {
-	                    oldSeqRecord.previousValue = oldSeqRecord.currentValue;
-	                    oldSeqRecord.currentValue = value;
-	                    _this._addToChanges(oldSeqRecord);
-	                }
+	                _this._maybeAddToChanges(newSeqRecord, value);
 	            }
 	            else {
 	                seqChanged = true;
 	                if (oldSeqRecord !== null) {
-	                    oldSeqRecord._next = null;
 	                    _this._removeFromSeq(lastOldSeqRecord, oldSeqRecord);
 	                    _this._addToRemovals(oldSeqRecord);
 	                }
 	                if (records.has(key)) {
 	                    newSeqRecord = records.get(key);
+	                    _this._maybeAddToChanges(newSeqRecord, value);
 	                }
 	                else {
 	                    newSeqRecord = new KeyValueChangeRecord(key);
@@ -9951,7 +12351,7 @@
 	            }
 	            lastOldSeqRecord = oldSeqRecord;
 	            lastNewSeqRecord = newSeqRecord;
-	            oldSeqRecord = oldSeqRecord === null ? null : oldSeqRecord._next;
+	            oldSeqRecord = oldSeqRecord && oldSeqRecord._next;
 	        });
 	        this._truncate(lastOldSeqRecord, oldSeqRecord);
 	        return this.isDirty;
@@ -9959,7 +12359,7 @@
 	    /** @internal */
 	    DefaultKeyValueDiffer.prototype._reset = function () {
 	        if (this.isDirty) {
-	            var record;
+	            var record = void 0;
 	            // Record the state of the mapping
 	            for (record = this._previousMapHead = this._mapHead; record !== null; record = record._next) {
 	                record._nextPrevious = record._next;
@@ -9970,31 +12370,6 @@
 	            for (record = this._additionsHead; record != null; record = record._nextAdded) {
 	                record.previousValue = record.currentValue;
 	            }
-	            // todo(vicb) once assert is supported
-	            // assert(() {
-	            //  var r = _changesHead;
-	            //  while (r != null) {
-	            //    var nextRecord = r._nextChanged;
-	            //    r._nextChanged = null;
-	            //    r = nextRecord;
-	            //  }
-	            //
-	            //  r = _additionsHead;
-	            //  while (r != null) {
-	            //    var nextRecord = r._nextAdded;
-	            //    r._nextAdded = null;
-	            //    r = nextRecord;
-	            //  }
-	            //
-	            //  r = _removalsHead;
-	            //  while (r != null) {
-	            //    var nextRecord = r._nextRemoved;
-	            //    r._nextRemoved = null;
-	            //    r = nextRecord;
-	            //  }
-	            //
-	            //  return true;
-	            //});
 	            this._changesHead = this._changesTail = null;
 	            this._additionsHead = this._additionsTail = null;
 	            this._removalsHead = this._removalsTail = null;
@@ -10010,11 +12385,6 @@
 	                lastRecord._next = null;
 	            }
 	            var nextRecord = record._next;
-	            // todo(vicb) assert
-	            // assert((() {
-	            //  record._next = null;
-	            //  return true;
-	            //}));
 	            this._addToRemovals(record);
 	            lastRecord = record;
 	            record = nextRecord;
@@ -10025,6 +12395,13 @@
 	            this._records.delete(rec.key);
 	        }
 	    };
+	    DefaultKeyValueDiffer.prototype._maybeAddToChanges = function (record, newValue) {
+	        if (!lang_1.looseIdentical(newValue, record.currentValue)) {
+	            record.previousValue = record.currentValue;
+	            record.currentValue = newValue;
+	            this._addToChanges(record);
+	        }
+	    };
 	    /** @internal */
 	    DefaultKeyValueDiffer.prototype._isInRemovals = function (record) {
 	        return record === this._removalsHead || record._nextRemoved !== null ||
@@ -10032,12 +12409,6 @@
 	    };
 	    /** @internal */
 	    DefaultKeyValueDiffer.prototype._addToRemovals = function (record) {
-	        // todo(vicb) assert
-	        // assert(record._next == null);
-	        // assert(record._nextAdded == null);
-	        // assert(record._nextChanged == null);
-	        // assert(record._nextRemoved == null);
-	        // assert(record._prevRemoved == null);
 	        if (this._removalsHead === null) {
 	            this._removalsHead = this._removalsTail = record;
 	        }
@@ -10056,18 +12427,10 @@
 	        else {
 	            prev._next = next;
 	        }
-	        // todo(vicb) assert
-	        // assert((() {
-	        //  record._next = null;
-	        //  return true;
-	        //})());
+	        record._next = null;
 	    };
 	    /** @internal */
 	    DefaultKeyValueDiffer.prototype._removeFromRemovals = function (record) {
-	        // todo(vicb) assert
-	        // assert(record._next == null);
-	        // assert(record._nextAdded == null);
-	        // assert(record._nextChanged == null);
 	        var prev = record._prevRemoved;
 	        var next = record._nextRemoved;
 	        if (prev === null) {
@@ -10086,12 +12449,6 @@
 	    };
 	    /** @internal */
 	    DefaultKeyValueDiffer.prototype._addToAdditions = function (record) {
-	        // todo(vicb): assert
-	        // assert(record._next == null);
-	        // assert(record._nextAdded == null);
-	        // assert(record._nextChanged == null);
-	        // assert(record._nextRemoved == null);
-	        // assert(record._prevRemoved == null);
 	        if (this._additionsHead === null) {
 	            this._additionsHead = this._additionsTail = record;
 	        }
@@ -10102,11 +12459,6 @@
 	    };
 	    /** @internal */
 	    DefaultKeyValueDiffer.prototype._addToChanges = function (record) {
-	        // todo(vicb) assert
-	        // assert(record._nextAdded == null);
-	        // assert(record._nextChanged == null);
-	        // assert(record._nextRemoved == null);
-	        // assert(record._prevRemoved == null);
 	        if (this._changesHead === null) {
 	            this._changesHead = this._changesTail = record;
 	        }
@@ -10137,9 +12489,11 @@
 	        for (record = this._removalsHead; record !== null; record = record._nextRemoved) {
 	            removals.push(lang_1.stringify(record));
 	        }
-	        return "map: " + items.join(', ') + "\n" + "previous: " + previous.join(', ') + "\n" +
-	            "additions: " + additions.join(', ') + "\n" + "changes: " + changes.join(', ') + "\n" +
-	            "removals: " + removals.join(', ') + "\n";
+	        return 'map: ' + items.join(', ') + '\n' +
+	            'previous: ' + previous.join(', ') + '\n' +
+	            'additions: ' + additions.join(', ') + '\n' +
+	            'changes: ' + changes.join(', ') + '\n' +
+	            'removals: ' + removals.join(', ') + '\n';
 	    };
 	    /** @internal */
 	    DefaultKeyValueDiffer.prototype._forEach = function (obj, fn) {
@@ -10153,6 +12507,9 @@
 	    return DefaultKeyValueDiffer;
 	}());
 	exports.DefaultKeyValueDiffer = DefaultKeyValueDiffer;
+	/**
+	 * @stable
+	 */
 	var KeyValueChangeRecord = (function () {
 	    function KeyValueChangeRecord(key) {
 	        this.key = key;
@@ -10183,20 +12540,26 @@
 	//# sourceMappingURL=default_keyvalue_differ.js.map
 
 /***/ },
-/* 182 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
-	var collection_1 = __webpack_require__(11);
-	var di_1 = __webpack_require__(31);
+	var di_1 = __webpack_require__(20);
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
 	/**
 	 * A repository of different iterable diffing strategies used by NgFor, NgClass, and others.
-	 * @ts2dart_const
+	 * @stable
 	 */
 	var IterableDiffers = (function () {
-	    /*@ts2dart_const*/
 	    function IterableDiffers(factories) {
 	        this.factories = factories;
 	    }
@@ -10259,20 +12622,26 @@
 	//# sourceMappingURL=iterable_differs.js.map
 
 /***/ },
-/* 183 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
-	var collection_1 = __webpack_require__(11);
-	var di_1 = __webpack_require__(31);
+	var di_1 = __webpack_require__(20);
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
 	/**
 	 * A repository of different Map diffing strategies used by NgClass, NgStyle, and others.
-	 * @ts2dart_const
+	 * @stable
 	 */
 	var KeyValueDiffers = (function () {
-	    /*@ts2dart_const*/
 	    function KeyValueDiffers(factories) {
 	        this.factories = factories;
 	    }
@@ -10335,17 +12704,24 @@
 	//# sourceMappingURL=keyvalue_differs.js.map
 
 /***/ },
-/* 184 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var lang_1 = __webpack_require__(4);
-	var collection_1 = __webpack_require__(11);
+	var collection_1 = __webpack_require__(12);
+	var lang_1 = __webpack_require__(3);
 	var EventListener = (function () {
 	    function EventListener(name, callback) {
 	        this.name = name;
@@ -10355,6 +12731,9 @@
 	    return EventListener;
 	}());
 	exports.EventListener = EventListener;
+	/**
+	 * @experimental All debugging apis are currently experimental.
+	 */
 	var DebugNode = (function () {
 	    function DebugNode(nativeNode, parent, _debugInfo) {
 	        this._debugInfo = _debugInfo;
@@ -10412,12 +12791,17 @@
 	    return DebugNode;
 	}());
 	exports.DebugNode = DebugNode;
+	/**
+	 * @experimental All debugging apis are currently experimental.
+	 */
 	var DebugElement = (function (_super) {
 	    __extends(DebugElement, _super);
 	    function DebugElement(nativeNode, parent, _debugInfo) {
 	        _super.call(this, nativeNode, parent, _debugInfo);
 	        this.properties = {};
 	        this.attributes = {};
+	        this.classes = {};
+	        this.styles = {};
 	        this.childNodes = [];
 	        this.nativeElement = nativeNode;
 	    }
@@ -10487,6 +12871,9 @@
 	    return DebugElement;
 	}(DebugNode));
 	exports.DebugElement = DebugElement;
+	/**
+	 * @experimental
+	 */
 	function asNativeElements(debugEls) {
 	    return debugEls.map(function (el) { return el.nativeElement; });
 	}
@@ -10515,6 +12902,9 @@
 	}
 	// Need to keep the nodes in a global Map so that multiple angular apps are supported.
 	var _nativeNodeToDebugNode = new Map();
+	/**
+	 * @experimental
+	 */
 	function getDebugNode(nativeNode) {
 	    return _nativeNodeToDebugNode.get(nativeNode);
 	}
@@ -10534,11 +12924,49 @@
 	//# sourceMappingURL=debug_node.js.map
 
 /***/ },
-/* 185 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var provider_1 = __webpack_require__(105);
+	var decorators_1 = __webpack_require__(47); // so that metadata is gathered for this class
+	var OpaqueToken = (function () {
+	    function OpaqueToken(_desc) {
+	        this._desc = _desc;
+	    }
+	    OpaqueToken.prototype.toString = function () { return "Token " + this._desc; };
+	    /** @nocollapse */
+	    OpaqueToken.decorators = [
+	        { type: decorators_1.Injectable },
+	    ];
+	    /** @nocollapse */
+	    OpaqueToken.ctorParameters = [
+	        null,
+	    ];
+	    return OpaqueToken;
+	}());
+	exports.OpaqueToken = OpaqueToken;
+	//# sourceMappingURL=opaque_token.js.map
+
+/***/ },
+/* 220 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var provider_1 = __webpack_require__(128);
 	function isProviderLiteral(obj) {
 	    return obj && typeof obj == 'object' && obj.provide;
 	}
@@ -10550,17 +12978,6245 @@
 	//# sourceMappingURL=provider_util.js.map
 
 /***/ },
-/* 186 */
+/* 221 */
+174,
+/* 222 */
+[534, 221, 12, 3],
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var view_utils_1 = __webpack_require__(82);
+	/**
+	 * Represents an instance of a Component created via a {@link ComponentFactory}.
+	 *
+	 * `ComponentRef` provides access to the Component Instance as well other objects related to this
+	 * Component Instance and allows you to destroy the Component Instance via the {@link #destroy}
+	 * method.
+	 * @stable
+	 */
+	var ComponentRef = (function () {
+	    function ComponentRef() {
+	    }
+	    Object.defineProperty(ComponentRef.prototype, "location", {
+	        /**
+	         * Location of the Host Element of this Component Instance.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ComponentRef.prototype, "injector", {
+	        /**
+	         * The injector on which the component instance exists.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ComponentRef.prototype, "instance", {
+	        /**
+	         * The instance of the Component.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ;
+	    Object.defineProperty(ComponentRef.prototype, "hostView", {
+	        /**
+	         * The {@link ViewRef} of the Host View of this Component instance.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ;
+	    Object.defineProperty(ComponentRef.prototype, "changeDetectorRef", {
+	        /**
+	         * The {@link ChangeDetectorRef} of the Component instance.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ComponentRef.prototype, "componentType", {
+	        /**
+	         * The component type.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return ComponentRef;
+	}());
+	exports.ComponentRef = ComponentRef;
+	var ComponentRef_ = (function (_super) {
+	    __extends(ComponentRef_, _super);
+	    function ComponentRef_(_hostElement, _componentType) {
+	        _super.call(this);
+	        this._hostElement = _hostElement;
+	        this._componentType = _componentType;
+	    }
+	    Object.defineProperty(ComponentRef_.prototype, "location", {
+	        get: function () { return this._hostElement.elementRef; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ComponentRef_.prototype, "injector", {
+	        get: function () { return this._hostElement.injector; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ComponentRef_.prototype, "instance", {
+	        get: function () { return this._hostElement.component; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ;
+	    Object.defineProperty(ComponentRef_.prototype, "hostView", {
+	        get: function () { return this._hostElement.parentView.ref; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ;
+	    Object.defineProperty(ComponentRef_.prototype, "changeDetectorRef", {
+	        get: function () { return this._hostElement.parentView.ref; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ;
+	    Object.defineProperty(ComponentRef_.prototype, "componentType", {
+	        get: function () { return this._componentType; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ComponentRef_.prototype.destroy = function () { this._hostElement.parentView.destroy(); };
+	    ComponentRef_.prototype.onDestroy = function (callback) { this.hostView.onDestroy(callback); };
+	    return ComponentRef_;
+	}(ComponentRef));
+	exports.ComponentRef_ = ComponentRef_;
+	/**
+	 * @experimental
+	 */
+	var EMPTY_CONTEXT = new Object();
+	/**
+	 * @stable
+	 */
+	var ComponentFactory = (function () {
+	    function ComponentFactory(selector, _viewFactory, _componentType) {
+	        this.selector = selector;
+	        this._viewFactory = _viewFactory;
+	        this._componentType = _componentType;
+	    }
+	    Object.defineProperty(ComponentFactory.prototype, "componentType", {
+	        get: function () { return this._componentType; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    /**
+	     * Creates a new component.
+	     */
+	    ComponentFactory.prototype.create = function (injector, projectableNodes, rootSelectorOrNode) {
+	        if (projectableNodes === void 0) { projectableNodes = null; }
+	        if (rootSelectorOrNode === void 0) { rootSelectorOrNode = null; }
+	        var vu = injector.get(view_utils_1.ViewUtils);
+	        if (lang_1.isBlank(projectableNodes)) {
+	            projectableNodes = [];
+	        }
+	        // Note: Host views don't need a declarationAppElement!
+	        var hostView = this._viewFactory(vu, injector, null);
+	        var hostElement = hostView.create(EMPTY_CONTEXT, projectableNodes, rootSelectorOrNode);
+	        return new ComponentRef_(hostElement, this._componentType);
+	    };
+	    return ComponentFactory;
+	}());
+	exports.ComponentFactory = ComponentFactory;
+	//# sourceMappingURL=component_factory.js.map
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var collection_1 = __webpack_require__(12);
+	var lang_1 = __webpack_require__(3);
+	var view_type_1 = __webpack_require__(81);
+	var StaticNodeDebugInfo = (function () {
+	    function StaticNodeDebugInfo(providerTokens, componentToken, refTokens) {
+	        this.providerTokens = providerTokens;
+	        this.componentToken = componentToken;
+	        this.refTokens = refTokens;
+	    }
+	    return StaticNodeDebugInfo;
+	}());
+	exports.StaticNodeDebugInfo = StaticNodeDebugInfo;
+	var DebugContext = (function () {
+	    function DebugContext(_view, _nodeIndex, _tplRow, _tplCol) {
+	        this._view = _view;
+	        this._nodeIndex = _nodeIndex;
+	        this._tplRow = _tplRow;
+	        this._tplCol = _tplCol;
+	    }
+	    Object.defineProperty(DebugContext.prototype, "_staticNodeInfo", {
+	        get: function () {
+	            return lang_1.isPresent(this._nodeIndex) ? this._view.staticNodeDebugInfos[this._nodeIndex] : null;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DebugContext.prototype, "context", {
+	        get: function () { return this._view.context; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DebugContext.prototype, "component", {
+	        get: function () {
+	            var staticNodeInfo = this._staticNodeInfo;
+	            if (lang_1.isPresent(staticNodeInfo) && lang_1.isPresent(staticNodeInfo.componentToken)) {
+	                return this.injector.get(staticNodeInfo.componentToken);
+	            }
+	            return null;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DebugContext.prototype, "componentRenderElement", {
+	        get: function () {
+	            var componentView = this._view;
+	            while (lang_1.isPresent(componentView.declarationAppElement) &&
+	                componentView.type !== view_type_1.ViewType.COMPONENT) {
+	                componentView = componentView.declarationAppElement.parentView;
+	            }
+	            return lang_1.isPresent(componentView.declarationAppElement) ?
+	                componentView.declarationAppElement.nativeElement :
+	                null;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DebugContext.prototype, "injector", {
+	        get: function () { return this._view.injector(this._nodeIndex); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DebugContext.prototype, "renderNode", {
+	        get: function () {
+	            if (lang_1.isPresent(this._nodeIndex) && this._view.allNodes) {
+	                return this._view.allNodes[this._nodeIndex];
+	            }
+	            else {
+	                return null;
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DebugContext.prototype, "providerTokens", {
+	        get: function () {
+	            var staticNodeInfo = this._staticNodeInfo;
+	            return lang_1.isPresent(staticNodeInfo) ? staticNodeInfo.providerTokens : null;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DebugContext.prototype, "source", {
+	        get: function () {
+	            return this._view.componentType.templateUrl + ":" + this._tplRow + ":" + this._tplCol;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DebugContext.prototype, "references", {
+	        get: function () {
+	            var _this = this;
+	            var varValues = {};
+	            var staticNodeInfo = this._staticNodeInfo;
+	            if (lang_1.isPresent(staticNodeInfo)) {
+	                var refs = staticNodeInfo.refTokens;
+	                collection_1.StringMapWrapper.forEach(refs, function (refToken, refName) {
+	                    var varValue;
+	                    if (lang_1.isBlank(refToken)) {
+	                        varValue = _this._view.allNodes ? _this._view.allNodes[_this._nodeIndex] : null;
+	                    }
+	                    else {
+	                        varValue = _this._view.injectorGet(refToken, _this._nodeIndex, null);
+	                    }
+	                    varValues[refName] = varValue;
+	                });
+	            }
+	            return varValues;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return DebugContext;
+	}());
+	exports.DebugContext = DebugContext;
+	//# sourceMappingURL=debug_context.js.map
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var di_1 = __webpack_require__(20);
+	var lang_1 = __webpack_require__(3);
+	var compiler_1 = __webpack_require__(48);
+	/**
+	 * Use ComponentFactoryResolver and ViewContainerRef directly.
+	 *
+	 * @deprecated
+	 */
+	var DynamicComponentLoader = (function () {
+	    function DynamicComponentLoader() {
+	    }
+	    return DynamicComponentLoader;
+	}());
+	exports.DynamicComponentLoader = DynamicComponentLoader;
+	var DynamicComponentLoader_ = (function (_super) {
+	    __extends(DynamicComponentLoader_, _super);
+	    function DynamicComponentLoader_(_compiler) {
+	        _super.call(this);
+	        this._compiler = _compiler;
+	    }
+	    DynamicComponentLoader_.prototype.loadAsRoot = function (type, overrideSelectorOrNode, injector, onDispose, projectableNodes) {
+	        return this._compiler.compileComponentAsync(type).then(function (componentFactory) {
+	            var componentRef = componentFactory.create(injector, projectableNodes, lang_1.isPresent(overrideSelectorOrNode) ? overrideSelectorOrNode : componentFactory.selector);
+	            if (lang_1.isPresent(onDispose)) {
+	                componentRef.onDestroy(onDispose);
+	            }
+	            return componentRef;
+	        });
+	    };
+	    DynamicComponentLoader_.prototype.loadNextToLocation = function (type, location, providers, projectableNodes) {
+	        if (providers === void 0) { providers = null; }
+	        if (projectableNodes === void 0) { projectableNodes = null; }
+	        return this._compiler.compileComponentAsync(type).then(function (componentFactory) {
+	            var contextInjector = location.parentInjector;
+	            var childInjector = lang_1.isPresent(providers) && providers.length > 0 ?
+	                di_1.ReflectiveInjector.fromResolvedProviders(providers, contextInjector) :
+	                contextInjector;
+	            return location.createComponent(componentFactory, location.length, childInjector, projectableNodes);
+	        });
+	    };
+	    /** @nocollapse */
+	    DynamicComponentLoader_.decorators = [
+	        { type: di_1.Injectable },
+	    ];
+	    /** @nocollapse */
+	    DynamicComponentLoader_.ctorParameters = [
+	        { type: compiler_1.Compiler, },
+	    ];
+	    return DynamicComponentLoader_;
+	}(DynamicComponentLoader));
+	exports.DynamicComponentLoader_ = DynamicComponentLoader_;
+	//# sourceMappingURL=dynamic_component_loader.js.map
+
+/***/ },
+/* 226 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * A wrapper around a native element inside of a View.
+	 *
+	 * An `ElementRef` is backed by a render-specific element. In the browser, this is usually a DOM
+	 * element.
+	 *
+	 * @security Permitting direct access to the DOM can make your application more vulnerable to
+	 * XSS attacks. Carefully review any use of `ElementRef` in your code. For more detail, see the
+	 * [Security Guide](http://g.co/ng/security).
+	 *
+	 * @stable
+	 */
+	// Note: We don't expose things like `Injector`, `ViewContainer`, ... here,
+	// i.e. users have to ask for what they need. With that, we can build better analysis tools
+	// and could do better codegen in the future.
+	var ElementRef = (function () {
+	    function ElementRef(nativeElement) {
+	        this.nativeElement = nativeElement;
+	    }
+	    return ElementRef;
+	}());
+	exports.ElementRef = ElementRef;
+	//# sourceMappingURL=element_ref.js.map
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var injector_1 = __webpack_require__(79);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var component_factory_resolver_1 = __webpack_require__(80);
+	/**
+	 * Represents an instance of an NgModule created via a {@link NgModuleFactory}.
+	 *
+	 * `NgModuleRef` provides access to the NgModule Instance as well other objects related to this
+	 * NgModule Instance.
+	 *
+	 * @experimental
+	 */
+	var NgModuleRef = (function () {
+	    function NgModuleRef() {
+	    }
+	    Object.defineProperty(NgModuleRef.prototype, "injector", {
+	        /**
+	         * The injector that contains all of the providers of the NgModule.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(NgModuleRef.prototype, "componentFactoryResolver", {
+	        /**
+	         * The ComponentFactoryResolver to get hold of the ComponentFactories
+	         * delcared in the `entryComponents` property of the module.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(NgModuleRef.prototype, "instance", {
+	        /**
+	         * The NgModule instance.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return NgModuleRef;
+	}());
+	exports.NgModuleRef = NgModuleRef;
+	/**
+	 * @experimental
+	 */
+	var NgModuleFactory = (function () {
+	    function NgModuleFactory(_injectorClass, _moduleype) {
+	        this._injectorClass = _injectorClass;
+	        this._moduleype = _moduleype;
+	    }
+	    Object.defineProperty(NgModuleFactory.prototype, "moduleType", {
+	        get: function () { return this._moduleype; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    NgModuleFactory.prototype.create = function (parentInjector) {
+	        if (!parentInjector) {
+	            parentInjector = injector_1.Injector.NULL;
+	        }
+	        var instance = new this._injectorClass(parentInjector);
+	        instance.create();
+	        return instance;
+	    };
+	    return NgModuleFactory;
+	}());
+	exports.NgModuleFactory = NgModuleFactory;
+	var _UNDEFINED = new Object();
+	var NgModuleInjector = (function (_super) {
+	    __extends(NgModuleInjector, _super);
+	    function NgModuleInjector(parent, factories, bootstrapFactories) {
+	        _super.call(this, factories, parent.get(component_factory_resolver_1.ComponentFactoryResolver, component_factory_resolver_1.ComponentFactoryResolver.NULL));
+	        this.parent = parent;
+	        this.bootstrapFactories = bootstrapFactories;
+	        this._destroyListeners = [];
+	        this._destroyed = false;
+	    }
+	    NgModuleInjector.prototype.create = function () { this.instance = this.createInternal(); };
+	    NgModuleInjector.prototype.get = function (token, notFoundValue) {
+	        if (notFoundValue === void 0) { notFoundValue = injector_1.THROW_IF_NOT_FOUND; }
+	        if (token === injector_1.Injector || token === component_factory_resolver_1.ComponentFactoryResolver) {
+	            return this;
+	        }
+	        var result = this.getInternal(token, _UNDEFINED);
+	        return result === _UNDEFINED ? this.parent.get(token, notFoundValue) : result;
+	    };
+	    Object.defineProperty(NgModuleInjector.prototype, "injector", {
+	        get: function () { return this; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(NgModuleInjector.prototype, "componentFactoryResolver", {
+	        get: function () { return this; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    NgModuleInjector.prototype.destroy = function () {
+	        if (this._destroyed) {
+	            throw new exceptions_1.BaseException("The ng module " + lang_1.stringify(this.instance.constructor) + " has already been destroyed.");
+	        }
+	        this._destroyed = true;
+	        this.destroyInternal();
+	        this._destroyListeners.forEach(function (listener) { return listener(); });
+	    };
+	    NgModuleInjector.prototype.onDestroy = function (callback) { this._destroyListeners.push(callback); };
+	    return NgModuleInjector;
+	}(component_factory_resolver_1.CodegenComponentFactoryResolver));
+	exports.NgModuleInjector = NgModuleInjector;
+	//# sourceMappingURL=ng_module_factory.js.map
+
+/***/ },
+/* 228 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	/**
+	 * Represents an Embedded Template that can be used to instantiate Embedded Views.
+	 *
+	 * You can access a `TemplateRef`, in two ways. Via a directive placed on a `<template>` element (or
+	 * directive prefixed with `*`) and have the `TemplateRef` for this Embedded View injected into the
+	 * constructor of the directive using the `TemplateRef` Token. Alternatively you can query for the
+	 * `TemplateRef` from a Component or a Directive via {@link Query}.
+	 *
+	 * To instantiate Embedded Views based on a Template, use
+	 * {@link ViewContainerRef#createEmbeddedView}, which will create the View and attach it to the
+	 * View Container.
+	 * @stable
+	 */
+	var TemplateRef = (function () {
+	    function TemplateRef() {
+	    }
+	    Object.defineProperty(TemplateRef.prototype, "elementRef", {
+	        /**
+	         * The location in the View where the Embedded View logically belongs to.
+	         *
+	         * The data-binding and injection contexts of Embedded Views created from this `TemplateRef`
+	         * inherit from the contexts of this location.
+	         *
+	         * Typically new Embedded Views are attached to the View Container of this location, but in
+	         * advanced use-cases, the View can be attached to a different container while keeping the
+	         * data-binding and injection context from the original location.
+	         *
+	         */
+	        // TODO(i): rename to anchor or location
+	        get: function () { return null; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return TemplateRef;
+	}());
+	exports.TemplateRef = TemplateRef;
+	var TemplateRef_ = (function (_super) {
+	    __extends(TemplateRef_, _super);
+	    function TemplateRef_(_appElement, _viewFactory) {
+	        _super.call(this);
+	        this._appElement = _appElement;
+	        this._viewFactory = _viewFactory;
+	    }
+	    TemplateRef_.prototype.createEmbeddedView = function (context) {
+	        var view = this._viewFactory(this._appElement.parentView.viewUtils, this._appElement.parentInjector, this._appElement);
+	        view.create(context || {}, null, null);
+	        return view.ref;
+	    };
+	    Object.defineProperty(TemplateRef_.prototype, "elementRef", {
+	        get: function () { return this._appElement.elementRef; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return TemplateRef_;
+	}(TemplateRef));
+	exports.TemplateRef_ = TemplateRef_;
+	//# sourceMappingURL=template_ref.js.map
+
+/***/ },
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var profile_1 = __webpack_require__(83);
+	/**
+	 * Represents a container where one or more Views can be attached.
+	 *
+	 * The container can contain two kinds of Views. Host Views, created by instantiating a
+	 * {@link Component} via {@link #createComponent}, and Embedded Views, created by instantiating an
+	 * {@link TemplateRef Embedded Template} via {@link #createEmbeddedView}.
+	 *
+	 * The location of the View Container within the containing View is specified by the Anchor
+	 * `element`. Each View Container can have only one Anchor Element and each Anchor Element can only
+	 * have a single View Container.
+	 *
+	 * Root elements of Views attached to this container become siblings of the Anchor Element in
+	 * the Rendered View.
+	 *
+	 * To access a `ViewContainerRef` of an Element, you can either place a {@link Directive} injected
+	 * with `ViewContainerRef` on the Element, or you obtain it via a {@link ViewChild} query.
+	 * @stable
+	 */
+	var ViewContainerRef = (function () {
+	    function ViewContainerRef() {
+	    }
+	    Object.defineProperty(ViewContainerRef.prototype, "element", {
+	        /**
+	         * Anchor element that specifies the location of this container in the containing View.
+	         * <!-- TODO: rename to anchorElement -->
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ViewContainerRef.prototype, "injector", {
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ViewContainerRef.prototype, "parentInjector", {
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ViewContainerRef.prototype, "length", {
+	        /**
+	         * Returns the number of Views currently attached to this container.
+	         */
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ;
+	    return ViewContainerRef;
+	}());
+	exports.ViewContainerRef = ViewContainerRef;
+	var ViewContainerRef_ = (function () {
+	    function ViewContainerRef_(_element) {
+	        this._element = _element;
+	        /** @internal */
+	        this._createComponentInContainerScope = profile_1.wtfCreateScope('ViewContainerRef#createComponent()');
+	        /** @internal */
+	        this._insertScope = profile_1.wtfCreateScope('ViewContainerRef#insert()');
+	        /** @internal */
+	        this._removeScope = profile_1.wtfCreateScope('ViewContainerRef#remove()');
+	        /** @internal */
+	        this._detachScope = profile_1.wtfCreateScope('ViewContainerRef#detach()');
+	    }
+	    ViewContainerRef_.prototype.get = function (index) { return this._element.nestedViews[index].ref; };
+	    Object.defineProperty(ViewContainerRef_.prototype, "length", {
+	        get: function () {
+	            var views = this._element.nestedViews;
+	            return lang_1.isPresent(views) ? views.length : 0;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ViewContainerRef_.prototype, "element", {
+	        get: function () { return this._element.elementRef; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ViewContainerRef_.prototype, "injector", {
+	        get: function () { return this._element.injector; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ViewContainerRef_.prototype, "parentInjector", {
+	        get: function () { return this._element.parentInjector; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    // TODO(rado): profile and decide whether bounds checks should be added
+	    // to the methods below.
+	    ViewContainerRef_.prototype.createEmbeddedView = function (templateRef, context, index) {
+	        if (context === void 0) { context = null; }
+	        if (index === void 0) { index = -1; }
+	        var viewRef = templateRef.createEmbeddedView(context);
+	        this.insert(viewRef, index);
+	        return viewRef;
+	    };
+	    ViewContainerRef_.prototype.createComponent = function (componentFactory, index, injector, projectableNodes) {
+	        if (index === void 0) { index = -1; }
+	        if (injector === void 0) { injector = null; }
+	        if (projectableNodes === void 0) { projectableNodes = null; }
+	        var s = this._createComponentInContainerScope();
+	        var contextInjector = lang_1.isPresent(injector) ? injector : this._element.parentInjector;
+	        var componentRef = componentFactory.create(contextInjector, projectableNodes);
+	        this.insert(componentRef.hostView, index);
+	        return profile_1.wtfLeave(s, componentRef);
+	    };
+	    // TODO(i): refactor insert+remove into move
+	    ViewContainerRef_.prototype.insert = function (viewRef, index) {
+	        if (index === void 0) { index = -1; }
+	        var s = this._insertScope();
+	        if (index == -1)
+	            index = this.length;
+	        var viewRef_ = viewRef;
+	        this._element.attachView(viewRef_.internalView, index);
+	        return profile_1.wtfLeave(s, viewRef_);
+	    };
+	    ViewContainerRef_.prototype.move = function (viewRef, currentIndex) {
+	        var s = this._insertScope();
+	        if (currentIndex == -1)
+	            return;
+	        var viewRef_ = viewRef;
+	        this._element.moveView(viewRef_.internalView, currentIndex);
+	        return profile_1.wtfLeave(s, viewRef_);
+	    };
+	    ViewContainerRef_.prototype.indexOf = function (viewRef) {
+	        return collection_1.ListWrapper.indexOf(this._element.nestedViews, viewRef.internalView);
+	    };
+	    // TODO(i): rename to destroy
+	    ViewContainerRef_.prototype.remove = function (index) {
+	        if (index === void 0) { index = -1; }
+	        var s = this._removeScope();
+	        if (index == -1)
+	            index = this.length - 1;
+	        var view = this._element.detachView(index);
+	        view.destroy();
+	        // view is intentionally not returned to the client.
+	        profile_1.wtfLeave(s);
+	    };
+	    // TODO(i): refactor insert+remove into move
+	    ViewContainerRef_.prototype.detach = function (index) {
+	        if (index === void 0) { index = -1; }
+	        var s = this._detachScope();
+	        if (index == -1)
+	            index = this.length - 1;
+	        var view = this._element.detachView(index);
+	        return profile_1.wtfLeave(s, view.ref);
+	    };
+	    ViewContainerRef_.prototype.clear = function () {
+	        for (var i = this.length - 1; i >= 0; i--) {
+	            this.remove(i);
+	        }
+	    };
+	    return ViewContainerRef_;
+	}());
+	exports.ViewContainerRef_ = ViewContainerRef_;
+	//# sourceMappingURL=view_container_ref.js.map
+
+/***/ },
+/* 230 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var constants_1 = __webpack_require__(76);
+	var exceptions_1 = __webpack_require__(8);
+	/**
+	 * @stable
+	 */
+	var ViewRef = (function () {
+	    function ViewRef() {
+	    }
+	    Object.defineProperty(ViewRef.prototype, "destroyed", {
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return ViewRef;
+	}());
+	exports.ViewRef = ViewRef;
+	/**
+	 * Represents an Angular View.
+	 *
+	 * <!-- TODO: move the next two paragraphs to the dev guide -->
+	 * A View is a fundamental building block of the application UI. It is the smallest grouping of
+	 * Elements which are created and destroyed together.
+	 *
+	 * Properties of elements in a View can change, but the structure (number and order) of elements in
+	 * a View cannot. Changing the structure of Elements can only be done by inserting, moving or
+	 * removing nested Views via a {@link ViewContainerRef}. Each View can contain many View Containers.
+	 * <!-- /TODO -->
+	 *
+	 * ### Example
+	 *
+	 * Given this template...
+	 *
+	 * ```
+	 * Count: {{items.length}}
+	 * <ul>
+	 *   <li *ngFor="let  item of items">{{item}}</li>
+	 * </ul>
+	 * ```
+	 *
+	 * We have two {@link TemplateRef}s:
+	 *
+	 * Outer {@link TemplateRef}:
+	 * ```
+	 * Count: {{items.length}}
+	 * <ul>
+	 *   <template ngFor let-item [ngForOf]="items"></template>
+	 * </ul>
+	 * ```
+	 *
+	 * Inner {@link TemplateRef}:
+	 * ```
+	 *   <li>{{item}}</li>
+	 * ```
+	 *
+	 * Notice that the original template is broken down into two separate {@link TemplateRef}s.
+	 *
+	 * The outer/inner {@link TemplateRef}s are then assembled into views like so:
+	 *
+	 * ```
+	 * <!-- ViewRef: outer-0 -->
+	 * Count: 2
+	 * <ul>
+	 *   <template view-container-ref></template>
+	 *   <!-- ViewRef: inner-1 --><li>first</li><!-- /ViewRef: inner-1 -->
+	 *   <!-- ViewRef: inner-2 --><li>second</li><!-- /ViewRef: inner-2 -->
+	 * </ul>
+	 * <!-- /ViewRef: outer-0 -->
+	 * ```
+	 * @experimental
+	 */
+	var EmbeddedViewRef = (function (_super) {
+	    __extends(EmbeddedViewRef, _super);
+	    function EmbeddedViewRef() {
+	        _super.apply(this, arguments);
+	    }
+	    Object.defineProperty(EmbeddedViewRef.prototype, "context", {
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(EmbeddedViewRef.prototype, "rootNodes", {
+	        get: function () { return exceptions_1.unimplemented(); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ;
+	    return EmbeddedViewRef;
+	}(ViewRef));
+	exports.EmbeddedViewRef = EmbeddedViewRef;
+	var ViewRef_ = (function () {
+	    function ViewRef_(_view) {
+	        this._view = _view;
+	        this._view = _view;
+	        this._originalMode = this._view.cdMode;
+	    }
+	    Object.defineProperty(ViewRef_.prototype, "internalView", {
+	        get: function () { return this._view; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ViewRef_.prototype, "rootNodes", {
+	        get: function () { return this._view.flatRootNodes; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ViewRef_.prototype, "context", {
+	        get: function () { return this._view.context; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ViewRef_.prototype, "destroyed", {
+	        get: function () { return this._view.destroyed; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ViewRef_.prototype.markForCheck = function () { this._view.markPathToRootAsCheckOnce(); };
+	    ViewRef_.prototype.detach = function () { this._view.cdMode = constants_1.ChangeDetectorStatus.Detached; };
+	    ViewRef_.prototype.detectChanges = function () { this._view.detectChanges(false); };
+	    ViewRef_.prototype.checkNoChanges = function () { this._view.detectChanges(true); };
+	    ViewRef_.prototype.reattach = function () {
+	        this._view.cdMode = this._originalMode;
+	        this.markForCheck();
+	    };
+	    ViewRef_.prototype.onDestroy = function (callback) { this._view.disposables.push(callback); };
+	    ViewRef_.prototype.destroy = function () { this._view.destroy(); };
+	    return ViewRef_;
+	}());
+	exports.ViewRef_ = ViewRef_;
+	//# sourceMappingURL=view_ref.js.map
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var di_1 = __webpack_require__(232);
+	var directives_1 = __webpack_require__(233);
+	var ng_module_1 = __webpack_require__(235);
+	var decorators_1 = __webpack_require__(84);
+	var di_2 = __webpack_require__(232);
+	exports.ANALYZE_FOR_ENTRY_COMPONENTS = di_2.ANALYZE_FOR_ENTRY_COMPONENTS;
+	exports.AttributeMetadata = di_2.AttributeMetadata;
+	exports.ContentChildMetadata = di_2.ContentChildMetadata;
+	exports.ContentChildrenMetadata = di_2.ContentChildrenMetadata;
+	exports.QueryMetadata = di_2.QueryMetadata;
+	exports.ViewChildMetadata = di_2.ViewChildMetadata;
+	exports.ViewChildrenMetadata = di_2.ViewChildrenMetadata;
+	exports.ViewQueryMetadata = di_2.ViewQueryMetadata;
+	var directives_2 = __webpack_require__(233);
+	exports.ComponentMetadata = directives_2.ComponentMetadata;
+	exports.DirectiveMetadata = directives_2.DirectiveMetadata;
+	exports.HostBindingMetadata = directives_2.HostBindingMetadata;
+	exports.HostListenerMetadata = directives_2.HostListenerMetadata;
+	exports.InputMetadata = directives_2.InputMetadata;
+	exports.OutputMetadata = directives_2.OutputMetadata;
+	exports.PipeMetadata = directives_2.PipeMetadata;
+	var lifecycle_hooks_1 = __webpack_require__(234);
+	exports.AfterContentChecked = lifecycle_hooks_1.AfterContentChecked;
+	exports.AfterContentInit = lifecycle_hooks_1.AfterContentInit;
+	exports.AfterViewChecked = lifecycle_hooks_1.AfterViewChecked;
+	exports.AfterViewInit = lifecycle_hooks_1.AfterViewInit;
+	exports.DoCheck = lifecycle_hooks_1.DoCheck;
+	exports.OnChanges = lifecycle_hooks_1.OnChanges;
+	exports.OnDestroy = lifecycle_hooks_1.OnDestroy;
+	exports.OnInit = lifecycle_hooks_1.OnInit;
+	var ng_module_2 = __webpack_require__(235);
+	exports.CUSTOM_ELEMENTS_SCHEMA = ng_module_2.CUSTOM_ELEMENTS_SCHEMA;
+	exports.NgModuleMetadata = ng_module_2.NgModuleMetadata;
+	var view_1 = __webpack_require__(236);
+	exports.ViewEncapsulation = view_1.ViewEncapsulation;
+	exports.ViewMetadata = view_1.ViewMetadata;
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from ComponentMetadata.
+	/**
+	 * Declare reusable UI building blocks for an application.
+	 *
+	 * Each Angular component requires a single `@Component` annotation. The `@Component`
+	 * annotation specifies when a component is instantiated, and which properties and hostListeners it
+	 * binds to.
+	 *
+	 * When a component is instantiated, Angular
+	 * - creates a shadow DOM for the component.
+	 * - loads the selected template into the shadow DOM.
+	 * - creates all the injectable objects configured with `providers` and `viewProviders`.
+	 *
+	 * All template expressions and statements are then evaluated against the component instance.
+	 *
+	 * ## Lifecycle hooks
+	 *
+	 * When the component class implements some {@linkDocs guide/lifecycle-hooks} the
+	 * callbacks are called by the change detection at defined points in time during the life of the
+	 * component.
+	 *
+	 * ### Example
+	 *
+	 * {@example core/ts/metadata/metadata.ts region='component'}
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Component = decorators_1.makeDecorator(directives_1.ComponentMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from DirectiveMetadata.
+	/**
+	 * Directives allow you to attach behavior to elements in the DOM.
+	 *
+	 * {@link DirectiveMetadata}s with an embedded view are called {@link ComponentMetadata}s.
+	 *
+	 * A directive consists of a single directive annotation and a controller class. When the
+	 * directive's `selector` matches
+	 * elements in the DOM, the following steps occur:
+	 *
+	 * 1. For each directive, the `ElementInjector` attempts to resolve the directive's constructor
+	 * arguments.
+	 * 2. Angular instantiates directives for each matched element using `ElementInjector` in a
+	 * depth-first order,
+	 *    as declared in the HTML.
+	 *
+	 * ## Understanding How Injection Works
+	 *
+	 * There are three stages of injection resolution.
+	 * - *Pre-existing Injectors*:
+	 *   - The terminal {@link Injector} cannot resolve dependencies. It either throws an error or, if
+	 * the dependency was
+	 *     specified as `@Optional`, returns `null`.
+	 *   - The platform injector resolves browser singleton resources, such as: cookies, title,
+	 * location, and others.
+	 * - *Component Injectors*: Each component instance has its own {@link Injector}, and they follow
+	 * the same parent-child hierarchy
+	 *     as the component instances in the DOM.
+	 * - *Element Injectors*: Each component instance has a Shadow DOM. Within the Shadow DOM each
+	 * element has an `ElementInjector`
+	 *     which follow the same parent-child hierarchy as the DOM elements themselves.
+	 *
+	 * When a template is instantiated, it also must instantiate the corresponding directives in a
+	 * depth-first order. The
+	 * current `ElementInjector` resolves the constructor dependencies for each directive.
+	 *
+	 * Angular then resolves dependencies as follows, according to the order in which they appear in the
+	 * {@link ComponentMetadata}:
+	 *
+	 * 1. Dependencies on the current element
+	 * 2. Dependencies on element injectors and their parents until it encounters a Shadow DOM boundary
+	 * 3. Dependencies on component injectors and their parents until it encounters the root component
+	 * 4. Dependencies on pre-existing injectors
+	 *
+	 *
+	 * The `ElementInjector` can inject other directives, element-specific special objects, or it can
+	 * delegate to the parent
+	 * injector.
+	 *
+	 * To inject other directives, declare the constructor parameter as:
+	 * - `directive:DirectiveType`: a directive on the current element only
+	 * - `@Host() directive:DirectiveType`: any directive that matches the type between the current
+	 * element and the
+	 *    Shadow DOM root.
+	 * - `@Query(DirectiveType) query:QueryList<DirectiveType>`: A live collection of direct child
+	 * directives.
+	 * - `@QueryDescendants(DirectiveType) query:QueryList<DirectiveType>`: A live collection of any
+	 * child directives.
+	 *
+	 * To inject element-specific special objects, declare the constructor parameter as:
+	 * - `element: ElementRef` to obtain a reference to logical element in the view.
+	 * - `viewContainer: ViewContainerRef` to control child template instantiation, for
+	 * {@link DirectiveMetadata} directives only
+	 * - `bindingPropagation: BindingPropagation` to control change detection in a more granular way.
+	 *
+	 * ### Example
+	 *
+	 * The following example demonstrates how dependency injection resolves constructor arguments in
+	 * practice.
+	 *
+	 *
+	 * Assume this HTML template:
+	 *
+	 * ```
+	 * <div dependency="1">
+	 *   <div dependency="2">
+	 *     <div dependency="3" my-directive>
+	 *       <div dependency="4">
+	 *         <div dependency="5"></div>
+	 *       </div>
+	 *       <div dependency="6"></div>
+	 *     </div>
+	 *   </div>
+	 * </div>
+	 * ```
+	 *
+	 * With the following `dependency` decorator and `SomeService` injectable class.
+	 *
+	 * ```
+	 * @Injectable()
+	 * class SomeService {
+	 * }
+	 *
+	 * @Directive({
+	 *   selector: '[dependency]',
+	 *   inputs: [
+	 *     'id: dependency'
+	 *   ]
+	 * })
+	 * class Dependency {
+	 *   id:string;
+	 * }
+	 * ```
+	 *
+	 * Let's step through the different ways in which `MyDirective` could be declared...
+	 *
+	 *
+	 * ### No injection
+	 *
+	 * Here the constructor is declared with no arguments, therefore nothing is injected into
+	 * `MyDirective`.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor() {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with no dependencies.
+	 *
+	 *
+	 * ### Component-level injection
+	 *
+	 * Directives can inject any injectable instance from the closest component injector or any of its
+	 * parents.
+	 *
+	 * Here, the constructor declares a parameter, `someService`, and injects the `SomeService` type
+	 * from the parent
+	 * component's injector.
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(someService: SomeService) {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with a dependency on `SomeService`.
+	 *
+	 *
+	 * ### Injecting a directive from the current element
+	 *
+	 * Directives can inject other directives declared on the current element.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(dependency: Dependency) {
+	 *     expect(dependency.id).toEqual(3);
+	 *   }
+	 * }
+	 * ```
+	 * This directive would be instantiated with `Dependency` declared at the same element, in this case
+	 * `dependency="3"`.
+	 *
+	 * ### Injecting a directive from any ancestor elements
+	 *
+	 * Directives can inject other directives declared on any ancestor element (in the current Shadow
+	 * DOM), i.e. on the current element, the
+	 * parent element, or its parents.
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(@Host() dependency: Dependency) {
+	 *     expect(dependency.id).toEqual(2);
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * `@Host` checks the current element, the parent, as well as its parents recursively. If
+	 * `dependency="2"` didn't
+	 * exist on the direct parent, this injection would
+	 * have returned
+	 * `dependency="1"`.
+	 *
+	 *
+	 * ### Injecting a live collection of direct child directives
+	 *
+	 *
+	 * A directive can also query for other child directives. Since parent directives are instantiated
+	 * before child directives, a directive can't simply inject the list of child directives. Instead,
+	 * the directive injects a {@link QueryList}, which updates its contents as children are added,
+	 * removed, or moved by a directive that uses a {@link ViewContainerRef} such as a `ngFor`, an
+	 * `ngIf`, or an `ngSwitch`.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(@Query(Dependency) dependencies:QueryList<Dependency>) {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with a {@link QueryList} which contains `Dependency` 4 and
+	 * 6. Here, `Dependency` 5 would not be included, because it is not a direct child.
+	 *
+	 * ### Injecting a live collection of descendant directives
+	 *
+	 * By passing the descendant flag to `@Query` above, we can include the children of the child
+	 * elements.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(@Query(Dependency, {descendants: true}) dependencies:QueryList<Dependency>) {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with a Query which would contain `Dependency` 4, 5 and 6.
+	 *
+	 * ### Optional injection
+	 *
+	 * The normal behavior of directives is to return an error when a specified dependency cannot be
+	 * resolved. If you
+	 * would like to inject `null` on unresolved dependency instead, you can annotate that dependency
+	 * with `@Optional()`.
+	 * This explicitly permits the author of a template to treat some of the surrounding directives as
+	 * optional.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(@Optional() dependency:Dependency) {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with a `Dependency` directive found on the current element.
+	 * If none can be
+	 * found, the injector supplies `null` instead of throwing an error.
+	 *
+	 * ### Example
+	 *
+	 * Here we use a decorator directive to simply define basic tool-tip behavior.
+	 *
+	 * ```
+	 * @Directive({
+	 *   selector: '[tooltip]',
+	 *   inputs: [
+	 *     'text: tooltip'
+	 *   ],
+	 *   host: {
+	 *     '(mouseenter)': 'onMouseEnter()',
+	 *     '(mouseleave)': 'onMouseLeave()'
+	 *   }
+	 * })
+	 * class Tooltip{
+	 *   text:string;
+	 *   overlay:Overlay; // NOT YET IMPLEMENTED
+	 *   overlayManager:OverlayManager; // NOT YET IMPLEMENTED
+	 *
+	 *   constructor(overlayManager:OverlayManager) {
+	 *     this.overlayManager = overlayManager;
+	 *   }
+	 *
+	 *   onMouseEnter() {
+	 *     // exact signature to be determined
+	 *     this.overlay = this.overlayManager.open(text, ...);
+	 *   }
+	 *
+	 *   onMouseLeave() {
+	 *     this.overlay.close();
+	 *     this.overlay = null;
+	 *   }
+	 * }
+	 * ```
+	 * In our HTML template, we can then add this behavior to a `<div>` or any other element with the
+	 * `tooltip` selector,
+	 * like so:
+	 *
+	 * ```
+	 * <div tooltip="some text here"></div>
+	 * ```
+	 *
+	 * Directives can also control the instantiation, destruction, and positioning of inline template
+	 * elements:
+	 *
+	 * A directive uses a {@link ViewContainerRef} to instantiate, insert, move, and destroy views at
+	 * runtime.
+	 * The {@link ViewContainerRef} is created as a result of `<template>` element, and represents a
+	 * location in the current view
+	 * where these actions are performed.
+	 *
+	 * Views are always created as children of the current {@link ComponentMetadata}, and as siblings of
+	 * the
+	 * `<template>` element. Thus a
+	 * directive in a child view cannot inject the directive that created it.
+	 *
+	 * Since directives that create views via ViewContainers are common in Angular, and using the full
+	 * `<template>` element syntax is wordy, Angular
+	 * also supports a shorthand notation: `<li *foo="bar">` and `<li template="foo: bar">` are
+	 * equivalent.
+	 *
+	 * Thus,
+	 *
+	 * ```
+	 * <ul>
+	 *   <li *foo="bar" title="text"></li>
+	 * </ul>
+	 * ```
+	 *
+	 * Expands in use to:
+	 *
+	 * ```
+	 * <ul>
+	 *   <template [foo]="bar">
+	 *     <li title="text"></li>
+	 *   </template>
+	 * </ul>
+	 * ```
+	 *
+	 * Notice that although the shorthand places `*foo="bar"` within the `<li>` element, the binding for
+	 * the directive
+	 * controller is correctly instantiated on the `<template>` element rather than the `<li>` element.
+	 *
+	 * ## Lifecycle hooks
+	 *
+	 * When the directive class implements some {@linkDocs guide/lifecycle-hooks} the
+	 * callbacks are called by the change detection at defined points in time during the life of the
+	 * directive.
+	 *
+	 * ### Example
+	 *
+	 * Let's suppose we want to implement the `unless` behavior, to conditionally include a template.
+	 *
+	 * Here is a simple directive that triggers on an `unless` selector:
+	 *
+	 * ```
+	 * @Directive({
+	 *   selector: '[unless]',
+	 *   inputs: ['unless']
+	 * })
+	 * export class Unless {
+	 *   viewContainer: ViewContainerRef;
+	 *   templateRef: TemplateRef;
+	 *   prevCondition: boolean;
+	 *
+	 *   constructor(viewContainer: ViewContainerRef, templateRef: TemplateRef) {
+	 *     this.viewContainer = viewContainer;
+	 *     this.templateRef = templateRef;
+	 *     this.prevCondition = null;
+	 *   }
+	 *
+	 *   set unless(newCondition) {
+	 *     if (newCondition && (isBlank(this.prevCondition) || !this.prevCondition)) {
+	 *       this.prevCondition = true;
+	 *       this.viewContainer.clear();
+	 *     } else if (!newCondition && (isBlank(this.prevCondition) || this.prevCondition)) {
+	 *       this.prevCondition = false;
+	 *       this.viewContainer.create(this.templateRef);
+	 *     }
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * We can then use this `unless` selector in a template:
+	 * ```
+	 * <ul>
+	 *   <li *unless="expr"></li>
+	 * </ul>
+	 * ```
+	 *
+	 * Once the directive instantiates the child view, the shorthand notation for the template expands
+	 * and the result is:
+	 *
+	 * ```
+	 * <ul>
+	 *   <template [unless]="exp">
+	 *     <li></li>
+	 *   </template>
+	 *   <li></li>
+	 * </ul>
+	 * ```
+	 *
+	 * Note also that although the `<li></li>` template still exists inside the `<template></template>`,
+	 * the instantiated
+	 * view occurs on the second `<li></li>` which is a sibling to the `<template>` element.
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Directive = decorators_1.makeDecorator(directives_1.DirectiveMetadata);
+	/**
+	 * Specifies that a constant attribute value should be injected.
+	 *
+	 * The directive can inject constant string literals of host element attributes.
+	 *
+	 * ### Example
+	 *
+	 * Suppose we have an `<input>` element and want to know its `type`.
+	 *
+	 * ```html
+	 * <input type="text">
+	 * ```
+	 *
+	 * A decorator can inject string literal `text` like so:
+	 *
+	 * {@example core/ts/metadata/metadata.ts region='attributeMetadata'}
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Attribute = decorators_1.makeParamDecorator(di_1.AttributeMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from QueryMetadata.
+	/**
+	 * Declares an injectable parameter to be a live list of directives or variable
+	 * bindings from the content children of a directive.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/lY9m8HLy7z06vDoUaSN2?p=preview))
+	 *
+	 * Assume that `<tabs>` component would like to get a list its children `<pane>`
+	 * components as shown in this example:
+	 *
+	 * ```html
+	 * <tabs>
+	 *   <pane title="Overview">...</pane>
+	 *   <pane *ngFor="let o of objects" [title]="o.title">{{o.text}}</pane>
+	 * </tabs>
+	 * ```
+	 *
+	 * The preferred solution is to query for `Pane` directives using this decorator.
+	 *
+	 * ```javascript
+	 * @Component({
+	 *   selector: 'pane',
+	 *   inputs: ['title']
+	 * })
+	 * class Pane {
+	 *   title:string;
+	 * }
+	 *
+	 * @Component({
+	 *  selector: 'tabs',
+	 *  template: `
+	 *    <ul>
+	 *      <li *ngFor="let pane of panes">{{pane.title}}</li>
+	 *    </ul>
+	 *    <ng-content></ng-content>
+	 *  `
+	 * })
+	 * class Tabs {
+	 *   panes: QueryList<Pane>;
+	 *   constructor(@Query(Pane) panes:QueryList<Pane>) {
+	 *     this.panes = panes;
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * A query can look for variable bindings by passing in a string with desired binding symbol.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/sT2j25cH1dURAyBRCKx1?p=preview))
+	 * ```html
+	 * <seeker>
+	 *   <div #findme>...</div>
+	 * </seeker>
+	 *
+	 * @Component({ selector: 'seeker' })
+	 * class seeker {
+	 *   constructor(@Query('findme') elList: QueryList<ElementRef>) {...}
+	 * }
+	 * ```
+	 *
+	 * In this case the object that is injected depend on the type of the variable
+	 * binding. It can be an ElementRef, a directive or a component.
+	 *
+	 * Passing in a comma separated list of variable bindings will query for all of them.
+	 *
+	 * ```html
+	 * <seeker>
+	 *   <div #findMe>...</div>
+	 *   <div #findMeToo>...</div>
+	 * </seeker>
+	 *
+	 *  @Component({
+	 *   selector: 'seeker'
+	 * })
+	 * class Seeker {
+	 *   constructor(@Query('findMe, findMeToo') elList: QueryList<ElementRef>) {...}
+	 * }
+	 * ```
+	 *
+	 * Configure whether query looks for direct children or all descendants
+	 * of the querying element, by using the `descendants` parameter.
+	 * It is set to `false` by default.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/wtGeB977bv7qvA5FTYl9?p=preview))
+	 * ```html
+	 * <container #first>
+	 *   <item>a</item>
+	 *   <item>b</item>
+	 *   <container #second>
+	 *     <item>c</item>
+	 *   </container>
+	 * </container>
+	 * ```
+	 *
+	 * When querying for items, the first container will see only `a` and `b` by default,
+	 * but with `Query(TextDirective, {descendants: true})` it will see `c` too.
+	 *
+	 * The queried directives are kept in a depth-first pre-order with respect to their
+	 * positions in the DOM.
+	 *
+	 * Query does not look deep into any subcomponent views.
+	 *
+	 * Query is updated as part of the change-detection cycle. Since change detection
+	 * happens after construction of a directive, QueryList will always be empty when observed in the
+	 * constructor.
+	 *
+	 * The injected object is an unmodifiable live list.
+	 * See {@link QueryList} for more details.
+	 * @deprecated
+	 * @Annotation
+	 */
+	exports.Query = decorators_1.makeParamDecorator(di_1.QueryMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from ContentChildrenMetadata.
+	/**
+	 * Configures a content query.
+	 *
+	 * Content queries are set before the `ngAfterContentInit` callback is called.
+	 *
+	 * ### Example
+	 *
+	 * ```
+	 * @Directive({
+	 *   selector: 'someDir'
+	 * })
+	 * class SomeDir {
+	 *   @ContentChildren(ChildDirective) contentChildren: QueryList<ChildDirective>;
+	 *
+	 *   ngAfterContentInit() {
+	 *     // contentChildren is set
+	 *   }
+	 * }
+	 * ```
+	 * @stable
+	 * @Annotation
+	 */
+	exports.ContentChildren = decorators_1.makePropDecorator(di_1.ContentChildrenMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from ContentChildMetadata.
+	/**
+	 * Configures a content query.
+	 *
+	 * Content queries are set before the `ngAfterContentInit` callback is called.
+	 *
+	 * ### Example
+	 *
+	 * ```
+	 * @Directive({
+	 *   selector: 'someDir'
+	 * })
+	 * class SomeDir {
+	 *   @ContentChild(ChildDirective) contentChild;
+	 *   @ContentChild('container_ref') containerChild
+	 *
+	 *   ngAfterContentInit() {
+	 *     // contentChild is set
+	 *     // containerChild is set
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * ```html
+	 * <container #container_ref>
+	 *   <item>a</item>
+	 *   <item>b</item>
+	 * </container>
+	 * ```
+	 * @stable
+	 * @Annotation
+	 */
+	exports.ContentChild = decorators_1.makePropDecorator(di_1.ContentChildMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from ViewChildrenMetadata.
+	/**
+	 * Declares a list of child element references.
+	 *
+	 * Angular automatically updates the list when the DOM is updated.
+	 *
+	 * `ViewChildren` takes a argument to select elements.
+	 *
+	 * - If the argument is a type, directives or components with the type will be bound.
+	 *
+	 * - If the argument is a string, the string is interpreted as a list of comma-separated selectors.
+	 * For each selector, an element containing the matching template variable (e.g. `#child`) will be
+	 * bound.
+	 *
+	 * View children are set before the `ngAfterViewInit` callback is called.
+	 *
+	 * ### Example
+	 *
+	 * With type selector:
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'child-cmp',
+	 *   template: '<p>child</p>'
+	 * })
+	 * class ChildCmp {
+	 *   doSomething() {}
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'some-cmp',
+	 *   template: `
+	 *     <child-cmp></child-cmp>
+	 *     <child-cmp></child-cmp>
+	 *     <child-cmp></child-cmp>
+	 *   `,
+	 *   directives: [ChildCmp]
+	 * })
+	 * class SomeCmp {
+	 *   @ViewChildren(ChildCmp) children:QueryList<ChildCmp>;
+	 *
+	 *   ngAfterViewInit() {
+	 *     // children are set
+	 *     this.children.toArray().forEach((child)=>child.doSomething());
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * With string selector:
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'child-cmp',
+	 *   template: '<p>child</p>'
+	 * })
+	 * class ChildCmp {
+	 *   doSomething() {}
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'some-cmp',
+	 *   template: `
+	 *     <child-cmp #child1></child-cmp>
+	 *     <child-cmp #child2></child-cmp>
+	 *     <child-cmp #child3></child-cmp>
+	 *   `,
+	 *   directives: [ChildCmp]
+	 * })
+	 * class SomeCmp {
+	 *   @ViewChildren('child1,child2,child3') children:QueryList<ChildCmp>;
+	 *
+	 *   ngAfterViewInit() {
+	 *     // children are set
+	 *     this.children.toArray().forEach((child)=>child.doSomething());
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * See also: [ViewChildrenMetadata]
+	 * @stable
+	 * @Annotation
+	 */
+	exports.ViewChildren = decorators_1.makePropDecorator(di_1.ViewChildrenMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from ViewChildMetadata.
+	/**
+	 * Declares a reference to a child element.
+	 *
+	 * `ViewChildren` takes a argument to select elements.
+	 *
+	 * - If the argument is a type, a directive or a component with the type will be bound.
+	 *
+	 * - If the argument is a string, the string is interpreted as a selector. An element containing the
+	 * matching template variable (e.g. `#child`) will be bound.
+	 *
+	 * In either case, `@ViewChild()` assigns the first (looking from above) element if there are
+	 * multiple matches.
+	 *
+	 * View child is set before the `ngAfterViewInit` callback is called.
+	 *
+	 * ### Example
+	 *
+	 * With type selector:
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'child-cmp',
+	 *   template: '<p>child</p>'
+	 * })
+	 * class ChildCmp {
+	 *   doSomething() {}
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'some-cmp',
+	 *   template: '<child-cmp></child-cmp>',
+	 *   directives: [ChildCmp]
+	 * })
+	 * class SomeCmp {
+	 *   @ViewChild(ChildCmp) child:ChildCmp;
+	 *
+	 *   ngAfterViewInit() {
+	 *     // child is set
+	 *     this.child.doSomething();
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * With string selector:
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'child-cmp',
+	 *   template: '<p>child</p>'
+	 * })
+	 * class ChildCmp {
+	 *   doSomething() {}
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'some-cmp',
+	 *   template: '<child-cmp #child></child-cmp>',
+	 *   directives: [ChildCmp]
+	 * })
+	 * class SomeCmp {
+	 *   @ViewChild('child') child:ChildCmp;
+	 *
+	 *   ngAfterViewInit() {
+	 *     // child is set
+	 *     this.child.doSomething();
+	 *   }
+	 * }
+	 * ```
+	 * See also: [ViewChildMetadata]
+	 * @stable
+	 * @Annotation
+	 */
+	exports.ViewChild = decorators_1.makePropDecorator(di_1.ViewChildMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from ViewQueryMetadata.
+	/**
+	 * Similar to {@link QueryMetadata}, but querying the component view, instead of
+	 * the content children.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/eNsFHDf7YjyM6IzKxM1j?p=preview))
+	 *
+	 * ```javascript
+	 * @Component({
+	 *   ...,
+	 *   template: `
+	 *     <item> a </item>
+	 *     <item> b </item>
+	 *     <item> c </item>
+	 *   `
+	 * })
+	 * class MyComponent {
+	 *   shown: boolean;
+	 *
+	 *   constructor(private @Query(Item) items:QueryList<Item>) {
+	 *     items.changes.subscribe(() => console.log(items.length));
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * Supports the same querying parameters as {@link QueryMetadata}, except
+	 * `descendants`. This always queries the whole view.
+	 *
+	 * As `shown` is flipped between true and false, items will contain zero of one
+	 * items.
+	 *
+	 * Specifies that a {@link QueryList} should be injected.
+	 *
+	 * The injected object is an iterable and observable live list.
+	 * See {@link QueryList} for more details.
+	 * @deprecated
+	 * @Annotation
+	 */
+	exports.ViewQuery = decorators_1.makeParamDecorator(di_1.ViewQueryMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from PipeMetadata.
+	/**
+	 * Declare reusable pipe function.
+	 *
+	 * ### Example
+	 *
+	 * {@example core/ts/metadata/metadata.ts region='pipe'}
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Pipe = decorators_1.makeDecorator(directives_1.PipeMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from InputMetadata.
+	/**
+	 * Declares a data-bound input property.
+	 *
+	 * Angular automatically updates data-bound properties during change detection.
+	 *
+	 * `InputMetadata` takes an optional parameter that specifies the name
+	 * used when instantiating a component in the template. When not provided,
+	 * the name of the decorated property is used.
+	 *
+	 * ### Example
+	 *
+	 * The following example creates a component with two input properties.
+	 *
+	 * ```typescript
+	 * @Component({
+	 *   selector: 'bank-account',
+	 *   template: `
+	 *     Bank Name: {{bankName}}
+	 *     Account Id: {{id}}
+	 *   `
+	 * })
+	 * class BankAccount {
+	 *   @Input() bankName: string;
+	 *   @Input('account-id') id: string;
+	 *
+	 *   // this property is not bound, and won't be automatically updated by Angular
+	 *   normalizedBankName: string;
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <bank-account bank-name="RBC" account-id="4747"></bank-account>
+	 *   `,
+	 *   directives: [BankAccount]
+	 * })
+	 * class App {}
+	 *
+	 * bootstrap(App);
+	 * ```
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Input = decorators_1.makePropDecorator(directives_1.InputMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from OutputMetadata.
+	/**
+	 * Declares an event-bound output property.
+	 *
+	 * When an output property emits an event, an event handler attached to that event
+	 * the template is invoked.
+	 *
+	 * `OutputMetadata` takes an optional parameter that specifies the name
+	 * used when instantiating a component in the template. When not provided,
+	 * the name of the decorated property is used.
+	 *
+	 * ### Example
+	 *
+	 * ```typescript
+	 * @Directive({
+	 *   selector: 'interval-dir',
+	 * })
+	 * class IntervalDir {
+	 *   @Output() everySecond = new EventEmitter();
+	 *   @Output('everyFiveSeconds') five5Secs = new EventEmitter();
+	 *
+	 *   constructor() {
+	 *     setInterval(() => this.everySecond.emit("event"), 1000);
+	 *     setInterval(() => this.five5Secs.emit("event"), 5000);
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <interval-dir (everySecond)="everySecond()" (everyFiveSeconds)="everyFiveSeconds()">
+	 *     </interval-dir>
+	 *   `,
+	 *   directives: [IntervalDir]
+	 * })
+	 * class App {
+	 *   everySecond() { console.log('second'); }
+	 *   everyFiveSeconds() { console.log('five seconds'); }
+	 * }
+	 * bootstrap(App);
+	 * ```
+	 * @stable
+	 * @Annotation
+	 */
+	exports.Output = decorators_1.makePropDecorator(directives_1.OutputMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from HostBindingMetadata.
+	/**
+	 * Declares a host property binding.
+	 *
+	 * Angular automatically checks host property bindings during change detection.
+	 * If a binding changes, it will update the host element of the directive.
+	 *
+	 * `HostBindingMetadata` takes an optional parameter that specifies the property
+	 * name of the host element that will be updated. When not provided,
+	 * the class property name is used.
+	 *
+	 * ### Example
+	 *
+	 * The following example creates a directive that sets the `valid` and `invalid` classes
+	 * on the DOM element that has ngModel directive on it.
+	 *
+	 * ```typescript
+	 * @Directive({selector: '[ngModel]'})
+	 * class NgModelStatus {
+	 *   constructor(public control:NgModel) {}
+	 *   @HostBinding('class.valid') get valid() { return this.control.valid; }
+	 *   @HostBinding('class.invalid') get invalid() { return this.control.invalid; }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `<input [(ngModel)]="prop">`,
+	 *   directives: [FORM_DIRECTIVES, NgModelStatus]
+	 * })
+	 * class App {
+	 *   prop;
+	 * }
+	 *
+	 * bootstrap(App);
+	 * ```
+	 * @stable
+	 * @Annotation
+	 */
+	exports.HostBinding = decorators_1.makePropDecorator(directives_1.HostBindingMetadata);
+	// TODO(alexeagle): remove the duplication of this doc. It is copied from HostListenerMetadata.
+	/**
+	 * Declares a host listener.
+	 *
+	 * Angular will invoke the decorated method when the host element emits the specified event.
+	 *
+	 * If the decorated method returns `false`, then `preventDefault` is applied on the DOM
+	 * event.
+	 *
+	 * ### Example
+	 *
+	 * The following example declares a directive that attaches a click listener to the button and
+	 * counts clicks.
+	 *
+	 * ```typescript
+	 * @Directive({selector: 'button[counting]'})
+	 * class CountClicks {
+	 *   numberOfClicks = 0;
+	 *
+	 *   @HostListener('click', ['$event.target'])
+	 *   onClick(btn) {
+	 *     console.log("button", btn, "number of clicks:", this.numberOfClicks++);
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `<button counting>Increment</button>`,
+	 *   directives: [CountClicks]
+	 * })
+	 * class App {}
+	 *
+	 * bootstrap(App);
+	 * ```
+	 * @stable
+	 * @Annotation
+	 */
+	exports.HostListener = decorators_1.makePropDecorator(directives_1.HostListenerMetadata);
+	/**
+	 * Declares an ng module.
+	 * @experimental
+	 * @Annotation
+	 */
+	exports.NgModule = decorators_1.makeDecorator(ng_module_1.NgModuleMetadata);
+	//# sourceMappingURL=metadata.js.map
+
+/***/ },
+/* 232 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var forward_ref_1 = __webpack_require__(78);
+	var metadata_1 = __webpack_require__(33);
+	var opaque_token_1 = __webpack_require__(219);
+	var lang_1 = __webpack_require__(3);
+	/**
+	 * This token can be used to create a virtual provider that will populate the
+	 * `entryComponents` fields of components and ng modules based on its `useValue`.
+	 * All components that are referenced in the `useValue` value (either directly
+	 * or in a nested array or map) will be added to the `entryComponents` property.
+	 *
+	 * ### Example
+	 * The following example shows how the router can populate the `entryComponents`
+	 * field of an NgModule based on the router configuration which refers
+	 * to components.
+	 *
+	 * ```typescript
+	 * // helper function inside the router
+	 * function provideRoutes(routes) {
+	 *   return [
+	 *     {provide: ROUTES, useValue: routes},
+	 *     {provide: ANALYZE_FOR_ENTRY_COMPONENTS, useValue: routes, multi: true}
+	 *   ];
+	 * }
+	 *
+	 * // user code
+	 * let routes = [
+	 *   {path: '/root', component: RootComp},
+	 *   {path: /teams', component: TeamsComp}
+	 * ];
+	 *
+	 * @NgModule({
+	 *   providers: [provideRoutes(routes)]
+	 * })
+	 * class ModuleWithRoutes {}
+	 * ```
+	 *
+	 * @experimental
+	 */
+	exports.ANALYZE_FOR_ENTRY_COMPONENTS = new opaque_token_1.OpaqueToken('AnalyzeForEntryComponents');
+	/**
+	 * Specifies that a constant attribute value should be injected.
+	 *
+	 * The directive can inject constant string literals of host element attributes.
+	 *
+	 * ### Example
+	 *
+	 * Suppose we have an `<input>` element and want to know its `type`.
+	 *
+	 * ```html
+	 * <input type="text">
+	 * ```
+	 *
+	 * A decorator can inject string literal `text` like so:
+	 *
+	 * {@example core/ts/metadata/metadata.ts region='attributeMetadata'}
+	 * @stable
+	 */
+	var AttributeMetadata = (function (_super) {
+	    __extends(AttributeMetadata, _super);
+	    function AttributeMetadata(attributeName) {
+	        _super.call(this);
+	        this.attributeName = attributeName;
+	    }
+	    Object.defineProperty(AttributeMetadata.prototype, "token", {
+	        get: function () {
+	            // Normally one would default a token to a type of an injected value but here
+	            // the type of a variable is "string" and we can't use primitive type as a return value
+	            // so we use instance of Attribute instead. This doesn't matter much in practice as arguments
+	            // with @Attribute annotation are injected by ElementInjector that doesn't take tokens into
+	            // account.
+	            return this;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    AttributeMetadata.prototype.toString = function () { return "@Attribute(" + lang_1.stringify(this.attributeName) + ")"; };
+	    return AttributeMetadata;
+	}(metadata_1.DependencyMetadata));
+	exports.AttributeMetadata = AttributeMetadata;
+	/**
+	 * Declares an injectable parameter to be a live list of directives or variable
+	 * bindings from the content children of a directive.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/lY9m8HLy7z06vDoUaSN2?p=preview))
+	 *
+	 * Assume that `<tabs>` component would like to get a list its children `<pane>`
+	 * components as shown in this example:
+	 *
+	 * ```html
+	 * <tabs>
+	 *   <pane title="Overview">...</pane>
+	 *   <pane *ngFor="let o of objects" [title]="o.title">{{o.text}}</pane>
+	 * </tabs>
+	 * ```
+	 *
+	 * The preferred solution is to query for `Pane` directives using this decorator.
+	 *
+	 * ```javascript
+	 * @Component({
+	 *   selector: 'pane',
+	 *   inputs: ['title']
+	 * })
+	 * class Pane {
+	 *   title:string;
+	 * }
+	 *
+	 * @Component({
+	 *  selector: 'tabs',
+	 *  template: `
+	 *    <ul>
+	 *      <li *ngFor="let pane of panes">{{pane.title}}</li>
+	 *    </ul>
+	 *    <ng-content></ng-content>
+	 *  `
+	 * })
+	 * class Tabs {
+	 *   panes: QueryList<Pane>;
+	 *   constructor(@Query(Pane) panes:QueryList<Pane>) {
+	  *    this.panes = panes;
+	  *  }
+	 * }
+	 * ```
+	 *
+	 * A query can look for variable bindings by passing in a string with desired binding symbol.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/sT2j25cH1dURAyBRCKx1?p=preview))
+	 * ```html
+	 * <seeker>
+	 *   <div #findme>...</div>
+	 * </seeker>
+	 *
+	 * @Component({ selector: 'seeker' })
+	 * class Seeker {
+	 *   constructor(@Query('findme') elList: QueryList<ElementRef>) {...}
+	 * }
+	 * ```
+	 *
+	 * In this case the object that is injected depend on the type of the variable
+	 * binding. It can be an ElementRef, a directive or a component.
+	 *
+	 * Passing in a comma separated list of variable bindings will query for all of them.
+	 *
+	 * ```html
+	 * <seeker>
+	 *   <div #find-me>...</div>
+	 *   <div #find-me-too>...</div>
+	 * </seeker>
+	 *
+	 *  @Component({
+	 *   selector: 'seeker'
+	 * })
+	 * class Seeker {
+	 *   constructor(@Query('findMe, findMeToo') elList: QueryList<ElementRef>) {...}
+	 * }
+	 * ```
+	 *
+	 * Configure whether query looks for direct children or all descendants
+	 * of the querying element, by using the `descendants` parameter.
+	 * It is set to `false` by default.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/wtGeB977bv7qvA5FTYl9?p=preview))
+	 * ```html
+	 * <container #first>
+	 *   <item>a</item>
+	 *   <item>b</item>
+	 *   <container #second>
+	 *     <item>c</item>
+	 *   </container>
+	 * </container>
+	 * ```
+	 *
+	 * When querying for items, the first container will see only `a` and `b` by default,
+	 * but with `Query(TextDirective, {descendants: true})` it will see `c` too.
+	 *
+	 * The queried directives are kept in a depth-first pre-order with respect to their
+	 * positions in the DOM.
+	 *
+	 * Query does not look deep into any subcomponent views.
+	 *
+	 * Query is updated as part of the change-detection cycle. Since change detection
+	 * happens after construction of a directive, QueryList will always be empty when observed in the
+	 * constructor.
+	 *
+	 * The injected object is an unmodifiable live list.
+	 * See {@link QueryList} for more details.
+	 * @deprecated
+	 */
+	var QueryMetadata = (function (_super) {
+	    __extends(QueryMetadata, _super);
+	    function QueryMetadata(_selector, _a) {
+	        var _b = _a === void 0 ? {} : _a, _c = _b.descendants, descendants = _c === void 0 ? false : _c, _d = _b.first, first = _d === void 0 ? false : _d, _e = _b.read, read = _e === void 0 ? null : _e;
+	        _super.call(this);
+	        this._selector = _selector;
+	        this.descendants = descendants;
+	        this.first = first;
+	        this.read = read;
+	    }
+	    Object.defineProperty(QueryMetadata.prototype, "isViewQuery", {
+	        /**
+	         * always `false` to differentiate it with {@link ViewQueryMetadata}.
+	         */
+	        get: function () { return false; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(QueryMetadata.prototype, "selector", {
+	        /**
+	         * what this is querying for.
+	         */
+	        get: function () { return forward_ref_1.resolveForwardRef(this._selector); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(QueryMetadata.prototype, "isVarBindingQuery", {
+	        /**
+	         * whether this is querying for a variable binding or a directive.
+	         */
+	        get: function () { return lang_1.isString(this.selector); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(QueryMetadata.prototype, "varBindings", {
+	        /**
+	         * returns a list of variable bindings this is querying for.
+	         * Only applicable if this is a variable bindings query.
+	         */
+	        get: function () { return lang_1.StringWrapper.split(this.selector, /\s*,\s*/g); },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    QueryMetadata.prototype.toString = function () { return "@Query(" + lang_1.stringify(this.selector) + ")"; };
+	    return QueryMetadata;
+	}(metadata_1.DependencyMetadata));
+	exports.QueryMetadata = QueryMetadata;
+	// TODO: add an example after ContentChildren and ViewChildren are in master
+	/**
+	 * Configures a content query.
+	 *
+	 * Content queries are set before the `ngAfterContentInit` callback is called.
+	 *
+	 * ### Example
+	 *
+	 * ```
+	 * @Directive({
+	 *   selector: 'someDir'
+	 * })
+	 * class SomeDir {
+	 *   @ContentChildren(ChildDirective) contentChildren: QueryList<ChildDirective>;
+	 *
+	 *   ngAfterContentInit() {
+	 *     // contentChildren is set
+	 *   }
+	 * }
+	 * ```
+	 * @stable
+	 */
+	var ContentChildrenMetadata = (function (_super) {
+	    __extends(ContentChildrenMetadata, _super);
+	    function ContentChildrenMetadata(_selector, _a) {
+	        var _b = _a === void 0 ? {} : _a, _c = _b.descendants, descendants = _c === void 0 ? false : _c, _d = _b.read, read = _d === void 0 ? null : _d;
+	        _super.call(this, _selector, { descendants: descendants, read: read });
+	    }
+	    return ContentChildrenMetadata;
+	}(QueryMetadata));
+	exports.ContentChildrenMetadata = ContentChildrenMetadata;
+	// TODO: add an example after ContentChild and ViewChild are in master
+	/**
+	 * Configures a content query.
+	 *
+	 * Content queries are set before the `ngAfterContentInit` callback is called.
+	 *
+	 * ### Example
+	 *
+	 * ```
+	 * @Directive({
+	 *   selector: 'someDir'
+	 * })
+	 * class SomeDir {
+	 *   @ContentChild(ChildDirective) contentChild;
+	 *
+	 *   ngAfterContentInit() {
+	 *     // contentChild is set
+	 *   }
+	 * }
+	 * ```
+	 * @stable
+	 */
+	var ContentChildMetadata = (function (_super) {
+	    __extends(ContentChildMetadata, _super);
+	    function ContentChildMetadata(_selector, _a) {
+	        var _b = (_a === void 0 ? {} : _a).read, read = _b === void 0 ? null : _b;
+	        _super.call(this, _selector, { descendants: true, first: true, read: read });
+	    }
+	    return ContentChildMetadata;
+	}(QueryMetadata));
+	exports.ContentChildMetadata = ContentChildMetadata;
+	/**
+	 * Similar to {@link QueryMetadata}, but querying the component view, instead of
+	 * the content children.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/eNsFHDf7YjyM6IzKxM1j?p=preview))
+	 *
+	 * ```javascript
+	 * @Component({
+	 *   ...,
+	 *   template: `
+	 *     <item> a </item>
+	 *     <item> b </item>
+	 *     <item> c </item>
+	 *   `
+	 * })
+	 * class MyComponent {
+	 *   shown: boolean;
+	 *
+	 *   constructor(private @ViewQuery(Item) items:QueryList<Item>) {
+	 *     items.changes.subscribe(() => console.log(items.length));
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * Supports the same querying parameters as {@link QueryMetadata}, except
+	 * `descendants`. This always queries the whole view.
+	 *
+	 * As `shown` is flipped between true and false, items will contain zero of one
+	 * items.
+	 *
+	 * Specifies that a {@link QueryList} should be injected.
+	 *
+	 * The injected object is an iterable and observable live list.
+	 * See {@link QueryList} for more details.
+	 * @deprecated
+	 */
+	var ViewQueryMetadata = (function (_super) {
+	    __extends(ViewQueryMetadata, _super);
+	    function ViewQueryMetadata(_selector, _a) {
+	        var _b = _a === void 0 ? {} : _a, _c = _b.descendants, descendants = _c === void 0 ? false : _c, _d = _b.first, first = _d === void 0 ? false : _d, _e = _b.read, read = _e === void 0 ? null : _e;
+	        _super.call(this, _selector, { descendants: descendants, first: first, read: read });
+	    }
+	    Object.defineProperty(ViewQueryMetadata.prototype, "isViewQuery", {
+	        /**
+	         * always `true` to differentiate it with {@link QueryMetadata}.
+	         */
+	        get: function () { return true; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ViewQueryMetadata.prototype.toString = function () { return "@ViewQuery(" + lang_1.stringify(this.selector) + ")"; };
+	    return ViewQueryMetadata;
+	}(QueryMetadata));
+	exports.ViewQueryMetadata = ViewQueryMetadata;
+	/**
+	 * Declares a list of child element references.
+	 *
+	 * Angular automatically updates the list when the DOM is updated.
+	 *
+	 * `ViewChildren` takes an argument to select elements.
+	 *
+	 * - If the argument is a type, directives or components with the type will be bound.
+	 *
+	 * - If the argument is a string, the string is interpreted as a list of comma-separated selectors.
+	 * For each selector, an element containing the matching template variable (e.g. `#child`) will be
+	 * bound.
+	 *
+	 * View children are set before the `ngAfterViewInit` callback is called.
+	 *
+	 * ### Example
+	 *
+	 * With type selector:
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'child-cmp',
+	 *   template: '<p>child</p>'
+	 * })
+	 * class ChildCmp {
+	 *   doSomething() {}
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'some-cmp',
+	 *   template: `
+	 *     <child-cmp></child-cmp>
+	 *     <child-cmp></child-cmp>
+	 *     <child-cmp></child-cmp>
+	 *   `,
+	 *   directives: [ChildCmp]
+	 * })
+	 * class SomeCmp {
+	 *   @ViewChildren(ChildCmp) children:QueryList<ChildCmp>;
+	 *
+	 *   ngAfterViewInit() {
+	 *     // children are set
+	 *     this.children.toArray().forEach((child)=>child.doSomething());
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * With string selector:
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'child-cmp',
+	 *   template: '<p>child</p>'
+	 * })
+	 * class ChildCmp {
+	 *   doSomething() {}
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'some-cmp',
+	 *   template: `
+	 *     <child-cmp #child1></child-cmp>
+	 *     <child-cmp #child2></child-cmp>
+	 *     <child-cmp #child3></child-cmp>
+	 *   `,
+	 *   directives: [ChildCmp]
+	 * })
+	 * class SomeCmp {
+	 *   @ViewChildren('child1,child2,child3') children:QueryList<ChildCmp>;
+	 *
+	 *   ngAfterViewInit() {
+	 *     // children are set
+	 *     this.children.toArray().forEach((child)=>child.doSomething());
+	 *   }
+	 * }
+	 * ```
+	 * @stable
+	 */
+	var ViewChildrenMetadata = (function (_super) {
+	    __extends(ViewChildrenMetadata, _super);
+	    function ViewChildrenMetadata(_selector, _a) {
+	        var _b = (_a === void 0 ? {} : _a).read, read = _b === void 0 ? null : _b;
+	        _super.call(this, _selector, { descendants: true, read: read });
+	    }
+	    return ViewChildrenMetadata;
+	}(ViewQueryMetadata));
+	exports.ViewChildrenMetadata = ViewChildrenMetadata;
+	/**
+	 *
+	 * Declares a reference of child element.
+	 *
+	 * `ViewChildren` takes an argument to select elements.
+	 *
+	 * - If the argument is a type, a directive or a component with the type will be bound.
+	 *
+	 If the argument is a string, the string is interpreted as a selector. An element containing the
+	 matching template variable (e.g. `#child`) will be bound.
+	 *
+	 * In either case, `@ViewChild()` assigns the first (looking from above) element if there are
+	 multiple matches.
+	 *
+	 * View child is set before the `ngAfterViewInit` callback is called.
+	 *
+	 * ### Example
+	 *
+	 * With type selector:
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'child-cmp',
+	 *   template: '<p>child</p>'
+	 * })
+	 * class ChildCmp {
+	 *   doSomething() {}
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'some-cmp',
+	 *   template: '<child-cmp></child-cmp>',
+	 *   directives: [ChildCmp]
+	 * })
+	 * class SomeCmp {
+	 *   @ViewChild(ChildCmp) child:ChildCmp;
+	 *
+	 *   ngAfterViewInit() {
+	 *     // child is set
+	 *     this.child.doSomething();
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * With string selector:
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'child-cmp',
+	 *   template: '<p>child</p>'
+	 * })
+	 * class ChildCmp {
+	 *   doSomething() {}
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'some-cmp',
+	 *   template: '<child-cmp #child></child-cmp>',
+	 *   directives: [ChildCmp]
+	 * })
+	 * class SomeCmp {
+	 *   @ViewChild('child') child:ChildCmp;
+	 *
+	 *   ngAfterViewInit() {
+	 *     // child is set
+	 *     this.child.doSomething();
+	 *   }
+	 * }
+	 * ```
+	 * @stable
+	 */
+	var ViewChildMetadata = (function (_super) {
+	    __extends(ViewChildMetadata, _super);
+	    function ViewChildMetadata(_selector, _a) {
+	        var _b = (_a === void 0 ? {} : _a).read, read = _b === void 0 ? null : _b;
+	        _super.call(this, _selector, { descendants: true, first: true, read: read });
+	    }
+	    return ViewChildMetadata;
+	}(ViewQueryMetadata));
+	exports.ViewChildMetadata = ViewChildMetadata;
+	//# sourceMappingURL=di.js.map
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var constants_1 = __webpack_require__(76);
+	var metadata_1 = __webpack_require__(33);
+	var lang_1 = __webpack_require__(3);
+	/**
+	 * Directives allow you to attach behavior to elements in the DOM.
+	 *
+	 * {@link DirectiveMetadata}s with an embedded view are called {@link ComponentMetadata}s.
+	 *
+	 * A directive consists of a single directive annotation and a controller class. When the
+	 * directive's `selector` matches
+	 * elements in the DOM, the following steps occur:
+	 *
+	 * 1. For each directive, the `ElementInjector` attempts to resolve the directive's constructor
+	 * arguments.
+	 * 2. Angular instantiates directives for each matched element using `ElementInjector` in a
+	 * depth-first order,
+	 *    as declared in the HTML.
+	 *
+	 * ## Understanding How Injection Works
+	 *
+	 * There are three stages of injection resolution.
+	 * - *Pre-existing Injectors*:
+	 *   - The terminal {@link Injector} cannot resolve dependencies. It either throws an error or, if
+	 * the dependency was
+	 *     specified as `@Optional`, returns `null`.
+	 *   - The platform injector resolves browser singleton resources, such as: cookies, title,
+	 * location, and others.
+	 * - *Component Injectors*: Each component instance has its own {@link Injector}, and they follow
+	 * the same parent-child hierarchy
+	 *     as the component instances in the DOM.
+	 * - *Element Injectors*: Each component instance has a Shadow DOM. Within the Shadow DOM each
+	 * element has an `ElementInjector`
+	 *     which follow the same parent-child hierarchy as the DOM elements themselves.
+	 *
+	 * When a template is instantiated, it also must instantiate the corresponding directives in a
+	 * depth-first order. The
+	 * current `ElementInjector` resolves the constructor dependencies for each directive.
+	 *
+	 * Angular then resolves dependencies as follows, according to the order in which they appear in the
+	 * {@link ComponentMetadata}:
+	 *
+	 * 1. Dependencies on the current element
+	 * 2. Dependencies on element injectors and their parents until it encounters a Shadow DOM boundary
+	 * 3. Dependencies on component injectors and their parents until it encounters the root component
+	 * 4. Dependencies on pre-existing injectors
+	 *
+	 *
+	 * The `ElementInjector` can inject other directives, element-specific special objects, or it can
+	 * delegate to the parent
+	 * injector.
+	 *
+	 * To inject other directives, declare the constructor parameter as:
+	 * - `directive:DirectiveType`: a directive on the current element only
+	 * - `@Host() directive:DirectiveType`: any directive that matches the type between the current
+	 * element and the
+	 *    Shadow DOM root.
+	 * - `@Query(DirectiveType) query:QueryList<DirectiveType>`: A live collection of direct child
+	 * directives.
+	 * - `@QueryDescendants(DirectiveType) query:QueryList<DirectiveType>`: A live collection of any
+	 * child directives.
+	 *
+	 * To inject element-specific special objects, declare the constructor parameter as:
+	 * - `element: ElementRef` to obtain a reference to logical element in the view.
+	 * - `viewContainer: ViewContainerRef` to control child template instantiation, for
+	 * {@link DirectiveMetadata} directives only
+	 * - `bindingPropagation: BindingPropagation` to control change detection in a more granular way.
+	 *
+	 * ### Example
+	 *
+	 * The following example demonstrates how dependency injection resolves constructor arguments in
+	 * practice.
+	 *
+	 *
+	 * Assume this HTML template:
+	 *
+	 * ```
+	 * <div dependency="1">
+	 *   <div dependency="2">
+	 *     <div dependency="3" my-directive>
+	 *       <div dependency="4">
+	 *         <div dependency="5"></div>
+	 *       </div>
+	 *       <div dependency="6"></div>
+	 *     </div>
+	 *   </div>
+	 * </div>
+	 * ```
+	 *
+	 * With the following `dependency` decorator and `SomeService` injectable class.
+	 *
+	 * ```
+	 * @Injectable()
+	 * class SomeService {
+	 * }
+	 *
+	 * @Directive({
+	 *   selector: '[dependency]',
+	 *   inputs: [
+	 *     'id: dependency'
+	 *   ]
+	 * })
+	 * class Dependency {
+	 *   id:string;
+	 * }
+	 * ```
+	 *
+	 * Let's step through the different ways in which `MyDirective` could be declared...
+	 *
+	 *
+	 * ### No injection
+	 *
+	 * Here the constructor is declared with no arguments, therefore nothing is injected into
+	 * `MyDirective`.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor() {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with no dependencies.
+	 *
+	 *
+	 * ### Component-level injection
+	 *
+	 * Directives can inject any injectable instance from the closest component injector or any of its
+	 * parents.
+	 *
+	 * Here, the constructor declares a parameter, `someService`, and injects the `SomeService` type
+	 * from the parent
+	 * component's injector.
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(someService: SomeService) {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with a dependency on `SomeService`.
+	 *
+	 *
+	 * ### Injecting a directive from the current element
+	 *
+	 * Directives can inject other directives declared on the current element.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(dependency: Dependency) {
+	 *     expect(dependency.id).toEqual(3);
+	 *   }
+	 * }
+	 * ```
+	 * This directive would be instantiated with `Dependency` declared at the same element, in this case
+	 * `dependency="3"`.
+	 *
+	 * ### Injecting a directive from any ancestor elements
+	 *
+	 * Directives can inject other directives declared on any ancestor element (in the current Shadow
+	 * DOM), i.e. on the current element, the
+	 * parent element, or its parents.
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(@Host() dependency: Dependency) {
+	 *     expect(dependency.id).toEqual(2);
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * `@Host` checks the current element, the parent, as well as its parents recursively. If
+	 * `dependency="2"` didn't
+	 * exist on the direct parent, this injection would
+	 * have returned
+	 * `dependency="1"`.
+	 *
+	 *
+	 * ### Injecting a live collection of direct child directives
+	 *
+	 *
+	 * A directive can also query for other child directives. Since parent directives are instantiated
+	 * before child directives, a directive can't simply inject the list of child directives. Instead,
+	 * the directive injects a {@link QueryList}, which updates its contents as children are added,
+	 * removed, or moved by a directive that uses a {@link ViewContainerRef} such as a `ngFor`, an
+	 * `ngIf`, or an `ngSwitch`.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(@Query(Dependency) dependencies:QueryList<Dependency>) {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with a {@link QueryList} which contains `Dependency` 4 and
+	 * `Dependency` 6. Here, `Dependency` 5 would not be included, because it is not a direct child.
+	 *
+	 * ### Injecting a live collection of descendant directives
+	 *
+	 * By passing the descendant flag to `@Query` above, we can include the children of the child
+	 * elements.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(@Query(Dependency, {descendants: true}) dependencies:QueryList<Dependency>) {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with a Query which would contain `Dependency` 4, 5 and 6.
+	 *
+	 * ### Optional injection
+	 *
+	 * The normal behavior of directives is to return an error when a specified dependency cannot be
+	 * resolved. If you
+	 * would like to inject `null` on unresolved dependency instead, you can annotate that dependency
+	 * with `@Optional()`.
+	 * This explicitly permits the author of a template to treat some of the surrounding directives as
+	 * optional.
+	 *
+	 * ```
+	 * @Directive({ selector: '[my-directive]' })
+	 * class MyDirective {
+	 *   constructor(@Optional() dependency:Dependency) {
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * This directive would be instantiated with a `Dependency` directive found on the current element.
+	 * If none can be
+	 * found, the injector supplies `null` instead of throwing an error.
+	 *
+	 * ### Example
+	 *
+	 * Here we use a decorator directive to simply define basic tool-tip behavior.
+	 *
+	 * ```
+	 * @Directive({
+	 *   selector: '[tooltip]',
+	 *   inputs: [
+	 *     'text: tooltip'
+	 *   ],
+	 *   host: {
+	 *     '(mouseenter)': 'onMouseEnter()',
+	 *     '(mouseleave)': 'onMouseLeave()'
+	 *   }
+	 * })
+	 * class Tooltip{
+	 *   text:string;
+	 *   overlay:Overlay; // NOT YET IMPLEMENTED
+	 *   overlayManager:OverlayManager; // NOT YET IMPLEMENTED
+	 *
+	 *   constructor(overlayManager:OverlayManager) {
+	 *     this.overlay = overlay;
+	 *   }
+	 *
+	 *   onMouseEnter() {
+	 *     // exact signature to be determined
+	 *     this.overlay = this.overlayManager.open(text, ...);
+	 *   }
+	 *
+	 *   onMouseLeave() {
+	 *     this.overlay.close();
+	 *     this.overlay = null;
+	 *   }
+	 * }
+	 * ```
+	 * In our HTML template, we can then add this behavior to a `<div>` or any other element with the
+	 * `tooltip` selector,
+	 * like so:
+	 *
+	 * ```
+	 * <div tooltip="some text here"></div>
+	 * ```
+	 *
+	 * Directives can also control the instantiation, destruction, and positioning of inline template
+	 * elements:
+	 *
+	 * A directive uses a {@link ViewContainerRef} to instantiate, insert, move, and destroy views at
+	 * runtime.
+	 * The {@link ViewContainerRef} is created as a result of `<template>` element, and represents a
+	 * location in the current view
+	 * where these actions are performed.
+	 *
+	 * Views are always created as children of the current {@link ComponentMetadata}, and as siblings of
+	 * the
+	 * `<template>` element. Thus a
+	 * directive in a child view cannot inject the directive that created it.
+	 *
+	 * Since directives that create views via ViewContainers are common in Angular, and using the full
+	 * `<template>` element syntax is wordy, Angular
+	 * also supports a shorthand notation: `<li *foo="bar">` and `<li template="foo: bar">` are
+	 * equivalent.
+	 *
+	 * Thus,
+	 *
+	 * ```
+	 * <ul>
+	 *   <li *foo="bar" title="text"></li>
+	 * </ul>
+	 * ```
+	 *
+	 * Expands in use to:
+	 *
+	 * ```
+	 * <ul>
+	 *   <template [foo]="bar">
+	 *     <li title="text"></li>
+	 *   </template>
+	 * </ul>
+	 * ```
+	 *
+	 * Notice that although the shorthand places `*foo="bar"` within the `<li>` element, the binding for
+	 * the directive
+	 * controller is correctly instantiated on the `<template>` element rather than the `<li>` element.
+	 *
+	 * ## Lifecycle hooks
+	 *
+	 * When the directive class implements some {@linkDocs guide/lifecycle-hooks} the
+	 * callbacks are called by the change detection at defined points in time during the life of the
+	 * directive.
+	 *
+	 * ### Example
+	 *
+	 * Let's suppose we want to implement the `unless` behavior, to conditionally include a template.
+	 *
+	 * Here is a simple directive that triggers on an `unless` selector:
+	 *
+	 * ```
+	 * @Directive({
+	 *   selector: '[unless]',
+	 *   inputs: ['unless']
+	 * })
+	 * export class Unless {
+	 *   viewContainer: ViewContainerRef;
+	 *   templateRef: TemplateRef;
+	 *   prevCondition: boolean;
+	 *
+	 *   constructor(viewContainer: ViewContainerRef, templateRef: TemplateRef) {
+	 *     this.viewContainer = viewContainer;
+	 *     this.templateRef = templateRef;
+	 *     this.prevCondition = null;
+	 *   }
+	 *
+	 *   set unless(newCondition) {
+	 *     if (newCondition && (isBlank(this.prevCondition) || !this.prevCondition)) {
+	 *       this.prevCondition = true;
+	 *       this.viewContainer.clear();
+	 *     } else if (!newCondition && (isBlank(this.prevCondition) || this.prevCondition)) {
+	 *       this.prevCondition = false;
+	 *       this.viewContainer.create(this.templateRef);
+	 *     }
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * We can then use this `unless` selector in a template:
+	 * ```
+	 * <ul>
+	 *   <li *unless="expr"></li>
+	 * </ul>
+	 * ```
+	 *
+	 * Once the directive instantiates the child view, the shorthand notation for the template expands
+	 * and the result is:
+	 *
+	 * ```
+	 * <ul>
+	 *   <template [unless]="exp">
+	 *     <li></li>
+	 *   </template>
+	 *   <li></li>
+	 * </ul>
+	 * ```
+	 *
+	 * Note also that although the `<li></li>` template still exists inside the `<template></template>`,
+	 * the instantiated
+	 * view occurs on the second `<li></li>` which is a sibling to the `<template>` element.
+	 * @stable
+	 */
+	var DirectiveMetadata = (function (_super) {
+	    __extends(DirectiveMetadata, _super);
+	    function DirectiveMetadata(_a) {
+	        var _b = _a === void 0 ? {} : _a, selector = _b.selector, inputs = _b.inputs, outputs = _b.outputs, properties = _b.properties, events = _b.events, host = _b.host, providers = _b.providers, exportAs = _b.exportAs, queries = _b.queries;
+	        _super.call(this);
+	        this.selector = selector;
+	        this._inputs = inputs;
+	        this._properties = properties;
+	        this._outputs = outputs;
+	        this._events = events;
+	        this.host = host;
+	        this.exportAs = exportAs;
+	        this.queries = queries;
+	        this._providers = providers;
+	    }
+	    Object.defineProperty(DirectiveMetadata.prototype, "inputs", {
+	        /**
+	         * Enumerates the set of data-bound input properties for a directive
+	         *
+	         * Angular automatically updates input properties during change detection.
+	         *
+	         * The `inputs` property defines a set of `directiveProperty` to `bindingProperty`
+	         * configuration:
+	         *
+	         * - `directiveProperty` specifies the component property where the value is written.
+	         * - `bindingProperty` specifies the DOM property where the value is read from.
+	         *
+	         * When `bindingProperty` is not provided, it is assumed to be equal to `directiveProperty`.
+	         *
+	         * ### Example ([live demo](http://plnkr.co/edit/ivhfXY?p=preview))
+	         *
+	         * The following example creates a component with two data-bound properties.
+	         *
+	         * ```typescript
+	         * @Component({
+	         *   selector: 'bank-account',
+	         *   inputs: ['bankName', 'id: account-id'],
+	         *   template: `
+	         *     Bank Name: {{bankName}}
+	         *     Account Id: {{id}}
+	         *   `
+	         * })
+	         * class BankAccount {
+	         *   bankName: string;
+	         *   id: string;
+	         *
+	         *   // this property is not bound, and won't be automatically updated by Angular
+	         *   normalizedBankName: string;
+	         * }
+	         *
+	         * @Component({
+	         *   selector: 'app',
+	         *   template: `
+	         *     <bank-account bank-name="RBC" account-id="4747"></bank-account>
+	         *   `,
+	         *   directives: [BankAccount]
+	         * })
+	         * class App {}
+	         *
+	         * bootstrap(App);
+	         * ```
+	         *
+	         */
+	        get: function () {
+	            return lang_1.isPresent(this._properties) && this._properties.length > 0 ? this._properties :
+	                this._inputs;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DirectiveMetadata.prototype, "properties", {
+	        /**
+	         * Use `inputs` instead
+	         *
+	         * @deprecated
+	         */
+	        get: function () { return this.inputs; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DirectiveMetadata.prototype, "outputs", {
+	        /**
+	         * Enumerates the set of event-bound output properties.
+	         *
+	         * When an output property emits an event, an event handler attached to that event
+	         * the template is invoked.
+	         *
+	         * The `outputs` property defines a set of `directiveProperty` to `bindingProperty`
+	         * configuration:
+	         *
+	         * - `directiveProperty` specifies the component property that emits events.
+	         * - `bindingProperty` specifies the DOM property the event handler is attached to.
+	         *
+	         * ### Example ([live demo](http://plnkr.co/edit/d5CNq7?p=preview))
+	         *
+	         * ```typescript
+	         * @Directive({
+	         *   selector: 'interval-dir',
+	         *   outputs: ['everySecond', 'five5Secs: everyFiveSeconds']
+	         * })
+	         * class IntervalDir {
+	         *   everySecond = new EventEmitter();
+	         *   five5Secs = new EventEmitter();
+	         *
+	         *   constructor() {
+	         *     setInterval(() => this.everySecond.emit("event"), 1000);
+	         *     setInterval(() => this.five5Secs.emit("event"), 5000);
+	         *   }
+	         * }
+	         *
+	         * @Component({
+	         *   selector: 'app',
+	         *   template: `
+	         *     <interval-dir (everySecond)="everySecond()" (everyFiveSeconds)="everyFiveSeconds()">
+	         *     </interval-dir>
+	         *   `,
+	         *   directives: [IntervalDir]
+	         * })
+	         * class App {
+	         *   everySecond() { console.log('second'); }
+	         *   everyFiveSeconds() { console.log('five seconds'); }
+	         * }
+	         * bootstrap(App);
+	         * ```
+	         *
+	         */
+	        get: function () {
+	            return lang_1.isPresent(this._events) && this._events.length > 0 ? this._events : this._outputs;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DirectiveMetadata.prototype, "events", {
+	        /**
+	         * Use `outputs` instead
+	         *
+	         * @deprecated
+	         */
+	        get: function () { return this.outputs; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(DirectiveMetadata.prototype, "providers", {
+	        /**
+	         * Defines the set of injectable objects that are visible to a Directive and its light DOM
+	         * children.
+	         *
+	         * ## Simple Example
+	         *
+	         * Here is an example of a class that can be injected:
+	         *
+	         * ```
+	         * class Greeter {
+	         *    greet(name:string) {
+	         *      return 'Hello ' + name + '!';
+	         *    }
+	         * }
+	         *
+	         * @Directive({
+	         *   selector: 'greet',
+	         *   providers: [
+	         *     Greeter
+	         *   ]
+	         * })
+	         * class HelloWorld {
+	         *   greeter:Greeter;
+	         *
+	         *   constructor(greeter:Greeter) {
+	         *     this.greeter = greeter;
+	         *   }
+	         * }
+	         * ```
+	         */
+	        get: function () { return this._providers; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return DirectiveMetadata;
+	}(metadata_1.InjectableMetadata));
+	exports.DirectiveMetadata = DirectiveMetadata;
+	/**
+	 * Declare reusable UI building blocks for an application.
+	 *
+	 * Each Angular component requires a single `@Component` annotation. The
+	 * `@Component`
+	 * annotation specifies when a component is instantiated, and which properties and hostListeners it
+	 * binds to.
+	 *
+	 * When a component is instantiated, Angular
+	 * - creates a shadow DOM for the component.
+	 * - loads the selected template into the shadow DOM.
+	 * - creates all the injectable objects configured with `providers` and `viewProviders`.
+	 *
+	 * All template expressions and statements are then evaluated against the component instance.
+	 *
+	 * ## Lifecycle hooks
+	 *
+	 * When the component class implements some {@linkDocs guide/lifecycle-hooks} the
+	 * callbacks are called by the change detection at defined points in time during the life of the
+	 * component.
+	 *
+	 * ### Example
+	 *
+	 * {@example core/ts/metadata/metadata.ts region='component'}
+	 * @stable
+	 */
+	var ComponentMetadata = (function (_super) {
+	    __extends(ComponentMetadata, _super);
+	    function ComponentMetadata(_a) {
+	        var _b = _a === void 0 ? {} : _a, selector = _b.selector, inputs = _b.inputs, outputs = _b.outputs, properties = _b.properties, events = _b.events, host = _b.host, exportAs = _b.exportAs, moduleId = _b.moduleId, providers = _b.providers, viewProviders = _b.viewProviders, _c = _b.changeDetection, changeDetection = _c === void 0 ? constants_1.ChangeDetectionStrategy.Default : _c, queries = _b.queries, templateUrl = _b.templateUrl, template = _b.template, styleUrls = _b.styleUrls, styles = _b.styles, animations = _b.animations, directives = _b.directives, pipes = _b.pipes, encapsulation = _b.encapsulation, interpolation = _b.interpolation, entryComponents = _b.entryComponents;
+	        _super.call(this, {
+	            selector: selector,
+	            inputs: inputs,
+	            outputs: outputs,
+	            properties: properties,
+	            events: events,
+	            host: host,
+	            exportAs: exportAs,
+	            providers: providers,
+	            queries: queries
+	        });
+	        this.changeDetection = changeDetection;
+	        this._viewProviders = viewProviders;
+	        this.templateUrl = templateUrl;
+	        this.template = template;
+	        this.styleUrls = styleUrls;
+	        this.styles = styles;
+	        this.directives = directives;
+	        this.pipes = pipes;
+	        this.encapsulation = encapsulation;
+	        this.moduleId = moduleId;
+	        this.animations = animations;
+	        this.interpolation = interpolation;
+	        this.entryComponents = entryComponents;
+	    }
+	    Object.defineProperty(ComponentMetadata.prototype, "viewProviders", {
+	        /**
+	         * Defines the set of injectable objects that are visible to its view DOM children.
+	         *
+	         * ## Simple Example
+	         *
+	         * Here is an example of a class that can be injected:
+	         *
+	         * ```
+	         * class Greeter {
+	         *    greet(name:string) {
+	         *      return 'Hello ' + name + '!';
+	         *    }
+	         * }
+	         *
+	         * @Directive({
+	         *   selector: 'needs-greeter'
+	         * })
+	         * class NeedsGreeter {
+	         *   greeter:Greeter;
+	         *
+	         *   constructor(greeter:Greeter) {
+	         *     this.greeter = greeter;
+	         *   }
+	         * }
+	         *
+	         * @Component({
+	         *   selector: 'greet',
+	         *   viewProviders: [
+	         *     Greeter
+	         *   ],
+	         *   template: `<needs-greeter></needs-greeter>`,
+	         *   directives: [NeedsGreeter]
+	         * })
+	         * class HelloWorld {
+	         * }
+	         *
+	         * ```
+	         */
+	        get: function () { return this._viewProviders; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return ComponentMetadata;
+	}(DirectiveMetadata));
+	exports.ComponentMetadata = ComponentMetadata;
+	/**
+	 * Declare reusable pipe function.
+	 *
+	 * A "pure" pipe is only re-evaluated when either the input or any of the arguments change.
+	 *
+	 * When not specified, pipes default to being pure.
+	 *
+	 * ### Example
+	 *
+	 * {@example core/ts/metadata/metadata.ts region='pipe'}
+	 * @stable
+	 */
+	var PipeMetadata = (function (_super) {
+	    __extends(PipeMetadata, _super);
+	    function PipeMetadata(_a) {
+	        var name = _a.name, pure = _a.pure;
+	        _super.call(this);
+	        this.name = name;
+	        this._pure = pure;
+	    }
+	    Object.defineProperty(PipeMetadata.prototype, "pure", {
+	        get: function () { return lang_1.isPresent(this._pure) ? this._pure : true; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return PipeMetadata;
+	}(metadata_1.InjectableMetadata));
+	exports.PipeMetadata = PipeMetadata;
+	/**
+	 * Declares a data-bound input property.
+	 *
+	 * Angular automatically updates data-bound properties during change detection.
+	 *
+	 * `InputMetadata` takes an optional parameter that specifies the name
+	 * used when instantiating a component in the template. When not provided,
+	 * the name of the decorated property is used.
+	 *
+	 * ### Example
+	 *
+	 * The following example creates a component with two input properties.
+	 *
+	 * ```typescript
+	 * @Component({
+	 *   selector: 'bank-account',
+	 *   template: `
+	 *     Bank Name: {{bankName}}
+	 *     Account Id: {{id}}
+	 *   `
+	 * })
+	 * class BankAccount {
+	 *   @Input() bankName: string;
+	 *   @Input('account-id') id: string;
+	 *
+	 *   // this property is not bound, and won't be automatically updated by Angular
+	 *   normalizedBankName: string;
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <bank-account bank-name="RBC" account-id="4747"></bank-account>
+	 *   `,
+	 *   directives: [BankAccount]
+	 * })
+	 * class App {}
+	 *
+	 * bootstrap(App);
+	 * ```
+	 * @stable
+	 */
+	var InputMetadata = (function () {
+	    function InputMetadata(
+	        /**
+	         * Name used when instantiating a component in the template.
+	         */
+	        bindingPropertyName) {
+	        this.bindingPropertyName = bindingPropertyName;
+	    }
+	    return InputMetadata;
+	}());
+	exports.InputMetadata = InputMetadata;
+	/**
+	 * Declares an event-bound output property.
+	 *
+	 * When an output property emits an event, an event handler attached to that event
+	 * the template is invoked.
+	 *
+	 * `OutputMetadata` takes an optional parameter that specifies the name
+	 * used when instantiating a component in the template. When not provided,
+	 * the name of the decorated property is used.
+	 *
+	 * ### Example
+	 *
+	 * ```typescript
+	 * @Directive({
+	 *   selector: 'interval-dir',
+	 * })
+	 * class IntervalDir {
+	 *   @Output() everySecond = new EventEmitter();
+	 *   @Output('everyFiveSeconds') five5Secs = new EventEmitter();
+	 *
+	 *   constructor() {
+	 *     setInterval(() => this.everySecond.emit("event"), 1000);
+	 *     setInterval(() => this.five5Secs.emit("event"), 5000);
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <interval-dir (everySecond)="everySecond()" (everyFiveSeconds)="everyFiveSeconds()">
+	 *     </interval-dir>
+	 *   `,
+	 *   directives: [IntervalDir]
+	 * })
+	 * class App {
+	 *   everySecond() { console.log('second'); }
+	 *   everyFiveSeconds() { console.log('five seconds'); }
+	 * }
+	 * bootstrap(App);
+	 * ```
+	 * @stable
+	 */
+	var OutputMetadata = (function () {
+	    function OutputMetadata(bindingPropertyName) {
+	        this.bindingPropertyName = bindingPropertyName;
+	    }
+	    return OutputMetadata;
+	}());
+	exports.OutputMetadata = OutputMetadata;
+	/**
+	 * Declares a host property binding.
+	 *
+	 * Angular automatically checks host property bindings during change detection.
+	 * If a binding changes, it will update the host element of the directive.
+	 *
+	 * `HostBindingMetadata` takes an optional parameter that specifies the property
+	 * name of the host element that will be updated. When not provided,
+	 * the class property name is used.
+	 *
+	 * ### Example
+	 *
+	 * The following example creates a directive that sets the `valid` and `invalid` classes
+	 * on the DOM element that has ngModel directive on it.
+	 *
+	 * ```typescript
+	 * @Directive({selector: '[ngModel]'})
+	 * class NgModelStatus {
+	 *   constructor(public control:NgModel) {}
+	 *   @HostBinding('class.valid') get valid { return this.control.valid; }
+	 *   @HostBinding('class.invalid') get invalid { return this.control.invalid; }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `<input [(ngModel)]="prop">`,
+	 *   directives: [FORM_DIRECTIVES, NgModelStatus]
+	 * })
+	 * class App {
+	 *   prop;
+	 * }
+	 *
+	 * bootstrap(App);
+	 * ```
+	 * @stable
+	 */
+	var HostBindingMetadata = (function () {
+	    function HostBindingMetadata(hostPropertyName) {
+	        this.hostPropertyName = hostPropertyName;
+	    }
+	    return HostBindingMetadata;
+	}());
+	exports.HostBindingMetadata = HostBindingMetadata;
+	/**
+	 * Declares a host listener.
+	 *
+	 * Angular will invoke the decorated method when the host element emits the specified event.
+	 *
+	 * If the decorated method returns `false`, then `preventDefault` is applied on the DOM
+	 * event.
+	 *
+	 * ### Example
+	 *
+	 * The following example declares a directive that attaches a click listener to the button and
+	 * counts clicks.
+	 *
+	 * ```typescript
+	 * @Directive({selector: 'button[counting]'})
+	 * class CountClicks {
+	 *   numberOfClicks = 0;
+	 *
+	 *   @HostListener('click', ['$event.target'])
+	 *   onClick(btn) {
+	 *     console.log("button", btn, "number of clicks:", this.numberOfClicks++);
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `<button counting>Increment</button>`,
+	 *   directives: [CountClicks]
+	 * })
+	 * class App {}
+	 *
+	 * bootstrap(App);
+	 * ```
+	 * @stable
+	 */
+	var HostListenerMetadata = (function () {
+	    function HostListenerMetadata(eventName, args) {
+	        this.eventName = eventName;
+	        this.args = args;
+	    }
+	    return HostListenerMetadata;
+	}());
+	exports.HostListenerMetadata = HostListenerMetadata;
+	//# sourceMappingURL=directives.js.map
+
+/***/ },
+/* 234 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * @stable
+	 */
+	(function (LifecycleHooks) {
+	    LifecycleHooks[LifecycleHooks["OnInit"] = 0] = "OnInit";
+	    LifecycleHooks[LifecycleHooks["OnDestroy"] = 1] = "OnDestroy";
+	    LifecycleHooks[LifecycleHooks["DoCheck"] = 2] = "DoCheck";
+	    LifecycleHooks[LifecycleHooks["OnChanges"] = 3] = "OnChanges";
+	    LifecycleHooks[LifecycleHooks["AfterContentInit"] = 4] = "AfterContentInit";
+	    LifecycleHooks[LifecycleHooks["AfterContentChecked"] = 5] = "AfterContentChecked";
+	    LifecycleHooks[LifecycleHooks["AfterViewInit"] = 6] = "AfterViewInit";
+	    LifecycleHooks[LifecycleHooks["AfterViewChecked"] = 7] = "AfterViewChecked";
+	})(exports.LifecycleHooks || (exports.LifecycleHooks = {}));
+	var LifecycleHooks = exports.LifecycleHooks;
+	exports.LIFECYCLE_HOOKS_VALUES = [
+	    LifecycleHooks.OnInit, LifecycleHooks.OnDestroy, LifecycleHooks.DoCheck, LifecycleHooks.OnChanges,
+	    LifecycleHooks.AfterContentInit, LifecycleHooks.AfterContentChecked, LifecycleHooks.AfterViewInit,
+	    LifecycleHooks.AfterViewChecked
+	];
+	/**
+	 * Lifecycle hooks are guaranteed to be called in the following order:
+	 * - `OnChanges` (if any bindings have changed),
+	 * - `OnInit` (after the first check only),
+	 * - `DoCheck`,
+	 * - `AfterContentInit`,
+	 * - `AfterContentChecked`,
+	 * - `AfterViewInit`,
+	 * - `AfterViewChecked`,
+	 * - `OnDestroy` (at the very end before destruction)
+	 */
+	/**
+	 * Implement this interface to get notified when any data-bound property of your directive changes.
+	 *
+	 * `ngOnChanges` is called right after the data-bound properties have been checked and before view
+	 * and content children are checked if at least one of them has changed.
+	 *
+	 * The `changes` parameter contains an entry for each of the changed data-bound property. The key is
+	 * the property name and the value is an instance of {@link SimpleChange}.
+	 *
+	 * ### Example ([live example](http://plnkr.co/edit/AHrB6opLqHDBPkt4KpdT?p=preview)):
+	 *
+	 * ```typescript
+	 * @Component({
+	 *   selector: 'my-cmp',
+	 *   template: `<p>myProp = {{myProp}}</p>`
+	 * })
+	 * class MyComponent implements OnChanges {
+	 *   @Input() myProp: any;
+	 *
+	 *   ngOnChanges(changes: SimpleChanges) {
+	 *     console.log('ngOnChanges - myProp = ' + changes['myProp'].currentValue);
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <button (click)="value = value + 1">Change MyComponent</button>
+	 *     <my-cmp [my-prop]="value"></my-cmp>`,
+	 *   directives: [MyComponent]
+	 * })
+	 * export class App {
+	 *   value = 0;
+	 * }
+	 *
+	 * bootstrap(App).catch(err => console.error(err));
+	 * ```
+	 * @stable
+	 */
+	var OnChanges = (function () {
+	    function OnChanges() {
+	    }
+	    return OnChanges;
+	}());
+	exports.OnChanges = OnChanges;
+	/**
+	 * Implement this interface to execute custom initialization logic after your directive's
+	 * data-bound properties have been initialized.
+	 *
+	 * `ngOnInit` is called right after the directive's data-bound properties have been checked for the
+	 * first time, and before any of its children have been checked. It is invoked only once when the
+	 * directive is instantiated.
+	 *
+	 * ### Example ([live example](http://plnkr.co/edit/1MBypRryXd64v4pV03Yn?p=preview))
+	 *
+	 * ```typescript
+	 * @Component({
+	 *   selector: 'my-cmp',
+	 *   template: `<p>my-component</p>`
+	 * })
+	 * class MyComponent implements OnInit, OnDestroy {
+	 *   ngOnInit() {
+	 *     console.log('ngOnInit');
+	 *   }
+	 *
+	 *   ngOnDestroy() {
+	 *     console.log('ngOnDestroy');
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <button (click)="hasChild = !hasChild">
+	 *       {{hasChild ? 'Destroy' : 'Create'}} MyComponent
+	 *     </button>
+	 *     <my-cmp *ngIf="hasChild"></my-cmp>`,
+	 *   directives: [MyComponent, NgIf]
+	 * })
+	 * export class App {
+	 *   hasChild = true;
+	 * }
+	 *
+	 * bootstrap(App).catch(err => console.error(err));
+	 *  ```
+	 * @stable
+	 */
+	var OnInit = (function () {
+	    function OnInit() {
+	    }
+	    return OnInit;
+	}());
+	exports.OnInit = OnInit;
+	/**
+	 * Implement this interface to supplement the default change detection algorithm in your directive.
+	 *
+	 * `ngDoCheck` gets called to check the changes in the directives in addition to the default
+	 * algorithm.
+	 *
+	 * The default change detection algorithm looks for differences by comparing bound-property values
+	 * by reference across change detection runs.
+	 *
+	 * Note that a directive typically should not use both `DoCheck` and {@link OnChanges} to respond to
+	 * changes on the same input. `ngOnChanges` will continue to be called when the default change
+	 * detector
+	 * detects changes, so it is usually unnecessary to respond to changes on the same input in both
+	 * hooks.
+	 * Reaction to the changes have to be handled from within the `ngDoCheck` callback.
+	 *
+	 * You can use {@link KeyValueDiffers} and {@link IterableDiffers} to help add your custom check
+	 * mechanisms.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/QpnIlF0CR2i5bcYbHEUJ?p=preview))
+	 *
+	 * In the following example `ngDoCheck` uses an {@link IterableDiffers} to detect the updates to the
+	 * array `list`:
+	 *
+	 * ```typescript
+	 * @Component({
+	 *   selector: 'custom-check',
+	 *   template: `
+	 *     <p>Changes:</p>
+	 *     <ul>
+	 *       <li *ngFor="let line of logs">{{line}}</li>
+	 *     </ul>`,
+	 *   directives: [NgFor]
+	 * })
+	 * class CustomCheckComponent implements DoCheck {
+	 *   @Input() list: any[];
+	 *   differ: any;
+	 *   logs = [];
+	 *
+	 *   constructor(differs: IterableDiffers) {
+	 *     this.differ = differs.find([]).create(null);
+	 *   }
+	 *
+	 *   ngDoCheck() {
+	 *     var changes = this.differ.diff(this.list);
+	 *
+	 *     if (changes) {
+	 *       changes.forEachAddedItem(r => this.logs.push('added ' + r.item));
+	 *       changes.forEachRemovedItem(r => this.logs.push('removed ' + r.item))
+	 *     }
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <button (click)="list.push(list.length)">Push</button>
+	 *     <button (click)="list.pop()">Pop</button>
+	 *     <custom-check [list]="list"></custom-check>`,
+	 *   directives: [CustomCheckComponent]
+	 * })
+	 * export class App {
+	 *   list = [];
+	 * }
+	 * ```
+	 * @stable
+	 */
+	var DoCheck = (function () {
+	    function DoCheck() {
+	    }
+	    return DoCheck;
+	}());
+	exports.DoCheck = DoCheck;
+	/**
+	 * Implement this interface to get notified when your directive is destroyed.
+	 *
+	 * `ngOnDestroy` callback is typically used for any custom cleanup that needs to occur when the
+	 * instance is destroyed
+	 *
+	 * ### Example ([live example](http://plnkr.co/edit/1MBypRryXd64v4pV03Yn?p=preview))
+	 *
+	 * ```typesript
+	 * @Component({
+	 *   selector: 'my-cmp',
+	 *   template: `<p>my-component</p>`
+	 * })
+	 * class MyComponent implements OnInit, OnDestroy {
+	 *   ngOnInit() {
+	 *     console.log('ngOnInit');
+	 *   }
+	 *
+	 *   ngOnDestroy() {
+	 *     console.log('ngOnDestroy');
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <button (click)="hasChild = !hasChild">
+	 *       {{hasChild ? 'Destroy' : 'Create'}} MyComponent
+	 *     </button>
+	 *     <my-cmp *ngIf="hasChild"></my-cmp>`,
+	 *   directives: [MyComponent, NgIf]
+	 * })
+	 * export class App {
+	 *   hasChild = true;
+	 * }
+	 *
+	 * bootstrap(App).catch(err => console.error(err));
+	 * ```
+	 *
+	 *
+	 * To create a stateful Pipe, you should implement this interface and set the `pure`
+	 * parameter to `false` in the {@link PipeMetadata}.
+	 *
+	 * A stateful pipe may produce different output, given the same input. It is
+	 * likely that a stateful pipe may contain state that should be cleaned up when
+	 * a binding is destroyed. For example, a subscription to a stream of data may need to
+	 * be disposed, or an interval may need to be cleared.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/i8pm5brO4sPaLxBx56MR?p=preview))
+	 *
+	 * In this example, a pipe is created to countdown its input value, updating it every
+	 * 50ms. Because it maintains an internal interval, it automatically clears
+	 * the interval when the binding is destroyed or the countdown completes.
+	 *
+	 * ```
+	 * import {OnDestroy, Pipe, PipeTransform} from '@angular/core'
+	 * @Pipe({name: 'countdown', pure: false})
+	 * class CountDown implements PipeTransform, OnDestroy {
+	 *   remainingTime:Number;
+	 *   interval:SetInterval;
+	 *   ngOnDestroy() {
+	 *     if (this.interval) {
+	 *       clearInterval(this.interval);
+	 *     }
+	 *   }
+	 *   transform(value: any, args: any[] = []) {
+	 *     if (!parseInt(value, 10)) return null;
+	 *     if (typeof this.remainingTime !== 'number') {
+	 *       this.remainingTime = parseInt(value, 10);
+	 *     }
+	 *     if (!this.interval) {
+	 *       this.interval = setInterval(() => {
+	 *         this.remainingTime-=50;
+	 *         if (this.remainingTime <= 0) {
+	 *           this.remainingTime = 0;
+	 *           clearInterval(this.interval);
+	 *           delete this.interval;
+	 *         }
+	 *       }, 50);
+	 *     }
+	 *     return this.remainingTime;
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * Invoking `{{ 10000 | countdown }}` would cause the value to be decremented by 50,
+	 * every 50ms, until it reaches 0.
+	 *
+	 * @stable
+	 */
+	var OnDestroy = (function () {
+	    function OnDestroy() {
+	    }
+	    return OnDestroy;
+	}());
+	exports.OnDestroy = OnDestroy;
+	/**
+	 * Implement this interface to get notified when your directive's content has been fully
+	 * initialized.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/plamXUpsLQbIXpViZhUO?p=preview))
+	 *
+	 * ```typescript
+	 * @Component({
+	 *   selector: 'child-cmp',
+	 *   template: `{{where}} child`
+	 * })
+	 * class ChildComponent {
+	 *   @Input() where: string;
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'parent-cmp',
+	 *   template: `<ng-content></ng-content>`
+	 * })
+	 * class ParentComponent implements AfterContentInit {
+	 *   @ContentChild(ChildComponent) contentChild: ChildComponent;
+	 *
+	 *   constructor() {
+	 *     // contentChild is not initialized yet
+	 *     console.log(this.getMessage(this.contentChild));
+	 *   }
+	 *
+	 *   ngAfterContentInit() {
+	 *     // contentChild is updated after the content has been checked
+	 *     console.log('AfterContentInit: ' + this.getMessage(this.contentChild));
+	 *   }
+	 *
+	 *   private getMessage(cmp: ChildComponent): string {
+	 *     return cmp ? cmp.where + ' child' : 'no child';
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <parent-cmp>
+	 *       <child-cmp where="content"></child-cmp>
+	 *     </parent-cmp>`,
+	 *   directives: [ParentComponent, ChildComponent]
+	 * })
+	 * export class App {
+	 * }
+	 *
+	 * bootstrap(App).catch(err => console.error(err));
+	 * ```
+	 * @stable
+	 */
+	var AfterContentInit = (function () {
+	    function AfterContentInit() {
+	    }
+	    return AfterContentInit;
+	}());
+	exports.AfterContentInit = AfterContentInit;
+	/**
+	 * Implement this interface to get notified after every check of your directive's content.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/tGdrytNEKQnecIPkD7NU?p=preview))
+	 *
+	 * ```typescript
+	 * @Component({selector: 'child-cmp', template: `{{where}} child`})
+	 * class ChildComponent {
+	 *   @Input() where: string;
+	 * }
+	 *
+	 * @Component({selector: 'parent-cmp', template: `<ng-content></ng-content>`})
+	 * class ParentComponent implements AfterContentChecked {
+	 *   @ContentChild(ChildComponent) contentChild: ChildComponent;
+	 *
+	 *   constructor() {
+	 *     // contentChild is not initialized yet
+	 *     console.log(this.getMessage(this.contentChild));
+	 *   }
+	 *
+	 *   ngAfterContentChecked() {
+	 *     // contentChild is updated after the content has been checked
+	 *     console.log('AfterContentChecked: ' + this.getMessage(this.contentChild));
+	 *   }
+	 *
+	 *   private getMessage(cmp: ChildComponent): string {
+	 *     return cmp ? cmp.where + ' child' : 'no child';
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `
+	 *     <parent-cmp>
+	 *       <button (click)="hasContent = !hasContent">Toggle content child</button>
+	 *       <child-cmp *ngIf="hasContent" where="content"></child-cmp>
+	 *     </parent-cmp>`,
+	 *   directives: [NgIf, ParentComponent, ChildComponent]
+	 * })
+	 * export class App {
+	 *   hasContent = true;
+	 * }
+	 *
+	 * bootstrap(App).catch(err => console.error(err));
+	 * ```
+	 * @stable
+	 */
+	var AfterContentChecked = (function () {
+	    function AfterContentChecked() {
+	    }
+	    return AfterContentChecked;
+	}());
+	exports.AfterContentChecked = AfterContentChecked;
+	/**
+	 * Implement this interface to get notified when your component's view has been fully initialized.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/LhTKVMEM0fkJgyp4CI1W?p=preview))
+	 *
+	 * ```typescript
+	 * @Component({selector: 'child-cmp', template: `{{where}} child`})
+	 * class ChildComponent {
+	 *   @Input() where: string;
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'parent-cmp',
+	 *   template: `<child-cmp where="view"></child-cmp>`,
+	 *   directives: [ChildComponent]
+	 * })
+	 * class ParentComponent implements AfterViewInit {
+	 *   @ViewChild(ChildComponent) viewChild: ChildComponent;
+	 *
+	 *   constructor() {
+	 *     // viewChild is not initialized yet
+	 *     console.log(this.getMessage(this.viewChild));
+	 *   }
+	 *
+	 *   ngAfterViewInit() {
+	 *     // viewChild is updated after the view has been initialized
+	 *     console.log('ngAfterViewInit: ' + this.getMessage(this.viewChild));
+	 *   }
+	 *
+	 *   private getMessage(cmp: ChildComponent): string {
+	 *     return cmp ? cmp.where + ' child' : 'no child';
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `<parent-cmp></parent-cmp>`,
+	 *   directives: [ParentComponent]
+	 * })
+	 * export class App {
+	 * }
+	 *
+	 * bootstrap(App).catch(err => console.error(err));
+	 * ```
+	 * @stable
+	 */
+	var AfterViewInit = (function () {
+	    function AfterViewInit() {
+	    }
+	    return AfterViewInit;
+	}());
+	exports.AfterViewInit = AfterViewInit;
+	/**
+	 * Implement this interface to get notified after every check of your component's view.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/0qDGHcPQkc25CXhTNzKU?p=preview))
+	 *
+	 * ```typescript
+	 * @Component({selector: 'child-cmp', template: `{{where}} child`})
+	 * class ChildComponent {
+	 *   @Input() where: string;
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'parent-cmp',
+	 *   template: `
+	 *     <button (click)="showView = !showView">Toggle view child</button>
+	 *     <child-cmp *ngIf="showView" where="view"></child-cmp>`,
+	 *   directives: [NgIf, ChildComponent]
+	 * })
+	 * class ParentComponent implements AfterViewChecked {
+	 *   @ViewChild(ChildComponent) viewChild: ChildComponent;
+	 *   showView = true;
+	 *
+	 *   constructor() {
+	 *     // viewChild is not initialized yet
+	 *     console.log(this.getMessage(this.viewChild));
+	 *   }
+	 *
+	 *   ngAfterViewChecked() {
+	 *     // viewChild is updated after the view has been checked
+	 *     console.log('AfterViewChecked: ' + this.getMessage(this.viewChild));
+	 *   }
+	 *
+	 *   private getMessage(cmp: ChildComponent): string {
+	 *     return cmp ? cmp.where + ' child' : 'no child';
+	 *   }
+	 * }
+	 *
+	 * @Component({
+	 *   selector: 'app',
+	 *   template: `<parent-cmp></parent-cmp>`,
+	 *   directives: [ParentComponent]
+	 * })
+	 * export class App {
+	 * }
+	 *
+	 * bootstrap(App).catch(err => console.error(err));
+	 * ```
+	 * @stable
+	 */
+	var AfterViewChecked = (function () {
+	    function AfterViewChecked() {
+	    }
+	    return AfterViewChecked;
+	}());
+	exports.AfterViewChecked = AfterViewChecked;
+	//# sourceMappingURL=lifecycle_hooks.js.map
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var metadata_1 = __webpack_require__(33);
+	/**
+	 * Defines a schema that will allow any property on elements with a `-` in their name,
+	 * which is the common rule for custom elements.
+	 *
+	 * @experimental
+	 */
+	exports.CUSTOM_ELEMENTS_SCHEMA = {
+	    name: 'custom-elements'
+	};
+	/**
+	 * Declares an Angular Module.
+	 * @experimental
+	 */
+	var NgModuleMetadata = (function (_super) {
+	    __extends(NgModuleMetadata, _super);
+	    function NgModuleMetadata(options) {
+	        if (options === void 0) { options = {}; }
+	        // We cannot use destructuring of the constructor argument because `exports` is a
+	        // protected symbol in CommonJS and closure tries to aggressively optimize it away.
+	        _super.call(this);
+	        this._providers = options.providers;
+	        this.declarations = options.declarations;
+	        this.imports = options.imports;
+	        this.exports = options.exports;
+	        this.entryComponents = options.entryComponents;
+	        this.bootstrap = options.bootstrap;
+	        this.schemas = options.schemas;
+	    }
+	    Object.defineProperty(NgModuleMetadata.prototype, "providers", {
+	        /**
+	         * Defines the set of injectable objects that are available in the injector
+	         * of this module.
+	         *
+	         * ## Simple Example
+	         *
+	         * Here is an example of a class that can be injected:
+	         *
+	         * ```
+	         * class Greeter {
+	         *    greet(name:string) {
+	         *      return 'Hello ' + name + '!';
+	         *    }
+	         * }
+	         *
+	         * @NgModule({
+	         *   providers: [
+	         *     Greeter
+	         *   ]
+	         * })
+	         * class HelloWorld {
+	         *   greeter:Greeter;
+	         *
+	         *   constructor(greeter:Greeter) {
+	         *     this.greeter = greeter;
+	         *   }
+	         * }
+	         * ```
+	         */
+	        get: function () { return this._providers; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    return NgModuleMetadata;
+	}(metadata_1.InjectableMetadata));
+	exports.NgModuleMetadata = NgModuleMetadata;
+	//# sourceMappingURL=ng_module.js.map
+
+/***/ },
+/* 236 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * Defines template and style encapsulation options available for Component's {@link Component}.
+	 *
+	 * See {@link ViewMetadata#encapsulation}.
+	 * @stable
+	 */
+	(function (ViewEncapsulation) {
+	    /**
+	     * Emulate `Native` scoping of styles by adding an attribute containing surrogate id to the Host
+	     * Element and pre-processing the style rules provided via
+	     * {@link ViewMetadata#styles} or {@link ViewMetadata#stylesUrls}, and adding the new Host Element
+	     * attribute to all selectors.
+	     *
+	     * This is the default option.
+	     */
+	    ViewEncapsulation[ViewEncapsulation["Emulated"] = 0] = "Emulated";
+	    /**
+	     * Use the native encapsulation mechanism of the renderer.
+	     *
+	     * For the DOM this means using [Shadow DOM](https://w3c.github.io/webcomponents/spec/shadow/) and
+	     * creating a ShadowRoot for Component's Host Element.
+	     */
+	    ViewEncapsulation[ViewEncapsulation["Native"] = 1] = "Native";
+	    /**
+	     * Don't provide any template or style encapsulation.
+	     */
+	    ViewEncapsulation[ViewEncapsulation["None"] = 2] = "None";
+	})(exports.ViewEncapsulation || (exports.ViewEncapsulation = {}));
+	var ViewEncapsulation = exports.ViewEncapsulation;
+	exports.VIEW_ENCAPSULATION_VALUES = [ViewEncapsulation.Emulated, ViewEncapsulation.Native, ViewEncapsulation.None];
+	/**
+	 * Metadata properties available for configuring Views.
+	 *
+	 * Each Angular component requires a single `@Component` and at least one `@View` annotation. The
+	 * `@View` annotation specifies the HTML template to use, and lists the directives that are active
+	 * within the template.
+	 *
+	 * When a component is instantiated, the template is loaded into the component's shadow root, and
+	 * the expressions and statements in the template are evaluated against the component.
+	 *
+	 * For details on the `@Component` annotation, see {@link ComponentMetadata}.
+	 *
+	 * ### Example
+	 *
+	 * ```
+	 * @Component({
+	 *   selector: 'greet',
+	 *   template: 'Hello {{name}}!',
+	 *   directives: [GreetUser, Bold]
+	 * })
+	 * class Greet {
+	 *   name: string;
+	 *
+	 *   constructor() {
+	 *     this.name = 'World';
+	 *   }
+	 * }
+	 * ```
+	 *
+	 * @deprecated Use ComponentMetadata instead.
+	 */
+	var ViewMetadata = (function () {
+	    function ViewMetadata(_a) {
+	        var _b = _a === void 0 ? {} : _a, templateUrl = _b.templateUrl, template = _b.template, directives = _b.directives, pipes = _b.pipes, encapsulation = _b.encapsulation, styles = _b.styles, styleUrls = _b.styleUrls, animations = _b.animations, interpolation = _b.interpolation;
+	        this.templateUrl = templateUrl;
+	        this.template = template;
+	        this.styleUrls = styleUrls;
+	        this.styles = styles;
+	        this.directives = directives;
+	        this.pipes = pipes;
+	        this.encapsulation = encapsulation;
+	        this.animations = animations;
+	        this.interpolation = interpolation;
+	    }
+	    return ViewMetadata;
+	}());
+	exports.ViewMetadata = ViewMetadata;
+	//# sourceMappingURL=view.js.map
+
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var lang_1 = __webpack_require__(3);
+	var ReflectionCapabilities = (function () {
+	    function ReflectionCapabilities(reflect) {
+	        this._reflect = lang_1.isPresent(reflect) ? reflect : lang_1.global.Reflect;
+	    }
+	    ReflectionCapabilities.prototype.isReflectionEnabled = function () { return true; };
+	    ReflectionCapabilities.prototype.factory = function (t) {
+	        switch (t.length) {
+	            case 0:
+	                return function () { return new t(); };
+	            case 1:
+	                return function (a1) { return new t(a1); };
+	            case 2:
+	                return function (a1, a2) { return new t(a1, a2); };
+	            case 3:
+	                return function (a1, a2, a3) { return new t(a1, a2, a3); };
+	            case 4:
+	                return function (a1, a2, a3, a4) { return new t(a1, a2, a3, a4); };
+	            case 5:
+	                return function (a1, a2, a3, a4, a5) { return new t(a1, a2, a3, a4, a5); };
+	            case 6:
+	                return function (a1, a2, a3, a4, a5, a6) {
+	                    return new t(a1, a2, a3, a4, a5, a6);
+	                };
+	            case 7:
+	                return function (a1, a2, a3, a4, a5, a6, a7) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7);
+	                };
+	            case 8:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8);
+	                };
+	            case 9:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9);
+	                };
+	            case 10:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
+	                };
+	            case 11:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
+	                };
+	            case 12:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
+	                };
+	            case 13:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
+	                };
+	            case 14:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14);
+	                };
+	            case 15:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15);
+	                };
+	            case 16:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16);
+	                };
+	            case 17:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
+	                };
+	            case 18:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18);
+	                };
+	            case 19:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19);
+	                };
+	            case 20:
+	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20) {
+	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
+	                };
+	        }
+	        ;
+	        throw new Error("Cannot create a factory for '" + lang_1.stringify(t) + "' because its constructor has more than 20 arguments");
+	    };
+	    /** @internal */
+	    ReflectionCapabilities.prototype._zipTypesAndAnnotations = function (paramTypes /** TODO #9100 */, paramAnnotations /** TODO #9100 */) {
+	        var result;
+	        if (typeof paramTypes === 'undefined') {
+	            result = new Array(paramAnnotations.length);
+	        }
+	        else {
+	            result = new Array(paramTypes.length);
+	        }
+	        for (var i = 0; i < result.length; i++) {
+	            // TS outputs Object for parameters without types, while Traceur omits
+	            // the annotations. For now we preserve the Traceur behavior to aid
+	            // migration, but this can be revisited.
+	            if (typeof paramTypes === 'undefined') {
+	                result[i] = [];
+	            }
+	            else if (paramTypes[i] != Object) {
+	                result[i] = [paramTypes[i]];
+	            }
+	            else {
+	                result[i] = [];
+	            }
+	            if (lang_1.isPresent(paramAnnotations) && lang_1.isPresent(paramAnnotations[i])) {
+	                result[i] = result[i].concat(paramAnnotations[i]);
+	            }
+	        }
+	        return result;
+	    };
+	    ReflectionCapabilities.prototype.parameters = function (typeOrFunc) {
+	        // Prefer the direct API.
+	        if (lang_1.isPresent(typeOrFunc.parameters)) {
+	            return typeOrFunc.parameters;
+	        }
+	        // API of tsickle for lowering decorators to properties on the class.
+	        if (lang_1.isPresent(typeOrFunc.ctorParameters)) {
+	            var ctorParameters = typeOrFunc.ctorParameters;
+	            var paramTypes_1 = ctorParameters.map(function (ctorParam /** TODO #9100 */) { return ctorParam && ctorParam.type; });
+	            var paramAnnotations_1 = ctorParameters.map(function (ctorParam /** TODO #9100 */) {
+	                return ctorParam && convertTsickleDecoratorIntoMetadata(ctorParam.decorators);
+	            });
+	            return this._zipTypesAndAnnotations(paramTypes_1, paramAnnotations_1);
+	        }
+	        // API for metadata created by invoking the decorators.
+	        if (lang_1.isPresent(this._reflect) && lang_1.isPresent(this._reflect.getMetadata)) {
+	            var paramAnnotations = this._reflect.getMetadata('parameters', typeOrFunc);
+	            var paramTypes = this._reflect.getMetadata('design:paramtypes', typeOrFunc);
+	            if (lang_1.isPresent(paramTypes) || lang_1.isPresent(paramAnnotations)) {
+	                return this._zipTypesAndAnnotations(paramTypes, paramAnnotations);
+	            }
+	        }
+	        // The array has to be filled with `undefined` because holes would be skipped by `some`
+	        var parameters = new Array(typeOrFunc.length);
+	        parameters.fill(undefined);
+	        return parameters;
+	    };
+	    ReflectionCapabilities.prototype.annotations = function (typeOrFunc) {
+	        // Prefer the direct API.
+	        if (lang_1.isPresent(typeOrFunc.annotations)) {
+	            var annotations = typeOrFunc.annotations;
+	            if (lang_1.isFunction(annotations) && annotations.annotations) {
+	                annotations = annotations.annotations;
+	            }
+	            return annotations;
+	        }
+	        // API of tsickle for lowering decorators to properties on the class.
+	        if (lang_1.isPresent(typeOrFunc.decorators)) {
+	            return convertTsickleDecoratorIntoMetadata(typeOrFunc.decorators);
+	        }
+	        // API for metadata created by invoking the decorators.
+	        if (lang_1.isPresent(this._reflect) && lang_1.isPresent(this._reflect.getMetadata)) {
+	            var annotations = this._reflect.getMetadata('annotations', typeOrFunc);
+	            if (lang_1.isPresent(annotations))
+	                return annotations;
+	        }
+	        return [];
+	    };
+	    ReflectionCapabilities.prototype.propMetadata = function (typeOrFunc) {
+	        // Prefer the direct API.
+	        if (lang_1.isPresent(typeOrFunc.propMetadata)) {
+	            var propMetadata = typeOrFunc.propMetadata;
+	            if (lang_1.isFunction(propMetadata) && propMetadata.propMetadata) {
+	                propMetadata = propMetadata.propMetadata;
+	            }
+	            return propMetadata;
+	        }
+	        // API of tsickle for lowering decorators to properties on the class.
+	        if (lang_1.isPresent(typeOrFunc.propDecorators)) {
+	            var propDecorators_1 = typeOrFunc.propDecorators;
+	            var propMetadata_1 = {};
+	            Object.keys(propDecorators_1).forEach(function (prop) {
+	                propMetadata_1[prop] = convertTsickleDecoratorIntoMetadata(propDecorators_1[prop]);
+	            });
+	            return propMetadata_1;
+	        }
+	        // API for metadata created by invoking the decorators.
+	        if (lang_1.isPresent(this._reflect) && lang_1.isPresent(this._reflect.getMetadata)) {
+	            var propMetadata = this._reflect.getMetadata('propMetadata', typeOrFunc);
+	            if (lang_1.isPresent(propMetadata))
+	                return propMetadata;
+	        }
+	        return {};
+	    };
+	    // Note: JavaScript does not support to query for interfaces during runtime.
+	    // However, we can't throw here as the reflector will always call this method
+	    // when asked for a lifecycle interface as this is what we check in Dart.
+	    ReflectionCapabilities.prototype.interfaces = function (type) { return []; };
+	    ReflectionCapabilities.prototype.hasLifecycleHook = function (type, lcInterface, lcProperty) {
+	        if (!(type instanceof lang_1.Type))
+	            return false;
+	        var proto = type.prototype;
+	        return !!proto[lcProperty];
+	    };
+	    ReflectionCapabilities.prototype.getter = function (name) { return new Function('o', 'return o.' + name + ';'); };
+	    ReflectionCapabilities.prototype.setter = function (name) {
+	        return new Function('o', 'v', 'return o.' + name + ' = v;');
+	    };
+	    ReflectionCapabilities.prototype.method = function (name) {
+	        var functionBody = "if (!o." + name + ") throw new Error('\"" + name + "\" is undefined');\n        return o." + name + ".apply(o, args);";
+	        return new Function('o', 'args', functionBody);
+	    };
+	    // There is not a concept of import uri in Js, but this is useful in developing Dart applications.
+	    ReflectionCapabilities.prototype.importUri = function (type) {
+	        // StaticSymbol
+	        if (typeof type === 'object' && type['filePath']) {
+	            return type['filePath'];
+	        }
+	        // Runtime type
+	        return "./" + lang_1.stringify(type);
+	    };
+	    return ReflectionCapabilities;
+	}());
+	exports.ReflectionCapabilities = ReflectionCapabilities;
+	function convertTsickleDecoratorIntoMetadata(decoratorInvocations) {
+	    if (!decoratorInvocations) {
+	        return [];
+	    }
+	    return decoratorInvocations.map(function (decoratorInvocation) {
+	        var decoratorType = decoratorInvocation.type;
+	        var annotationCls = decoratorType.annotationCls;
+	        var annotationArgs = decoratorInvocation.args ? decoratorInvocation.args : [];
+	        var annotation = Object.create(annotationCls.prototype);
+	        annotationCls.apply(annotation, annotationArgs);
+	        return annotation;
+	    });
+	}
+	//# sourceMappingURL=reflection_capabilities.js.map
+
+/***/ },
+/* 238 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var lang_1 = __webpack_require__(3);
+	var reflector_reader_1 = __webpack_require__(137);
+	/**
+	 * Reflective information about a symbol, including annotations, interfaces, and other metadata.
+	 */
+	var ReflectionInfo = (function () {
+	    function ReflectionInfo(annotations, parameters, factory, interfaces, propMetadata) {
+	        this.annotations = annotations;
+	        this.parameters = parameters;
+	        this.factory = factory;
+	        this.interfaces = interfaces;
+	        this.propMetadata = propMetadata;
+	    }
+	    return ReflectionInfo;
+	}());
+	exports.ReflectionInfo = ReflectionInfo;
+	/**
+	 * Provides access to reflection data about symbols. Used internally by Angular
+	 * to power dependency injection and compilation.
+	 */
+	var Reflector = (function (_super) {
+	    __extends(Reflector, _super);
+	    function Reflector(reflectionCapabilities) {
+	        _super.call(this);
+	        /** @internal */
+	        this._injectableInfo = new collection_1.Map();
+	        /** @internal */
+	        this._getters = new collection_1.Map();
+	        /** @internal */
+	        this._setters = new collection_1.Map();
+	        /** @internal */
+	        this._methods = new collection_1.Map();
+	        this._usedKeys = null;
+	        this.reflectionCapabilities = reflectionCapabilities;
+	    }
+	    Reflector.prototype.updateCapabilities = function (caps) { this.reflectionCapabilities = caps; };
+	    Reflector.prototype.isReflectionEnabled = function () { return this.reflectionCapabilities.isReflectionEnabled(); };
+	    /**
+	     * Causes `this` reflector to track keys used to access
+	     * {@link ReflectionInfo} objects.
+	     */
+	    Reflector.prototype.trackUsage = function () { this._usedKeys = new collection_1.Set(); };
+	    /**
+	     * Lists types for which reflection information was not requested since
+	     * {@link #trackUsage} was called. This list could later be audited as
+	     * potential dead code.
+	     */
+	    Reflector.prototype.listUnusedKeys = function () {
+	        var _this = this;
+	        if (this._usedKeys == null) {
+	            throw new exceptions_1.BaseException('Usage tracking is disabled');
+	        }
+	        var allTypes = collection_1.MapWrapper.keys(this._injectableInfo);
+	        return allTypes.filter(function (key) { return !collection_1.SetWrapper.has(_this._usedKeys, key); });
+	    };
+	    Reflector.prototype.registerFunction = function (func, funcInfo) {
+	        this._injectableInfo.set(func, funcInfo);
+	    };
+	    Reflector.prototype.registerType = function (type, typeInfo) {
+	        this._injectableInfo.set(type, typeInfo);
+	    };
+	    Reflector.prototype.registerGetters = function (getters) { _mergeMaps(this._getters, getters); };
+	    Reflector.prototype.registerSetters = function (setters) { _mergeMaps(this._setters, setters); };
+	    Reflector.prototype.registerMethods = function (methods) { _mergeMaps(this._methods, methods); };
+	    Reflector.prototype.factory = function (type) {
+	        if (this._containsReflectionInfo(type)) {
+	            var res = this._getReflectionInfo(type).factory;
+	            return lang_1.isPresent(res) ? res : null;
+	        }
+	        else {
+	            return this.reflectionCapabilities.factory(type);
+	        }
+	    };
+	    Reflector.prototype.parameters = function (typeOrFunc) {
+	        if (this._injectableInfo.has(typeOrFunc)) {
+	            var res = this._getReflectionInfo(typeOrFunc).parameters;
+	            return lang_1.isPresent(res) ? res : [];
+	        }
+	        else {
+	            return this.reflectionCapabilities.parameters(typeOrFunc);
+	        }
+	    };
+	    Reflector.prototype.annotations = function (typeOrFunc) {
+	        if (this._injectableInfo.has(typeOrFunc)) {
+	            var res = this._getReflectionInfo(typeOrFunc).annotations;
+	            return lang_1.isPresent(res) ? res : [];
+	        }
+	        else {
+	            return this.reflectionCapabilities.annotations(typeOrFunc);
+	        }
+	    };
+	    Reflector.prototype.propMetadata = function (typeOrFunc) {
+	        if (this._injectableInfo.has(typeOrFunc)) {
+	            var res = this._getReflectionInfo(typeOrFunc).propMetadata;
+	            return lang_1.isPresent(res) ? res : {};
+	        }
+	        else {
+	            return this.reflectionCapabilities.propMetadata(typeOrFunc);
+	        }
+	    };
+	    Reflector.prototype.interfaces = function (type) {
+	        if (this._injectableInfo.has(type)) {
+	            var res = this._getReflectionInfo(type).interfaces;
+	            return lang_1.isPresent(res) ? res : [];
+	        }
+	        else {
+	            return this.reflectionCapabilities.interfaces(type);
+	        }
+	    };
+	    Reflector.prototype.hasLifecycleHook = function (type, lcInterface, lcProperty) {
+	        var interfaces = this.interfaces(type);
+	        if (interfaces.indexOf(lcInterface) !== -1) {
+	            return true;
+	        }
+	        else {
+	            return this.reflectionCapabilities.hasLifecycleHook(type, lcInterface, lcProperty);
+	        }
+	    };
+	    Reflector.prototype.getter = function (name) {
+	        if (this._getters.has(name)) {
+	            return this._getters.get(name);
+	        }
+	        else {
+	            return this.reflectionCapabilities.getter(name);
+	        }
+	    };
+	    Reflector.prototype.setter = function (name) {
+	        if (this._setters.has(name)) {
+	            return this._setters.get(name);
+	        }
+	        else {
+	            return this.reflectionCapabilities.setter(name);
+	        }
+	    };
+	    Reflector.prototype.method = function (name) {
+	        if (this._methods.has(name)) {
+	            return this._methods.get(name);
+	        }
+	        else {
+	            return this.reflectionCapabilities.method(name);
+	        }
+	    };
+	    /** @internal */
+	    Reflector.prototype._getReflectionInfo = function (typeOrFunc) {
+	        if (lang_1.isPresent(this._usedKeys)) {
+	            this._usedKeys.add(typeOrFunc);
+	        }
+	        return this._injectableInfo.get(typeOrFunc);
+	    };
+	    /** @internal */
+	    Reflector.prototype._containsReflectionInfo = function (typeOrFunc) { return this._injectableInfo.has(typeOrFunc); };
+	    Reflector.prototype.importUri = function (type) { return this.reflectionCapabilities.importUri(type); };
+	    return Reflector;
+	}(reflector_reader_1.ReflectorReader));
+	exports.Reflector = Reflector;
+	function _mergeMaps(target, config) {
+	    collection_1.StringMapWrapper.forEach(config, function (v, k) { return target.set(k, v); });
+	}
+	//# sourceMappingURL=reflector.js.map
+
+/***/ },
+/* 239 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * A SecurityContext marks a location that has dangerous security implications, e.g. a DOM property
+	 * like `innerHTML` that could cause Cross Site Scripting (XSS) security bugs when improperly
+	 * handled.
+	 *
+	 * See DomSanitizationService for more details on security in Angular applications.
+	 *
+	 * @stable
+	 */
+	(function (SecurityContext) {
+	    SecurityContext[SecurityContext["NONE"] = 0] = "NONE";
+	    SecurityContext[SecurityContext["HTML"] = 1] = "HTML";
+	    SecurityContext[SecurityContext["STYLE"] = 2] = "STYLE";
+	    SecurityContext[SecurityContext["SCRIPT"] = 3] = "SCRIPT";
+	    SecurityContext[SecurityContext["URL"] = 4] = "URL";
+	    SecurityContext[SecurityContext["RESOURCE_URL"] = 5] = "RESOURCE_URL";
+	})(exports.SecurityContext || (exports.SecurityContext = {}));
+	var SecurityContext = exports.SecurityContext;
+	/**
+	 * SanitizationService is used by the views to sanitize potentially dangerous values.
+	 *
+	 * @stable
+	 */
+	var SanitizationService = (function () {
+	    function SanitizationService() {
+	    }
+	    return SanitizationService;
+	}());
+	exports.SanitizationService = SanitizationService;
+	//# sourceMappingURL=security.js.map
+
+/***/ },
+/* 240 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * Stores error information; delivered via [NgZone.onError] stream.
+	 * @deprecated
+	 */
+	var NgZoneError = (function () {
+	    function NgZoneError(error, stackTrace) {
+	        this.error = error;
+	        this.stackTrace = stackTrace;
+	    }
+	    return NgZoneError;
+	}());
+	exports.NgZoneError = NgZoneError;
+	var NgZoneImpl = (function () {
+	    function NgZoneImpl(_a) {
+	        var _this = this;
+	        var trace = _a.trace, onEnter = _a.onEnter, onLeave = _a.onLeave, setMicrotask = _a.setMicrotask, setMacrotask = _a.setMacrotask, onError = _a.onError;
+	        this.onEnter = onEnter;
+	        this.onLeave = onLeave;
+	        this.setMicrotask = setMicrotask;
+	        this.setMacrotask = setMacrotask;
+	        this.onError = onError;
+	        if (Zone) {
+	            this.outer = this.inner = Zone.current;
+	            if (Zone['wtfZoneSpec']) {
+	                this.inner = this.inner.fork(Zone['wtfZoneSpec']);
+	            }
+	            if (trace && Zone['longStackTraceZoneSpec']) {
+	                this.inner = this.inner.fork(Zone['longStackTraceZoneSpec']);
+	            }
+	            this.inner = this.inner.fork({
+	                name: 'angular',
+	                properties: { 'isAngularZone': true },
+	                onInvokeTask: function (delegate, current, target, task, applyThis, applyArgs) {
+	                    try {
+	                        _this.onEnter();
+	                        return delegate.invokeTask(target, task, applyThis, applyArgs);
+	                    }
+	                    finally {
+	                        _this.onLeave();
+	                    }
+	                },
+	                onInvoke: function (delegate, current, target, callback, applyThis, applyArgs, source) {
+	                    try {
+	                        _this.onEnter();
+	                        return delegate.invoke(target, callback, applyThis, applyArgs, source);
+	                    }
+	                    finally {
+	                        _this.onLeave();
+	                    }
+	                },
+	                onHasTask: function (delegate, current, target, hasTaskState) {
+	                    delegate.hasTask(target, hasTaskState);
+	                    if (current == target) {
+	                        // We are only interested in hasTask events which originate from our zone
+	                        // (A child hasTask event is not interesting to us)
+	                        if (hasTaskState.change == 'microTask') {
+	                            _this.setMicrotask(hasTaskState.microTask);
+	                        }
+	                        else if (hasTaskState.change == 'macroTask') {
+	                            _this.setMacrotask(hasTaskState.macroTask);
+	                        }
+	                    }
+	                },
+	                onHandleError: function (delegate, current, target, error) {
+	                    delegate.handleError(target, error);
+	                    _this.onError(new NgZoneError(error, error.stack));
+	                    return false;
+	                }
+	            });
+	        }
+	        else {
+	            throw new Error('Angular requires Zone.js polyfill.');
+	        }
+	    }
+	    NgZoneImpl.isInAngularZone = function () { return Zone.current.get('isAngularZone') === true; };
+	    NgZoneImpl.prototype.runInner = function (fn) { return this.inner.run(fn); };
+	    ;
+	    NgZoneImpl.prototype.runInnerGuarded = function (fn) { return this.inner.runGuarded(fn); };
+	    ;
+	    NgZoneImpl.prototype.runOuter = function (fn) { return this.outer.run(fn); };
+	    ;
+	    return NgZoneImpl;
+	}());
+	exports.NgZoneImpl = NgZoneImpl;
+	//# sourceMappingURL=ng_zone_impl.js.map
+
+/***/ },
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var collection_1 = __webpack_require__(11);
-	var reflective_provider_1 = __webpack_require__(108);
-	var reflective_exceptions_1 = __webpack_require__(106);
-	var exceptions_1 = __webpack_require__(9);
-	var reflective_key_1 = __webpack_require__(107);
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var isFunction_1 = __webpack_require__(388);
+	var Subscription_1 = __webpack_require__(160);
+	var rxSubscriber_1 = __webpack_require__(161);
+	var Observer_1 = __webpack_require__(513);
+	/**
+	 * Implements the {@link Observer} interface and extends the
+	 * {@link Subscription} class. While the {@link Observer} is the public API for
+	 * consuming the values of an {@link Observable}, all Observers get converted to
+	 * a Subscriber, in order to provide Subscription-like capabilities such as
+	 * `unsubscribe`. Subscriber is a common type in RxJS, and crucial for
+	 * implementing operators, but it is rarely used as a public API.
+	 *
+	 * @class Subscriber<T>
+	 */
+	var Subscriber = (function (_super) {
+	    __extends(Subscriber, _super);
+	    /**
+	     * @param {Observer|function(value: T): void} [destinationOrNext] A partially
+	     * defined Observer or a `next` callback function.
+	     * @param {function(e: ?any): void} [error] The `error` callback of an
+	     * Observer.
+	     * @param {function(): void} [complete] The `complete` callback of an
+	     * Observer.
+	     */
+	    function Subscriber(destinationOrNext, error, complete) {
+	        _super.call(this);
+	        this.syncErrorValue = null;
+	        this.syncErrorThrown = false;
+	        this.syncErrorThrowable = false;
+	        this.isStopped = false;
+	        switch (arguments.length) {
+	            case 0:
+	                this.destination = Observer_1.empty;
+	                break;
+	            case 1:
+	                if (!destinationOrNext) {
+	                    this.destination = Observer_1.empty;
+	                    break;
+	                }
+	                if (typeof destinationOrNext === 'object') {
+	                    if (destinationOrNext instanceof Subscriber) {
+	                        this.destination = destinationOrNext;
+	                        this.destination.add(this);
+	                    }
+	                    else {
+	                        this.syncErrorThrowable = true;
+	                        this.destination = new SafeSubscriber(this, destinationOrNext);
+	                    }
+	                    break;
+	                }
+	            default:
+	                this.syncErrorThrowable = true;
+	                this.destination = new SafeSubscriber(this, destinationOrNext, error, complete);
+	                break;
+	        }
+	    }
+	    /**
+	     * A static factory for a Subscriber, given a (potentially partial) definition
+	     * of an Observer.
+	     * @param {function(x: ?T): void} [next] The `next` callback of an Observer.
+	     * @param {function(e: ?any): void} [error] The `error` callback of an
+	     * Observer.
+	     * @param {function(): void} [complete] The `complete` callback of an
+	     * Observer.
+	     * @return {Subscriber<T>} A Subscriber wrapping the (partially defined)
+	     * Observer represented by the given arguments.
+	     */
+	    Subscriber.create = function (next, error, complete) {
+	        var subscriber = new Subscriber(next, error, complete);
+	        subscriber.syncErrorThrowable = false;
+	        return subscriber;
+	    };
+	    /**
+	     * The {@link Observer} callback to receive notifications of type `next` from
+	     * the Observable, with a value. The Observable may call this method 0 or more
+	     * times.
+	     * @param {T} [value] The `next` value.
+	     * @return {void}
+	     */
+	    Subscriber.prototype.next = function (value) {
+	        if (!this.isStopped) {
+	            this._next(value);
+	        }
+	    };
+	    /**
+	     * The {@link Observer} callback to receive notifications of type `error` from
+	     * the Observable, with an attached {@link Error}. Notifies the Observer that
+	     * the Observable has experienced an error condition.
+	     * @param {any} [err] The `error` exception.
+	     * @return {void}
+	     */
+	    Subscriber.prototype.error = function (err) {
+	        if (!this.isStopped) {
+	            this.isStopped = true;
+	            this._error(err);
+	        }
+	    };
+	    /**
+	     * The {@link Observer} callback to receive a valueless notification of type
+	     * `complete` from the Observable. Notifies the Observer that the Observable
+	     * has finished sending push-based notifications.
+	     * @return {void}
+	     */
+	    Subscriber.prototype.complete = function () {
+	        if (!this.isStopped) {
+	            this.isStopped = true;
+	            this._complete();
+	        }
+	    };
+	    Subscriber.prototype.unsubscribe = function () {
+	        if (this.isUnsubscribed) {
+	            return;
+	        }
+	        this.isStopped = true;
+	        _super.prototype.unsubscribe.call(this);
+	    };
+	    Subscriber.prototype._next = function (value) {
+	        this.destination.next(value);
+	    };
+	    Subscriber.prototype._error = function (err) {
+	        this.destination.error(err);
+	        this.unsubscribe();
+	    };
+	    Subscriber.prototype._complete = function () {
+	        this.destination.complete();
+	        this.unsubscribe();
+	    };
+	    Subscriber.prototype[rxSubscriber_1.$$rxSubscriber] = function () {
+	        return this;
+	    };
+	    return Subscriber;
+	}(Subscription_1.Subscription));
+	exports.Subscriber = Subscriber;
+	/**
+	 * We need this JSDoc comment for affecting ESDoc.
+	 * @ignore
+	 * @extends {Ignored}
+	 */
+	var SafeSubscriber = (function (_super) {
+	    __extends(SafeSubscriber, _super);
+	    function SafeSubscriber(_parent, observerOrNext, error, complete) {
+	        _super.call(this);
+	        this._parent = _parent;
+	        var next;
+	        var context = this;
+	        if (isFunction_1.isFunction(observerOrNext)) {
+	            next = observerOrNext;
+	        }
+	        else if (observerOrNext) {
+	            context = observerOrNext;
+	            next = observerOrNext.next;
+	            error = observerOrNext.error;
+	            complete = observerOrNext.complete;
+	            if (isFunction_1.isFunction(context.unsubscribe)) {
+	                this.add(context.unsubscribe.bind(context));
+	            }
+	            context.unsubscribe = this.unsubscribe.bind(this);
+	        }
+	        this._context = context;
+	        this._next = next;
+	        this._error = error;
+	        this._complete = complete;
+	    }
+	    SafeSubscriber.prototype.next = function (value) {
+	        if (!this.isStopped && this._next) {
+	            var _parent = this._parent;
+	            if (!_parent.syncErrorThrowable) {
+	                this.__tryOrUnsub(this._next, value);
+	            }
+	            else if (this.__tryOrSetError(_parent, this._next, value)) {
+	                this.unsubscribe();
+	            }
+	        }
+	    };
+	    SafeSubscriber.prototype.error = function (err) {
+	        if (!this.isStopped) {
+	            var _parent = this._parent;
+	            if (this._error) {
+	                if (!_parent.syncErrorThrowable) {
+	                    this.__tryOrUnsub(this._error, err);
+	                    this.unsubscribe();
+	                }
+	                else {
+	                    this.__tryOrSetError(_parent, this._error, err);
+	                    this.unsubscribe();
+	                }
+	            }
+	            else if (!_parent.syncErrorThrowable) {
+	                this.unsubscribe();
+	                throw err;
+	            }
+	            else {
+	                _parent.syncErrorValue = err;
+	                _parent.syncErrorThrown = true;
+	                this.unsubscribe();
+	            }
+	        }
+	    };
+	    SafeSubscriber.prototype.complete = function () {
+	        if (!this.isStopped) {
+	            var _parent = this._parent;
+	            if (this._complete) {
+	                if (!_parent.syncErrorThrowable) {
+	                    this.__tryOrUnsub(this._complete);
+	                    this.unsubscribe();
+	                }
+	                else {
+	                    this.__tryOrSetError(_parent, this._complete);
+	                    this.unsubscribe();
+	                }
+	            }
+	            else {
+	                this.unsubscribe();
+	            }
+	        }
+	    };
+	    SafeSubscriber.prototype.__tryOrUnsub = function (fn, value) {
+	        try {
+	            fn.call(this._context, value);
+	        }
+	        catch (err) {
+	            this.unsubscribe();
+	            throw err;
+	        }
+	    };
+	    SafeSubscriber.prototype.__tryOrSetError = function (parent, fn, value) {
+	        try {
+	            fn.call(this._context, value);
+	        }
+	        catch (err) {
+	            parent.syncErrorValue = err;
+	            parent.syncErrorThrown = true;
+	            return true;
+	        }
+	        return false;
+	    };
+	    SafeSubscriber.prototype._unsubscribe = function () {
+	        var _parent = this._parent;
+	        this._context = null;
+	        this._parent = null;
+	        _parent.unsubscribe();
+	    };
+	    return SafeSubscriber;
+	}(Subscriber));
+	//# sourceMappingURL=Subscriber.js.map
+
+/***/ },
+/* 387 */
+/***/ function(module, exports) {
+
+	"use strict";
+	// typeof any so that it we don't have to cast when comparing a result to the error object
+	exports.errorObject = { e: {} };
+	//# sourceMappingURL=errorObject.js.map
+
+/***/ },
+/* 388 */
+/***/ function(module, exports) {
+
+	"use strict";
+	function isFunction(x) {
+	    return typeof x === 'function';
+	}
+	exports.isFunction = isFunction;
+	//# sourceMappingURL=isFunction.js.map
+
+/***/ },
+/* 389 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var ng_class_1 = __webpack_require__(168);
+	var ng_for_1 = __webpack_require__(169);
+	var ng_if_1 = __webpack_require__(170);
+	var ng_plural_1 = __webpack_require__(171);
+	var ng_style_1 = __webpack_require__(172);
+	var ng_switch_1 = __webpack_require__(96);
+	var ng_template_outlet_1 = __webpack_require__(173);
+	/**
+	 * A collection of Angular core directives that are likely to be used in each and every Angular
+	 * application.
+	 *
+	 * This collection can be used to quickly enumerate all the built-in directives in the `directives`
+	 * property of the `@Component` annotation.
+	 *
+	 * ### Example ([live demo](http://plnkr.co/edit/yakGwpCdUkg0qfzX5m8g?p=preview))
+	 *
+	 * Instead of writing:
+	 *
+	 * ```typescript
+	 * import {NgClass, NgIf, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault} from '@angular/common';
+	 * import {OtherDirective} from './myDirectives';
+	 *
+	 * @Component({
+	 *   selector: 'my-component',
+	 *   templateUrl: 'myComponent.html',
+	 *   directives: [NgClass, NgIf, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault, OtherDirective]
+	 * })
+	 * export class MyComponent {
+	 *   ...
+	 * }
+	 * ```
+	 * one could import all the core directives at once:
+	 *
+	 * ```typescript
+	 * import {CORE_DIRECTIVES} from '@angular/common';
+	 * import {OtherDirective} from './myDirectives';
+	 *
+	 * @Component({
+	 *   selector: 'my-component',
+	 *   templateUrl: 'myComponent.html',
+	 *   directives: [CORE_DIRECTIVES, OtherDirective]
+	 * })
+	 * export class MyComponent {
+	 *   ...
+	 * }
+	 * ```
+	 *
+	 * @stable
+	 */
+	exports.CORE_DIRECTIVES = [
+	    ng_class_1.NgClass,
+	    ng_for_1.NgFor,
+	    ng_if_1.NgIf,
+	    ng_template_outlet_1.NgTemplateOutlet,
+	    ng_style_1.NgStyle,
+	    ng_switch_1.NgSwitch,
+	    ng_switch_1.NgSwitchCase,
+	    ng_switch_1.NgSwitchDefault,
+	    ng_plural_1.NgPlural,
+	    ng_plural_1.NgPluralCase,
+	];
+	//# sourceMappingURL=core_directives.js.map
+
+/***/ },
+/* 390 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * @module
+	 * @description
+	 * This module is used for handling user input, by defining and building a {@link ControlGroup} that
+	 * consists of
+	 * {@link Control} objects, and mapping them onto the DOM. {@link Control} objects can then be used
+	 * to read information
+	 * from the form DOM elements.
+	 *
+	 * Forms providers are not included in default providers; you must import these providers
+	 * explicitly.
+	 */
+	var core_1 = __webpack_require__(1);
+	var directives_1 = __webpack_require__(177);
+	var radio_control_value_accessor_1 = __webpack_require__(62);
+	var form_builder_1 = __webpack_require__(178);
+	var directives_2 = __webpack_require__(177);
+	exports.FORM_DIRECTIVES = directives_2.FORM_DIRECTIVES;
+	exports.RadioButtonState = directives_2.RadioButtonState;
+	var abstract_control_directive_1 = __webpack_require__(97);
+	exports.AbstractControlDirective = abstract_control_directive_1.AbstractControlDirective;
+	var checkbox_value_accessor_1 = __webpack_require__(60);
+	exports.CheckboxControlValueAccessor = checkbox_value_accessor_1.CheckboxControlValueAccessor;
+	var control_container_1 = __webpack_require__(44);
+	exports.ControlContainer = control_container_1.ControlContainer;
+	var control_value_accessor_1 = __webpack_require__(21);
+	exports.NG_VALUE_ACCESSOR = control_value_accessor_1.NG_VALUE_ACCESSOR;
+	var default_value_accessor_1 = __webpack_require__(61);
+	exports.DefaultValueAccessor = default_value_accessor_1.DefaultValueAccessor;
+	var ng_control_1 = __webpack_require__(31);
+	exports.NgControl = ng_control_1.NgControl;
+	var ng_control_group_1 = __webpack_require__(98);
+	exports.NgControlGroup = ng_control_group_1.NgControlGroup;
+	var ng_control_name_1 = __webpack_require__(99);
+	exports.NgControlName = ng_control_name_1.NgControlName;
+	var ng_control_status_1 = __webpack_require__(100);
+	exports.NgControlStatus = ng_control_status_1.NgControlStatus;
+	var ng_form_1 = __webpack_require__(101);
+	exports.NgForm = ng_form_1.NgForm;
+	var ng_form_control_1 = __webpack_require__(102);
+	exports.NgFormControl = ng_form_control_1.NgFormControl;
+	var ng_form_model_1 = __webpack_require__(103);
+	exports.NgFormModel = ng_form_model_1.NgFormModel;
+	var ng_model_1 = __webpack_require__(104);
+	exports.NgModel = ng_model_1.NgModel;
+	var select_control_value_accessor_1 = __webpack_require__(63);
+	exports.NgSelectOption = select_control_value_accessor_1.NgSelectOption;
+	exports.SelectControlValueAccessor = select_control_value_accessor_1.SelectControlValueAccessor;
+	var validators_1 = __webpack_require__(107);
+	exports.MaxLengthValidator = validators_1.MaxLengthValidator;
+	exports.MinLengthValidator = validators_1.MinLengthValidator;
+	exports.PatternValidator = validators_1.PatternValidator;
+	exports.RequiredValidator = validators_1.RequiredValidator;
+	var form_builder_2 = __webpack_require__(178);
+	exports.FormBuilder = form_builder_2.FormBuilder;
+	var model_1 = __webpack_require__(64);
+	exports.AbstractControl = model_1.AbstractControl;
+	exports.Control = model_1.Control;
+	exports.ControlArray = model_1.ControlArray;
+	exports.ControlGroup = model_1.ControlGroup;
+	var validators_2 = __webpack_require__(23);
+	exports.NG_ASYNC_VALIDATORS = validators_2.NG_ASYNC_VALIDATORS;
+	exports.NG_VALIDATORS = validators_2.NG_VALIDATORS;
+	exports.Validators = validators_2.Validators;
+	/**
+	 * Shorthand set of providers used for building Angular forms.
+	 *
+	 * ### Example
+	 *
+	 * ```typescript
+	 * bootstrap(MyApp, [FORM_PROVIDERS]);
+	 * ```
+	 *
+	 * @experimental
+	 */
+	exports.FORM_PROVIDERS = [form_builder_1.FormBuilder, radio_control_value_accessor_1.RadioControlRegistry];
+	var DeprecatedFormsModule = (function () {
+	    function DeprecatedFormsModule() {
+	    }
+	    /** @nocollapse */
+	    DeprecatedFormsModule.decorators = [
+	        { type: core_1.NgModule, args: [{
+	                    providers: [
+	                        exports.FORM_PROVIDERS,
+	                    ],
+	                    declarations: directives_1.FORM_DIRECTIVES,
+	                    exports: directives_1.FORM_DIRECTIVES
+	                },] },
+	    ];
+	    return DeprecatedFormsModule;
+	}());
+	exports.DeprecatedFormsModule = DeprecatedFormsModule;
+	//# sourceMappingURL=forms-deprecated.js.map
+
+/***/ },
+/* 391 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	function normalizeValidator(validator) {
+	    if (validator.validate !== undefined) {
+	        return function (c) { return validator.validate(c); };
+	    }
+	    else {
+	        return validator;
+	    }
+	}
+	exports.normalizeValidator = normalizeValidator;
+	function normalizeAsyncValidator(validator) {
+	    if (validator.validate !== undefined) {
+	        return function (c) { return validator.validate(c); };
+	    }
+	    else {
+	        return validator;
+	    }
+	}
+	exports.normalizeAsyncValidator = normalizeAsyncValidator;
+	//# sourceMappingURL=normalize_validator.js.map
+
+/***/ },
+/* 392 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	__export(__webpack_require__(110));
+	__export(__webpack_require__(65));
+	__export(__webpack_require__(393));
+	__export(__webpack_require__(394));
+	__export(__webpack_require__(109));
+	//# sourceMappingURL=location.js.map
+
+/***/ },
+/* 393 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var core_1 = __webpack_require__(1);
+	var lang_1 = __webpack_require__(5);
+	var location_1 = __webpack_require__(109);
+	var location_strategy_1 = __webpack_require__(65);
+	var platform_location_1 = __webpack_require__(110);
+	var HashLocationStrategy = (function (_super) {
+	    __extends(HashLocationStrategy, _super);
+	    function HashLocationStrategy(_platformLocation, _baseHref) {
+	        _super.call(this);
+	        this._platformLocation = _platformLocation;
+	        this._baseHref = '';
+	        if (lang_1.isPresent(_baseHref)) {
+	            this._baseHref = _baseHref;
+	        }
+	    }
+	    HashLocationStrategy.prototype.onPopState = function (fn) {
+	        this._platformLocation.onPopState(fn);
+	        this._platformLocation.onHashChange(fn);
+	    };
+	    HashLocationStrategy.prototype.getBaseHref = function () { return this._baseHref; };
+	    HashLocationStrategy.prototype.path = function (includeHash) {
+	        if (includeHash === void 0) { includeHash = false; }
+	        // the hash value is always prefixed with a `#`
+	        // and if it is empty then it will stay empty
+	        var path = this._platformLocation.hash;
+	        if (!lang_1.isPresent(path))
+	            path = '#';
+	        return path.length > 0 ? path.substring(1) : path;
+	    };
+	    HashLocationStrategy.prototype.prepareExternalUrl = function (internal) {
+	        var url = location_1.Location.joinWithSlash(this._baseHref, internal);
+	        return url.length > 0 ? ('#' + url) : url;
+	    };
+	    HashLocationStrategy.prototype.pushState = function (state, title, path, queryParams) {
+	        var url = this.prepareExternalUrl(path + location_1.Location.normalizeQueryParams(queryParams));
+	        if (url.length == 0) {
+	            url = this._platformLocation.pathname;
+	        }
+	        this._platformLocation.pushState(state, title, url);
+	    };
+	    HashLocationStrategy.prototype.replaceState = function (state, title, path, queryParams) {
+	        var url = this.prepareExternalUrl(path + location_1.Location.normalizeQueryParams(queryParams));
+	        if (url.length == 0) {
+	            url = this._platformLocation.pathname;
+	        }
+	        this._platformLocation.replaceState(state, title, url);
+	    };
+	    HashLocationStrategy.prototype.forward = function () { this._platformLocation.forward(); };
+	    HashLocationStrategy.prototype.back = function () { this._platformLocation.back(); };
+	    /** @nocollapse */
+	    HashLocationStrategy.decorators = [
+	        { type: core_1.Injectable },
+	    ];
+	    /** @nocollapse */
+	    HashLocationStrategy.ctorParameters = [
+	        { type: platform_location_1.PlatformLocation, },
+	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Inject, args: [location_strategy_1.APP_BASE_HREF,] },] },
+	    ];
+	    return HashLocationStrategy;
+	}(location_strategy_1.LocationStrategy));
+	exports.HashLocationStrategy = HashLocationStrategy;
+	//# sourceMappingURL=hash_location_strategy.js.map
+
+/***/ },
+/* 394 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var core_1 = __webpack_require__(1);
+	var exceptions_1 = __webpack_require__(30);
+	var lang_1 = __webpack_require__(5);
+	var location_1 = __webpack_require__(109);
+	var location_strategy_1 = __webpack_require__(65);
+	var platform_location_1 = __webpack_require__(110);
+	var PathLocationStrategy = (function (_super) {
+	    __extends(PathLocationStrategy, _super);
+	    function PathLocationStrategy(_platformLocation, href) {
+	        _super.call(this);
+	        this._platformLocation = _platformLocation;
+	        if (lang_1.isBlank(href)) {
+	            href = this._platformLocation.getBaseHrefFromDOM();
+	        }
+	        if (lang_1.isBlank(href)) {
+	            throw new exceptions_1.BaseException("No base href set. Please provide a value for the APP_BASE_HREF token or add a base element to the document.");
+	        }
+	        this._baseHref = href;
+	    }
+	    PathLocationStrategy.prototype.onPopState = function (fn) {
+	        this._platformLocation.onPopState(fn);
+	        this._platformLocation.onHashChange(fn);
+	    };
+	    PathLocationStrategy.prototype.getBaseHref = function () { return this._baseHref; };
+	    PathLocationStrategy.prototype.prepareExternalUrl = function (internal) {
+	        return location_1.Location.joinWithSlash(this._baseHref, internal);
+	    };
+	    PathLocationStrategy.prototype.path = function (includeHash) {
+	        if (includeHash === void 0) { includeHash = false; }
+	        var pathname = this._platformLocation.pathname +
+	            location_1.Location.normalizeQueryParams(this._platformLocation.search);
+	        var hash = this._platformLocation.hash;
+	        return hash && includeHash ? "" + pathname + hash : pathname;
+	    };
+	    PathLocationStrategy.prototype.pushState = function (state, title, url, queryParams) {
+	        var externalUrl = this.prepareExternalUrl(url + location_1.Location.normalizeQueryParams(queryParams));
+	        this._platformLocation.pushState(state, title, externalUrl);
+	    };
+	    PathLocationStrategy.prototype.replaceState = function (state, title, url, queryParams) {
+	        var externalUrl = this.prepareExternalUrl(url + location_1.Location.normalizeQueryParams(queryParams));
+	        this._platformLocation.replaceState(state, title, externalUrl);
+	    };
+	    PathLocationStrategy.prototype.forward = function () { this._platformLocation.forward(); };
+	    PathLocationStrategy.prototype.back = function () { this._platformLocation.back(); };
+	    /** @nocollapse */
+	    PathLocationStrategy.decorators = [
+	        { type: core_1.Injectable },
+	    ];
+	    /** @nocollapse */
+	    PathLocationStrategy.ctorParameters = [
+	        { type: platform_location_1.PlatformLocation, },
+	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Inject, args: [location_strategy_1.APP_BASE_HREF,] },] },
+	    ];
+	    return PathLocationStrategy;
+	}(location_strategy_1.LocationStrategy));
+	exports.PathLocationStrategy = PathLocationStrategy;
+	//# sourceMappingURL=path_location_strategy.js.map
+
+/***/ },
+/* 395 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * @module
+	 * @description
+	 * This module provides a set of common Pipes.
+	 */
+	var async_pipe_1 = __webpack_require__(180);
+	var date_pipe_1 = __webpack_require__(181);
+	var i18n_plural_pipe_1 = __webpack_require__(182);
+	var i18n_select_pipe_1 = __webpack_require__(183);
+	var json_pipe_1 = __webpack_require__(184);
+	var lowercase_pipe_1 = __webpack_require__(185);
+	var number_pipe_1 = __webpack_require__(186);
+	var replace_pipe_1 = __webpack_require__(187);
+	var slice_pipe_1 = __webpack_require__(188);
+	var uppercase_pipe_1 = __webpack_require__(189);
+	/**
+	 * A collection of Angular core pipes that are likely to be used in each and every
+	 * application.
+	 *
+	 * This collection can be used to quickly enumerate all the built-in pipes in the `pipes`
+	 * property of the `@Component` decorator.
+	 *
+	 * @experimental Contains i18n pipes which are experimental
+	 */
+	exports.COMMON_PIPES = [
+	    async_pipe_1.AsyncPipe,
+	    uppercase_pipe_1.UpperCasePipe,
+	    lowercase_pipe_1.LowerCasePipe,
+	    json_pipe_1.JsonPipe,
+	    slice_pipe_1.SlicePipe,
+	    number_pipe_1.DecimalPipe,
+	    number_pipe_1.PercentPipe,
+	    number_pipe_1.CurrencyPipe,
+	    date_pipe_1.DatePipe,
+	    replace_pipe_1.ReplacePipe,
+	    i18n_plural_pipe_1.I18nPluralPipe,
+	    i18n_select_pipe_1.I18nSelectPipe,
+	];
+	//# sourceMappingURL=common_pipes.js.map
+
+/***/ },
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var animation_constants_1 = __webpack_require__(212);
+	var animation_group_player_1 = __webpack_require__(213);
+	var animation_keyframe_1 = __webpack_require__(427);
+	var animation_player_1 = __webpack_require__(124);
+	var animation_sequence_player_1 = __webpack_require__(428);
+	var animationUtils = __webpack_require__(429);
+	var animation_styles_1 = __webpack_require__(430);
+	var change_detection_util = __webpack_require__(75);
+	var constants = __webpack_require__(76);
+	var console = __webpack_require__(77);
+	var debug = __webpack_require__(435);
+	var provider_util = __webpack_require__(220);
+	var reflective_provider = __webpack_require__(131);
+	var component_factory_resolver = __webpack_require__(80);
+	var debug_context = __webpack_require__(224);
+	var element = __webpack_require__(134);
+	var ng_module_factory = __webpack_require__(227);
+	var template_ref = __webpack_require__(228);
+	var view = __webpack_require__(444);
+	var view_type = __webpack_require__(81);
+	var view_utils = __webpack_require__(82);
+	var lifecycle_hooks = __webpack_require__(234);
+	var metadata_view = __webpack_require__(236);
+	var wtf_init = __webpack_require__(448);
+	var reflection = __webpack_require__(136);
+	var reflection_capabilities = __webpack_require__(237);
+	var reflector_reader = __webpack_require__(137);
+	var api = __webpack_require__(138);
+	var decorators = __webpack_require__(84);
+	exports.__core_private__ = {
+	    isDefaultChangeDetectionStrategy: constants.isDefaultChangeDetectionStrategy,
+	    ChangeDetectorStatus: constants.ChangeDetectorStatus,
+	    CHANGE_DETECTION_STRATEGY_VALUES: constants.CHANGE_DETECTION_STRATEGY_VALUES,
+	    constructDependencies: reflective_provider.constructDependencies,
+	    LifecycleHooks: lifecycle_hooks.LifecycleHooks,
+	    LIFECYCLE_HOOKS_VALUES: lifecycle_hooks.LIFECYCLE_HOOKS_VALUES,
+	    ReflectorReader: reflector_reader.ReflectorReader,
+	    CodegenComponentFactoryResolver: component_factory_resolver.CodegenComponentFactoryResolver,
+	    AppElement: element.AppElement,
+	    AppView: view.AppView,
+	    DebugAppView: view.DebugAppView,
+	    NgModuleInjector: ng_module_factory.NgModuleInjector,
+	    ViewType: view_type.ViewType,
+	    MAX_INTERPOLATION_VALUES: view_utils.MAX_INTERPOLATION_VALUES,
+	    checkBinding: view_utils.checkBinding,
+	    flattenNestedViewRenderNodes: view_utils.flattenNestedViewRenderNodes,
+	    interpolate: view_utils.interpolate,
+	    ViewUtils: view_utils.ViewUtils,
+	    VIEW_ENCAPSULATION_VALUES: metadata_view.VIEW_ENCAPSULATION_VALUES,
+	    DebugContext: debug_context.DebugContext,
+	    StaticNodeDebugInfo: debug_context.StaticNodeDebugInfo,
+	    devModeEqual: change_detection_util.devModeEqual,
+	    UNINITIALIZED: change_detection_util.UNINITIALIZED,
+	    ValueUnwrapper: change_detection_util.ValueUnwrapper,
+	    RenderDebugInfo: api.RenderDebugInfo,
+	    TemplateRef_: template_ref.TemplateRef_,
+	    wtfInit: wtf_init.wtfInit,
+	    ReflectionCapabilities: reflection_capabilities.ReflectionCapabilities,
+	    makeDecorator: decorators.makeDecorator,
+	    DebugDomRootRenderer: debug.DebugDomRootRenderer,
+	    createProvider: provider_util.createProvider,
+	    isProviderLiteral: provider_util.isProviderLiteral,
+	    EMPTY_ARRAY: view_utils.EMPTY_ARRAY,
+	    EMPTY_MAP: view_utils.EMPTY_MAP,
+	    pureProxy1: view_utils.pureProxy1,
+	    pureProxy2: view_utils.pureProxy2,
+	    pureProxy3: view_utils.pureProxy3,
+	    pureProxy4: view_utils.pureProxy4,
+	    pureProxy5: view_utils.pureProxy5,
+	    pureProxy6: view_utils.pureProxy6,
+	    pureProxy7: view_utils.pureProxy7,
+	    pureProxy8: view_utils.pureProxy8,
+	    pureProxy9: view_utils.pureProxy9,
+	    pureProxy10: view_utils.pureProxy10,
+	    castByValue: view_utils.castByValue,
+	    Console: console.Console,
+	    reflector: reflection.reflector,
+	    Reflector: reflection.Reflector,
+	    NoOpAnimationPlayer: animation_player_1.NoOpAnimationPlayer,
+	    AnimationPlayer: animation_player_1.AnimationPlayer,
+	    AnimationSequencePlayer: animation_sequence_player_1.AnimationSequencePlayer,
+	    AnimationGroupPlayer: animation_group_player_1.AnimationGroupPlayer,
+	    AnimationKeyframe: animation_keyframe_1.AnimationKeyframe,
+	    prepareFinalAnimationStyles: animationUtils.prepareFinalAnimationStyles,
+	    balanceAnimationKeyframes: animationUtils.balanceAnimationKeyframes,
+	    flattenStyles: animationUtils.flattenStyles,
+	    clearStyles: animationUtils.clearStyles,
+	    renderStyles: animationUtils.renderStyles,
+	    collectAndResolveStyles: animationUtils.collectAndResolveStyles,
+	    AnimationStyles: animation_styles_1.AnimationStyles,
+	    ANY_STATE: animation_constants_1.ANY_STATE,
+	    DEFAULT_STATE: animation_constants_1.DEFAULT_STATE,
+	    EMPTY_STATE: animation_constants_1.EMPTY_STATE,
+	    FILL_STYLE_FLAG: animation_constants_1.FILL_STYLE_FLAG
+	};
+	//# sourceMappingURL=private_export.js.map
+
+/***/ },
+/* 427 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var AnimationKeyframe = (function () {
+	    function AnimationKeyframe(offset, styles) {
+	        this.offset = offset;
+	        this.styles = styles;
+	    }
+	    return AnimationKeyframe;
+	}());
+	exports.AnimationKeyframe = AnimationKeyframe;
+	//# sourceMappingURL=animation_keyframe.js.map
+
+/***/ },
+/* 428 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var lang_1 = __webpack_require__(3);
+	var animation_player_1 = __webpack_require__(124);
+	var AnimationSequencePlayer = (function () {
+	    function AnimationSequencePlayer(_players) {
+	        var _this = this;
+	        this._players = _players;
+	        this._currentIndex = 0;
+	        this._subscriptions = [];
+	        this._finished = false;
+	        this._started = false;
+	        this.parentPlayer = null;
+	        this._players.forEach(function (player) { player.parentPlayer = _this; });
+	        this._onNext(false);
+	    }
+	    AnimationSequencePlayer.prototype._onNext = function (start) {
+	        var _this = this;
+	        if (this._finished)
+	            return;
+	        if (this._players.length == 0) {
+	            this._activePlayer = new animation_player_1.NoOpAnimationPlayer();
+	            lang_1.scheduleMicroTask(function () { return _this._onFinish(); });
+	        }
+	        else if (this._currentIndex >= this._players.length) {
+	            this._activePlayer = new animation_player_1.NoOpAnimationPlayer();
+	            this._onFinish();
+	        }
+	        else {
+	            var player = this._players[this._currentIndex++];
+	            player.onDone(function () { return _this._onNext(true); });
+	            this._activePlayer = player;
+	            if (start) {
+	                player.play();
+	            }
+	        }
+	    };
+	    AnimationSequencePlayer.prototype._onFinish = function () {
+	        if (!this._finished) {
+	            this._finished = true;
+	            if (!lang_1.isPresent(this.parentPlayer)) {
+	                this.destroy();
+	            }
+	            this._subscriptions.forEach(function (subscription) { return subscription(); });
+	            this._subscriptions = [];
+	        }
+	    };
+	    AnimationSequencePlayer.prototype.init = function () { this._players.forEach(function (player) { return player.init(); }); };
+	    AnimationSequencePlayer.prototype.onDone = function (fn) { this._subscriptions.push(fn); };
+	    AnimationSequencePlayer.prototype.hasStarted = function () { return this._started; };
+	    AnimationSequencePlayer.prototype.play = function () {
+	        if (!lang_1.isPresent(this.parentPlayer)) {
+	            this.init();
+	        }
+	        this._started = true;
+	        this._activePlayer.play();
+	    };
+	    AnimationSequencePlayer.prototype.pause = function () { this._activePlayer.pause(); };
+	    AnimationSequencePlayer.prototype.restart = function () {
+	        if (this._players.length > 0) {
+	            this.reset();
+	            this._players[0].restart();
+	        }
+	    };
+	    AnimationSequencePlayer.prototype.reset = function () { this._players.forEach(function (player) { return player.reset(); }); };
+	    AnimationSequencePlayer.prototype.finish = function () {
+	        this._onFinish();
+	        this._players.forEach(function (player) { return player.finish(); });
+	    };
+	    AnimationSequencePlayer.prototype.destroy = function () {
+	        this._onFinish();
+	        this._players.forEach(function (player) { return player.destroy(); });
+	    };
+	    AnimationSequencePlayer.prototype.setPosition = function (p /** TODO #9100 */) { this._players[0].setPosition(p); };
+	    AnimationSequencePlayer.prototype.getPosition = function () { return this._players[0].getPosition(); };
+	    return AnimationSequencePlayer;
+	}());
+	exports.AnimationSequencePlayer = AnimationSequencePlayer;
+	//# sourceMappingURL=animation_sequence_player.js.map
+
+/***/ },
+/* 429 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var collection_1 = __webpack_require__(12);
+	var lang_1 = __webpack_require__(3);
+	var animation_constants_1 = __webpack_require__(212);
+	var metadata_1 = __webpack_require__(214);
+	function prepareFinalAnimationStyles(previousStyles, newStyles, nullValue) {
+	    if (nullValue === void 0) { nullValue = null; }
+	    var finalStyles = {};
+	    collection_1.StringMapWrapper.forEach(newStyles, function (value, prop) {
+	        finalStyles[prop] = value == metadata_1.AUTO_STYLE ? nullValue : value.toString();
+	    });
+	    collection_1.StringMapWrapper.forEach(previousStyles, function (value, prop) {
+	        if (!lang_1.isPresent(finalStyles[prop])) {
+	            finalStyles[prop] = nullValue;
+	        }
+	    });
+	    return finalStyles;
+	}
+	exports.prepareFinalAnimationStyles = prepareFinalAnimationStyles;
+	function balanceAnimationKeyframes(collectedStyles, finalStateStyles, keyframes) {
+	    var limit = keyframes.length - 1;
+	    var firstKeyframe = keyframes[0];
+	    // phase 1: copy all the styles from the first keyframe into the lookup map
+	    var flatenedFirstKeyframeStyles = flattenStyles(firstKeyframe.styles.styles);
+	    var extraFirstKeyframeStyles = {};
+	    var hasExtraFirstStyles = false;
+	    collection_1.StringMapWrapper.forEach(collectedStyles, function (value, prop) {
+	        // if the style is already defined in the first keyframe then
+	        // we do not replace it.
+	        if (!flatenedFirstKeyframeStyles[prop]) {
+	            flatenedFirstKeyframeStyles[prop] = value;
+	            extraFirstKeyframeStyles[prop] = value;
+	            hasExtraFirstStyles = true;
+	        }
+	    });
+	    var keyframeCollectedStyles = collection_1.StringMapWrapper.merge({}, flatenedFirstKeyframeStyles);
+	    // phase 2: normalize the final keyframe
+	    var finalKeyframe = keyframes[limit];
+	    collection_1.ListWrapper.insert(finalKeyframe.styles.styles, 0, finalStateStyles);
+	    var flatenedFinalKeyframeStyles = flattenStyles(finalKeyframe.styles.styles);
+	    var extraFinalKeyframeStyles = {};
+	    var hasExtraFinalStyles = false;
+	    collection_1.StringMapWrapper.forEach(keyframeCollectedStyles, function (value, prop) {
+	        if (!lang_1.isPresent(flatenedFinalKeyframeStyles[prop])) {
+	            extraFinalKeyframeStyles[prop] = metadata_1.AUTO_STYLE;
+	            hasExtraFinalStyles = true;
+	        }
+	    });
+	    if (hasExtraFinalStyles) {
+	        finalKeyframe.styles.styles.push(extraFinalKeyframeStyles);
+	    }
+	    collection_1.StringMapWrapper.forEach(flatenedFinalKeyframeStyles, function (value, prop) {
+	        if (!lang_1.isPresent(flatenedFirstKeyframeStyles[prop])) {
+	            extraFirstKeyframeStyles[prop] = metadata_1.AUTO_STYLE;
+	            hasExtraFirstStyles = true;
+	        }
+	    });
+	    if (hasExtraFirstStyles) {
+	        firstKeyframe.styles.styles.push(extraFirstKeyframeStyles);
+	    }
+	    return keyframes;
+	}
+	exports.balanceAnimationKeyframes = balanceAnimationKeyframes;
+	function clearStyles(styles) {
+	    var finalStyles = {};
+	    collection_1.StringMapWrapper.keys(styles).forEach(function (key) { finalStyles[key] = null; });
+	    return finalStyles;
+	}
+	exports.clearStyles = clearStyles;
+	function collectAndResolveStyles(collection, styles) {
+	    return styles.map(function (entry) {
+	        var stylesObj = {};
+	        collection_1.StringMapWrapper.forEach(entry, function (value, prop) {
+	            if (value == animation_constants_1.FILL_STYLE_FLAG) {
+	                value = collection[prop];
+	                if (!lang_1.isPresent(value)) {
+	                    value = metadata_1.AUTO_STYLE;
+	                }
+	            }
+	            collection[prop] = value;
+	            stylesObj[prop] = value;
+	        });
+	        return stylesObj;
+	    });
+	}
+	exports.collectAndResolveStyles = collectAndResolveStyles;
+	function renderStyles(element, renderer, styles) {
+	    collection_1.StringMapWrapper.forEach(styles, function (value, prop) { renderer.setElementStyle(element, prop, value); });
+	}
+	exports.renderStyles = renderStyles;
+	function flattenStyles(styles) {
+	    var finalStyles = {};
+	    styles.forEach(function (entry) {
+	        collection_1.StringMapWrapper.forEach(entry, function (value, prop) { finalStyles[prop] = value; });
+	    });
+	    return finalStyles;
+	}
+	exports.flattenStyles = flattenStyles;
+	//# sourceMappingURL=animation_style_util.js.map
+
+/***/ },
+/* 430 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var AnimationStyles = (function () {
+	    function AnimationStyles(styles) {
+	        this.styles = styles;
+	    }
+	    return AnimationStyles;
+	}());
+	exports.AnimationStyles = AnimationStyles;
+	//# sourceMappingURL=animation_styles.js.map
+
+/***/ },
+/* 431 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var collection_1 = __webpack_require__(12);
+	var lang_1 = __webpack_require__(3);
+	var ViewAnimationMap = (function () {
+	    function ViewAnimationMap() {
+	        this._map = new collection_1.Map();
+	        this._allPlayers = [];
+	    }
+	    Object.defineProperty(ViewAnimationMap.prototype, "length", {
+	        get: function () { return this.getAllPlayers().length; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ViewAnimationMap.prototype.find = function (element, animationName) {
+	        var playersByAnimation = this._map.get(element);
+	        if (lang_1.isPresent(playersByAnimation)) {
+	            return playersByAnimation[animationName];
+	        }
+	    };
+	    ViewAnimationMap.prototype.findAllPlayersByElement = function (element) {
+	        var el = this._map.get(element);
+	        return el ? collection_1.StringMapWrapper.values(el) : [];
+	    };
+	    ViewAnimationMap.prototype.set = function (element, animationName, player) {
+	        var playersByAnimation = this._map.get(element);
+	        if (!lang_1.isPresent(playersByAnimation)) {
+	            playersByAnimation = {};
+	        }
+	        var existingEntry = playersByAnimation[animationName];
+	        if (lang_1.isPresent(existingEntry)) {
+	            this.remove(element, animationName);
+	        }
+	        playersByAnimation[animationName] = player;
+	        this._allPlayers.push(player);
+	        this._map.set(element, playersByAnimation);
+	    };
+	    ViewAnimationMap.prototype.getAllPlayers = function () { return this._allPlayers; };
+	    ViewAnimationMap.prototype.remove = function (element, animationName) {
+	        var playersByAnimation = this._map.get(element);
+	        if (lang_1.isPresent(playersByAnimation)) {
+	            var player = playersByAnimation[animationName];
+	            delete playersByAnimation[animationName];
+	            var index = this._allPlayers.indexOf(player);
+	            collection_1.ListWrapper.removeAt(this._allPlayers, index);
+	            if (collection_1.StringMapWrapper.isEmpty(playersByAnimation)) {
+	                this._map.delete(element);
+	            }
+	        }
+	    };
+	    return ViewAnimationMap;
+	}());
+	exports.ViewAnimationMap = ViewAnimationMap;
+	//# sourceMappingURL=view_animation_map.js.map
+
+/***/ },
+/* 432 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var application_init_1 = __webpack_require__(125);
+	var application_ref_1 = __webpack_require__(126);
+	var application_tokens_1 = __webpack_require__(73);
+	var change_detection_1 = __webpack_require__(74);
+	var compiler_1 = __webpack_require__(48);
+	var component_resolver_1 = __webpack_require__(133);
+	var dynamic_component_loader_1 = __webpack_require__(225);
+	var view_utils_1 = __webpack_require__(82);
+	var metadata_1 = __webpack_require__(231);
+	function _iterableDiffersFactory() {
+	    return change_detection_1.defaultIterableDiffers;
+	}
+	exports._iterableDiffersFactory = _iterableDiffersFactory;
+	function _keyValueDiffersFactory() {
+	    return change_detection_1.defaultKeyValueDiffers;
+	}
+	exports._keyValueDiffersFactory = _keyValueDiffersFactory;
+	/**
+	 * A default set of providers which should be included in any Angular
+	 * application, regardless of the platform it runs onto.
+	 *
+	 * @deprecated Include `ApplicationModule` instead.
+	 */
+	exports.APPLICATION_COMMON_PROVIDERS = [];
+	var ApplicationModule = (function () {
+	    function ApplicationModule() {
+	    }
+	    /** @nocollapse */
+	    ApplicationModule.decorators = [
+	        { type: metadata_1.NgModule, args: [{
+	                    providers: [
+	                        application_ref_1.ApplicationRef_,
+	                        { provide: application_ref_1.ApplicationRef, useExisting: application_ref_1.ApplicationRef_ },
+	                        application_init_1.ApplicationInitStatus,
+	                        compiler_1.Compiler,
+	                        { provide: component_resolver_1.ComponentResolver, useExisting: compiler_1.Compiler },
+	                        application_tokens_1.APP_ID_RANDOM_PROVIDER,
+	                        view_utils_1.ViewUtils,
+	                        { provide: change_detection_1.IterableDiffers, useFactory: _iterableDiffersFactory },
+	                        { provide: change_detection_1.KeyValueDiffers, useFactory: _keyValueDiffersFactory },
+	                        { provide: dynamic_component_loader_1.DynamicComponentLoader, useClass: dynamic_component_loader_1.DynamicComponentLoader_ },
+	                    ]
+	                },] },
+	    ];
+	    return ApplicationModule;
+	}());
+	exports.ApplicationModule = ApplicationModule;
+	//# sourceMappingURL=application_module.js.map
+
+/***/ },
+/* 433 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * @module
+	 * @description
+	 * Change detection enables data binding in Angular.
+	 */
+	var change_detection_1 = __webpack_require__(74);
+	exports.ChangeDetectionStrategy = change_detection_1.ChangeDetectionStrategy;
+	exports.ChangeDetectorRef = change_detection_1.ChangeDetectorRef;
+	exports.CollectionChangeRecord = change_detection_1.CollectionChangeRecord;
+	exports.DefaultIterableDiffer = change_detection_1.DefaultIterableDiffer;
+	exports.IterableDiffers = change_detection_1.IterableDiffers;
+	exports.KeyValueChangeRecord = change_detection_1.KeyValueChangeRecord;
+	exports.KeyValueDiffers = change_detection_1.KeyValueDiffers;
+	exports.SimpleChange = change_detection_1.SimpleChange;
+	exports.WrappedValue = change_detection_1.WrappedValue;
+	//# sourceMappingURL=change_detection.js.map
+
+/***/ },
+/* 434 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * @stable
+	 */
+	var ChangeDetectorRef = (function () {
+	    function ChangeDetectorRef() {
+	    }
+	    return ChangeDetectorRef;
+	}());
+	exports.ChangeDetectorRef = ChangeDetectorRef;
+	//# sourceMappingURL=change_detector_ref.js.map
+
+/***/ },
+/* 435 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var lang_1 = __webpack_require__(3);
+	var debug_node_1 = __webpack_require__(218);
+	var DebugDomRootRenderer = (function () {
+	    function DebugDomRootRenderer(_delegate) {
+	        this._delegate = _delegate;
+	    }
+	    DebugDomRootRenderer.prototype.renderComponent = function (componentProto) {
+	        return new DebugDomRenderer(this._delegate.renderComponent(componentProto));
+	    };
+	    return DebugDomRootRenderer;
+	}());
+	exports.DebugDomRootRenderer = DebugDomRootRenderer;
+	var DebugDomRenderer = (function () {
+	    function DebugDomRenderer(_delegate) {
+	        this._delegate = _delegate;
+	    }
+	    DebugDomRenderer.prototype.selectRootElement = function (selectorOrNode, debugInfo) {
+	        var nativeEl = this._delegate.selectRootElement(selectorOrNode, debugInfo);
+	        var debugEl = new debug_node_1.DebugElement(nativeEl, null, debugInfo);
+	        debug_node_1.indexDebugNode(debugEl);
+	        return nativeEl;
+	    };
+	    DebugDomRenderer.prototype.createElement = function (parentElement, name, debugInfo) {
+	        var nativeEl = this._delegate.createElement(parentElement, name, debugInfo);
+	        var debugEl = new debug_node_1.DebugElement(nativeEl, debug_node_1.getDebugNode(parentElement), debugInfo);
+	        debugEl.name = name;
+	        debug_node_1.indexDebugNode(debugEl);
+	        return nativeEl;
+	    };
+	    DebugDomRenderer.prototype.createViewRoot = function (hostElement) { return this._delegate.createViewRoot(hostElement); };
+	    DebugDomRenderer.prototype.createTemplateAnchor = function (parentElement, debugInfo) {
+	        var comment = this._delegate.createTemplateAnchor(parentElement, debugInfo);
+	        var debugEl = new debug_node_1.DebugNode(comment, debug_node_1.getDebugNode(parentElement), debugInfo);
+	        debug_node_1.indexDebugNode(debugEl);
+	        return comment;
+	    };
+	    DebugDomRenderer.prototype.createText = function (parentElement, value, debugInfo) {
+	        var text = this._delegate.createText(parentElement, value, debugInfo);
+	        var debugEl = new debug_node_1.DebugNode(text, debug_node_1.getDebugNode(parentElement), debugInfo);
+	        debug_node_1.indexDebugNode(debugEl);
+	        return text;
+	    };
+	    DebugDomRenderer.prototype.projectNodes = function (parentElement, nodes) {
+	        var debugParent = debug_node_1.getDebugNode(parentElement);
+	        if (lang_1.isPresent(debugParent) && debugParent instanceof debug_node_1.DebugElement) {
+	            var debugElement_1 = debugParent;
+	            nodes.forEach(function (node) { debugElement_1.addChild(debug_node_1.getDebugNode(node)); });
+	        }
+	        this._delegate.projectNodes(parentElement, nodes);
+	    };
+	    DebugDomRenderer.prototype.attachViewAfter = function (node, viewRootNodes) {
+	        var debugNode = debug_node_1.getDebugNode(node);
+	        if (lang_1.isPresent(debugNode)) {
+	            var debugParent = debugNode.parent;
+	            if (viewRootNodes.length > 0 && lang_1.isPresent(debugParent)) {
+	                var debugViewRootNodes = [];
+	                viewRootNodes.forEach(function (rootNode) { return debugViewRootNodes.push(debug_node_1.getDebugNode(rootNode)); });
+	                debugParent.insertChildrenAfter(debugNode, debugViewRootNodes);
+	            }
+	        }
+	        this._delegate.attachViewAfter(node, viewRootNodes);
+	    };
+	    DebugDomRenderer.prototype.detachView = function (viewRootNodes) {
+	        viewRootNodes.forEach(function (node) {
+	            var debugNode = debug_node_1.getDebugNode(node);
+	            if (lang_1.isPresent(debugNode) && lang_1.isPresent(debugNode.parent)) {
+	                debugNode.parent.removeChild(debugNode);
+	            }
+	        });
+	        this._delegate.detachView(viewRootNodes);
+	    };
+	    DebugDomRenderer.prototype.destroyView = function (hostElement, viewAllNodes) {
+	        viewAllNodes.forEach(function (node) { debug_node_1.removeDebugNodeFromIndex(debug_node_1.getDebugNode(node)); });
+	        this._delegate.destroyView(hostElement, viewAllNodes);
+	    };
+	    DebugDomRenderer.prototype.listen = function (renderElement, name, callback) {
+	        var debugEl = debug_node_1.getDebugNode(renderElement);
+	        if (lang_1.isPresent(debugEl)) {
+	            debugEl.listeners.push(new debug_node_1.EventListener(name, callback));
+	        }
+	        return this._delegate.listen(renderElement, name, callback);
+	    };
+	    DebugDomRenderer.prototype.listenGlobal = function (target, name, callback) {
+	        return this._delegate.listenGlobal(target, name, callback);
+	    };
+	    DebugDomRenderer.prototype.setElementProperty = function (renderElement, propertyName, propertyValue) {
+	        var debugEl = debug_node_1.getDebugNode(renderElement);
+	        if (lang_1.isPresent(debugEl) && debugEl instanceof debug_node_1.DebugElement) {
+	            debugEl.properties[propertyName] = propertyValue;
+	        }
+	        this._delegate.setElementProperty(renderElement, propertyName, propertyValue);
+	    };
+	    DebugDomRenderer.prototype.setElementAttribute = function (renderElement, attributeName, attributeValue) {
+	        var debugEl = debug_node_1.getDebugNode(renderElement);
+	        if (lang_1.isPresent(debugEl) && debugEl instanceof debug_node_1.DebugElement) {
+	            debugEl.attributes[attributeName] = attributeValue;
+	        }
+	        this._delegate.setElementAttribute(renderElement, attributeName, attributeValue);
+	    };
+	    DebugDomRenderer.prototype.setBindingDebugInfo = function (renderElement, propertyName, propertyValue) {
+	        this._delegate.setBindingDebugInfo(renderElement, propertyName, propertyValue);
+	    };
+	    DebugDomRenderer.prototype.setElementClass = function (renderElement, className, isAdd) {
+	        var debugEl = debug_node_1.getDebugNode(renderElement);
+	        if (lang_1.isPresent(debugEl) && debugEl instanceof debug_node_1.DebugElement) {
+	            debugEl.classes[className] = isAdd;
+	        }
+	        this._delegate.setElementClass(renderElement, className, isAdd);
+	    };
+	    DebugDomRenderer.prototype.setElementStyle = function (renderElement, styleName, styleValue) {
+	        var debugEl = debug_node_1.getDebugNode(renderElement);
+	        if (lang_1.isPresent(debugEl) && debugEl instanceof debug_node_1.DebugElement) {
+	            debugEl.styles[styleName] = styleValue;
+	        }
+	        this._delegate.setElementStyle(renderElement, styleName, styleValue);
+	    };
+	    DebugDomRenderer.prototype.invokeElementMethod = function (renderElement, methodName, args) {
+	        this._delegate.invokeElementMethod(renderElement, methodName, args);
+	    };
+	    DebugDomRenderer.prototype.setText = function (renderNode, text) { this._delegate.setText(renderNode, text); };
+	    DebugDomRenderer.prototype.animate = function (element, startingStyles, keyframes, duration, delay, easing) {
+	        return this._delegate.animate(element, startingStyles, keyframes, duration, delay, easing);
+	    };
+	    return DebugDomRenderer;
+	}());
+	exports.DebugDomRenderer = DebugDomRenderer;
+	//# sourceMappingURL=debug_renderer.js.map
+
+/***/ },
+/* 436 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var collection_1 = __webpack_require__(12);
+	var exceptions_1 = __webpack_require__(8);
+	var injector_1 = __webpack_require__(79);
 	var metadata_1 = __webpack_require__(33);
-	var injector_1 = __webpack_require__(104);
+	var reflective_exceptions_1 = __webpack_require__(129);
+	var reflective_key_1 = __webpack_require__(130);
+	var reflective_provider_1 = __webpack_require__(131);
 	var __unused; // avoid unused import when Type union types are erased
 	// Threshold for the dynamic version
 	var _MAX_CONSTRUCTION_COUNTER = 10;
@@ -10871,6 +19527,8 @@
 	 *
 	 * Notice, we don't use the `new` operator because we explicitly want to have the `Injector`
 	 * resolve all of the object's dependencies automatically.
+	 *
+	 * @stable
 	 */
 	var ReflectiveInjector = (function () {
 	    function ReflectiveInjector() {
@@ -10963,6 +19621,7 @@
 	     * var injector = ReflectiveInjector.fromResolvedProviders(providers);
 	     * expect(injector.get(Car) instanceof Car).toBe(true);
 	     * ```
+	     * @experimental
 	     */
 	    ReflectiveInjector.fromResolvedProviders = function (providers, parent) {
 	        if (parent === void 0) { parent = null; }
@@ -11361,7 +20020,9 @@
 	    };
 	    Object.defineProperty(ReflectiveInjector_.prototype, "displayName", {
 	        get: function () {
-	            return "ReflectiveInjector(providers: [" + _mapProviders(this, function (b) { return (" \"" + b.key.displayName + "\" "); }).join(", ") + "])";
+	            var providers = _mapProviders(this, function (b) { return ' "' + b.key.displayName + '" '; })
+	                .join(', ');
+	            return "ReflectiveInjector(providers: [" + providers + "])";
 	        },
 	        enumerable: true,
 	        configurable: true
@@ -11372,3895 +20033,88 @@
 	exports.ReflectiveInjector_ = ReflectiveInjector_;
 	var INJECTOR_KEY = reflective_key_1.ReflectiveKey.get(injector_1.Injector);
 	function _mapProviders(injector, fn) {
-	    var res = [];
+	    var res = new Array(injector._proto.numberOfProviders);
 	    for (var i = 0; i < injector._proto.numberOfProviders; ++i) {
-	        res.push(fn(injector._proto.getProviderAtIndex(i)));
+	        res[i] = fn(injector._proto.getProviderAtIndex(i));
 	    }
 	    return res;
 	}
 	//# sourceMappingURL=reflective_injector.js.map
 
 /***/ },
-/* 187 */
-150,
-/* 188 */
-[472, 4, 187, 11],
-/* 189 */
+/* 437 */
+[536, 3],
+/* 438 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
-	var view_utils_1 = __webpack_require__(64);
 	/**
-	 * Represents an instance of a Component created via a {@link ComponentFactory}.
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
 	 *
-	 * `ComponentRef` provides access to the Component Instance as well other objects related to this
-	 * Component Instance and allows you to destroy the Component Instance via the {@link #destroy}
-	 * method.
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
 	 */
-	var ComponentRef = (function () {
-	    function ComponentRef() {
-	    }
-	    Object.defineProperty(ComponentRef.prototype, "location", {
-	        /**
-	         * Location of the Host Element of this Component Instance.
-	         */
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ComponentRef.prototype, "injector", {
-	        /**
-	         * The injector on which the component instance exists.
-	         */
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ComponentRef.prototype, "instance", {
-	        /**
-	         * The instance of the Component.
-	         */
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ;
-	    Object.defineProperty(ComponentRef.prototype, "hostView", {
-	        /**
-	         * The {@link ViewRef} of the Host View of this Component instance.
-	         */
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ;
-	    Object.defineProperty(ComponentRef.prototype, "changeDetectorRef", {
-	        /**
-	         * The {@link ChangeDetectorRef} of the Component instance.
-	         */
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ComponentRef.prototype, "componentType", {
-	        /**
-	         * The component type.
-	         */
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    return ComponentRef;
-	}());
-	exports.ComponentRef = ComponentRef;
-	var ComponentRef_ = (function (_super) {
-	    __extends(ComponentRef_, _super);
-	    function ComponentRef_(_hostElement, _componentType) {
-	        _super.call(this);
-	        this._hostElement = _hostElement;
-	        this._componentType = _componentType;
-	    }
-	    Object.defineProperty(ComponentRef_.prototype, "location", {
-	        get: function () { return this._hostElement.elementRef; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ComponentRef_.prototype, "injector", {
-	        get: function () { return this._hostElement.injector; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ComponentRef_.prototype, "instance", {
-	        get: function () { return this._hostElement.component; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ;
-	    Object.defineProperty(ComponentRef_.prototype, "hostView", {
-	        get: function () { return this._hostElement.parentView.ref; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ;
-	    Object.defineProperty(ComponentRef_.prototype, "changeDetectorRef", {
-	        get: function () { return this._hostElement.parentView.ref; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ;
-	    Object.defineProperty(ComponentRef_.prototype, "componentType", {
-	        get: function () { return this._componentType; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ComponentRef_.prototype.destroy = function () { this._hostElement.parentView.destroy(); };
-	    ComponentRef_.prototype.onDestroy = function (callback) { this.hostView.onDestroy(callback); };
-	    return ComponentRef_;
-	}(ComponentRef));
-	exports.ComponentRef_ = ComponentRef_;
-	var EMPTY_CONTEXT = new Object();
-	/*@ts2dart_const*/
-	var ComponentFactory = (function () {
-	    function ComponentFactory(selector, _viewFactory, _componentType) {
-	        this.selector = selector;
-	        this._viewFactory = _viewFactory;
-	        this._componentType = _componentType;
-	    }
-	    Object.defineProperty(ComponentFactory.prototype, "componentType", {
-	        get: function () { return this._componentType; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    /**
-	     * Creates a new component.
-	     */
-	    ComponentFactory.prototype.create = function (injector, projectableNodes, rootSelectorOrNode) {
-	        if (projectableNodes === void 0) { projectableNodes = null; }
-	        if (rootSelectorOrNode === void 0) { rootSelectorOrNode = null; }
-	        var vu = injector.get(view_utils_1.ViewUtils);
-	        if (lang_1.isBlank(projectableNodes)) {
-	            projectableNodes = [];
-	        }
-	        // Note: Host views don't need a declarationAppElement!
-	        var hostView = this._viewFactory(vu, injector, null);
-	        var hostElement = hostView.create(EMPTY_CONTEXT, projectableNodes, rootSelectorOrNode);
-	        return new ComponentRef_(hostElement, this._componentType);
-	    };
-	    return ComponentFactory;
-	}());
-	exports.ComponentFactory = ComponentFactory;
-	//# sourceMappingURL=component_factory.js.map
-
-/***/ },
-/* 190 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var collection_1 = __webpack_require__(11);
-	var view_type_1 = __webpack_require__(63);
-	/* @ts2dart_const */
-	var StaticNodeDebugInfo = (function () {
-	    function StaticNodeDebugInfo(providerTokens, componentToken, refTokens) {
-	        this.providerTokens = providerTokens;
-	        this.componentToken = componentToken;
-	        this.refTokens = refTokens;
-	    }
-	    return StaticNodeDebugInfo;
-	}());
-	exports.StaticNodeDebugInfo = StaticNodeDebugInfo;
-	var DebugContext = (function () {
-	    function DebugContext(_view, _nodeIndex, _tplRow, _tplCol) {
-	        this._view = _view;
-	        this._nodeIndex = _nodeIndex;
-	        this._tplRow = _tplRow;
-	        this._tplCol = _tplCol;
-	    }
-	    Object.defineProperty(DebugContext.prototype, "_staticNodeInfo", {
-	        get: function () {
-	            return lang_1.isPresent(this._nodeIndex) ? this._view.staticNodeDebugInfos[this._nodeIndex] : null;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DebugContext.prototype, "context", {
-	        get: function () { return this._view.context; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DebugContext.prototype, "component", {
-	        get: function () {
-	            var staticNodeInfo = this._staticNodeInfo;
-	            if (lang_1.isPresent(staticNodeInfo) && lang_1.isPresent(staticNodeInfo.componentToken)) {
-	                return this.injector.get(staticNodeInfo.componentToken);
-	            }
-	            return null;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DebugContext.prototype, "componentRenderElement", {
-	        get: function () {
-	            var componentView = this._view;
-	            while (lang_1.isPresent(componentView.declarationAppElement) &&
-	                componentView.type !== view_type_1.ViewType.COMPONENT) {
-	                componentView = componentView.declarationAppElement.parentView;
-	            }
-	            return lang_1.isPresent(componentView.declarationAppElement) ?
-	                componentView.declarationAppElement.nativeElement :
-	                null;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DebugContext.prototype, "injector", {
-	        get: function () { return this._view.injector(this._nodeIndex); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DebugContext.prototype, "renderNode", {
-	        get: function () {
-	            if (lang_1.isPresent(this._nodeIndex) && lang_1.isPresent(this._view.allNodes)) {
-	                return this._view.allNodes[this._nodeIndex];
-	            }
-	            else {
-	                return null;
-	            }
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DebugContext.prototype, "providerTokens", {
-	        get: function () {
-	            var staticNodeInfo = this._staticNodeInfo;
-	            return lang_1.isPresent(staticNodeInfo) ? staticNodeInfo.providerTokens : null;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DebugContext.prototype, "source", {
-	        get: function () {
-	            return this._view.componentType.templateUrl + ":" + this._tplRow + ":" + this._tplCol;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DebugContext.prototype, "references", {
-	        get: function () {
-	            var _this = this;
-	            var varValues = {};
-	            var staticNodeInfo = this._staticNodeInfo;
-	            if (lang_1.isPresent(staticNodeInfo)) {
-	                var refs = staticNodeInfo.refTokens;
-	                collection_1.StringMapWrapper.forEach(refs, function (refToken, refName) {
-	                    var varValue;
-	                    if (lang_1.isBlank(refToken)) {
-	                        varValue = lang_1.isPresent(_this._view.allNodes) ? _this._view.allNodes[_this._nodeIndex] : null;
-	                    }
-	                    else {
-	                        varValue = _this._view.injectorGet(refToken, _this._nodeIndex, null);
-	                    }
-	                    varValues[refName] = varValue;
-	                });
-	            }
-	            return varValues;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    return DebugContext;
-	}());
-	exports.DebugContext = DebugContext;
-	//# sourceMappingURL=debug_context.js.map
-
-/***/ },
-/* 191 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var component_resolver_1 = __webpack_require__(40);
-	var lang_1 = __webpack_require__(4);
-	var reflective_injector_1 = __webpack_require__(186);
-	var decorators_1 = __webpack_require__(32);
-	/**
-	 * Use ComponentResolver and ViewContainerRef directly.
-	 *
-	 * @deprecated
-	 */
-	var DynamicComponentLoader = (function () {
-	    function DynamicComponentLoader() {
-	    }
-	    return DynamicComponentLoader;
-	}());
-	exports.DynamicComponentLoader = DynamicComponentLoader;
-	var DynamicComponentLoader_ = (function (_super) {
-	    __extends(DynamicComponentLoader_, _super);
-	    function DynamicComponentLoader_(_compiler) {
-	        _super.call(this);
-	        this._compiler = _compiler;
-	    }
-	    DynamicComponentLoader_.prototype.loadAsRoot = function (type, overrideSelectorOrNode, injector, onDispose, projectableNodes) {
-	        return this._compiler.resolveComponent(type).then(function (componentFactory) {
-	            var componentRef = componentFactory.create(injector, projectableNodes, lang_1.isPresent(overrideSelectorOrNode) ? overrideSelectorOrNode : componentFactory.selector);
-	            if (lang_1.isPresent(onDispose)) {
-	                componentRef.onDestroy(onDispose);
-	            }
-	            return componentRef;
-	        });
-	    };
-	    DynamicComponentLoader_.prototype.loadNextToLocation = function (type, location, providers, projectableNodes) {
-	        if (providers === void 0) { providers = null; }
-	        if (projectableNodes === void 0) { projectableNodes = null; }
-	        return this._compiler.resolveComponent(type).then(function (componentFactory) {
-	            var contextInjector = location.parentInjector;
-	            var childInjector = lang_1.isPresent(providers) && providers.length > 0 ?
-	                reflective_injector_1.ReflectiveInjector.fromResolvedProviders(providers, contextInjector) :
-	                contextInjector;
-	            return location.createComponent(componentFactory, location.length, childInjector, projectableNodes);
-	        });
-	    };
-	    DynamicComponentLoader_.decorators = [
-	        { type: decorators_1.Injectable },
-	    ];
-	    DynamicComponentLoader_.ctorParameters = [
-	        { type: component_resolver_1.ComponentResolver, },
-	    ];
-	    return DynamicComponentLoader_;
-	}(DynamicComponentLoader));
-	exports.DynamicComponentLoader_ = DynamicComponentLoader_;
-	//# sourceMappingURL=dynamic_component_loader.js.map
-
-/***/ },
-/* 192 */
-/***/ function(module, exports) {
-
-	"use strict";
-	/**
-	* A wrapper around a native element inside of a View.
-	*
-	* An `ElementRef` is backed by a render-specific element. In the browser, this is usually a DOM
-	* element.
-	*/
-	// Note: We don't expose things like `Injector`, `ViewContainer`, ... here,
-	// i.e. users have to ask for what they need. With that, we can build better analysis tools
-	// and could do better codegen in the future.
-	var ElementRef = (function () {
-	    function ElementRef(nativeElement) {
-	        this.nativeElement = nativeElement;
-	    }
-	    return ElementRef;
-	}());
-	exports.ElementRef = ElementRef;
-	//# sourceMappingURL=element_ref.js.map
-
-/***/ },
-/* 193 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var lang_1 = __webpack_require__(4);
-	var EMPTY_CONTEXT = new Object();
-	/**
-	 * Represents an Embedded Template that can be used to instantiate Embedded Views.
-	 *
-	 * You can access a `TemplateRef`, in two ways. Via a directive placed on a `<template>` element (or
-	 * directive prefixed with `*`) and have the `TemplateRef` for this Embedded View injected into the
-	 * constructor of the directive using the `TemplateRef` Token. Alternatively you can query for the
-	 * `TemplateRef` from a Component or a Directive via {@link Query}.
-	 *
-	 * To instantiate Embedded Views based on a Template, use
-	 * {@link ViewContainerRef#createEmbeddedView}, which will create the View and attach it to the
-	 * View Container.
-	 */
-	var TemplateRef = (function () {
-	    function TemplateRef() {
-	    }
-	    Object.defineProperty(TemplateRef.prototype, "elementRef", {
-	        /**
-	         * The location in the View where the Embedded View logically belongs to.
-	         *
-	         * The data-binding and injection contexts of Embedded Views created from this `TemplateRef`
-	         * inherit from the contexts of this location.
-	         *
-	         * Typically new Embedded Views are attached to the View Container of this location, but in
-	         * advanced use-cases, the View can be attached to a different container while keeping the
-	         * data-binding and injection context from the original location.
-	         *
-	         */
-	        // TODO(i): rename to anchor or location
-	        get: function () { return null; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    return TemplateRef;
-	}());
-	exports.TemplateRef = TemplateRef;
-	var TemplateRef_ = (function (_super) {
-	    __extends(TemplateRef_, _super);
-	    function TemplateRef_(_appElement, _viewFactory) {
-	        _super.call(this);
-	        this._appElement = _appElement;
-	        this._viewFactory = _viewFactory;
-	    }
-	    TemplateRef_.prototype.createEmbeddedView = function (context) {
-	        var view = this._viewFactory(this._appElement.parentView.viewUtils, this._appElement.parentInjector, this._appElement);
-	        if (lang_1.isBlank(context)) {
-	            context = EMPTY_CONTEXT;
-	        }
-	        view.create(context, null, null);
-	        return view.ref;
-	    };
-	    Object.defineProperty(TemplateRef_.prototype, "elementRef", {
-	        get: function () { return this._appElement.elementRef; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    return TemplateRef_;
-	}(TemplateRef));
-	exports.TemplateRef_ = TemplateRef_;
-	//# sourceMappingURL=template_ref.js.map
-
-/***/ },
-/* 194 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var collection_1 = __webpack_require__(11);
-	var exceptions_1 = __webpack_require__(9);
-	var lang_1 = __webpack_require__(4);
-	var profile_1 = __webpack_require__(65);
-	/**
-	 * Represents a container where one or more Views can be attached.
-	 *
-	 * The container can contain two kinds of Views. Host Views, created by instantiating a
-	 * {@link Component} via {@link #createComponent}, and Embedded Views, created by instantiating an
-	 * {@link TemplateRef Embedded Template} via {@link #createEmbeddedView}.
-	 *
-	 * The location of the View Container within the containing View is specified by the Anchor
-	 * `element`. Each View Container can have only one Anchor Element and each Anchor Element can only
-	 * have a single View Container.
-	 *
-	 * Root elements of Views attached to this container become siblings of the Anchor Element in
-	 * the Rendered View.
-	 *
-	 * To access a `ViewContainerRef` of an Element, you can either place a {@link Directive} injected
-	 * with `ViewContainerRef` on the Element, or you obtain it via a {@link ViewChild} query.
-	 */
-	var ViewContainerRef = (function () {
-	    function ViewContainerRef() {
-	    }
-	    Object.defineProperty(ViewContainerRef.prototype, "element", {
-	        /**
-	         * Anchor element that specifies the location of this container in the containing View.
-	         * <!-- TODO: rename to anchorElement -->
-	         */
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ViewContainerRef.prototype, "injector", {
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ViewContainerRef.prototype, "parentInjector", {
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ViewContainerRef.prototype, "length", {
-	        /**
-	         * Returns the number of Views currently attached to this container.
-	         */
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ;
-	    return ViewContainerRef;
-	}());
-	exports.ViewContainerRef = ViewContainerRef;
-	var ViewContainerRef_ = (function () {
-	    function ViewContainerRef_(_element) {
-	        this._element = _element;
-	        /** @internal */
-	        this._createComponentInContainerScope = profile_1.wtfCreateScope('ViewContainerRef#createComponent()');
-	        /** @internal */
-	        this._insertScope = profile_1.wtfCreateScope('ViewContainerRef#insert()');
-	        /** @internal */
-	        this._removeScope = profile_1.wtfCreateScope('ViewContainerRef#remove()');
-	        /** @internal */
-	        this._detachScope = profile_1.wtfCreateScope('ViewContainerRef#detach()');
-	    }
-	    ViewContainerRef_.prototype.get = function (index) { return this._element.nestedViews[index].ref; };
-	    Object.defineProperty(ViewContainerRef_.prototype, "length", {
-	        get: function () {
-	            var views = this._element.nestedViews;
-	            return lang_1.isPresent(views) ? views.length : 0;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ViewContainerRef_.prototype, "element", {
-	        get: function () { return this._element.elementRef; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ViewContainerRef_.prototype, "injector", {
-	        get: function () { return this._element.injector; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ViewContainerRef_.prototype, "parentInjector", {
-	        get: function () { return this._element.parentInjector; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    // TODO(rado): profile and decide whether bounds checks should be added
-	    // to the methods below.
-	    ViewContainerRef_.prototype.createEmbeddedView = function (templateRef, context, index) {
-	        if (context === void 0) { context = null; }
-	        if (index === void 0) { index = -1; }
-	        var viewRef = templateRef.createEmbeddedView(context);
-	        this.insert(viewRef, index);
-	        return viewRef;
-	    };
-	    ViewContainerRef_.prototype.createComponent = function (componentFactory, index, injector, projectableNodes) {
-	        if (index === void 0) { index = -1; }
-	        if (injector === void 0) { injector = null; }
-	        if (projectableNodes === void 0) { projectableNodes = null; }
-	        var s = this._createComponentInContainerScope();
-	        var contextInjector = lang_1.isPresent(injector) ? injector : this._element.parentInjector;
-	        var componentRef = componentFactory.create(contextInjector, projectableNodes);
-	        this.insert(componentRef.hostView, index);
-	        return profile_1.wtfLeave(s, componentRef);
-	    };
-	    // TODO(i): refactor insert+remove into move
-	    ViewContainerRef_.prototype.insert = function (viewRef, index) {
-	        if (index === void 0) { index = -1; }
-	        var s = this._insertScope();
-	        if (index == -1)
-	            index = this.length;
-	        var viewRef_ = viewRef;
-	        this._element.attachView(viewRef_.internalView, index);
-	        return profile_1.wtfLeave(s, viewRef_);
-	    };
-	    ViewContainerRef_.prototype.indexOf = function (viewRef) {
-	        return collection_1.ListWrapper.indexOf(this._element.nestedViews, viewRef.internalView);
-	    };
-	    // TODO(i): rename to destroy
-	    ViewContainerRef_.prototype.remove = function (index) {
-	        if (index === void 0) { index = -1; }
-	        var s = this._removeScope();
-	        if (index == -1)
-	            index = this.length - 1;
-	        var view = this._element.detachView(index);
-	        view.destroy();
-	        // view is intentionally not returned to the client.
-	        profile_1.wtfLeave(s);
-	    };
-	    // TODO(i): refactor insert+remove into move
-	    ViewContainerRef_.prototype.detach = function (index) {
-	        if (index === void 0) { index = -1; }
-	        var s = this._detachScope();
-	        if (index == -1)
-	            index = this.length - 1;
-	        var view = this._element.detachView(index);
-	        return profile_1.wtfLeave(s, view.ref);
-	    };
-	    ViewContainerRef_.prototype.clear = function () {
-	        for (var i = this.length - 1; i >= 0; i--) {
-	            this.remove(i);
-	        }
-	    };
-	    return ViewContainerRef_;
-	}());
-	exports.ViewContainerRef_ = ViewContainerRef_;
-	//# sourceMappingURL=view_container_ref.js.map
-
-/***/ },
-/* 195 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var exceptions_1 = __webpack_require__(9);
-	var constants_1 = __webpack_require__(61);
-	var ViewRef = (function () {
-	    function ViewRef() {
-	    }
-	    Object.defineProperty(ViewRef.prototype, "destroyed", {
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    return ViewRef;
-	}());
-	exports.ViewRef = ViewRef;
-	/**
-	 * Represents an Angular View.
-	 *
-	 * <!-- TODO: move the next two paragraphs to the dev guide -->
-	 * A View is a fundamental building block of the application UI. It is the smallest grouping of
-	 * Elements which are created and destroyed together.
-	 *
-	 * Properties of elements in a View can change, but the structure (number and order) of elements in
-	 * a View cannot. Changing the structure of Elements can only be done by inserting, moving or
-	 * removing nested Views via a {@link ViewContainerRef}. Each View can contain many View Containers.
-	 * <!-- /TODO -->
-	 *
-	 * ### Example
-	 *
-	 * Given this template...
-	 *
-	 * ```
-	 * Count: {{items.length}}
-	 * <ul>
-	 *   <li *ngFor="let  item of items">{{item}}</li>
-	 * </ul>
-	 * ```
-	 *
-	 * ... we have two {@link TemplateRef}s:
-	 *
-	 * Outer {@link TemplateRef}:
-	 * ```
-	 * Count: {{items.length}}
-	 * <ul>
-	 *   <template ngFor let-item [ngForOf]="items"></template>
-	 * </ul>
-	 * ```
-	 *
-	 * Inner {@link TemplateRef}:
-	 * ```
-	 *   <li>{{item}}</li>
-	 * ```
-	 *
-	 * Notice that the original template is broken down into two separate {@link TemplateRef}s.
-	 *
-	 * The outer/inner {@link TemplateRef}s are then assembled into views like so:
-	 *
-	 * ```
-	 * <!-- ViewRef: outer-0 -->
-	 * Count: 2
-	 * <ul>
-	 *   <template view-container-ref></template>
-	 *   <!-- ViewRef: inner-1 --><li>first</li><!-- /ViewRef: inner-1 -->
-	 *   <!-- ViewRef: inner-2 --><li>second</li><!-- /ViewRef: inner-2 -->
-	 * </ul>
-	 * <!-- /ViewRef: outer-0 -->
-	 * ```
-	 */
-	var EmbeddedViewRef = (function (_super) {
-	    __extends(EmbeddedViewRef, _super);
-	    function EmbeddedViewRef() {
-	        _super.apply(this, arguments);
-	    }
-	    Object.defineProperty(EmbeddedViewRef.prototype, "context", {
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(EmbeddedViewRef.prototype, "rootNodes", {
-	        get: function () { return exceptions_1.unimplemented(); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ;
-	    return EmbeddedViewRef;
-	}(ViewRef));
-	exports.EmbeddedViewRef = EmbeddedViewRef;
-	var ViewRef_ = (function () {
-	    function ViewRef_(_view) {
-	        this._view = _view;
-	        this._view = _view;
-	    }
-	    Object.defineProperty(ViewRef_.prototype, "internalView", {
-	        get: function () { return this._view; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ViewRef_.prototype, "rootNodes", {
-	        get: function () { return this._view.flatRootNodes; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ViewRef_.prototype, "context", {
-	        get: function () { return this._view.context; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ViewRef_.prototype, "destroyed", {
-	        get: function () { return this._view.destroyed; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ViewRef_.prototype.markForCheck = function () { this._view.markPathToRootAsCheckOnce(); };
-	    ViewRef_.prototype.detach = function () { this._view.cdMode = constants_1.ChangeDetectionStrategy.Detached; };
-	    ViewRef_.prototype.detectChanges = function () { this._view.detectChanges(false); };
-	    ViewRef_.prototype.checkNoChanges = function () { this._view.detectChanges(true); };
-	    ViewRef_.prototype.reattach = function () {
-	        this._view.cdMode = constants_1.ChangeDetectionStrategy.CheckAlways;
-	        this.markForCheck();
-	    };
-	    ViewRef_.prototype.onDestroy = function (callback) { this._view.disposables.push(callback); };
-	    ViewRef_.prototype.destroy = function () { this._view.destroy(); };
-	    return ViewRef_;
-	}());
-	exports.ViewRef_ = ViewRef_;
-	//# sourceMappingURL=view_ref.js.map
-
-/***/ },
-/* 196 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var lang_1 = __webpack_require__(4);
-	var metadata_1 = __webpack_require__(33);
-	var forward_ref_1 = __webpack_require__(62);
-	/**
-	 * Specifies that a constant attribute value should be injected.
-	 *
-	 * The directive can inject constant string literals of host element attributes.
-	 *
-	 * ### Example
-	 *
-	 * Suppose we have an `<input>` element and want to know its `type`.
-	 *
-	 * ```html
-	 * <input type="text">
-	 * ```
-	 *
-	 * A decorator can inject string literal `text` like so:
-	 *
-	 * {@example core/ts/metadata/metadata.ts region='attributeMetadata'}
-	 * @ts2dart_const
-	 */
-	var AttributeMetadata = (function (_super) {
-	    __extends(AttributeMetadata, _super);
-	    function AttributeMetadata(attributeName) {
-	        _super.call(this);
-	        this.attributeName = attributeName;
-	    }
-	    Object.defineProperty(AttributeMetadata.prototype, "token", {
-	        get: function () {
-	            // Normally one would default a token to a type of an injected value but here
-	            // the type of a variable is "string" and we can't use primitive type as a return value
-	            // so we use instance of Attribute instead. This doesn't matter much in practice as arguments
-	            // with @Attribute annotation are injected by ElementInjector that doesn't take tokens into
-	            // account.
-	            return this;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    AttributeMetadata.prototype.toString = function () { return "@Attribute(" + lang_1.stringify(this.attributeName) + ")"; };
-	    return AttributeMetadata;
-	}(metadata_1.DependencyMetadata));
-	exports.AttributeMetadata = AttributeMetadata;
-	/**
-	 * Declares an injectable parameter to be a live list of directives or variable
-	 * bindings from the content children of a directive.
-	 *
-	 * ### Example ([live demo](http://plnkr.co/edit/lY9m8HLy7z06vDoUaSN2?p=preview))
-	 *
-	 * Assume that `<tabs>` component would like to get a list its children `<pane>`
-	 * components as shown in this example:
-	 *
-	 * ```html
-	 * <tabs>
-	 *   <pane title="Overview">...</pane>
-	 *   <pane *ngFor="let o of objects" [title]="o.title">{{o.text}}</pane>
-	 * </tabs>
-	 * ```
-	 *
-	 * The preferred solution is to query for `Pane` directives using this decorator.
-	 *
-	 * ```javascript
-	 * @Component({
-	 *   selector: 'pane',
-	 *   inputs: ['title']
-	 * })
-	 * class Pane {
-	 *   title:string;
-	 * }
-	 *
-	 * @Component({
-	 *  selector: 'tabs',
-	 *  template: `
-	 *    <ul>
-	 *      <li *ngFor="let pane of panes">{{pane.title}}</li>
-	 *    </ul>
-	 *    <ng-content></ng-content>
-	 *  `
-	 * })
-	 * class Tabs {
-	 *   panes: QueryList<Pane>;
-	 *   constructor(@Query(Pane) panes:QueryList<Pane>) {
-	  *    this.panes = panes;
-	  *  }
-	 * }
-	 * ```
-	 *
-	 * A query can look for variable bindings by passing in a string with desired binding symbol.
-	 *
-	 * ### Example ([live demo](http://plnkr.co/edit/sT2j25cH1dURAyBRCKx1?p=preview))
-	 * ```html
-	 * <seeker>
-	 *   <div #findme>...</div>
-	 * </seeker>
-	 *
-	 * @Component({ selector: 'seeker' })
-	 * class Seeker {
-	 *   constructor(@Query('findme') elList: QueryList<ElementRef>) {...}
-	 * }
-	 * ```
-	 *
-	 * In this case the object that is injected depend on the type of the variable
-	 * binding. It can be an ElementRef, a directive or a component.
-	 *
-	 * Passing in a comma separated list of variable bindings will query for all of them.
-	 *
-	 * ```html
-	 * <seeker>
-	 *   <div #find-me>...</div>
-	 *   <div #find-me-too>...</div>
-	 * </seeker>
-	 *
-	 *  @Component({
-	 *   selector: 'seeker'
-	 * })
-	 * class Seeker {
-	 *   constructor(@Query('findMe, findMeToo') elList: QueryList<ElementRef>) {...}
-	 * }
-	 * ```
-	 *
-	 * Configure whether query looks for direct children or all descendants
-	 * of the querying element, by using the `descendants` parameter.
-	 * It is set to `false` by default.
-	 *
-	 * ### Example ([live demo](http://plnkr.co/edit/wtGeB977bv7qvA5FTYl9?p=preview))
-	 * ```html
-	 * <container #first>
-	 *   <item>a</item>
-	 *   <item>b</item>
-	 *   <container #second>
-	 *     <item>c</item>
-	 *   </container>
-	 * </container>
-	 * ```
-	 *
-	 * When querying for items, the first container will see only `a` and `b` by default,
-	 * but with `Query(TextDirective, {descendants: true})` it will see `c` too.
-	 *
-	 * The queried directives are kept in a depth-first pre-order with respect to their
-	 * positions in the DOM.
-	 *
-	 * Query does not look deep into any subcomponent views.
-	 *
-	 * Query is updated as part of the change-detection cycle. Since change detection
-	 * happens after construction of a directive, QueryList will always be empty when observed in the
-	 * constructor.
-	 *
-	 * The injected object is an unmodifiable live list.
-	 * See {@link QueryList} for more details.
-	 * @ts2dart_const
-	 */
-	var QueryMetadata = (function (_super) {
-	    __extends(QueryMetadata, _super);
-	    function QueryMetadata(_selector, _a) {
-	        var _b = _a === void 0 ? {} : _a, _c = _b.descendants, descendants = _c === void 0 ? false : _c, _d = _b.first, first = _d === void 0 ? false : _d, _e = _b.read, read = _e === void 0 ? null : _e;
-	        _super.call(this);
-	        this._selector = _selector;
-	        this.descendants = descendants;
-	        this.first = first;
-	        this.read = read;
-	    }
-	    Object.defineProperty(QueryMetadata.prototype, "isViewQuery", {
-	        /**
-	         * always `false` to differentiate it with {@link ViewQueryMetadata}.
-	         */
-	        get: function () { return false; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(QueryMetadata.prototype, "selector", {
-	        /**
-	         * what this is querying for.
-	         */
-	        get: function () { return forward_ref_1.resolveForwardRef(this._selector); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(QueryMetadata.prototype, "isVarBindingQuery", {
-	        /**
-	         * whether this is querying for a variable binding or a directive.
-	         */
-	        get: function () { return lang_1.isString(this.selector); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(QueryMetadata.prototype, "varBindings", {
-	        /**
-	         * returns a list of variable bindings this is querying for.
-	         * Only applicable if this is a variable bindings query.
-	         */
-	        get: function () { return this.selector.split(','); },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    QueryMetadata.prototype.toString = function () { return "@Query(" + lang_1.stringify(this.selector) + ")"; };
-	    return QueryMetadata;
-	}(metadata_1.DependencyMetadata));
-	exports.QueryMetadata = QueryMetadata;
-	// TODO: add an example after ContentChildren and ViewChildren are in master
-	/**
-	 * Configures a content query.
-	 *
-	 * Content queries are set before the `ngAfterContentInit` callback is called.
-	 *
-	 * ### Example
-	 *
-	 * ```
-	 * @Directive({
-	 *   selector: 'someDir'
-	 * })
-	 * class SomeDir {
-	 *   @ContentChildren(ChildDirective) contentChildren: QueryList<ChildDirective>;
-	 *
-	 *   ngAfterContentInit() {
-	 *     // contentChildren is set
-	 *   }
-	 * }
-	 * ```
-	 * @ts2dart_const
-	 */
-	var ContentChildrenMetadata = (function (_super) {
-	    __extends(ContentChildrenMetadata, _super);
-	    function ContentChildrenMetadata(_selector, _a) {
-	        var _b = _a === void 0 ? {} : _a, _c = _b.descendants, descendants = _c === void 0 ? false : _c, _d = _b.read, read = _d === void 0 ? null : _d;
-	        _super.call(this, _selector, { descendants: descendants, read: read });
-	    }
-	    return ContentChildrenMetadata;
-	}(QueryMetadata));
-	exports.ContentChildrenMetadata = ContentChildrenMetadata;
-	// TODO: add an example after ContentChild and ViewChild are in master
-	/**
-	 * Configures a content query.
-	 *
-	 * Content queries are set before the `ngAfterContentInit` callback is called.
-	 *
-	 * ### Example
-	 *
-	 * ```
-	 * @Directive({
-	 *   selector: 'someDir'
-	 * })
-	 * class SomeDir {
-	 *   @ContentChild(ChildDirective) contentChild;
-	 *
-	 *   ngAfterContentInit() {
-	 *     // contentChild is set
-	 *   }
-	 * }
-	 * ```
-	 * @ts2dart_const
-	 */
-	var ContentChildMetadata = (function (_super) {
-	    __extends(ContentChildMetadata, _super);
-	    function ContentChildMetadata(_selector, _a) {
-	        var _b = (_a === void 0 ? {} : _a).read, read = _b === void 0 ? null : _b;
-	        _super.call(this, _selector, { descendants: true, first: true, read: read });
-	    }
-	    return ContentChildMetadata;
-	}(QueryMetadata));
-	exports.ContentChildMetadata = ContentChildMetadata;
-	/**
-	 * Similar to {@link QueryMetadata}, but querying the component view, instead of
-	 * the content children.
-	 *
-	 * ### Example ([live demo](http://plnkr.co/edit/eNsFHDf7YjyM6IzKxM1j?p=preview))
-	 *
-	 * ```javascript
-	 * @Component({
-	 *   ...,
-	 *   template: `
-	 *     <item> a </item>
-	 *     <item> b </item>
-	 *     <item> c </item>
-	 *   `
-	 * })
-	 * class MyComponent {
-	 *   shown: boolean;
-	 *
-	 *   constructor(private @ViewQuery(Item) items:QueryList<Item>) {
-	 *     items.changes.subscribe(() => console.log(items.length));
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * Supports the same querying parameters as {@link QueryMetadata}, except
-	 * `descendants`. This always queries the whole view.
-	 *
-	 * As `shown` is flipped between true and false, items will contain zero of one
-	 * items.
-	 *
-	 * Specifies that a {@link QueryList} should be injected.
-	 *
-	 * The injected object is an iterable and observable live list.
-	 * See {@link QueryList} for more details.
-	 * @ts2dart_const
-	 */
-	var ViewQueryMetadata = (function (_super) {
-	    __extends(ViewQueryMetadata, _super);
-	    function ViewQueryMetadata(_selector, _a) {
-	        var _b = _a === void 0 ? {} : _a, _c = _b.descendants, descendants = _c === void 0 ? false : _c, _d = _b.first, first = _d === void 0 ? false : _d, _e = _b.read, read = _e === void 0 ? null : _e;
-	        _super.call(this, _selector, { descendants: descendants, first: first, read: read });
-	    }
-	    Object.defineProperty(ViewQueryMetadata.prototype, "isViewQuery", {
-	        /**
-	         * always `true` to differentiate it with {@link QueryMetadata}.
-	         */
-	        get: function () { return true; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ViewQueryMetadata.prototype.toString = function () { return "@ViewQuery(" + lang_1.stringify(this.selector) + ")"; };
-	    return ViewQueryMetadata;
-	}(QueryMetadata));
-	exports.ViewQueryMetadata = ViewQueryMetadata;
-	/**
-	 * Declares a list of child element references.
-	 *
-	 * Angular automatically updates the list when the DOM is updated.
-	 *
-	 * `ViewChildren` takes an argument to select elements.
-	 *
-	 * - If the argument is a type, directives or components with the type will be bound.
-	 *
-	 * - If the argument is a string, the string is interpreted as a list of comma-separated selectors.
-	 * For each selector, an element containing the matching template variable (e.g. `#child`) will be
-	 * bound.
-	 *
-	 * View children are set before the `ngAfterViewInit` callback is called.
-	 *
-	 * ### Example
-	 *
-	 * With type selector:
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'child-cmp',
-	 *   template: '<p>child</p>'
-	 * })
-	 * class ChildCmp {
-	 *   doSomething() {}
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'some-cmp',
-	 *   template: `
-	 *     <child-cmp></child-cmp>
-	 *     <child-cmp></child-cmp>
-	 *     <child-cmp></child-cmp>
-	 *   `,
-	 *   directives: [ChildCmp]
-	 * })
-	 * class SomeCmp {
-	 *   @ViewChildren(ChildCmp) children:QueryList<ChildCmp>;
-	 *
-	 *   ngAfterViewInit() {
-	 *     // children are set
-	 *     this.children.toArray().forEach((child)=>child.doSomething());
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * With string selector:
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'child-cmp',
-	 *   template: '<p>child</p>'
-	 * })
-	 * class ChildCmp {
-	 *   doSomething() {}
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'some-cmp',
-	 *   template: `
-	 *     <child-cmp #child1></child-cmp>
-	 *     <child-cmp #child2></child-cmp>
-	 *     <child-cmp #child3></child-cmp>
-	 *   `,
-	 *   directives: [ChildCmp]
-	 * })
-	 * class SomeCmp {
-	 *   @ViewChildren('child1,child2,child3') children:QueryList<ChildCmp>;
-	 *
-	 *   ngAfterViewInit() {
-	 *     // children are set
-	 *     this.children.toArray().forEach((child)=>child.doSomething());
-	 *   }
-	 * }
-	 * ```
-	 * @ts2dart_const
-	 */
-	var ViewChildrenMetadata = (function (_super) {
-	    __extends(ViewChildrenMetadata, _super);
-	    function ViewChildrenMetadata(_selector, _a) {
-	        var _b = (_a === void 0 ? {} : _a).read, read = _b === void 0 ? null : _b;
-	        _super.call(this, _selector, { descendants: true, read: read });
-	    }
-	    return ViewChildrenMetadata;
-	}(ViewQueryMetadata));
-	exports.ViewChildrenMetadata = ViewChildrenMetadata;
-	/**
-	 *
-	 * Declares a reference of child element.
-	 *
-	 * `ViewChildren` takes an argument to select elements.
-	 *
-	 * - If the argument is a type, a directive or a component with the type will be bound.
-	 *
-	 If the argument is a string, the string is interpreted as a selector. An element containing the
-	 matching template variable (e.g. `#child`) will be bound.
-	 *
-	 * In either case, `@ViewChild()` assigns the first (looking from above) element if there are
-	 multiple matches.
-	 *
-	 * View child is set before the `ngAfterViewInit` callback is called.
-	 *
-	 * ### Example
-	 *
-	 * With type selector:
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'child-cmp',
-	 *   template: '<p>child</p>'
-	 * })
-	 * class ChildCmp {
-	 *   doSomething() {}
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'some-cmp',
-	 *   template: '<child-cmp></child-cmp>',
-	 *   directives: [ChildCmp]
-	 * })
-	 * class SomeCmp {
-	 *   @ViewChild(ChildCmp) child:ChildCmp;
-	 *
-	 *   ngAfterViewInit() {
-	 *     // child is set
-	 *     this.child.doSomething();
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * With string selector:
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'child-cmp',
-	 *   template: '<p>child</p>'
-	 * })
-	 * class ChildCmp {
-	 *   doSomething() {}
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'some-cmp',
-	 *   template: '<child-cmp #child></child-cmp>',
-	 *   directives: [ChildCmp]
-	 * })
-	 * class SomeCmp {
-	 *   @ViewChild('child') child:ChildCmp;
-	 *
-	 *   ngAfterViewInit() {
-	 *     // child is set
-	 *     this.child.doSomething();
-	 *   }
-	 * }
-	 * ```
-	 * @ts2dart_const
-	 */
-	var ViewChildMetadata = (function (_super) {
-	    __extends(ViewChildMetadata, _super);
-	    function ViewChildMetadata(_selector, _a) {
-	        var _b = (_a === void 0 ? {} : _a).read, read = _b === void 0 ? null : _b;
-	        _super.call(this, _selector, { descendants: true, first: true, read: read });
-	    }
-	    return ViewChildMetadata;
-	}(ViewQueryMetadata));
-	exports.ViewChildMetadata = ViewChildMetadata;
-	//# sourceMappingURL=di.js.map
-
-/***/ },
-/* 197 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var lang_1 = __webpack_require__(4);
-	var metadata_1 = __webpack_require__(33);
-	var constants_1 = __webpack_require__(61);
-	/**
-	 * Directives allow you to attach behavior to elements in the DOM.
-	 *
-	 * {@link DirectiveMetadata}s with an embedded view are called {@link ComponentMetadata}s.
-	 *
-	 * A directive consists of a single directive annotation and a controller class. When the
-	 * directive's `selector` matches
-	 * elements in the DOM, the following steps occur:
-	 *
-	 * 1. For each directive, the `ElementInjector` attempts to resolve the directive's constructor
-	 * arguments.
-	 * 2. Angular instantiates directives for each matched element using `ElementInjector` in a
-	 * depth-first order,
-	 *    as declared in the HTML.
-	 *
-	 * ## Understanding How Injection Works
-	 *
-	 * There are three stages of injection resolution.
-	 * - *Pre-existing Injectors*:
-	 *   - The terminal {@link Injector} cannot resolve dependencies. It either throws an error or, if
-	 * the dependency was
-	 *     specified as `@Optional`, returns `null`.
-	 *   - The platform injector resolves browser singleton resources, such as: cookies, title,
-	 * location, and others.
-	 * - *Component Injectors*: Each component instance has its own {@link Injector}, and they follow
-	 * the same parent-child hierarchy
-	 *     as the component instances in the DOM.
-	 * - *Element Injectors*: Each component instance has a Shadow DOM. Within the Shadow DOM each
-	 * element has an `ElementInjector`
-	 *     which follow the same parent-child hierarchy as the DOM elements themselves.
-	 *
-	 * When a template is instantiated, it also must instantiate the corresponding directives in a
-	 * depth-first order. The
-	 * current `ElementInjector` resolves the constructor dependencies for each directive.
-	 *
-	 * Angular then resolves dependencies as follows, according to the order in which they appear in the
-	 * {@link ViewMetadata}:
-	 *
-	 * 1. Dependencies on the current element
-	 * 2. Dependencies on element injectors and their parents until it encounters a Shadow DOM boundary
-	 * 3. Dependencies on component injectors and their parents until it encounters the root component
-	 * 4. Dependencies on pre-existing injectors
-	 *
-	 *
-	 * The `ElementInjector` can inject other directives, element-specific special objects, or it can
-	 * delegate to the parent
-	 * injector.
-	 *
-	 * To inject other directives, declare the constructor parameter as:
-	 * - `directive:DirectiveType`: a directive on the current element only
-	 * - `@Host() directive:DirectiveType`: any directive that matches the type between the current
-	 * element and the
-	 *    Shadow DOM root.
-	 * - `@Query(DirectiveType) query:QueryList<DirectiveType>`: A live collection of direct child
-	 * directives.
-	 * - `@QueryDescendants(DirectiveType) query:QueryList<DirectiveType>`: A live collection of any
-	 * child directives.
-	 *
-	 * To inject element-specific special objects, declare the constructor parameter as:
-	 * - `element: ElementRef` to obtain a reference to logical element in the view.
-	 * - `viewContainer: ViewContainerRef` to control child template instantiation, for
-	 * {@link DirectiveMetadata} directives only
-	 * - `bindingPropagation: BindingPropagation` to control change detection in a more granular way.
-	 *
-	 * ### Example
-	 *
-	 * The following example demonstrates how dependency injection resolves constructor arguments in
-	 * practice.
-	 *
-	 *
-	 * Assume this HTML template:
-	 *
-	 * ```
-	 * <div dependency="1">
-	 *   <div dependency="2">
-	 *     <div dependency="3" my-directive>
-	 *       <div dependency="4">
-	 *         <div dependency="5"></div>
-	 *       </div>
-	 *       <div dependency="6"></div>
-	 *     </div>
-	 *   </div>
-	 * </div>
-	 * ```
-	 *
-	 * With the following `dependency` decorator and `SomeService` injectable class.
-	 *
-	 * ```
-	 * @Injectable()
-	 * class SomeService {
-	 * }
-	 *
-	 * @Directive({
-	 *   selector: '[dependency]',
-	 *   inputs: [
-	 *     'id: dependency'
-	 *   ]
-	 * })
-	 * class Dependency {
-	 *   id:string;
-	 * }
-	 * ```
-	 *
-	 * Let's step through the different ways in which `MyDirective` could be declared...
-	 *
-	 *
-	 * ### No injection
-	 *
-	 * Here the constructor is declared with no arguments, therefore nothing is injected into
-	 * `MyDirective`.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor() {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with no dependencies.
-	 *
-	 *
-	 * ### Component-level injection
-	 *
-	 * Directives can inject any injectable instance from the closest component injector or any of its
-	 * parents.
-	 *
-	 * Here, the constructor declares a parameter, `someService`, and injects the `SomeService` type
-	 * from the parent
-	 * component's injector.
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(someService: SomeService) {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with a dependency on `SomeService`.
-	 *
-	 *
-	 * ### Injecting a directive from the current element
-	 *
-	 * Directives can inject other directives declared on the current element.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(dependency: Dependency) {
-	 *     expect(dependency.id).toEqual(3);
-	 *   }
-	 * }
-	 * ```
-	 * This directive would be instantiated with `Dependency` declared at the same element, in this case
-	 * `dependency="3"`.
-	 *
-	 * ### Injecting a directive from any ancestor elements
-	 *
-	 * Directives can inject other directives declared on any ancestor element (in the current Shadow
-	 * DOM), i.e. on the current element, the
-	 * parent element, or its parents.
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(@Host() dependency: Dependency) {
-	 *     expect(dependency.id).toEqual(2);
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * `@Host` checks the current element, the parent, as well as its parents recursively. If
-	 * `dependency="2"` didn't
-	 * exist on the direct parent, this injection would
-	 * have returned
-	 * `dependency="1"`.
-	 *
-	 *
-	 * ### Injecting a live collection of direct child directives
-	 *
-	 *
-	 * A directive can also query for other child directives. Since parent directives are instantiated
-	 * before child directives, a directive can't simply inject the list of child directives. Instead,
-	 * the directive injects a {@link QueryList}, which updates its contents as children are added,
-	 * removed, or moved by a directive that uses a {@link ViewContainerRef} such as a `ngFor`, an
-	 * `ngIf`, or an `ngSwitch`.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(@Query(Dependency) dependencies:QueryList<Dependency>) {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with a {@link QueryList} which contains `Dependency` 4 and
-	 * `Dependency` 6. Here, `Dependency` 5 would not be included, because it is not a direct child.
-	 *
-	 * ### Injecting a live collection of descendant directives
-	 *
-	 * By passing the descendant flag to `@Query` above, we can include the children of the child
-	 * elements.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(@Query(Dependency, {descendants: true}) dependencies:QueryList<Dependency>) {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with a Query which would contain `Dependency` 4, 5 and 6.
-	 *
-	 * ### Optional injection
-	 *
-	 * The normal behavior of directives is to return an error when a specified dependency cannot be
-	 * resolved. If you
-	 * would like to inject `null` on unresolved dependency instead, you can annotate that dependency
-	 * with `@Optional()`.
-	 * This explicitly permits the author of a template to treat some of the surrounding directives as
-	 * optional.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(@Optional() dependency:Dependency) {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with a `Dependency` directive found on the current element.
-	 * If none can be
-	 * found, the injector supplies `null` instead of throwing an error.
-	 *
-	 * ### Example
-	 *
-	 * Here we use a decorator directive to simply define basic tool-tip behavior.
-	 *
-	 * ```
-	 * @Directive({
-	 *   selector: '[tooltip]',
-	 *   inputs: [
-	 *     'text: tooltip'
-	 *   ],
-	 *   host: {
-	 *     '(mouseenter)': 'onMouseEnter()',
-	 *     '(mouseleave)': 'onMouseLeave()'
-	 *   }
-	 * })
-	 * class Tooltip{
-	 *   text:string;
-	 *   overlay:Overlay; // NOT YET IMPLEMENTED
-	 *   overlayManager:OverlayManager; // NOT YET IMPLEMENTED
-	 *
-	 *   constructor(overlayManager:OverlayManager) {
-	 *     this.overlay = overlay;
-	 *   }
-	 *
-	 *   onMouseEnter() {
-	 *     // exact signature to be determined
-	 *     this.overlay = this.overlayManager.open(text, ...);
-	 *   }
-	 *
-	 *   onMouseLeave() {
-	 *     this.overlay.close();
-	 *     this.overlay = null;
-	 *   }
-	 * }
-	 * ```
-	 * In our HTML template, we can then add this behavior to a `<div>` or any other element with the
-	 * `tooltip` selector,
-	 * like so:
-	 *
-	 * ```
-	 * <div tooltip="some text here"></div>
-	 * ```
-	 *
-	 * Directives can also control the instantiation, destruction, and positioning of inline template
-	 * elements:
-	 *
-	 * A directive uses a {@link ViewContainerRef} to instantiate, insert, move, and destroy views at
-	 * runtime.
-	 * The {@link ViewContainerRef} is created as a result of `<template>` element, and represents a
-	 * location in the current view
-	 * where these actions are performed.
-	 *
-	 * Views are always created as children of the current {@link ViewMetadata}, and as siblings of the
-	 * `<template>` element. Thus a
-	 * directive in a child view cannot inject the directive that created it.
-	 *
-	 * Since directives that create views via ViewContainers are common in Angular, and using the full
-	 * `<template>` element syntax is wordy, Angular
-	 * also supports a shorthand notation: `<li *foo="bar">` and `<li template="foo: bar">` are
-	 * equivalent.
-	 *
-	 * Thus,
-	 *
-	 * ```
-	 * <ul>
-	 *   <li *foo="bar" title="text"></li>
-	 * </ul>
-	 * ```
-	 *
-	 * Expands in use to:
-	 *
-	 * ```
-	 * <ul>
-	 *   <template [foo]="bar">
-	 *     <li title="text"></li>
-	 *   </template>
-	 * </ul>
-	 * ```
-	 *
-	 * Notice that although the shorthand places `*foo="bar"` within the `<li>` element, the binding for
-	 * the directive
-	 * controller is correctly instantiated on the `<template>` element rather than the `<li>` element.
-	 *
-	 * ## Lifecycle hooks
-	 *
-	 * When the directive class implements some {@link ../../guide/lifecycle-hooks.html} the callbacks
-	 * are called by the change detection at defined points in time during the life of the directive.
-	 *
-	 * ### Example
-	 *
-	 * Let's suppose we want to implement the `unless` behavior, to conditionally include a template.
-	 *
-	 * Here is a simple directive that triggers on an `unless` selector:
-	 *
-	 * ```
-	 * @Directive({
-	 *   selector: '[unless]',
-	 *   inputs: ['unless']
-	 * })
-	 * export class Unless {
-	 *   viewContainer: ViewContainerRef;
-	 *   templateRef: TemplateRef;
-	 *   prevCondition: boolean;
-	 *
-	 *   constructor(viewContainer: ViewContainerRef, templateRef: TemplateRef) {
-	 *     this.viewContainer = viewContainer;
-	 *     this.templateRef = templateRef;
-	 *     this.prevCondition = null;
-	 *   }
-	 *
-	 *   set unless(newCondition) {
-	 *     if (newCondition && (isBlank(this.prevCondition) || !this.prevCondition)) {
-	 *       this.prevCondition = true;
-	 *       this.viewContainer.clear();
-	 *     } else if (!newCondition && (isBlank(this.prevCondition) || this.prevCondition)) {
-	 *       this.prevCondition = false;
-	 *       this.viewContainer.create(this.templateRef);
-	 *     }
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * We can then use this `unless` selector in a template:
-	 * ```
-	 * <ul>
-	 *   <li *unless="expr"></li>
-	 * </ul>
-	 * ```
-	 *
-	 * Once the directive instantiates the child view, the shorthand notation for the template expands
-	 * and the result is:
-	 *
-	 * ```
-	 * <ul>
-	 *   <template [unless]="exp">
-	 *     <li></li>
-	 *   </template>
-	 *   <li></li>
-	 * </ul>
-	 * ```
-	 *
-	 * Note also that although the `<li></li>` template still exists inside the `<template></template>`,
-	 * the instantiated
-	 * view occurs on the second `<li></li>` which is a sibling to the `<template>` element.
-	 * @ts2dart_const
-	 */
-	var DirectiveMetadata = (function (_super) {
-	    __extends(DirectiveMetadata, _super);
-	    function DirectiveMetadata(_a) {
-	        var _b = _a === void 0 ? {} : _a, selector = _b.selector, inputs = _b.inputs, outputs = _b.outputs, properties = _b.properties, events = _b.events, host = _b.host, bindings = _b.bindings, providers = _b.providers, exportAs = _b.exportAs, queries = _b.queries;
-	        _super.call(this);
-	        this.selector = selector;
-	        this._inputs = inputs;
-	        this._properties = properties;
-	        this._outputs = outputs;
-	        this._events = events;
-	        this.host = host;
-	        this.exportAs = exportAs;
-	        this.queries = queries;
-	        this._providers = providers;
-	        this._bindings = bindings;
-	    }
-	    Object.defineProperty(DirectiveMetadata.prototype, "inputs", {
-	        /**
-	         * Enumerates the set of data-bound input properties for a directive
-	         *
-	         * Angular automatically updates input properties during change detection.
-	         *
-	         * The `inputs` property defines a set of `directiveProperty` to `bindingProperty`
-	         * configuration:
-	         *
-	         * - `directiveProperty` specifies the component property where the value is written.
-	         * - `bindingProperty` specifies the DOM property where the value is read from.
-	         *
-	         * When `bindingProperty` is not provided, it is assumed to be equal to `directiveProperty`.
-	         *
-	         * ### Example ([live demo](http://plnkr.co/edit/ivhfXY?p=preview))
-	         *
-	         * The following example creates a component with two data-bound properties.
-	         *
-	         * ```typescript
-	         * @Component({
-	         *   selector: 'bank-account',
-	         *   inputs: ['bankName', 'id: account-id'],
-	         *   template: `
-	         *     Bank Name: {{bankName}}
-	         *     Account Id: {{id}}
-	         *   `
-	         * })
-	         * class BankAccount {
-	         *   bankName: string;
-	         *   id: string;
-	         *
-	         *   // this property is not bound, and won't be automatically updated by Angular
-	         *   normalizedBankName: string;
-	         * }
-	         *
-	         * @Component({
-	         *   selector: 'app',
-	         *   template: `
-	         *     <bank-account bank-name="RBC" account-id="4747"></bank-account>
-	         *   `,
-	         *   directives: [BankAccount]
-	         * })
-	         * class App {}
-	         *
-	         * bootstrap(App);
-	         * ```
-	         *
-	         */
-	        get: function () {
-	            return lang_1.isPresent(this._properties) && this._properties.length > 0 ? this._properties :
-	                this._inputs;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DirectiveMetadata.prototype, "properties", {
-	        get: function () { return this.inputs; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DirectiveMetadata.prototype, "outputs", {
-	        /**
-	         * Enumerates the set of event-bound output properties.
-	         *
-	         * When an output property emits an event, an event handler attached to that event
-	         * the template is invoked.
-	         *
-	         * The `outputs` property defines a set of `directiveProperty` to `bindingProperty`
-	         * configuration:
-	         *
-	         * - `directiveProperty` specifies the component property that emits events.
-	         * - `bindingProperty` specifies the DOM property the event handler is attached to.
-	         *
-	         * ### Example ([live demo](http://plnkr.co/edit/d5CNq7?p=preview))
-	         *
-	         * ```typescript
-	         * @Directive({
-	         *   selector: 'interval-dir',
-	         *   outputs: ['everySecond', 'five5Secs: everyFiveSeconds']
-	         * })
-	         * class IntervalDir {
-	         *   everySecond = new EventEmitter();
-	         *   five5Secs = new EventEmitter();
-	         *
-	         *   constructor() {
-	         *     setInterval(() => this.everySecond.emit("event"), 1000);
-	         *     setInterval(() => this.five5Secs.emit("event"), 5000);
-	         *   }
-	         * }
-	         *
-	         * @Component({
-	         *   selector: 'app',
-	         *   template: `
-	         *     <interval-dir (everySecond)="everySecond()" (everyFiveSeconds)="everyFiveSeconds()">
-	         *     </interval-dir>
-	         *   `,
-	         *   directives: [IntervalDir]
-	         * })
-	         * class App {
-	         *   everySecond() { console.log('second'); }
-	         *   everyFiveSeconds() { console.log('five seconds'); }
-	         * }
-	         * bootstrap(App);
-	         * ```
-	         *
-	         */
-	        get: function () {
-	            return lang_1.isPresent(this._events) && this._events.length > 0 ? this._events : this._outputs;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DirectiveMetadata.prototype, "events", {
-	        get: function () { return this.outputs; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DirectiveMetadata.prototype, "providers", {
-	        /**
-	         * Defines the set of injectable objects that are visible to a Directive and its light DOM
-	         * children.
-	         *
-	         * ## Simple Example
-	         *
-	         * Here is an example of a class that can be injected:
-	         *
-	         * ```
-	         * class Greeter {
-	         *    greet(name:string) {
-	         *      return 'Hello ' + name + '!';
-	         *    }
-	         * }
-	         *
-	         * @Directive({
-	         *   selector: 'greet',
-	         *   bindings: [
-	         *     Greeter
-	         *   ]
-	         * })
-	         * class HelloWorld {
-	         *   greeter:Greeter;
-	         *
-	         *   constructor(greeter:Greeter) {
-	         *     this.greeter = greeter;
-	         *   }
-	         * }
-	         * ```
-	         */
-	        get: function () {
-	            return lang_1.isPresent(this._bindings) && this._bindings.length > 0 ? this._bindings :
-	                this._providers;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(DirectiveMetadata.prototype, "bindings", {
-	        /** @deprecated */
-	        get: function () { return this.providers; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    return DirectiveMetadata;
-	}(metadata_1.InjectableMetadata));
-	exports.DirectiveMetadata = DirectiveMetadata;
-	/**
-	 * Declare reusable UI building blocks for an application.
-	 *
-	 * Each Angular component requires a single `@Component` annotation. The
-	 * `@Component`
-	 * annotation specifies when a component is instantiated, and which properties and hostListeners it
-	 * binds to.
-	 *
-	 * When a component is instantiated, Angular
-	 * - creates a shadow DOM for the component.
-	 * - loads the selected template into the shadow DOM.
-	 * - creates all the injectable objects configured with `providers` and `viewProviders`.
-	 *
-	 * All template expressions and statements are then evaluated against the component instance.
-	 *
-	 * For details on the `@View` annotation, see {@link ViewMetadata}.
-	 *
-	 * ## Lifecycle hooks
-	 *
-	 * When the component class implements some {@link ../../guide/lifecycle-hooks.html} the callbacks
-	 * are called by the change detection at defined points in time during the life of the component.
-	 *
-	 * ### Example
-	 *
-	 * {@example core/ts/metadata/metadata.ts region='component'}
-	 * @ts2dart_const
-	 */
-	var ComponentMetadata = (function (_super) {
-	    __extends(ComponentMetadata, _super);
-	    function ComponentMetadata(_a) {
-	        var _b = _a === void 0 ? {} : _a, selector = _b.selector, inputs = _b.inputs, outputs = _b.outputs, properties = _b.properties, events = _b.events, host = _b.host, exportAs = _b.exportAs, moduleId = _b.moduleId, bindings = _b.bindings, providers = _b.providers, viewBindings = _b.viewBindings, viewProviders = _b.viewProviders, _c = _b.changeDetection, changeDetection = _c === void 0 ? constants_1.ChangeDetectionStrategy.Default : _c, queries = _b.queries, templateUrl = _b.templateUrl, template = _b.template, styleUrls = _b.styleUrls, styles = _b.styles, directives = _b.directives, pipes = _b.pipes, encapsulation = _b.encapsulation;
-	        _super.call(this, {
-	            selector: selector,
-	            inputs: inputs,
-	            outputs: outputs,
-	            properties: properties,
-	            events: events,
-	            host: host,
-	            exportAs: exportAs,
-	            bindings: bindings,
-	            providers: providers,
-	            queries: queries
-	        });
-	        this.changeDetection = changeDetection;
-	        this._viewProviders = viewProviders;
-	        this._viewBindings = viewBindings;
-	        this.templateUrl = templateUrl;
-	        this.template = template;
-	        this.styleUrls = styleUrls;
-	        this.styles = styles;
-	        this.directives = directives;
-	        this.pipes = pipes;
-	        this.encapsulation = encapsulation;
-	        this.moduleId = moduleId;
-	    }
-	    Object.defineProperty(ComponentMetadata.prototype, "viewProviders", {
-	        /**
-	         * Defines the set of injectable objects that are visible to its view DOM children.
-	         *
-	         * ## Simple Example
-	         *
-	         * Here is an example of a class that can be injected:
-	         *
-	         * ```
-	         * class Greeter {
-	         *    greet(name:string) {
-	         *      return 'Hello ' + name + '!';
-	         *    }
-	         * }
-	         *
-	         * @Directive({
-	         *   selector: 'needs-greeter'
-	         * })
-	         * class NeedsGreeter {
-	         *   greeter:Greeter;
-	         *
-	         *   constructor(greeter:Greeter) {
-	         *     this.greeter = greeter;
-	         *   }
-	         * }
-	         *
-	         * @Component({
-	         *   selector: 'greet',
-	         *   viewProviders: [
-	         *     Greeter
-	         *   ],
-	         *   template: `<needs-greeter></needs-greeter>`,
-	         *   directives: [NeedsGreeter]
-	         * })
-	         * class HelloWorld {
-	         * }
-	         *
-	         * ```
-	         */
-	        get: function () {
-	            return lang_1.isPresent(this._viewBindings) && this._viewBindings.length > 0 ? this._viewBindings :
-	                this._viewProviders;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ComponentMetadata.prototype, "viewBindings", {
-	        get: function () { return this.viewProviders; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    return ComponentMetadata;
-	}(DirectiveMetadata));
-	exports.ComponentMetadata = ComponentMetadata;
-	/**
-	 * Declare reusable pipe function.
-	 *
-	 * A "pure" pipe is only re-evaluated when either the input or any of the arguments change.
-	 *
-	 * When not specified, pipes default to being pure.
-	 *
-	 * ### Example
-	 *
-	 * {@example core/ts/metadata/metadata.ts region='pipe'}
-	 * @ts2dart_const
-	 */
-	var PipeMetadata = (function (_super) {
-	    __extends(PipeMetadata, _super);
-	    function PipeMetadata(_a) {
-	        var name = _a.name, pure = _a.pure;
-	        _super.call(this);
-	        this.name = name;
-	        this._pure = pure;
-	    }
-	    Object.defineProperty(PipeMetadata.prototype, "pure", {
-	        get: function () { return lang_1.isPresent(this._pure) ? this._pure : true; },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    return PipeMetadata;
-	}(metadata_1.InjectableMetadata));
-	exports.PipeMetadata = PipeMetadata;
-	/**
-	 * Declares a data-bound input property.
-	 *
-	 * Angular automatically updates data-bound properties during change detection.
-	 *
-	 * `InputMetadata` takes an optional parameter that specifies the name
-	 * used when instantiating a component in the template. When not provided,
-	 * the name of the decorated property is used.
-	 *
-	 * ### Example
-	 *
-	 * The following example creates a component with two input properties.
-	 *
-	 * ```typescript
-	 * @Component({
-	 *   selector: 'bank-account',
-	 *   template: `
-	 *     Bank Name: {{bankName}}
-	 *     Account Id: {{id}}
-	 *   `
-	 * })
-	 * class BankAccount {
-	 *   @Input() bankName: string;
-	 *   @Input('account-id') id: string;
-	 *
-	 *   // this property is not bound, and won't be automatically updated by Angular
-	 *   normalizedBankName: string;
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'app',
-	 *   template: `
-	 *     <bank-account bank-name="RBC" account-id="4747"></bank-account>
-	 *   `,
-	 *   directives: [BankAccount]
-	 * })
-	 * class App {}
-	 *
-	 * bootstrap(App);
-	 * ```
-	 * @ts2dart_const
-	 */
-	var InputMetadata = (function () {
-	    function InputMetadata(
-	        /**
-	         * Name used when instantiating a component in the template.
-	         */
-	        bindingPropertyName) {
-	        this.bindingPropertyName = bindingPropertyName;
-	    }
-	    return InputMetadata;
-	}());
-	exports.InputMetadata = InputMetadata;
-	/**
-	 * Declares an event-bound output property.
-	 *
-	 * When an output property emits an event, an event handler attached to that event
-	 * the template is invoked.
-	 *
-	 * `OutputMetadata` takes an optional parameter that specifies the name
-	 * used when instantiating a component in the template. When not provided,
-	 * the name of the decorated property is used.
-	 *
-	 * ### Example
-	 *
-	 * ```typescript
-	 * @Directive({
-	 *   selector: 'interval-dir',
-	 * })
-	 * class IntervalDir {
-	 *   @Output() everySecond = new EventEmitter();
-	 *   @Output('everyFiveSeconds') five5Secs = new EventEmitter();
-	 *
-	 *   constructor() {
-	 *     setInterval(() => this.everySecond.emit("event"), 1000);
-	 *     setInterval(() => this.five5Secs.emit("event"), 5000);
-	 *   }
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'app',
-	 *   template: `
-	 *     <interval-dir (everySecond)="everySecond()" (everyFiveSeconds)="everyFiveSeconds()">
-	 *     </interval-dir>
-	 *   `,
-	 *   directives: [IntervalDir]
-	 * })
-	 * class App {
-	 *   everySecond() { console.log('second'); }
-	 *   everyFiveSeconds() { console.log('five seconds'); }
-	 * }
-	 * bootstrap(App);
-	 * ```
-	 * @ts2dart_const
-	 */
-	var OutputMetadata = (function () {
-	    function OutputMetadata(bindingPropertyName) {
-	        this.bindingPropertyName = bindingPropertyName;
-	    }
-	    return OutputMetadata;
-	}());
-	exports.OutputMetadata = OutputMetadata;
-	/**
-	 * Declares a host property binding.
-	 *
-	 * Angular automatically checks host property bindings during change detection.
-	 * If a binding changes, it will update the host element of the directive.
-	 *
-	 * `HostBindingMetadata` takes an optional parameter that specifies the property
-	 * name of the host element that will be updated. When not provided,
-	 * the class property name is used.
-	 *
-	 * ### Example
-	 *
-	 * The following example creates a directive that sets the `valid` and `invalid` classes
-	 * on the DOM element that has ngModel directive on it.
-	 *
-	 * ```typescript
-	 * @Directive({selector: '[ngModel]'})
-	 * class NgModelStatus {
-	 *   constructor(public control:NgModel) {}
-	 *   @HostBinding('class.valid') get valid { return this.control.valid; }
-	 *   @HostBinding('class.invalid') get invalid { return this.control.invalid; }
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'app',
-	 *   template: `<input [(ngModel)]="prop">`,
-	 *   directives: [FORM_DIRECTIVES, NgModelStatus]
-	 * })
-	 * class App {
-	 *   prop;
-	 * }
-	 *
-	 * bootstrap(App);
-	 * ```
-	 * @ts2dart_const
-	 */
-	var HostBindingMetadata = (function () {
-	    function HostBindingMetadata(hostPropertyName) {
-	        this.hostPropertyName = hostPropertyName;
-	    }
-	    return HostBindingMetadata;
-	}());
-	exports.HostBindingMetadata = HostBindingMetadata;
-	/**
-	 * Declares a host listener.
-	 *
-	 * Angular will invoke the decorated method when the host element emits the specified event.
-	 *
-	 * If the decorated method returns `false`, then `preventDefault` is applied on the DOM
-	 * event.
-	 *
-	 * ### Example
-	 *
-	 * The following example declares a directive that attaches a click listener to the button and
-	 * counts clicks.
-	 *
-	 * ```typescript
-	 * @Directive({selector: 'button[counting]'})
-	 * class CountClicks {
-	 *   numberOfClicks = 0;
-	 *
-	 *   @HostListener('click', ['$event.target'])
-	 *   onClick(btn) {
-	 *     console.log("button", btn, "number of clicks:", this.numberOfClicks++);
-	 *   }
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'app',
-	 *   template: `<button counting>Increment</button>`,
-	 *   directives: [CountClicks]
-	 * })
-	 * class App {}
-	 *
-	 * bootstrap(App);
-	 * ```
-	 * @ts2dart_const
-	 */
-	var HostListenerMetadata = (function () {
-	    function HostListenerMetadata(eventName, args) {
-	        this.eventName = eventName;
-	        this.args = args;
-	    }
-	    return HostListenerMetadata;
-	}());
-	exports.HostListenerMetadata = HostListenerMetadata;
-	//# sourceMappingURL=directives.js.map
-
-/***/ },
-/* 198 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
-	var ReflectionCapabilities = (function () {
-	    function ReflectionCapabilities(reflect) {
-	        this._reflect = lang_1.isPresent(reflect) ? reflect : lang_1.global.Reflect;
-	    }
-	    ReflectionCapabilities.prototype.isReflectionEnabled = function () { return true; };
-	    ReflectionCapabilities.prototype.factory = function (t) {
-	        switch (t.length) {
-	            case 0:
-	                return function () { return new t(); };
-	            case 1:
-	                return function (a1) { return new t(a1); };
-	            case 2:
-	                return function (a1, a2) { return new t(a1, a2); };
-	            case 3:
-	                return function (a1, a2, a3) { return new t(a1, a2, a3); };
-	            case 4:
-	                return function (a1, a2, a3, a4) { return new t(a1, a2, a3, a4); };
-	            case 5:
-	                return function (a1, a2, a3, a4, a5) { return new t(a1, a2, a3, a4, a5); };
-	            case 6:
-	                return function (a1, a2, a3, a4, a5, a6) {
-	                    return new t(a1, a2, a3, a4, a5, a6);
-	                };
-	            case 7:
-	                return function (a1, a2, a3, a4, a5, a6, a7) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7);
-	                };
-	            case 8:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8);
-	                };
-	            case 9:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9);
-	                };
-	            case 10:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
-	                };
-	            case 11:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
-	                };
-	            case 12:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
-	                };
-	            case 13:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
-	                };
-	            case 14:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14);
-	                };
-	            case 15:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15);
-	                };
-	            case 16:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16);
-	                };
-	            case 17:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
-	                };
-	            case 18:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18);
-	                };
-	            case 19:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19);
-	                };
-	            case 20:
-	                return function (a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20) {
-	                    return new t(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
-	                };
-	        }
-	        ;
-	        throw new Error("Cannot create a factory for '" + lang_1.stringify(t) + "' because its constructor has more than 20 arguments");
-	    };
-	    /** @internal */
-	    ReflectionCapabilities.prototype._zipTypesAndAnnotations = function (paramTypes, paramAnnotations) {
-	        var result;
-	        if (typeof paramTypes === 'undefined') {
-	            result = new Array(paramAnnotations.length);
-	        }
-	        else {
-	            result = new Array(paramTypes.length);
-	        }
-	        for (var i = 0; i < result.length; i++) {
-	            // TS outputs Object for parameters without types, while Traceur omits
-	            // the annotations. For now we preserve the Traceur behavior to aid
-	            // migration, but this can be revisited.
-	            if (typeof paramTypes === 'undefined') {
-	                result[i] = [];
-	            }
-	            else if (paramTypes[i] != Object) {
-	                result[i] = [paramTypes[i]];
-	            }
-	            else {
-	                result[i] = [];
-	            }
-	            if (lang_1.isPresent(paramAnnotations) && lang_1.isPresent(paramAnnotations[i])) {
-	                result[i] = result[i].concat(paramAnnotations[i]);
-	            }
-	        }
-	        return result;
-	    };
-	    ReflectionCapabilities.prototype.parameters = function (typeOrFunc) {
-	        // Prefer the direct API.
-	        if (lang_1.isPresent(typeOrFunc.parameters)) {
-	            return typeOrFunc.parameters;
-	        }
-	        // API of tsickle for lowering decorators to properties on the class.
-	        if (lang_1.isPresent(typeOrFunc.ctorParameters)) {
-	            var ctorParameters = typeOrFunc.ctorParameters;
-	            var paramTypes_1 = ctorParameters.map(function (ctorParam) { return ctorParam && ctorParam.type; });
-	            var paramAnnotations_1 = ctorParameters.map(function (ctorParam) { return ctorParam && convertTsickleDecoratorIntoMetadata(ctorParam.decorators); });
-	            return this._zipTypesAndAnnotations(paramTypes_1, paramAnnotations_1);
-	        }
-	        // API for metadata created by invoking the decorators.
-	        if (lang_1.isPresent(this._reflect) && lang_1.isPresent(this._reflect.getMetadata)) {
-	            var paramAnnotations = this._reflect.getMetadata('parameters', typeOrFunc);
-	            var paramTypes = this._reflect.getMetadata('design:paramtypes', typeOrFunc);
-	            if (lang_1.isPresent(paramTypes) || lang_1.isPresent(paramAnnotations)) {
-	                return this._zipTypesAndAnnotations(paramTypes, paramAnnotations);
-	            }
-	        }
-	        // The array has to be filled with `undefined` because holes would be skipped by `some`
-	        var parameters = new Array(typeOrFunc.length);
-	        parameters.fill(undefined);
-	        return parameters;
-	    };
-	    ReflectionCapabilities.prototype.annotations = function (typeOrFunc) {
-	        // Prefer the direct API.
-	        if (lang_1.isPresent(typeOrFunc.annotations)) {
-	            var annotations = typeOrFunc.annotations;
-	            if (lang_1.isFunction(annotations) && annotations.annotations) {
-	                annotations = annotations.annotations;
-	            }
-	            return annotations;
-	        }
-	        // API of tsickle for lowering decorators to properties on the class.
-	        if (lang_1.isPresent(typeOrFunc.decorators)) {
-	            return convertTsickleDecoratorIntoMetadata(typeOrFunc.decorators);
-	        }
-	        // API for metadata created by invoking the decorators.
-	        if (lang_1.isPresent(this._reflect) && lang_1.isPresent(this._reflect.getMetadata)) {
-	            var annotations = this._reflect.getMetadata('annotations', typeOrFunc);
-	            if (lang_1.isPresent(annotations))
-	                return annotations;
-	        }
-	        return [];
-	    };
-	    ReflectionCapabilities.prototype.propMetadata = function (typeOrFunc) {
-	        // Prefer the direct API.
-	        if (lang_1.isPresent(typeOrFunc.propMetadata)) {
-	            var propMetadata = typeOrFunc.propMetadata;
-	            if (lang_1.isFunction(propMetadata) && propMetadata.propMetadata) {
-	                propMetadata = propMetadata.propMetadata;
-	            }
-	            return propMetadata;
-	        }
-	        // API of tsickle for lowering decorators to properties on the class.
-	        if (lang_1.isPresent(typeOrFunc.propDecorators)) {
-	            var propDecorators_1 = typeOrFunc.propDecorators;
-	            var propMetadata_1 = {};
-	            Object.keys(propDecorators_1)
-	                .forEach(function (prop) {
-	                propMetadata_1[prop] = convertTsickleDecoratorIntoMetadata(propDecorators_1[prop]);
-	            });
-	            return propMetadata_1;
-	        }
-	        // API for metadata created by invoking the decorators.
-	        if (lang_1.isPresent(this._reflect) && lang_1.isPresent(this._reflect.getMetadata)) {
-	            var propMetadata = this._reflect.getMetadata('propMetadata', typeOrFunc);
-	            if (lang_1.isPresent(propMetadata))
-	                return propMetadata;
-	        }
-	        return {};
-	    };
-	    ReflectionCapabilities.prototype.interfaces = function (type) {
-	        throw new exceptions_1.BaseException("JavaScript does not support interfaces");
-	    };
-	    ReflectionCapabilities.prototype.getter = function (name) { return new Function('o', 'return o.' + name + ';'); };
-	    ReflectionCapabilities.prototype.setter = function (name) {
-	        return new Function('o', 'v', 'return o.' + name + ' = v;');
-	    };
-	    ReflectionCapabilities.prototype.method = function (name) {
-	        var functionBody = "if (!o." + name + ") throw new Error('\"" + name + "\" is undefined');\n        return o." + name + ".apply(o, args);";
-	        return new Function('o', 'args', functionBody);
-	    };
-	    // There is not a concept of import uri in Js, but this is useful in developing Dart applications.
-	    ReflectionCapabilities.prototype.importUri = function (type) { return "./" + lang_1.stringify(type); };
-	    return ReflectionCapabilities;
-	}());
-	exports.ReflectionCapabilities = ReflectionCapabilities;
-	function convertTsickleDecoratorIntoMetadata(decoratorInvocations) {
-	    if (!decoratorInvocations) {
-	        return [];
-	    }
-	    return decoratorInvocations.map(function (decoratorInvocation) {
-	        var decoratorType = decoratorInvocation.type;
-	        var annotationCls = decoratorType.annotationCls;
-	        var annotationArgs = decoratorInvocation.args ? decoratorInvocation.args : [];
-	        var annotation = Object.create(annotationCls.prototype);
-	        annotationCls.apply(annotation, annotationArgs);
-	        return annotation;
-	    });
-	}
-	//# sourceMappingURL=reflection_capabilities.js.map
-
-/***/ },
-/* 199 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var lang_1 = __webpack_require__(4);
-	var exceptions_1 = __webpack_require__(9);
-	var collection_1 = __webpack_require__(11);
-	var reflector_reader_1 = __webpack_require__(112);
-	/**
-	 * Reflective information about a symbol, including annotations, interfaces, and other metadata.
-	 */
-	var ReflectionInfo = (function () {
-	    function ReflectionInfo(annotations, parameters, factory, interfaces, propMetadata) {
-	        this.annotations = annotations;
-	        this.parameters = parameters;
-	        this.factory = factory;
-	        this.interfaces = interfaces;
-	        this.propMetadata = propMetadata;
-	    }
-	    return ReflectionInfo;
-	}());
-	exports.ReflectionInfo = ReflectionInfo;
-	/**
-	 * Provides access to reflection data about symbols. Used internally by Angular
-	 * to power dependency injection and compilation.
-	 */
-	var Reflector = (function (_super) {
-	    __extends(Reflector, _super);
-	    function Reflector(reflectionCapabilities) {
-	        _super.call(this);
-	        /** @internal */
-	        this._injectableInfo = new collection_1.Map();
-	        /** @internal */
-	        this._getters = new collection_1.Map();
-	        /** @internal */
-	        this._setters = new collection_1.Map();
-	        /** @internal */
-	        this._methods = new collection_1.Map();
-	        this._usedKeys = null;
-	        this.reflectionCapabilities = reflectionCapabilities;
-	    }
-	    Reflector.prototype.isReflectionEnabled = function () { return this.reflectionCapabilities.isReflectionEnabled(); };
-	    /**
-	     * Causes `this` reflector to track keys used to access
-	     * {@link ReflectionInfo} objects.
-	     */
-	    Reflector.prototype.trackUsage = function () { this._usedKeys = new collection_1.Set(); };
-	    /**
-	     * Lists types for which reflection information was not requested since
-	     * {@link #trackUsage} was called. This list could later be audited as
-	     * potential dead code.
-	     */
-	    Reflector.prototype.listUnusedKeys = function () {
-	        var _this = this;
-	        if (this._usedKeys == null) {
-	            throw new exceptions_1.BaseException('Usage tracking is disabled');
-	        }
-	        var allTypes = collection_1.MapWrapper.keys(this._injectableInfo);
-	        return allTypes.filter(function (key) { return !collection_1.SetWrapper.has(_this._usedKeys, key); });
-	    };
-	    Reflector.prototype.registerFunction = function (func, funcInfo) {
-	        this._injectableInfo.set(func, funcInfo);
-	    };
-	    Reflector.prototype.registerType = function (type, typeInfo) {
-	        this._injectableInfo.set(type, typeInfo);
-	    };
-	    Reflector.prototype.registerGetters = function (getters) { _mergeMaps(this._getters, getters); };
-	    Reflector.prototype.registerSetters = function (setters) { _mergeMaps(this._setters, setters); };
-	    Reflector.prototype.registerMethods = function (methods) { _mergeMaps(this._methods, methods); };
-	    Reflector.prototype.factory = function (type) {
-	        if (this._containsReflectionInfo(type)) {
-	            var res = this._getReflectionInfo(type).factory;
-	            return lang_1.isPresent(res) ? res : null;
-	        }
-	        else {
-	            return this.reflectionCapabilities.factory(type);
-	        }
-	    };
-	    Reflector.prototype.parameters = function (typeOrFunc) {
-	        if (this._injectableInfo.has(typeOrFunc)) {
-	            var res = this._getReflectionInfo(typeOrFunc).parameters;
-	            return lang_1.isPresent(res) ? res : [];
-	        }
-	        else {
-	            return this.reflectionCapabilities.parameters(typeOrFunc);
-	        }
-	    };
-	    Reflector.prototype.annotations = function (typeOrFunc) {
-	        if (this._injectableInfo.has(typeOrFunc)) {
-	            var res = this._getReflectionInfo(typeOrFunc).annotations;
-	            return lang_1.isPresent(res) ? res : [];
-	        }
-	        else {
-	            return this.reflectionCapabilities.annotations(typeOrFunc);
-	        }
-	    };
-	    Reflector.prototype.propMetadata = function (typeOrFunc) {
-	        if (this._injectableInfo.has(typeOrFunc)) {
-	            var res = this._getReflectionInfo(typeOrFunc).propMetadata;
-	            return lang_1.isPresent(res) ? res : {};
-	        }
-	        else {
-	            return this.reflectionCapabilities.propMetadata(typeOrFunc);
-	        }
-	    };
-	    Reflector.prototype.interfaces = function (type) {
-	        if (this._injectableInfo.has(type)) {
-	            var res = this._getReflectionInfo(type).interfaces;
-	            return lang_1.isPresent(res) ? res : [];
-	        }
-	        else {
-	            return this.reflectionCapabilities.interfaces(type);
-	        }
-	    };
-	    Reflector.prototype.getter = function (name) {
-	        if (this._getters.has(name)) {
-	            return this._getters.get(name);
-	        }
-	        else {
-	            return this.reflectionCapabilities.getter(name);
-	        }
-	    };
-	    Reflector.prototype.setter = function (name) {
-	        if (this._setters.has(name)) {
-	            return this._setters.get(name);
-	        }
-	        else {
-	            return this.reflectionCapabilities.setter(name);
-	        }
-	    };
-	    Reflector.prototype.method = function (name) {
-	        if (this._methods.has(name)) {
-	            return this._methods.get(name);
-	        }
-	        else {
-	            return this.reflectionCapabilities.method(name);
-	        }
-	    };
-	    /** @internal */
-	    Reflector.prototype._getReflectionInfo = function (typeOrFunc) {
-	        if (lang_1.isPresent(this._usedKeys)) {
-	            this._usedKeys.add(typeOrFunc);
-	        }
-	        return this._injectableInfo.get(typeOrFunc);
-	    };
-	    /** @internal */
-	    Reflector.prototype._containsReflectionInfo = function (typeOrFunc) { return this._injectableInfo.has(typeOrFunc); };
-	    Reflector.prototype.importUri = function (type) { return this.reflectionCapabilities.importUri(type); };
-	    return Reflector;
-	}(reflector_reader_1.ReflectorReader));
-	exports.Reflector = Reflector;
-	function _mergeMaps(target, config) {
-	    collection_1.StringMapWrapper.forEach(config, function (v, k) { return target.set(k, v); });
-	}
-	//# sourceMappingURL=reflector.js.map
-
-/***/ },
-/* 200 */
-/***/ function(module, exports) {
-
-	"use strict";
-	/**
-	* A SecurityContext marks a location that has dangerous security implications, e.g. a DOM property
-	* like `innerHTML` that could cause Cross Site Scripting (XSS) security bugs when improperly
-	* handled.
-	*
-	* See DomSanitizationService for more details on security in Angular applications.
-	*/
-	(function (SecurityContext) {
-	    SecurityContext[SecurityContext["NONE"] = 0] = "NONE";
-	    SecurityContext[SecurityContext["HTML"] = 1] = "HTML";
-	    SecurityContext[SecurityContext["STYLE"] = 2] = "STYLE";
-	    SecurityContext[SecurityContext["SCRIPT"] = 3] = "SCRIPT";
-	    SecurityContext[SecurityContext["URL"] = 4] = "URL";
-	    SecurityContext[SecurityContext["RESOURCE_URL"] = 5] = "RESOURCE_URL";
-	})(exports.SecurityContext || (exports.SecurityContext = {}));
-	var SecurityContext = exports.SecurityContext;
-	/**
-	 * SanitizationService is used by the views to sanitize potentially dangerous values. This is a
-	 * private API, use code should only refer to DomSanitizationService.
-	 */
-	var SanitizationService = (function () {
-	    function SanitizationService() {
-	    }
-	    return SanitizationService;
-	}());
-	exports.SanitizationService = SanitizationService;
-	//# sourceMappingURL=security.js.map
-
-/***/ },
-/* 201 */
-/***/ function(module, exports) {
-
-	"use strict";
-	/**
-	* Stores error information; delivered via [NgZone.onError] stream.
-	*/
-	var NgZoneError = (function () {
-	    function NgZoneError(error, stackTrace) {
-	        this.error = error;
-	        this.stackTrace = stackTrace;
-	    }
-	    return NgZoneError;
-	}());
-	exports.NgZoneError = NgZoneError;
-	var NgZoneImpl = (function () {
-	    function NgZoneImpl(_a) {
-	        var _this = this;
-	        var trace = _a.trace, onEnter = _a.onEnter, onLeave = _a.onLeave, setMicrotask = _a.setMicrotask, setMacrotask = _a.setMacrotask, onError = _a.onError;
-	        this.onEnter = onEnter;
-	        this.onLeave = onLeave;
-	        this.setMicrotask = setMicrotask;
-	        this.setMacrotask = setMacrotask;
-	        this.onError = onError;
-	        if (Zone) {
-	            this.outer = this.inner = Zone.current;
-	            if (Zone['wtfZoneSpec']) {
-	                this.inner = this.inner.fork(Zone['wtfZoneSpec']);
-	            }
-	            if (trace && Zone['longStackTraceZoneSpec']) {
-	                this.inner = this.inner.fork(Zone['longStackTraceZoneSpec']);
-	            }
-	            this.inner = this.inner.fork({
-	                name: 'angular',
-	                properties: { 'isAngularZone': true },
-	                onInvokeTask: function (delegate, current, target, task, applyThis, applyArgs) {
-	                    try {
-	                        _this.onEnter();
-	                        return delegate.invokeTask(target, task, applyThis, applyArgs);
-	                    }
-	                    finally {
-	                        _this.onLeave();
-	                    }
-	                },
-	                onInvoke: function (delegate, current, target, callback, applyThis, applyArgs, source) {
-	                    try {
-	                        _this.onEnter();
-	                        return delegate.invoke(target, callback, applyThis, applyArgs, source);
-	                    }
-	                    finally {
-	                        _this.onLeave();
-	                    }
-	                },
-	                onHasTask: function (delegate, current, target, hasTaskState) {
-	                    delegate.hasTask(target, hasTaskState);
-	                    if (current == target) {
-	                        // We are only interested in hasTask events which originate from our zone
-	                        // (A child hasTask event is not interesting to us)
-	                        if (hasTaskState.change == 'microTask') {
-	                            _this.setMicrotask(hasTaskState.microTask);
-	                        }
-	                        else if (hasTaskState.change == 'macroTask') {
-	                            _this.setMacrotask(hasTaskState.macroTask);
-	                        }
-	                    }
-	                },
-	                onHandleError: function (delegate, current, target, error) {
-	                    delegate.handleError(target, error);
-	                    _this.onError(new NgZoneError(error, error.stack));
-	                    return false;
-	                }
-	            });
-	        }
-	        else {
-	            throw new Error('Angular requires Zone.js polyfill.');
-	        }
-	    }
-	    NgZoneImpl.isInAngularZone = function () { return Zone.current.get('isAngularZone') === true; };
-	    NgZoneImpl.prototype.runInner = function (fn) { return this.inner.run(fn); };
-	    ;
-	    NgZoneImpl.prototype.runInnerGuarded = function (fn) { return this.inner.runGuarded(fn); };
-	    ;
-	    NgZoneImpl.prototype.runOuter = function (fn) { return this.outer.run(fn); };
-	    ;
-	    return NgZoneImpl;
-	}());
-	exports.NgZoneImpl = NgZoneImpl;
-	//# sourceMappingURL=ng_zone_impl.js.map
-
-/***/ },
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */,
-/* 258 */,
-/* 259 */,
-/* 260 */,
-/* 261 */,
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */,
-/* 268 */,
-/* 269 */,
-/* 270 */,
-/* 271 */,
-/* 272 */,
-/* 273 */,
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */,
-/* 278 */,
-/* 279 */,
-/* 280 */,
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */,
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */,
-/* 302 */,
-/* 303 */,
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */,
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */,
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */,
-/* 323 */,
-/* 324 */,
-/* 325 */,
-/* 326 */,
-/* 327 */,
-/* 328 */,
-/* 329 */,
-/* 330 */,
-/* 331 */,
-/* 332 */,
-/* 333 */,
-/* 334 */,
-/* 335 */,
-/* 336 */,
-/* 337 */,
-/* 338 */,
-/* 339 */,
-/* 340 */,
-/* 341 */,
-/* 342 */,
-/* 343 */,
-/* 344 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var isFunction_1 = __webpack_require__(346);
-	var Subscription_1 = __webpack_require__(135);
-	var rxSubscriber_1 = __webpack_require__(138);
-	var Observer_1 = __webpack_require__(452);
-	/**
-	 * Implements the {@link Observer} interface and extends the
-	 * {@link Subscription} class. While the {@link Observer} is the public API for
-	 * consuming the values of an {@link Observable}, all Observers get converted to
-	 * a Subscriber, in order to provide Subscription-like capabilities such as
-	 * `unsubscribe`. Subscriber is a common type in RxJS, and crucial for
-	 * implementing operators, but it is rarely used as a public API.
-	 *
-	 * @class Subscriber<T>
-	 */
-	var Subscriber = (function (_super) {
-	    __extends(Subscriber, _super);
-	    /**
-	     * @param {Observer|function(value: T): void} [destinationOrNext] A partially
-	     * defined Observer or a `next` callback function.
-	     * @param {function(e: ?any): void} [error] The `error` callback of an
-	     * Observer.
-	     * @param {function(): void} [complete] The `complete` callback of an
-	     * Observer.
-	     */
-	    function Subscriber(destinationOrNext, error, complete) {
-	        _super.call(this);
-	        this.syncErrorValue = null;
-	        this.syncErrorThrown = false;
-	        this.syncErrorThrowable = false;
-	        this.isStopped = false;
-	        switch (arguments.length) {
-	            case 0:
-	                this.destination = Observer_1.empty;
-	                break;
-	            case 1:
-	                if (!destinationOrNext) {
-	                    this.destination = Observer_1.empty;
-	                    break;
-	                }
-	                if (typeof destinationOrNext === 'object') {
-	                    if (destinationOrNext instanceof Subscriber) {
-	                        this.destination = destinationOrNext;
-	                        this.destination.add(this);
-	                    }
-	                    else {
-	                        this.syncErrorThrowable = true;
-	                        this.destination = new SafeSubscriber(this, destinationOrNext);
-	                    }
-	                    break;
-	                }
-	            default:
-	                this.syncErrorThrowable = true;
-	                this.destination = new SafeSubscriber(this, destinationOrNext, error, complete);
-	                break;
-	        }
-	    }
-	    /**
-	     * A static factory for a Subscriber, given a (potentially partial) definition
-	     * of an Observer.
-	     * @param {function(x: ?T): void} [next] The `next` callback of an Observer.
-	     * @param {function(e: ?any): void} [error] The `error` callback of an
-	     * Observer.
-	     * @param {function(): void} [complete] The `complete` callback of an
-	     * Observer.
-	     * @return {Subscriber<T>} A Subscriber wrapping the (partially defined)
-	     * Observer represented by the given arguments.
-	     */
-	    Subscriber.create = function (next, error, complete) {
-	        var subscriber = new Subscriber(next, error, complete);
-	        subscriber.syncErrorThrowable = false;
-	        return subscriber;
-	    };
-	    /**
-	     * The {@link Observer} callback to receive notifications of type `next` from
-	     * the Observable, with a value. The Observable may call this method 0 or more
-	     * times.
-	     * @param {T} [value] The `next` value.
-	     * @return {void}
-	     */
-	    Subscriber.prototype.next = function (value) {
-	        if (!this.isStopped) {
-	            this._next(value);
-	        }
-	    };
-	    /**
-	     * The {@link Observer} callback to receive notifications of type `error` from
-	     * the Observable, with an attached {@link Error}. Notifies the Observer that
-	     * the Observable has experienced an error condition.
-	     * @param {any} [err] The `error` exception.
-	     * @return {void}
-	     */
-	    Subscriber.prototype.error = function (err) {
-	        if (!this.isStopped) {
-	            this.isStopped = true;
-	            this._error(err);
-	        }
-	    };
-	    /**
-	     * The {@link Observer} callback to receive a valueless notification of type
-	     * `complete` from the Observable. Notifies the Observer that the Observable
-	     * has finished sending push-based notifications.
-	     * @return {void}
-	     */
-	    Subscriber.prototype.complete = function () {
-	        if (!this.isStopped) {
-	            this.isStopped = true;
-	            this._complete();
-	        }
-	    };
-	    Subscriber.prototype.unsubscribe = function () {
-	        if (this.isUnsubscribed) {
-	            return;
-	        }
-	        this.isStopped = true;
-	        _super.prototype.unsubscribe.call(this);
-	    };
-	    Subscriber.prototype._next = function (value) {
-	        this.destination.next(value);
-	    };
-	    Subscriber.prototype._error = function (err) {
-	        this.destination.error(err);
-	        this.unsubscribe();
-	    };
-	    Subscriber.prototype._complete = function () {
-	        this.destination.complete();
-	        this.unsubscribe();
-	    };
-	    Subscriber.prototype[rxSubscriber_1.$$rxSubscriber] = function () {
-	        return this;
-	    };
-	    return Subscriber;
-	}(Subscription_1.Subscription));
-	exports.Subscriber = Subscriber;
-	/**
-	 * We need this JSDoc comment for affecting ESDoc.
-	 * @ignore
-	 * @extends {Ignored}
-	 */
-	var SafeSubscriber = (function (_super) {
-	    __extends(SafeSubscriber, _super);
-	    function SafeSubscriber(_parent, observerOrNext, error, complete) {
-	        _super.call(this);
-	        this._parent = _parent;
-	        var next;
-	        var context = this;
-	        if (isFunction_1.isFunction(observerOrNext)) {
-	            next = observerOrNext;
-	        }
-	        else if (observerOrNext) {
-	            context = observerOrNext;
-	            next = observerOrNext.next;
-	            error = observerOrNext.error;
-	            complete = observerOrNext.complete;
-	            if (isFunction_1.isFunction(context.unsubscribe)) {
-	                this.add(context.unsubscribe.bind(context));
-	            }
-	            context.unsubscribe = this.unsubscribe.bind(this);
-	        }
-	        this._context = context;
-	        this._next = next;
-	        this._error = error;
-	        this._complete = complete;
-	    }
-	    SafeSubscriber.prototype.next = function (value) {
-	        if (!this.isStopped && this._next) {
-	            var _parent = this._parent;
-	            if (!_parent.syncErrorThrowable) {
-	                this.__tryOrUnsub(this._next, value);
-	            }
-	            else if (this.__tryOrSetError(_parent, this._next, value)) {
-	                this.unsubscribe();
-	            }
-	        }
-	    };
-	    SafeSubscriber.prototype.error = function (err) {
-	        if (!this.isStopped) {
-	            var _parent = this._parent;
-	            if (this._error) {
-	                if (!_parent.syncErrorThrowable) {
-	                    this.__tryOrUnsub(this._error, err);
-	                    this.unsubscribe();
-	                }
-	                else {
-	                    this.__tryOrSetError(_parent, this._error, err);
-	                    this.unsubscribe();
-	                }
-	            }
-	            else if (!_parent.syncErrorThrowable) {
-	                this.unsubscribe();
-	                throw err;
-	            }
-	            else {
-	                _parent.syncErrorValue = err;
-	                _parent.syncErrorThrown = true;
-	                this.unsubscribe();
-	            }
-	        }
-	    };
-	    SafeSubscriber.prototype.complete = function () {
-	        if (!this.isStopped) {
-	            var _parent = this._parent;
-	            if (this._complete) {
-	                if (!_parent.syncErrorThrowable) {
-	                    this.__tryOrUnsub(this._complete);
-	                    this.unsubscribe();
-	                }
-	                else {
-	                    this.__tryOrSetError(_parent, this._complete);
-	                    this.unsubscribe();
-	                }
-	            }
-	            else {
-	                this.unsubscribe();
-	            }
-	        }
-	    };
-	    SafeSubscriber.prototype.__tryOrUnsub = function (fn, value) {
-	        try {
-	            fn.call(this._context, value);
-	        }
-	        catch (err) {
-	            this.unsubscribe();
-	            throw err;
-	        }
-	    };
-	    SafeSubscriber.prototype.__tryOrSetError = function (parent, fn, value) {
-	        try {
-	            fn.call(this._context, value);
-	        }
-	        catch (err) {
-	            parent.syncErrorValue = err;
-	            parent.syncErrorThrown = true;
-	            return true;
-	        }
-	        return false;
-	    };
-	    SafeSubscriber.prototype._unsubscribe = function () {
-	        var _parent = this._parent;
-	        this._context = null;
-	        this._parent = null;
-	        _parent.unsubscribe();
-	    };
-	    return SafeSubscriber;
-	}(Subscriber));
-	//# sourceMappingURL=Subscriber.js.map
-
-/***/ },
-/* 345 */
-/***/ function(module, exports) {
-
-	"use strict";
-	// typeof any so that it we don't have to cast when comparing a result to the error object
-	exports.errorObject = { e: {} };
-	//# sourceMappingURL=errorObject.js.map
-
-/***/ },
-/* 346 */
-/***/ function(module, exports) {
-
-	"use strict";
-	function isFunction(x) {
-	    return typeof x === 'function';
-	}
-	exports.isFunction = isFunction;
-	//# sourceMappingURL=isFunction.js.map
-
-/***/ },
-/* 347 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var forms_1 = __webpack_require__(153);
-	var directives_1 = __webpack_require__(143);
-	/**
-	 * A collection of Angular core directives that are likely to be used in each and every Angular
-	 * application. This includes core directives (e.g., NgIf and NgFor), and forms directives (e.g.,
-	 * NgModel).
-	 *
-	 * This collection can be used to quickly enumerate all the built-in directives in the `directives`
-	 * property of the `@Component` decorator.
-	 *
-	 * ### Example
-	 *
-	 * Instead of writing:
-	 *
-	 * ```typescript
-	 * import {NgClass, NgIf, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault, NgModel, NgForm} from
-	 * '@angular/common';
-	 * import {OtherDirective} from './myDirectives';
-	 *
-	 * @Component({
-	 *   selector: 'my-component',
-	 *   templateUrl: 'myComponent.html',
-	 *   directives: [NgClass, NgIf, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault, NgModel, NgForm,
-	 * OtherDirective]
-	 * })
-	 * export class MyComponent {
-	 *   ...
-	 * }
-	 * ```
-	 * one could import all the common directives at once:
-	 *
-	 * ```typescript
-	 * import {COMMON_DIRECTIVES} from '@angular/common';
-	 * import {OtherDirective} from './myDirectives';
-	 *
-	 * @Component({
-	 *   selector: 'my-component',
-	 *   templateUrl: 'myComponent.html',
-	 *   directives: [COMMON_DIRECTIVES, OtherDirective]
-	 * })
-	 * export class MyComponent {
-	 *   ...
-	 * }
-	 * ```
-	 */
-	exports.COMMON_DIRECTIVES = [directives_1.CORE_DIRECTIVES, forms_1.FORM_DIRECTIVES];
-	//# sourceMappingURL=common_directives.js.map
-
-/***/ },
-/* 348 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var ng_class_1 = __webpack_require__(144);
-	var ng_for_1 = __webpack_require__(145);
-	var ng_if_1 = __webpack_require__(146);
-	var ng_template_outlet_1 = __webpack_require__(149);
-	var ng_style_1 = __webpack_require__(148);
-	var ng_switch_1 = __webpack_require__(74);
-	var ng_plural_1 = __webpack_require__(147);
-	/**
-	 * A collection of Angular core directives that are likely to be used in each and every Angular
-	 * application.
-	 *
-	 * This collection can be used to quickly enumerate all the built-in directives in the `directives`
-	 * property of the `@Component` annotation.
-	 *
-	 * ### Example ([live demo](http://plnkr.co/edit/yakGwpCdUkg0qfzX5m8g?p=preview))
-	 *
-	 * Instead of writing:
-	 *
-	 * ```typescript
-	 * import {NgClass, NgIf, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault} from '@angular/common';
-	 * import {OtherDirective} from './myDirectives';
-	 *
-	 * @Component({
-	 *   selector: 'my-component',
-	 *   templateUrl: 'myComponent.html',
-	 *   directives: [NgClass, NgIf, NgFor, NgSwitch, NgSwitchWhen, NgSwitchDefault, OtherDirective]
-	 * })
-	 * export class MyComponent {
-	 *   ...
-	 * }
-	 * ```
-	 * one could import all the core directives at once:
-	 *
-	 * ```typescript
-	 * import {CORE_DIRECTIVES} from '@angular/common';
-	 * import {OtherDirective} from './myDirectives';
-	 *
-	 * @Component({
-	 *   selector: 'my-component',
-	 *   templateUrl: 'myComponent.html',
-	 *   directives: [CORE_DIRECTIVES, OtherDirective]
-	 * })
-	 * export class MyComponent {
-	 *   ...
-	 * }
-	 * ```
-	 */
-	exports.CORE_DIRECTIVES = [
-	    ng_class_1.NgClass,
-	    ng_for_1.NgFor,
-	    ng_if_1.NgIf,
-	    ng_template_outlet_1.NgTemplateOutlet,
-	    ng_style_1.NgStyle,
-	    ng_switch_1.NgSwitch,
-	    ng_switch_1.NgSwitchWhen,
-	    ng_switch_1.NgSwitchDefault,
-	    ng_plural_1.NgPlural,
-	    ng_plural_1.NgPluralCase
-	];
-	//# sourceMappingURL=core_directives.js.map
-
-/***/ },
-/* 349 */
-/***/ function(module, exports) {
-
-	"use strict";
-	//# sourceMappingURL=observable_list_diff.js.map
-
-/***/ },
-/* 350 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var ng_control_name_1 = __webpack_require__(78);
-	var ng_form_control_1 = __webpack_require__(81);
-	var ng_model_1 = __webpack_require__(83);
-	var ng_control_group_1 = __webpack_require__(77);
-	var ng_form_model_1 = __webpack_require__(82);
-	var ng_form_1 = __webpack_require__(80);
-	var default_value_accessor_1 = __webpack_require__(49);
-	var checkbox_value_accessor_1 = __webpack_require__(48);
-	var number_value_accessor_1 = __webpack_require__(84);
-	var radio_control_value_accessor_1 = __webpack_require__(50);
-	var ng_control_status_1 = __webpack_require__(79);
-	var select_control_value_accessor_1 = __webpack_require__(51);
-	var validators_1 = __webpack_require__(85);
-	var ng_control_name_2 = __webpack_require__(78);
-	exports.NgControlName = ng_control_name_2.NgControlName;
-	var ng_form_control_2 = __webpack_require__(81);
-	exports.NgFormControl = ng_form_control_2.NgFormControl;
-	var ng_model_2 = __webpack_require__(83);
-	exports.NgModel = ng_model_2.NgModel;
-	var ng_control_group_2 = __webpack_require__(77);
-	exports.NgControlGroup = ng_control_group_2.NgControlGroup;
-	var ng_form_model_2 = __webpack_require__(82);
-	exports.NgFormModel = ng_form_model_2.NgFormModel;
-	var ng_form_2 = __webpack_require__(80);
-	exports.NgForm = ng_form_2.NgForm;
-	var default_value_accessor_2 = __webpack_require__(49);
-	exports.DefaultValueAccessor = default_value_accessor_2.DefaultValueAccessor;
-	var checkbox_value_accessor_2 = __webpack_require__(48);
-	exports.CheckboxControlValueAccessor = checkbox_value_accessor_2.CheckboxControlValueAccessor;
-	var radio_control_value_accessor_2 = __webpack_require__(50);
-	exports.RadioControlValueAccessor = radio_control_value_accessor_2.RadioControlValueAccessor;
-	exports.RadioButtonState = radio_control_value_accessor_2.RadioButtonState;
-	var number_value_accessor_2 = __webpack_require__(84);
-	exports.NumberValueAccessor = number_value_accessor_2.NumberValueAccessor;
-	var ng_control_status_2 = __webpack_require__(79);
-	exports.NgControlStatus = ng_control_status_2.NgControlStatus;
-	var select_control_value_accessor_2 = __webpack_require__(51);
-	exports.SelectControlValueAccessor = select_control_value_accessor_2.SelectControlValueAccessor;
-	exports.NgSelectOption = select_control_value_accessor_2.NgSelectOption;
-	var validators_2 = __webpack_require__(85);
-	exports.RequiredValidator = validators_2.RequiredValidator;
-	exports.MinLengthValidator = validators_2.MinLengthValidator;
-	exports.MaxLengthValidator = validators_2.MaxLengthValidator;
-	exports.PatternValidator = validators_2.PatternValidator;
-	var ng_control_1 = __webpack_require__(26);
-	exports.NgControl = ng_control_1.NgControl;
-	/**
-	 *
-	 * A list of all the form directives used as part of a `@Component` annotation.
-	 *
-	 *  This is a shorthand for importing them each individually.
-	 *
-	 * ### Example
-	 *
-	 * ```typescript
-	 * @Component({
-	 *   selector: 'my-app',
-	 *   directives: [FORM_DIRECTIVES]
-	 * })
-	 * class MyApp {}
-	 * ```
-	 */
-	exports.FORM_DIRECTIVES = [
-	    ng_control_name_1.NgControlName,
-	    ng_control_group_1.NgControlGroup,
-	    ng_form_control_1.NgFormControl,
-	    ng_model_1.NgModel,
-	    ng_form_model_1.NgFormModel,
-	    ng_form_1.NgForm,
-	    select_control_value_accessor_1.NgSelectOption,
-	    default_value_accessor_1.DefaultValueAccessor,
-	    number_value_accessor_1.NumberValueAccessor,
-	    checkbox_value_accessor_1.CheckboxControlValueAccessor,
-	    select_control_value_accessor_1.SelectControlValueAccessor,
-	    radio_control_value_accessor_1.RadioControlValueAccessor,
-	    ng_control_status_1.NgControlStatus,
-	    validators_1.RequiredValidator,
-	    validators_1.MinLengthValidator,
-	    validators_1.MaxLengthValidator,
-	    validators_1.PatternValidator
-	];
-	//# sourceMappingURL=directives.js.map
-
-/***/ },
-/* 351 */
-/***/ function(module, exports) {
-
-	"use strict";
-	function normalizeValidator(validator) {
-	    if (validator.validate !== undefined) {
-	        return function (c) { return validator.validate(c); };
-	    }
-	    else {
-	        return validator;
-	    }
-	}
-	exports.normalizeValidator = normalizeValidator;
-	function normalizeAsyncValidator(validator) {
-	    if (validator.validate !== undefined) {
-	        return function (c) { return Promise.resolve(validator.validate(c)); };
-	    }
-	    else {
-	        return validator;
-	    }
-	}
-	exports.normalizeAsyncValidator = normalizeAsyncValidator;
-	//# sourceMappingURL=normalize_validator.js.map
-
-/***/ },
-/* 352 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(87));
-	__export(__webpack_require__(53));
-	__export(__webpack_require__(353));
-	__export(__webpack_require__(354));
-	__export(__webpack_require__(86));
-	//# sourceMappingURL=location.js.map
-
-/***/ },
-/* 353 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var core_1 = __webpack_require__(1);
-	var lang_1 = __webpack_require__(5);
-	var location_strategy_1 = __webpack_require__(53);
-	var location_1 = __webpack_require__(86);
-	var platform_location_1 = __webpack_require__(87);
-	var HashLocationStrategy = (function (_super) {
-	    __extends(HashLocationStrategy, _super);
-	    function HashLocationStrategy(_platformLocation, _baseHref) {
-	        _super.call(this);
-	        this._platformLocation = _platformLocation;
-	        this._baseHref = '';
-	        if (lang_1.isPresent(_baseHref)) {
-	            this._baseHref = _baseHref;
-	        }
-	    }
-	    HashLocationStrategy.prototype.onPopState = function (fn) {
-	        this._platformLocation.onPopState(fn);
-	        this._platformLocation.onHashChange(fn);
-	    };
-	    HashLocationStrategy.prototype.getBaseHref = function () { return this._baseHref; };
-	    HashLocationStrategy.prototype.path = function () {
-	        // the hash value is always prefixed with a `#`
-	        // and if it is empty then it will stay empty
-	        var path = this._platformLocation.hash;
-	        if (!lang_1.isPresent(path))
-	            path = '#';
-	        // Dart will complain if a call to substring is
-	        // executed with a position value that extends the
-	        // length of string.
-	        return (path.length > 0 ? path.substring(1) : path);
-	    };
-	    HashLocationStrategy.prototype.prepareExternalUrl = function (internal) {
-	        var url = location_1.Location.joinWithSlash(this._baseHref, internal);
-	        return url.length > 0 ? ('#' + url) : url;
-	    };
-	    HashLocationStrategy.prototype.pushState = function (state, title, path, queryParams) {
-	        var url = this.prepareExternalUrl(path + location_1.Location.normalizeQueryParams(queryParams));
-	        if (url.length == 0) {
-	            url = this._platformLocation.pathname;
-	        }
-	        this._platformLocation.pushState(state, title, url);
-	    };
-	    HashLocationStrategy.prototype.replaceState = function (state, title, path, queryParams) {
-	        var url = this.prepareExternalUrl(path + location_1.Location.normalizeQueryParams(queryParams));
-	        if (url.length == 0) {
-	            url = this._platformLocation.pathname;
-	        }
-	        this._platformLocation.replaceState(state, title, url);
-	    };
-	    HashLocationStrategy.prototype.forward = function () { this._platformLocation.forward(); };
-	    HashLocationStrategy.prototype.back = function () { this._platformLocation.back(); };
-	    HashLocationStrategy.decorators = [
-	        { type: core_1.Injectable },
-	    ];
-	    HashLocationStrategy.ctorParameters = [
-	        { type: platform_location_1.PlatformLocation, },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Inject, args: [location_strategy_1.APP_BASE_HREF,] },] },
-	    ];
-	    return HashLocationStrategy;
-	}(location_strategy_1.LocationStrategy));
-	exports.HashLocationStrategy = HashLocationStrategy;
-	//# sourceMappingURL=hash_location_strategy.js.map
-
-/***/ },
-/* 354 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var core_1 = __webpack_require__(1);
-	var lang_1 = __webpack_require__(5);
-	var exceptions_1 = __webpack_require__(23);
-	var platform_location_1 = __webpack_require__(87);
-	var location_strategy_1 = __webpack_require__(53);
-	var location_1 = __webpack_require__(86);
-	var PathLocationStrategy = (function (_super) {
-	    __extends(PathLocationStrategy, _super);
-	    function PathLocationStrategy(_platformLocation, href) {
-	        _super.call(this);
-	        this._platformLocation = _platformLocation;
-	        if (lang_1.isBlank(href)) {
-	            href = this._platformLocation.getBaseHrefFromDOM();
-	        }
-	        if (lang_1.isBlank(href)) {
-	            throw new exceptions_1.BaseException("No base href set. Please provide a value for the APP_BASE_HREF token or add a base element to the document.");
-	        }
-	        this._baseHref = href;
-	    }
-	    PathLocationStrategy.prototype.onPopState = function (fn) {
-	        this._platformLocation.onPopState(fn);
-	        this._platformLocation.onHashChange(fn);
-	    };
-	    PathLocationStrategy.prototype.getBaseHref = function () { return this._baseHref; };
-	    PathLocationStrategy.prototype.prepareExternalUrl = function (internal) {
-	        return location_1.Location.joinWithSlash(this._baseHref, internal);
-	    };
-	    PathLocationStrategy.prototype.path = function () {
-	        return this._platformLocation.pathname +
-	            location_1.Location.normalizeQueryParams(this._platformLocation.search);
-	    };
-	    PathLocationStrategy.prototype.pushState = function (state, title, url, queryParams) {
-	        var externalUrl = this.prepareExternalUrl(url + location_1.Location.normalizeQueryParams(queryParams));
-	        this._platformLocation.pushState(state, title, externalUrl);
-	    };
-	    PathLocationStrategy.prototype.replaceState = function (state, title, url, queryParams) {
-	        var externalUrl = this.prepareExternalUrl(url + location_1.Location.normalizeQueryParams(queryParams));
-	        this._platformLocation.replaceState(state, title, externalUrl);
-	    };
-	    PathLocationStrategy.prototype.forward = function () { this._platformLocation.forward(); };
-	    PathLocationStrategy.prototype.back = function () { this._platformLocation.back(); };
-	    PathLocationStrategy.decorators = [
-	        { type: core_1.Injectable },
-	    ];
-	    PathLocationStrategy.ctorParameters = [
-	        { type: platform_location_1.PlatformLocation, },
-	        { type: undefined, decorators: [{ type: core_1.Optional }, { type: core_1.Inject, args: [location_strategy_1.APP_BASE_HREF,] },] },
-	    ];
-	    return PathLocationStrategy;
-	}(location_strategy_1.LocationStrategy));
-	exports.PathLocationStrategy = PathLocationStrategy;
-	//# sourceMappingURL=path_location_strategy.js.map
-
-/***/ },
-/* 355 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	/**
-	* @module
-	* @description
-	* This module provides a set of common Pipes.
-	*/
-	var async_pipe_1 = __webpack_require__(155);
-	exports.AsyncPipe = async_pipe_1.AsyncPipe;
-	var date_pipe_1 = __webpack_require__(156);
-	exports.DatePipe = date_pipe_1.DatePipe;
-	var json_pipe_1 = __webpack_require__(159);
-	exports.JsonPipe = json_pipe_1.JsonPipe;
-	var slice_pipe_1 = __webpack_require__(163);
-	exports.SlicePipe = slice_pipe_1.SlicePipe;
-	var lowercase_pipe_1 = __webpack_require__(160);
-	exports.LowerCasePipe = lowercase_pipe_1.LowerCasePipe;
-	var number_pipe_1 = __webpack_require__(161);
-	exports.NumberPipe = number_pipe_1.NumberPipe;
-	exports.DecimalPipe = number_pipe_1.DecimalPipe;
-	exports.PercentPipe = number_pipe_1.PercentPipe;
-	exports.CurrencyPipe = number_pipe_1.CurrencyPipe;
-	var uppercase_pipe_1 = __webpack_require__(164);
-	exports.UpperCasePipe = uppercase_pipe_1.UpperCasePipe;
-	var replace_pipe_1 = __webpack_require__(162);
-	exports.ReplacePipe = replace_pipe_1.ReplacePipe;
-	var i18n_plural_pipe_1 = __webpack_require__(157);
-	exports.I18nPluralPipe = i18n_plural_pipe_1.I18nPluralPipe;
-	var i18n_select_pipe_1 = __webpack_require__(158);
-	exports.I18nSelectPipe = i18n_select_pipe_1.I18nSelectPipe;
-	var common_pipes_1 = __webpack_require__(356);
-	exports.COMMON_PIPES = common_pipes_1.COMMON_PIPES;
-	//# sourceMappingURL=pipes.js.map
-
-/***/ },
-/* 356 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	/**
-	* @module
-	* @description
-	* This module provides a set of common Pipes.
-	*/
-	var async_pipe_1 = __webpack_require__(155);
-	var uppercase_pipe_1 = __webpack_require__(164);
-	var lowercase_pipe_1 = __webpack_require__(160);
-	var json_pipe_1 = __webpack_require__(159);
-	var slice_pipe_1 = __webpack_require__(163);
-	var date_pipe_1 = __webpack_require__(156);
-	var number_pipe_1 = __webpack_require__(161);
-	var replace_pipe_1 = __webpack_require__(162);
-	var i18n_plural_pipe_1 = __webpack_require__(157);
-	var i18n_select_pipe_1 = __webpack_require__(158);
-	/**
-	 * A collection of Angular core pipes that are likely to be used in each and every
-	 * application.
-	 *
-	 * This collection can be used to quickly enumerate all the built-in pipes in the `pipes`
-	 * property of the `@Component` decorator.
-	 */
-	exports.COMMON_PIPES = [
-	    async_pipe_1.AsyncPipe,
-	    uppercase_pipe_1.UpperCasePipe,
-	    lowercase_pipe_1.LowerCasePipe,
-	    json_pipe_1.JsonPipe,
-	    slice_pipe_1.SlicePipe,
-	    number_pipe_1.DecimalPipe,
-	    number_pipe_1.PercentPipe,
-	    number_pipe_1.CurrencyPipe,
-	    date_pipe_1.DatePipe,
-	    replace_pipe_1.ReplacePipe,
-	    i18n_plural_pipe_1.I18nPluralPipe,
-	    i18n_select_pipe_1.I18nSelectPipe
-	];
-	//# sourceMappingURL=common_pipes.js.map
-
-/***/ },
-/* 357 */,
-/* 358 */,
-/* 359 */,
-/* 360 */,
-/* 361 */,
-/* 362 */,
-/* 363 */,
-/* 364 */,
-/* 365 */,
-/* 366 */,
-/* 367 */,
-/* 368 */,
-/* 369 */,
-/* 370 */,
-/* 371 */,
-/* 372 */,
-/* 373 */,
-/* 374 */,
-/* 375 */,
-/* 376 */,
-/* 377 */,
-/* 378 */,
-/* 379 */,
-/* 380 */,
-/* 381 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var constants = __webpack_require__(61);
-	var security = __webpack_require__(200);
-	var reflective_provider = __webpack_require__(108);
-	var lifecycle_hooks = __webpack_require__(393);
-	var reflector_reader = __webpack_require__(112);
-	var component_resolver = __webpack_require__(40);
-	var element = __webpack_require__(109);
-	var view = __webpack_require__(391);
-	var view_type = __webpack_require__(63);
-	var view_utils = __webpack_require__(64);
-	var metadata_view = __webpack_require__(111);
-	var debug_context = __webpack_require__(190);
-	var change_detection_util = __webpack_require__(101);
-	var api = __webpack_require__(113);
-	var template_ref = __webpack_require__(193);
-	var wtf_init = __webpack_require__(397);
-	var reflection_capabilities = __webpack_require__(198);
-	var decorators = __webpack_require__(67);
-	var debug = __webpack_require__(385);
-	var provider_util = __webpack_require__(185);
-	var console = __webpack_require__(103);
-	exports.__core_private__ = {
-	    isDefaultChangeDetectionStrategy: constants.isDefaultChangeDetectionStrategy,
-	    ChangeDetectorState: constants.ChangeDetectorState,
-	    CHANGE_DETECTION_STRATEGY_VALUES: constants.CHANGE_DETECTION_STRATEGY_VALUES,
-	    constructDependencies: reflective_provider.constructDependencies,
-	    LifecycleHooks: lifecycle_hooks.LifecycleHooks,
-	    LIFECYCLE_HOOKS_VALUES: lifecycle_hooks.LIFECYCLE_HOOKS_VALUES,
-	    ReflectorReader: reflector_reader.ReflectorReader,
-	    ReflectorComponentResolver: component_resolver.ReflectorComponentResolver,
-	    AppElement: element.AppElement,
-	    AppView: view.AppView,
-	    DebugAppView: view.DebugAppView,
-	    ViewType: view_type.ViewType,
-	    MAX_INTERPOLATION_VALUES: view_utils.MAX_INTERPOLATION_VALUES,
-	    checkBinding: view_utils.checkBinding,
-	    flattenNestedViewRenderNodes: view_utils.flattenNestedViewRenderNodes,
-	    interpolate: view_utils.interpolate,
-	    ViewUtils: view_utils.ViewUtils,
-	    VIEW_ENCAPSULATION_VALUES: metadata_view.VIEW_ENCAPSULATION_VALUES,
-	    DebugContext: debug_context.DebugContext,
-	    StaticNodeDebugInfo: debug_context.StaticNodeDebugInfo,
-	    devModeEqual: change_detection_util.devModeEqual,
-	    uninitialized: change_detection_util.uninitialized,
-	    ValueUnwrapper: change_detection_util.ValueUnwrapper,
-	    RenderDebugInfo: api.RenderDebugInfo,
-	    SecurityContext: security.SecurityContext,
-	    SanitizationService: security.SanitizationService,
-	    TemplateRef_: template_ref.TemplateRef_,
-	    wtfInit: wtf_init.wtfInit,
-	    ReflectionCapabilities: reflection_capabilities.ReflectionCapabilities,
-	    makeDecorator: decorators.makeDecorator,
-	    DebugDomRootRenderer: debug.DebugDomRootRenderer,
-	    createProvider: provider_util.createProvider,
-	    isProviderLiteral: provider_util.isProviderLiteral,
-	    EMPTY_ARRAY: view_utils.EMPTY_ARRAY,
-	    EMPTY_MAP: view_utils.EMPTY_MAP,
-	    pureProxy1: view_utils.pureProxy1,
-	    pureProxy2: view_utils.pureProxy2,
-	    pureProxy3: view_utils.pureProxy3,
-	    pureProxy4: view_utils.pureProxy4,
-	    pureProxy5: view_utils.pureProxy5,
-	    pureProxy6: view_utils.pureProxy6,
-	    pureProxy7: view_utils.pureProxy7,
-	    pureProxy8: view_utils.pureProxy8,
-	    pureProxy9: view_utils.pureProxy9,
-	    pureProxy10: view_utils.pureProxy10,
-	    castByValue: view_utils.castByValue,
-	    Console: console.Console,
-	};
-	//# sourceMappingURL=private_export.js.map
-
-/***/ },
-/* 382 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var application_tokens_1 = __webpack_require__(59);
-	var application_ref_1 = __webpack_require__(100);
-	var change_detection_1 = __webpack_require__(60);
-	var view_utils_1 = __webpack_require__(64);
-	var component_resolver_1 = __webpack_require__(40);
-	var dynamic_component_loader_1 = __webpack_require__(191);
-	var __unused; // avoid unused import when Type union types are erased
-	/**
-	 * A default set of providers which should be included in any Angular
-	 * application, regardless of the platform it runs onto.
-	 */
-	exports.APPLICATION_COMMON_PROVIDERS = 
-	/*@ts2dart_const*/ [
-	    application_ref_1.APPLICATION_CORE_PROVIDERS,
-	    /* @ts2dart_Provider */ { provide: component_resolver_1.ComponentResolver, useClass: component_resolver_1.ReflectorComponentResolver },
-	    application_tokens_1.APP_ID_RANDOM_PROVIDER,
-	    view_utils_1.ViewUtils,
-	    /* @ts2dart_Provider */ { provide: change_detection_1.IterableDiffers, useValue: change_detection_1.defaultIterableDiffers },
-	    /* @ts2dart_Provider */ { provide: change_detection_1.KeyValueDiffers, useValue: change_detection_1.defaultKeyValueDiffers },
-	    /* @ts2dart_Provider */ { provide: dynamic_component_loader_1.DynamicComponentLoader, useClass: dynamic_component_loader_1.DynamicComponentLoader_ }
-	];
-	//# sourceMappingURL=application_common_providers.js.map
-
-/***/ },
-/* 383 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	/**
-	* @module
-	* @description
-	* Change detection enables data binding in Angular.
-	*/
-	var change_detection_1 = __webpack_require__(60);
-	exports.ChangeDetectionStrategy = change_detection_1.ChangeDetectionStrategy;
-	exports.ChangeDetectorRef = change_detection_1.ChangeDetectorRef;
-	exports.WrappedValue = change_detection_1.WrappedValue;
-	exports.SimpleChange = change_detection_1.SimpleChange;
-	exports.DefaultIterableDiffer = change_detection_1.DefaultIterableDiffer;
-	exports.IterableDiffers = change_detection_1.IterableDiffers;
-	exports.KeyValueDiffers = change_detection_1.KeyValueDiffers;
-	exports.CollectionChangeRecord = change_detection_1.CollectionChangeRecord;
-	exports.KeyValueChangeRecord = change_detection_1.KeyValueChangeRecord;
-	//# sourceMappingURL=change_detection.js.map
-
-/***/ },
-/* 384 */
-/***/ function(module, exports) {
-
-	"use strict";
-	var ChangeDetectorRef = (function () {
-	    function ChangeDetectorRef() {
-	    }
-	    return ChangeDetectorRef;
-	}());
-	exports.ChangeDetectorRef = ChangeDetectorRef;
-	//# sourceMappingURL=change_detector_ref.js.map
-
-/***/ },
-/* 385 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var lang_1 = __webpack_require__(4);
-	var debug_node_1 = __webpack_require__(184);
-	var DebugDomRootRenderer = (function () {
-	    function DebugDomRootRenderer(_delegate) {
-	        this._delegate = _delegate;
-	    }
-	    DebugDomRootRenderer.prototype.renderComponent = function (componentProto) {
-	        return new DebugDomRenderer(this._delegate.renderComponent(componentProto));
-	    };
-	    return DebugDomRootRenderer;
-	}());
-	exports.DebugDomRootRenderer = DebugDomRootRenderer;
-	var DebugDomRenderer = (function () {
-	    function DebugDomRenderer(_delegate) {
-	        this._delegate = _delegate;
-	    }
-	    DebugDomRenderer.prototype.selectRootElement = function (selectorOrNode, debugInfo) {
-	        var nativeEl = this._delegate.selectRootElement(selectorOrNode, debugInfo);
-	        var debugEl = new debug_node_1.DebugElement(nativeEl, null, debugInfo);
-	        debug_node_1.indexDebugNode(debugEl);
-	        return nativeEl;
-	    };
-	    DebugDomRenderer.prototype.createElement = function (parentElement, name, debugInfo) {
-	        var nativeEl = this._delegate.createElement(parentElement, name, debugInfo);
-	        var debugEl = new debug_node_1.DebugElement(nativeEl, debug_node_1.getDebugNode(parentElement), debugInfo);
-	        debugEl.name = name;
-	        debug_node_1.indexDebugNode(debugEl);
-	        return nativeEl;
-	    };
-	    DebugDomRenderer.prototype.createViewRoot = function (hostElement) { return this._delegate.createViewRoot(hostElement); };
-	    DebugDomRenderer.prototype.createTemplateAnchor = function (parentElement, debugInfo) {
-	        var comment = this._delegate.createTemplateAnchor(parentElement, debugInfo);
-	        var debugEl = new debug_node_1.DebugNode(comment, debug_node_1.getDebugNode(parentElement), debugInfo);
-	        debug_node_1.indexDebugNode(debugEl);
-	        return comment;
-	    };
-	    DebugDomRenderer.prototype.createText = function (parentElement, value, debugInfo) {
-	        var text = this._delegate.createText(parentElement, value, debugInfo);
-	        var debugEl = new debug_node_1.DebugNode(text, debug_node_1.getDebugNode(parentElement), debugInfo);
-	        debug_node_1.indexDebugNode(debugEl);
-	        return text;
-	    };
-	    DebugDomRenderer.prototype.projectNodes = function (parentElement, nodes) {
-	        var debugParent = debug_node_1.getDebugNode(parentElement);
-	        if (lang_1.isPresent(debugParent) && debugParent instanceof debug_node_1.DebugElement) {
-	            var debugElement_1 = debugParent;
-	            nodes.forEach(function (node) { debugElement_1.addChild(debug_node_1.getDebugNode(node)); });
-	        }
-	        this._delegate.projectNodes(parentElement, nodes);
-	    };
-	    DebugDomRenderer.prototype.attachViewAfter = function (node, viewRootNodes) {
-	        var debugNode = debug_node_1.getDebugNode(node);
-	        if (lang_1.isPresent(debugNode)) {
-	            var debugParent = debugNode.parent;
-	            if (viewRootNodes.length > 0 && lang_1.isPresent(debugParent)) {
-	                var debugViewRootNodes = [];
-	                viewRootNodes.forEach(function (rootNode) { return debugViewRootNodes.push(debug_node_1.getDebugNode(rootNode)); });
-	                debugParent.insertChildrenAfter(debugNode, debugViewRootNodes);
-	            }
-	        }
-	        this._delegate.attachViewAfter(node, viewRootNodes);
-	    };
-	    DebugDomRenderer.prototype.detachView = function (viewRootNodes) {
-	        viewRootNodes.forEach(function (node) {
-	            var debugNode = debug_node_1.getDebugNode(node);
-	            if (lang_1.isPresent(debugNode) && lang_1.isPresent(debugNode.parent)) {
-	                debugNode.parent.removeChild(debugNode);
-	            }
-	        });
-	        this._delegate.detachView(viewRootNodes);
-	    };
-	    DebugDomRenderer.prototype.destroyView = function (hostElement, viewAllNodes) {
-	        viewAllNodes.forEach(function (node) { debug_node_1.removeDebugNodeFromIndex(debug_node_1.getDebugNode(node)); });
-	        this._delegate.destroyView(hostElement, viewAllNodes);
-	    };
-	    DebugDomRenderer.prototype.listen = function (renderElement, name, callback) {
-	        var debugEl = debug_node_1.getDebugNode(renderElement);
-	        if (lang_1.isPresent(debugEl)) {
-	            debugEl.listeners.push(new debug_node_1.EventListener(name, callback));
-	        }
-	        return this._delegate.listen(renderElement, name, callback);
-	    };
-	    DebugDomRenderer.prototype.listenGlobal = function (target, name, callback) {
-	        return this._delegate.listenGlobal(target, name, callback);
-	    };
-	    DebugDomRenderer.prototype.setElementProperty = function (renderElement, propertyName, propertyValue) {
-	        var debugEl = debug_node_1.getDebugNode(renderElement);
-	        if (lang_1.isPresent(debugEl) && debugEl instanceof debug_node_1.DebugElement) {
-	            debugEl.properties[propertyName] = propertyValue;
-	        }
-	        this._delegate.setElementProperty(renderElement, propertyName, propertyValue);
-	    };
-	    DebugDomRenderer.prototype.setElementAttribute = function (renderElement, attributeName, attributeValue) {
-	        var debugEl = debug_node_1.getDebugNode(renderElement);
-	        if (lang_1.isPresent(debugEl) && debugEl instanceof debug_node_1.DebugElement) {
-	            debugEl.attributes[attributeName] = attributeValue;
-	        }
-	        this._delegate.setElementAttribute(renderElement, attributeName, attributeValue);
-	    };
-	    DebugDomRenderer.prototype.setBindingDebugInfo = function (renderElement, propertyName, propertyValue) {
-	        this._delegate.setBindingDebugInfo(renderElement, propertyName, propertyValue);
-	    };
-	    DebugDomRenderer.prototype.setElementClass = function (renderElement, className, isAdd) {
-	        this._delegate.setElementClass(renderElement, className, isAdd);
-	    };
-	    DebugDomRenderer.prototype.setElementStyle = function (renderElement, styleName, styleValue) {
-	        this._delegate.setElementStyle(renderElement, styleName, styleValue);
-	    };
-	    DebugDomRenderer.prototype.invokeElementMethod = function (renderElement, methodName, args) {
-	        this._delegate.invokeElementMethod(renderElement, methodName, args);
-	    };
-	    DebugDomRenderer.prototype.setText = function (renderNode, text) { this._delegate.setText(renderNode, text); };
-	    return DebugDomRenderer;
-	}());
-	exports.DebugDomRenderer = DebugDomRenderer;
-	//# sourceMappingURL=debug_renderer.js.map
-
-/***/ },
-/* 386 */
-/***/ function(module, exports) {
-
-	"use strict";
-	/**
-	* Creates a token that can be used in a DI Provider.
-	*
-	* ### Example ([live demo](http://plnkr.co/edit/Ys9ezXpj2Mnoy3Uc8KBp?p=preview))
-	*
-	* ```typescript
-	* var t = new OpaqueToken("value");
-	*
-	* var injector = Injector.resolveAndCreate([
-	*   provide(t, {useValue: "bindingValue"})
-	* ]);
-	*
-	* expect(injector.get(t)).toEqual("bindingValue");
-	* ```
-	*
-	* Using an `OpaqueToken` is preferable to using strings as tokens because of possible collisions
-	* caused by multiple providers using the same string as two different tokens.
-	*
-	* Using an `OpaqueToken` is preferable to using an `Object` as tokens because it provides better
-	* error messages.
-	* @ts2dart_const
-	*/
-	var OpaqueToken = (function () {
-	    function OpaqueToken(_desc) {
-	        this._desc = _desc;
-	    }
-	    OpaqueToken.prototype.toString = function () { return "Token " + this._desc; };
-	    return OpaqueToken;
-	}());
-	exports.OpaqueToken = OpaqueToken;
-	//# sourceMappingURL=opaque_token.js.map
-
-/***/ },
-/* 387 */
-75,
-/* 388 */
-/***/ function(module, exports, __webpack_require__) {
-
 	"use strict";
 	// Public API for compiler
-	var component_resolver_1 = __webpack_require__(40);
+	var compiler_1 = __webpack_require__(48);
+	exports.COMPILER_OPTIONS = compiler_1.COMPILER_OPTIONS;
+	exports.Compiler = compiler_1.Compiler;
+	exports.CompilerFactory = compiler_1.CompilerFactory;
+	exports.ComponentStillLoadingError = compiler_1.ComponentStillLoadingError;
+	exports.ModuleWithComponentFactories = compiler_1.ModuleWithComponentFactories;
+	var component_factory_1 = __webpack_require__(223);
+	exports.ComponentFactory = component_factory_1.ComponentFactory;
+	exports.ComponentRef = component_factory_1.ComponentRef;
+	var component_factory_resolver_1 = __webpack_require__(80);
+	exports.ComponentFactoryResolver = component_factory_resolver_1.ComponentFactoryResolver;
+	exports.NoComponentFactoryError = component_factory_resolver_1.NoComponentFactoryError;
+	var component_resolver_1 = __webpack_require__(133);
 	exports.ComponentResolver = component_resolver_1.ComponentResolver;
-	var query_list_1 = __webpack_require__(390);
-	exports.QueryList = query_list_1.QueryList;
-	var dynamic_component_loader_1 = __webpack_require__(191);
+	var dynamic_component_loader_1 = __webpack_require__(225);
 	exports.DynamicComponentLoader = dynamic_component_loader_1.DynamicComponentLoader;
-	var element_ref_1 = __webpack_require__(192);
+	var element_ref_1 = __webpack_require__(226);
 	exports.ElementRef = element_ref_1.ElementRef;
-	var template_ref_1 = __webpack_require__(193);
+	var exceptions_1 = __webpack_require__(135);
+	exports.ExpressionChangedAfterItHasBeenCheckedException = exceptions_1.ExpressionChangedAfterItHasBeenCheckedException;
+	var ng_module_factory_1 = __webpack_require__(227);
+	exports.NgModuleFactory = ng_module_factory_1.NgModuleFactory;
+	exports.NgModuleRef = ng_module_factory_1.NgModuleRef;
+	var ng_module_factory_loader_1 = __webpack_require__(440);
+	exports.NgModuleFactoryLoader = ng_module_factory_loader_1.NgModuleFactoryLoader;
+	var query_list_1 = __webpack_require__(441);
+	exports.QueryList = query_list_1.QueryList;
+	var system_js_ng_module_factory_loader_1 = __webpack_require__(442);
+	exports.SystemJsNgModuleLoader = system_js_ng_module_factory_loader_1.SystemJsNgModuleLoader;
+	var systemjs_component_resolver_1 = __webpack_require__(443);
+	exports.SystemJsCmpFactoryResolver = systemjs_component_resolver_1.SystemJsCmpFactoryResolver;
+	exports.SystemJsComponentResolver = systemjs_component_resolver_1.SystemJsComponentResolver;
+	var template_ref_1 = __webpack_require__(228);
 	exports.TemplateRef = template_ref_1.TemplateRef;
-	var view_ref_1 = __webpack_require__(195);
+	var view_container_ref_1 = __webpack_require__(229);
+	exports.ViewContainerRef = view_container_ref_1.ViewContainerRef;
+	var view_ref_1 = __webpack_require__(230);
 	exports.EmbeddedViewRef = view_ref_1.EmbeddedViewRef;
 	exports.ViewRef = view_ref_1.ViewRef;
-	var view_container_ref_1 = __webpack_require__(194);
-	exports.ViewContainerRef = view_container_ref_1.ViewContainerRef;
-	var component_factory_1 = __webpack_require__(189);
-	exports.ComponentRef = component_factory_1.ComponentRef;
-	exports.ComponentFactory = component_factory_1.ComponentFactory;
-	var exceptions_1 = __webpack_require__(110);
-	exports.ExpressionChangedAfterItHasBeenCheckedException = exceptions_1.ExpressionChangedAfterItHasBeenCheckedException;
 	//# sourceMappingURL=linker.js.map
 
 /***/ },
-/* 389 */
+/* 439 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var injector_1 = __webpack_require__(104);
+	var injector_1 = __webpack_require__(79);
 	var _UNDEFINED = new Object();
 	var ElementInjector = (function (_super) {
 	    __extends(ElementInjector, _super);
@@ -15286,13 +20140,44 @@
 	//# sourceMappingURL=element_injector.js.map
 
 /***/ },
-/* 390 */
+/* 440 */
+/***/ function(module, exports) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	/**
+	 * Used to load ng moduled factories.
+	 * @experimental
+	 */
+	var NgModuleFactoryLoader = (function () {
+	    function NgModuleFactoryLoader() {
+	    }
+	    return NgModuleFactoryLoader;
+	}());
+	exports.NgModuleFactoryLoader = NgModuleFactoryLoader;
+	//# sourceMappingURL=ng_module_factory_loader.js.map
+
+/***/ },
+/* 441 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var collection_1 = __webpack_require__(11);
-	var lang_1 = __webpack_require__(4);
-	var async_1 = __webpack_require__(27);
+	var async_1 = __webpack_require__(132);
+	var collection_1 = __webpack_require__(12);
+	var lang_1 = __webpack_require__(3);
 	/**
 	 * An unmodifiable list of items that Angular keeps up to date when the state
 	 * of the application changes.
@@ -15311,11 +20196,10 @@
 	 * ```typescript
 	 * @Component({...})
 	 * class Container {
-	 *   constructor(@Query(Item) items: QueryList<Item>) {
-	 *     items.changes.subscribe(_ => console.log(items.length));
-	 *   }
+	 *   @ViewChildren(Item) items:QueryList<Item>;
 	 * }
 	 * ```
+	 * @stable
 	 */
 	var QueryList = (function () {
 	    function QueryList() {
@@ -15334,45 +20218,53 @@
 	        configurable: true
 	    });
 	    Object.defineProperty(QueryList.prototype, "first", {
-	        get: function () { return collection_1.ListWrapper.first(this._results); },
+	        get: function () { return this._results[0]; },
 	        enumerable: true,
 	        configurable: true
 	    });
 	    Object.defineProperty(QueryList.prototype, "last", {
-	        get: function () { return collection_1.ListWrapper.last(this._results); },
+	        get: function () { return this._results[this.length - 1]; },
 	        enumerable: true,
 	        configurable: true
 	    });
 	    /**
-	     * returns a new array with the passed in function applied to each element.
+	     * See
+	     * [Array.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 	     */
 	    QueryList.prototype.map = function (fn) { return this._results.map(fn); };
 	    /**
-	     * returns a filtered array.
+	     * See
+	     * [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 	     */
-	    QueryList.prototype.filter = function (fn) { return this._results.filter(fn); };
+	    QueryList.prototype.filter = function (fn) {
+	        return this._results.filter(fn);
+	    };
 	    /**
-	     * returns a reduced value.
+	     * See
+	     * [Array.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 	     */
-	    QueryList.prototype.reduce = function (fn, init) { return this._results.reduce(fn, init); };
+	    QueryList.prototype.reduce = function (fn, init) {
+	        return this._results.reduce(fn, init);
+	    };
 	    /**
-	     * executes function for each element in a query.
+	     * See
+	     * [Array.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 	     */
 	    QueryList.prototype.forEach = function (fn) { this._results.forEach(fn); };
 	    /**
-	     * converts QueryList into an array
+	     * See
+	     * [Array.some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 	     */
-	    QueryList.prototype.toArray = function () { return collection_1.ListWrapper.clone(this._results); };
+	    QueryList.prototype.some = function (fn) {
+	        return this._results.some(fn);
+	    };
+	    QueryList.prototype.toArray = function () { return this._results.slice(); };
 	    QueryList.prototype[lang_1.getSymbolIterator()] = function () { return this._results[lang_1.getSymbolIterator()](); };
 	    QueryList.prototype.toString = function () { return this._results.toString(); };
-	    /**
-	     * @internal
-	     */
 	    QueryList.prototype.reset = function (res) {
 	        this._results = collection_1.ListWrapper.flatten(res);
 	        this._dirty = false;
 	    };
-	    /** @internal */
 	    QueryList.prototype.notifyOnChanges = function () { this._emitter.emit(this); };
 	    /** internal */
 	    QueryList.prototype.setDirty = function () { this._dirty = true; };
@@ -15388,27 +20280,180 @@
 	//# sourceMappingURL=query_list.js.map
 
 /***/ },
-/* 391 */
+/* 442 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var di_1 = __webpack_require__(20);
+	var lang_1 = __webpack_require__(3);
+	var compiler_1 = __webpack_require__(48);
+	var _SEPARATOR = '#';
+	var FACTORY_MODULE_SUFFIX = '.ngfactory';
+	var FACTORY_CLASS_SUFFIX = 'NgFactory';
+	var SystemJsNgModuleLoader = (function () {
+	    function SystemJsNgModuleLoader(_compiler) {
+	        this._compiler = _compiler;
+	    }
+	    SystemJsNgModuleLoader.prototype.load = function (path) {
+	        var offlineMode = this._compiler instanceof compiler_1.Compiler;
+	        return offlineMode ? this.loadFactory(path) : this.loadAndCompile(path);
+	    };
+	    SystemJsNgModuleLoader.prototype.loadAndCompile = function (path) {
+	        var _this = this;
+	        var _a = path.split(_SEPARATOR), module = _a[0], exportName = _a[1];
+	        if (exportName === undefined)
+	            exportName = 'default';
+	        return lang_1.global
+	            .System.import(module)
+	            .then(function (module) { return module[exportName]; })
+	            .then(function (type) { return checkNotEmpty(type, module, exportName); })
+	            .then(function (type) { return _this._compiler.compileModuleAsync(type); });
+	    };
+	    SystemJsNgModuleLoader.prototype.loadFactory = function (path) {
+	        var _a = path.split(_SEPARATOR), module = _a[0], exportName = _a[1];
+	        if (exportName === undefined)
+	            exportName = 'default';
+	        return lang_1.global
+	            .System.import(module + FACTORY_MODULE_SUFFIX)
+	            .then(function (module) { return module[exportName + FACTORY_CLASS_SUFFIX]; })
+	            .then(function (factory) { return checkNotEmpty(factory, module, exportName); });
+	    };
+	    /** @nocollapse */
+	    SystemJsNgModuleLoader.decorators = [
+	        { type: di_1.Injectable },
+	    ];
+	    /** @nocollapse */
+	    SystemJsNgModuleLoader.ctorParameters = [
+	        { type: compiler_1.Compiler, },
+	    ];
+	    return SystemJsNgModuleLoader;
+	}());
+	exports.SystemJsNgModuleLoader = SystemJsNgModuleLoader;
+	function checkNotEmpty(value, modulePath, exportName) {
+	    if (!value) {
+	        throw new Error("Cannot find '" + exportName + "' in '" + modulePath + "'");
+	    }
+	    return value;
+	}
+	//# sourceMappingURL=system_js_ng_module_factory_loader.js.map
+
+/***/ },
+/* 443 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var console_1 = __webpack_require__(77);
+	var di_1 = __webpack_require__(20);
+	var lang_1 = __webpack_require__(3);
+	var component_resolver_1 = __webpack_require__(133);
+	var _SEPARATOR = '#';
+	var SystemJsComponentResolver = (function () {
+	    function SystemJsComponentResolver(_resolver, _console) {
+	        this._resolver = _resolver;
+	        this._console = _console;
+	    }
+	    SystemJsComponentResolver.prototype.resolveComponent = function (componentType) {
+	        var _this = this;
+	        if (lang_1.isString(componentType)) {
+	            this._console.warn(component_resolver_1.ComponentResolver.LazyLoadingDeprecationMsg);
+	            var _a = componentType.split(_SEPARATOR), module = _a[0], component_1 = _a[1];
+	            if (component_1 === void (0)) {
+	                // Use the default export when no component is specified
+	                component_1 = 'default';
+	            }
+	            return lang_1.global
+	                .System.import(module)
+	                .then(function (module) { return _this._resolver.resolveComponent(module[component_1]); });
+	        }
+	        return this._resolver.resolveComponent(componentType);
+	    };
+	    SystemJsComponentResolver.prototype.clearCache = function () { };
+	    /** @nocollapse */
+	    SystemJsComponentResolver.decorators = [
+	        { type: di_1.Injectable },
+	    ];
+	    /** @nocollapse */
+	    SystemJsComponentResolver.ctorParameters = [
+	        { type: component_resolver_1.ComponentResolver, },
+	        { type: console_1.Console, },
+	    ];
+	    return SystemJsComponentResolver;
+	}());
+	exports.SystemJsComponentResolver = SystemJsComponentResolver;
+	var FACTORY_MODULE_SUFFIX = '.ngfactory';
+	var FACTORY_CLASS_SUFFIX = 'NgFactory';
+	var SystemJsCmpFactoryResolver = (function () {
+	    function SystemJsCmpFactoryResolver(_console) {
+	        this._console = _console;
+	    }
+	    SystemJsCmpFactoryResolver.prototype.resolveComponent = function (componentType) {
+	        if (lang_1.isString(componentType)) {
+	            this._console.warn(component_resolver_1.ComponentResolver.LazyLoadingDeprecationMsg);
+	            var _a = componentType.split(_SEPARATOR), module = _a[0], factory_1 = _a[1];
+	            return lang_1.global
+	                .System.import(module + FACTORY_MODULE_SUFFIX)
+	                .then(function (module) { return module[factory_1 + FACTORY_CLASS_SUFFIX]; });
+	        }
+	        return Promise.resolve(null);
+	    };
+	    SystemJsCmpFactoryResolver.prototype.clearCache = function () { };
+	    /** @nocollapse */
+	    SystemJsCmpFactoryResolver.decorators = [
+	        { type: di_1.Injectable },
+	    ];
+	    /** @nocollapse */
+	    SystemJsCmpFactoryResolver.ctorParameters = [
+	        { type: console_1.Console, },
+	    ];
+	    return SystemJsCmpFactoryResolver;
+	}());
+	exports.SystemJsCmpFactoryResolver = SystemJsCmpFactoryResolver;
+	//# sourceMappingURL=systemjs_component_resolver.js.map
+
+/***/ },
+/* 444 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var collection_1 = __webpack_require__(11);
-	var element_1 = __webpack_require__(109);
-	var lang_1 = __webpack_require__(4);
-	var async_1 = __webpack_require__(27);
-	var view_ref_1 = __webpack_require__(195);
-	var view_type_1 = __webpack_require__(63);
-	var view_utils_1 = __webpack_require__(64);
-	var change_detection_1 = __webpack_require__(60);
-	var profile_1 = __webpack_require__(65);
-	var exceptions_1 = __webpack_require__(110);
-	var debug_context_1 = __webpack_require__(190);
-	var element_injector_1 = __webpack_require__(389);
+	var animation_group_player_1 = __webpack_require__(213);
+	var view_animation_map_1 = __webpack_require__(431);
+	var change_detection_1 = __webpack_require__(74);
+	var collection_1 = __webpack_require__(12);
+	var lang_1 = __webpack_require__(3);
+	var profile_1 = __webpack_require__(83);
+	var debug_context_1 = __webpack_require__(224);
+	var element_1 = __webpack_require__(134);
+	var element_injector_1 = __webpack_require__(439);
+	var exceptions_1 = __webpack_require__(135);
+	var view_ref_1 = __webpack_require__(230);
+	var view_type_1 = __webpack_require__(81);
+	var view_utils_1 = __webpack_require__(82);
 	var _scope_check = profile_1.wtfCreateScope("AppView#check(ascii id)");
 	/**
 	 * Cost of making objects: http://jsperf.com/instantiate-size-of-object
@@ -15426,10 +20471,8 @@
 	        this.contentChildren = [];
 	        this.viewChildren = [];
 	        this.viewContainerElement = null;
-	        // The names of the below fields must be kept in sync with codegen_name_util.ts or
-	        // change detection will fail.
-	        this.cdState = change_detection_1.ChangeDetectorState.NeverChecked;
-	        this.destroyed = false;
+	        this.numberOfChecks = 0;
+	        this.animationPlayers = new view_animation_map_1.ViewAnimationMap();
 	        this.ref = new view_ref_1.ViewRef_(this);
 	        if (type === view_type_1.ViewType.COMPONENT || type === view_type_1.ViewType.HOST) {
 	            this.renderer = viewUtils.renderComponent(componentType);
@@ -15438,6 +20481,35 @@
 	            this.renderer = declarationAppElement.parentView.renderer;
 	        }
 	    }
+	    Object.defineProperty(AppView.prototype, "destroyed", {
+	        get: function () { return this.cdMode === change_detection_1.ChangeDetectorStatus.Destroyed; },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    AppView.prototype.cancelActiveAnimation = function (element, animationName, removeAllAnimations) {
+	        if (removeAllAnimations === void 0) { removeAllAnimations = false; }
+	        if (removeAllAnimations) {
+	            this.animationPlayers.findAllPlayersByElement(element).forEach(function (player) { return player.destroy(); });
+	        }
+	        else {
+	            var player = this.animationPlayers.find(element, animationName);
+	            if (lang_1.isPresent(player)) {
+	                player.destroy();
+	            }
+	        }
+	    };
+	    AppView.prototype.queueAnimation = function (element, animationName, player) {
+	        var _this = this;
+	        this.animationPlayers.set(element, animationName, player);
+	        player.onDone(function () { _this.animationPlayers.remove(element, animationName); });
+	    };
+	    AppView.prototype.triggerQueuedAnimations = function () {
+	        this.animationPlayers.getAllPlayers().forEach(function (player) {
+	            if (!player.hasStarted()) {
+	                player.play();
+	            }
+	        });
+	    };
 	    AppView.prototype.create = function (context, givenProjectableNodes, rootSelectorOrNode) {
 	        this.context = context;
 	        var projectableNodes;
@@ -15512,7 +20584,7 @@
 	        this._destroyRecurse();
 	    };
 	    AppView.prototype._destroyRecurse = function () {
-	        if (this.destroyed) {
+	        if (this.cdMode === change_detection_1.ChangeDetectorStatus.Destroyed) {
 	            return;
 	        }
 	        var children = this.contentChildren;
@@ -15524,32 +20596,46 @@
 	            children[i]._destroyRecurse();
 	        }
 	        this.destroyLocal();
-	        this.destroyed = true;
+	        this.cdMode = change_detection_1.ChangeDetectorStatus.Destroyed;
 	    };
 	    AppView.prototype.destroyLocal = function () {
+	        var _this = this;
 	        var hostElement = this.type === view_type_1.ViewType.COMPONENT ? this.declarationAppElement.nativeElement : null;
 	        for (var i = 0; i < this.disposables.length; i++) {
 	            this.disposables[i]();
 	        }
 	        for (var i = 0; i < this.subscriptions.length; i++) {
-	            async_1.ObservableWrapper.dispose(this.subscriptions[i]);
+	            this.subscriptions[i].unsubscribe();
 	        }
 	        this.destroyInternal();
-	        if (this._hasExternalHostElement) {
-	            this.renderer.detachView(this.flatRootNodes);
-	        }
-	        else if (lang_1.isPresent(this.viewContainerElement)) {
-	            this.viewContainerElement.detachView(this.viewContainerElement.nestedViews.indexOf(this));
+	        this.dirtyParentQueriesInternal();
+	        if (this.animationPlayers.length == 0) {
+	            this.renderer.destroyView(hostElement, this.allNodes);
 	        }
 	        else {
-	            this.dirtyParentQueriesInternal();
+	            var player = new animation_group_player_1.AnimationGroupPlayer(this.animationPlayers.getAllPlayers());
+	            player.onDone(function () { _this.renderer.destroyView(hostElement, _this.allNodes); });
 	        }
-	        this.renderer.destroyView(hostElement, this.allNodes);
 	    };
 	    /**
 	     * Overwritten by implementations
 	     */
 	    AppView.prototype.destroyInternal = function () { };
+	    /**
+	     * Overwritten by implementations
+	     */
+	    AppView.prototype.detachInternal = function () { };
+	    AppView.prototype.detach = function () {
+	        var _this = this;
+	        this.detachInternal();
+	        if (this.animationPlayers.length == 0) {
+	            this.renderer.detachView(this.flatRootNodes);
+	        }
+	        else {
+	            var player = new animation_group_player_1.AnimationGroupPlayer(this.animationPlayers.getAllPlayers());
+	            player.onDone(function () { _this.renderer.detachView(_this.flatRootNodes); });
+	        }
+	    };
 	    Object.defineProperty(AppView.prototype, "changeDetectorRef", {
 	        get: function () { return this.ref; },
 	        enumerable: true,
@@ -15583,17 +20669,16 @@
 	    AppView.prototype.dirtyParentQueriesInternal = function () { };
 	    AppView.prototype.detectChanges = function (throwOnChange) {
 	        var s = _scope_check(this.clazz);
-	        if (this.cdMode === change_detection_1.ChangeDetectionStrategy.Detached ||
-	            this.cdMode === change_detection_1.ChangeDetectionStrategy.Checked ||
-	            this.cdState === change_detection_1.ChangeDetectorState.Errored)
+	        if (this.cdMode === change_detection_1.ChangeDetectorStatus.Checked ||
+	            this.cdMode === change_detection_1.ChangeDetectorStatus.Errored)
 	            return;
-	        if (this.destroyed) {
+	        if (this.cdMode === change_detection_1.ChangeDetectorStatus.Destroyed) {
 	            this.throwDestroyedError('detectChanges');
 	        }
 	        this.detectChangesInternal(throwOnChange);
-	        if (this.cdMode === change_detection_1.ChangeDetectionStrategy.CheckOnce)
-	            this.cdMode = change_detection_1.ChangeDetectionStrategy.Checked;
-	        this.cdState = change_detection_1.ChangeDetectorState.CheckedBefore;
+	        if (this.cdMode === change_detection_1.ChangeDetectorStatus.CheckOnce)
+	            this.cdMode = change_detection_1.ChangeDetectorStatus.Checked;
+	        this.numberOfChecks++;
 	        profile_1.wtfLeave(s);
 	    };
 	    /**
@@ -15605,14 +20690,21 @@
 	    };
 	    AppView.prototype.detectContentChildrenChanges = function (throwOnChange) {
 	        for (var i = 0; i < this.contentChildren.length; ++i) {
-	            this.contentChildren[i].detectChanges(throwOnChange);
+	            var child = this.contentChildren[i];
+	            if (child.cdMode === change_detection_1.ChangeDetectorStatus.Detached)
+	                continue;
+	            child.detectChanges(throwOnChange);
 	        }
 	    };
 	    AppView.prototype.detectViewChildrenChanges = function (throwOnChange) {
 	        for (var i = 0; i < this.viewChildren.length; ++i) {
-	            this.viewChildren[i].detectChanges(throwOnChange);
+	            var child = this.viewChildren[i];
+	            if (child.cdMode === change_detection_1.ChangeDetectorStatus.Detached)
+	                continue;
+	            child.detectChanges(throwOnChange);
 	        }
 	    };
+	    AppView.prototype.markContentChildAsMoved = function (renderAppElement) { this.dirtyParentQueriesInternal(); };
 	    AppView.prototype.addToContentChildren = function (renderAppElement) {
 	        renderAppElement.parentView.contentChildren.push(this);
 	        this.viewContainerElement = renderAppElement;
@@ -15623,12 +20715,12 @@
 	        this.dirtyParentQueriesInternal();
 	        this.viewContainerElement = null;
 	    };
-	    AppView.prototype.markAsCheckOnce = function () { this.cdMode = change_detection_1.ChangeDetectionStrategy.CheckOnce; };
+	    AppView.prototype.markAsCheckOnce = function () { this.cdMode = change_detection_1.ChangeDetectorStatus.CheckOnce; };
 	    AppView.prototype.markPathToRootAsCheckOnce = function () {
 	        var c = this;
-	        while (lang_1.isPresent(c) && c.cdMode !== change_detection_1.ChangeDetectionStrategy.Detached) {
-	            if (c.cdMode === change_detection_1.ChangeDetectionStrategy.Checked) {
-	                c.cdMode = change_detection_1.ChangeDetectionStrategy.CheckOnce;
+	        while (lang_1.isPresent(c) && c.cdMode !== change_detection_1.ChangeDetectorStatus.Detached) {
+	            if (c.cdMode === change_detection_1.ChangeDetectorStatus.Checked) {
+	                c.cdMode = change_detection_1.ChangeDetectorStatus.CheckOnce;
 	            }
 	            var parentEl = c.type === view_type_1.ViewType.COMPONENT ? c.declarationAppElement : c.viewContainerElement;
 	            c = lang_1.isPresent(parentEl) ? parentEl.parentView : null;
@@ -15666,6 +20758,16 @@
 	            throw e;
 	        }
 	    };
+	    DebugAppView.prototype.detach = function () {
+	        this._resetDebug();
+	        try {
+	            _super.prototype.detach.call(this);
+	        }
+	        catch (e) {
+	            this._rethrowWithContext(e, e.stack);
+	            throw e;
+	        }
+	    };
 	    DebugAppView.prototype.destroyLocal = function () {
 	        this._resetDebug();
 	        try {
@@ -15693,7 +20795,7 @@
 	    DebugAppView.prototype._rethrowWithContext = function (e, stack) {
 	        if (!(e instanceof exceptions_1.ViewWrappedException)) {
 	            if (!(e instanceof exceptions_1.ExpressionChangedAfterItHasBeenCheckedException)) {
-	                this.cdState = change_detection_1.ChangeDetectorState.Errored;
+	                this.cdMode = change_detection_1.ChangeDetectorStatus.Errored;
 	            }
 	            if (lang_1.isPresent(this._currentDebugContext)) {
 	                throw new exceptions_1.ViewWrappedException(e, stack, this._currentDebugContext);
@@ -15740,1125 +20842,128 @@
 	//# sourceMappingURL=view.js.map
 
 /***/ },
-/* 392 */
+/* 445 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	/**
-	* This indirection is needed to free up Component, etc symbols in the public API
-	* to be used by the decorator versions of these annotations.
-	*/
-	var di_1 = __webpack_require__(196);
-	exports.QueryMetadata = di_1.QueryMetadata;
-	exports.ContentChildrenMetadata = di_1.ContentChildrenMetadata;
-	exports.ContentChildMetadata = di_1.ContentChildMetadata;
-	exports.ViewChildrenMetadata = di_1.ViewChildrenMetadata;
-	exports.ViewQueryMetadata = di_1.ViewQueryMetadata;
-	exports.ViewChildMetadata = di_1.ViewChildMetadata;
-	exports.AttributeMetadata = di_1.AttributeMetadata;
-	var directives_1 = __webpack_require__(197);
-	exports.ComponentMetadata = directives_1.ComponentMetadata;
-	exports.DirectiveMetadata = directives_1.DirectiveMetadata;
-	exports.PipeMetadata = directives_1.PipeMetadata;
-	exports.InputMetadata = directives_1.InputMetadata;
-	exports.OutputMetadata = directives_1.OutputMetadata;
-	exports.HostBindingMetadata = directives_1.HostBindingMetadata;
-	exports.HostListenerMetadata = directives_1.HostListenerMetadata;
-	var view_1 = __webpack_require__(111);
-	exports.ViewMetadata = view_1.ViewMetadata;
-	exports.ViewEncapsulation = view_1.ViewEncapsulation;
-	var di_2 = __webpack_require__(196);
-	var directives_2 = __webpack_require__(197);
-	var view_2 = __webpack_require__(111);
-	var decorators_1 = __webpack_require__(67);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from ComponentMetadata.
-	/**
-	 * Declare reusable UI building blocks for an application.
-	 *
-	 * Each Angular component requires a single `@Component` annotation. The `@Component`
-	 * annotation specifies when a component is instantiated, and which properties and hostListeners it
-	 * binds to.
-	 *
-	 * When a component is instantiated, Angular
-	 * - creates a shadow DOM for the component.
-	 * - loads the selected template into the shadow DOM.
-	 * - creates all the injectable objects configured with `providers` and `viewProviders`.
-	 *
-	 * All template expressions and statements are then evaluated against the component instance.
-	 *
-	 * ## Lifecycle hooks
-	 *
-	 * When the component class implements some {@link ../../guide/lifecycle-hooks.html} the callbacks
-	 * are called by the change detection at defined points in time during the life of the component.
-	 *
-	 * ### Example
-	 *
-	 * {@example core/ts/metadata/metadata.ts region='component'}
-	 */
-	exports.Component = decorators_1.makeDecorator(directives_2.ComponentMetadata, function (fn) { return fn.View = View; });
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from DirectiveMetadata.
-	/**
-	 * Directives allow you to attach behavior to elements in the DOM.
-	 *
-	 * {@link DirectiveMetadata}s with an embedded view are called {@link ComponentMetadata}s.
-	 *
-	 * A directive consists of a single directive annotation and a controller class. When the
-	 * directive's `selector` matches
-	 * elements in the DOM, the following steps occur:
-	 *
-	 * 1. For each directive, the `ElementInjector` attempts to resolve the directive's constructor
-	 * arguments.
-	 * 2. Angular instantiates directives for each matched element using `ElementInjector` in a
-	 * depth-first order,
-	 *    as declared in the HTML.
-	 *
-	 * ## Understanding How Injection Works
-	 *
-	 * There are three stages of injection resolution.
-	 * - *Pre-existing Injectors*:
-	 *   - The terminal {@link Injector} cannot resolve dependencies. It either throws an error or, if
-	 * the dependency was
-	 *     specified as `@Optional`, returns `null`.
-	 *   - The platform injector resolves browser singleton resources, such as: cookies, title,
-	 * location, and others.
-	 * - *Component Injectors*: Each component instance has its own {@link Injector}, and they follow
-	 * the same parent-child hierarchy
-	 *     as the component instances in the DOM.
-	 * - *Element Injectors*: Each component instance has a Shadow DOM. Within the Shadow DOM each
-	 * element has an `ElementInjector`
-	 *     which follow the same parent-child hierarchy as the DOM elements themselves.
-	 *
-	 * When a template is instantiated, it also must instantiate the corresponding directives in a
-	 * depth-first order. The
-	 * current `ElementInjector` resolves the constructor dependencies for each directive.
-	 *
-	 * Angular then resolves dependencies as follows, according to the order in which they appear in the
-	 * {@link ViewMetadata}:
-	 *
-	 * 1. Dependencies on the current element
-	 * 2. Dependencies on element injectors and their parents until it encounters a Shadow DOM boundary
-	 * 3. Dependencies on component injectors and their parents until it encounters the root component
-	 * 4. Dependencies on pre-existing injectors
-	 *
-	 *
-	 * The `ElementInjector` can inject other directives, element-specific special objects, or it can
-	 * delegate to the parent
-	 * injector.
-	 *
-	 * To inject other directives, declare the constructor parameter as:
-	 * - `directive:DirectiveType`: a directive on the current element only
-	 * - `@Host() directive:DirectiveType`: any directive that matches the type between the current
-	 * element and the
-	 *    Shadow DOM root.
-	 * - `@Query(DirectiveType) query:QueryList<DirectiveType>`: A live collection of direct child
-	 * directives.
-	 * - `@QueryDescendants(DirectiveType) query:QueryList<DirectiveType>`: A live collection of any
-	 * child directives.
-	 *
-	 * To inject element-specific special objects, declare the constructor parameter as:
-	 * - `element: ElementRef` to obtain a reference to logical element in the view.
-	 * - `viewContainer: ViewContainerRef` to control child template instantiation, for
-	 * {@link DirectiveMetadata} directives only
-	 * - `bindingPropagation: BindingPropagation` to control change detection in a more granular way.
-	 *
-	 * ### Example
-	 *
-	 * The following example demonstrates how dependency injection resolves constructor arguments in
-	 * practice.
-	 *
-	 *
-	 * Assume this HTML template:
-	 *
-	 * ```
-	 * <div dependency="1">
-	 *   <div dependency="2">
-	 *     <div dependency="3" my-directive>
-	 *       <div dependency="4">
-	 *         <div dependency="5"></div>
-	 *       </div>
-	 *       <div dependency="6"></div>
-	 *     </div>
-	 *   </div>
-	 * </div>
-	 * ```
-	 *
-	 * With the following `dependency` decorator and `SomeService` injectable class.
-	 *
-	 * ```
-	 * @Injectable()
-	 * class SomeService {
-	 * }
-	 *
-	 * @Directive({
-	 *   selector: '[dependency]',
-	 *   inputs: [
-	 *     'id: dependency'
-	 *   ]
-	 * })
-	 * class Dependency {
-	 *   id:string;
-	 * }
-	 * ```
-	 *
-	 * Let's step through the different ways in which `MyDirective` could be declared...
-	 *
-	 *
-	 * ### No injection
-	 *
-	 * Here the constructor is declared with no arguments, therefore nothing is injected into
-	 * `MyDirective`.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor() {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with no dependencies.
-	 *
-	 *
-	 * ### Component-level injection
-	 *
-	 * Directives can inject any injectable instance from the closest component injector or any of its
-	 * parents.
-	 *
-	 * Here, the constructor declares a parameter, `someService`, and injects the `SomeService` type
-	 * from the parent
-	 * component's injector.
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(someService: SomeService) {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with a dependency on `SomeService`.
-	 *
-	 *
-	 * ### Injecting a directive from the current element
-	 *
-	 * Directives can inject other directives declared on the current element.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(dependency: Dependency) {
-	 *     expect(dependency.id).toEqual(3);
-	 *   }
-	 * }
-	 * ```
-	 * This directive would be instantiated with `Dependency` declared at the same element, in this case
-	 * `dependency="3"`.
-	 *
-	 * ### Injecting a directive from any ancestor elements
-	 *
-	 * Directives can inject other directives declared on any ancestor element (in the current Shadow
-	 * DOM), i.e. on the current element, the
-	 * parent element, or its parents.
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(@Host() dependency: Dependency) {
-	 *     expect(dependency.id).toEqual(2);
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * `@Host` checks the current element, the parent, as well as its parents recursively. If
-	 * `dependency="2"` didn't
-	 * exist on the direct parent, this injection would
-	 * have returned
-	 * `dependency="1"`.
-	 *
-	 *
-	 * ### Injecting a live collection of direct child directives
-	 *
-	 *
-	 * A directive can also query for other child directives. Since parent directives are instantiated
-	 * before child directives, a directive can't simply inject the list of child directives. Instead,
-	 * the directive injects a {@link QueryList}, which updates its contents as children are added,
-	 * removed, or moved by a directive that uses a {@link ViewContainerRef} such as a `ngFor`, an
-	 * `ngIf`, or an `ngSwitch`.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(@Query(Dependency) dependencies:QueryList<Dependency>) {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with a {@link QueryList} which contains `Dependency` 4 and
-	 * 6. Here, `Dependency` 5 would not be included, because it is not a direct child.
-	 *
-	 * ### Injecting a live collection of descendant directives
-	 *
-	 * By passing the descendant flag to `@Query` above, we can include the children of the child
-	 * elements.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(@Query(Dependency, {descendants: true}) dependencies:QueryList<Dependency>) {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with a Query which would contain `Dependency` 4, 5 and 6.
-	 *
-	 * ### Optional injection
-	 *
-	 * The normal behavior of directives is to return an error when a specified dependency cannot be
-	 * resolved. If you
-	 * would like to inject `null` on unresolved dependency instead, you can annotate that dependency
-	 * with `@Optional()`.
-	 * This explicitly permits the author of a template to treat some of the surrounding directives as
-	 * optional.
-	 *
-	 * ```
-	 * @Directive({ selector: '[my-directive]' })
-	 * class MyDirective {
-	 *   constructor(@Optional() dependency:Dependency) {
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * This directive would be instantiated with a `Dependency` directive found on the current element.
-	 * If none can be
-	 * found, the injector supplies `null` instead of throwing an error.
-	 *
-	 * ### Example
-	 *
-	 * Here we use a decorator directive to simply define basic tool-tip behavior.
-	 *
-	 * ```
-	 * @Directive({
-	 *   selector: '[tooltip]',
-	 *   inputs: [
-	 *     'text: tooltip'
-	 *   ],
-	 *   host: {
-	 *     '(mouseenter)': 'onMouseEnter()',
-	 *     '(mouseleave)': 'onMouseLeave()'
-	 *   }
-	 * })
-	 * class Tooltip{
-	 *   text:string;
-	 *   overlay:Overlay; // NOT YET IMPLEMENTED
-	 *   overlayManager:OverlayManager; // NOT YET IMPLEMENTED
-	 *
-	 *   constructor(overlayManager:OverlayManager) {
-	 *     this.overlay = overlay;
-	 *   }
-	 *
-	 *   onMouseEnter() {
-	 *     // exact signature to be determined
-	 *     this.overlay = this.overlayManager.open(text, ...);
-	 *   }
-	 *
-	 *   onMouseLeave() {
-	 *     this.overlay.close();
-	 *     this.overlay = null;
-	 *   }
-	 * }
-	 * ```
-	 * In our HTML template, we can then add this behavior to a `<div>` or any other element with the
-	 * `tooltip` selector,
-	 * like so:
-	 *
-	 * ```
-	 * <div tooltip="some text here"></div>
-	 * ```
-	 *
-	 * Directives can also control the instantiation, destruction, and positioning of inline template
-	 * elements:
-	 *
-	 * A directive uses a {@link ViewContainerRef} to instantiate, insert, move, and destroy views at
-	 * runtime.
-	 * The {@link ViewContainerRef} is created as a result of `<template>` element, and represents a
-	 * location in the current view
-	 * where these actions are performed.
-	 *
-	 * Views are always created as children of the current {@link ViewMetadata}, and as siblings of the
-	 * `<template>` element. Thus a
-	 * directive in a child view cannot inject the directive that created it.
-	 *
-	 * Since directives that create views via ViewContainers are common in Angular, and using the full
-	 * `<template>` element syntax is wordy, Angular
-	 * also supports a shorthand notation: `<li *foo="bar">` and `<li template="foo: bar">` are
-	 * equivalent.
-	 *
-	 * Thus,
-	 *
-	 * ```
-	 * <ul>
-	 *   <li *foo="bar" title="text"></li>
-	 * </ul>
-	 * ```
-	 *
-	 * Expands in use to:
-	 *
-	 * ```
-	 * <ul>
-	 *   <template [foo]="bar">
-	 *     <li title="text"></li>
-	 *   </template>
-	 * </ul>
-	 * ```
-	 *
-	 * Notice that although the shorthand places `*foo="bar"` within the `<li>` element, the binding for
-	 * the directive
-	 * controller is correctly instantiated on the `<template>` element rather than the `<li>` element.
-	 *
-	 * ## Lifecycle hooks
-	 *
-	 * When the directive class implements some {@link ../../guide/lifecycle-hooks.html} the callbacks
-	 * are called by the change detection at defined points in time during the life of the directive.
-	 *
-	 * ### Example
-	 *
-	 * Let's suppose we want to implement the `unless` behavior, to conditionally include a template.
-	 *
-	 * Here is a simple directive that triggers on an `unless` selector:
-	 *
-	 * ```
-	 * @Directive({
-	 *   selector: '[unless]',
-	 *   inputs: ['unless']
-	 * })
-	 * export class Unless {
-	 *   viewContainer: ViewContainerRef;
-	 *   templateRef: TemplateRef;
-	 *   prevCondition: boolean;
-	 *
-	 *   constructor(viewContainer: ViewContainerRef, templateRef: TemplateRef) {
-	 *     this.viewContainer = viewContainer;
-	 *     this.templateRef = templateRef;
-	 *     this.prevCondition = null;
-	 *   }
-	 *
-	 *   set unless(newCondition) {
-	 *     if (newCondition && (isBlank(this.prevCondition) || !this.prevCondition)) {
-	 *       this.prevCondition = true;
-	 *       this.viewContainer.clear();
-	 *     } else if (!newCondition && (isBlank(this.prevCondition) || this.prevCondition)) {
-	 *       this.prevCondition = false;
-	 *       this.viewContainer.create(this.templateRef);
-	 *     }
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * We can then use this `unless` selector in a template:
-	 * ```
-	 * <ul>
-	 *   <li *unless="expr"></li>
-	 * </ul>
-	 * ```
-	 *
-	 * Once the directive instantiates the child view, the shorthand notation for the template expands
-	 * and the result is:
-	 *
-	 * ```
-	 * <ul>
-	 *   <template [unless]="exp">
-	 *     <li></li>
-	 *   </template>
-	 *   <li></li>
-	 * </ul>
-	 * ```
-	 *
-	 * Note also that although the `<li></li>` template still exists inside the `<template></template>`,
-	 * the instantiated
-	 * view occurs on the second `<li></li>` which is a sibling to the `<template>` element.
-	 */
-	exports.Directive = decorators_1.makeDecorator(directives_2.DirectiveMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from ViewMetadata.
-	/**
-	 * Metadata properties available for configuring Views.
-	 *
-	 * Each Angular component requires a single `@Component` and at least one `@View` annotation. The
-	 * `@View` annotation specifies the HTML template to use, and lists the directives that are active
-	 * within the template.
-	 *
-	 * When a component is instantiated, the template is loaded into the component's shadow root, and
-	 * the expressions and statements in the template are evaluated against the component.
-	 *
-	 * For details on the `@Component` annotation, see {@link ComponentMetadata}.
-	 *
-	 * ### Example
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'greet',
-	 *   template: 'Hello {{name}}!',
-	 *   directives: [GreetUser, Bold]
-	 * })
-	 * class Greet {
-	 *   name: string;
-	 *
-	 *   constructor() {
-	 *     this.name = 'World';
-	 *   }
-	 * }
-	 * ```
-	 */
-	var View = decorators_1.makeDecorator(view_2.ViewMetadata, function (fn) { return fn.View = View; });
-	/**
-	 * Specifies that a constant attribute value should be injected.
-	 *
-	 * The directive can inject constant string literals of host element attributes.
-	 *
-	 * ### Example
-	 *
-	 * Suppose we have an `<input>` element and want to know its `type`.
-	 *
-	 * ```html
-	 * <input type="text">
-	 * ```
-	 *
-	 * A decorator can inject string literal `text` like so:
-	 *
-	 * {@example core/ts/metadata/metadata.ts region='attributeMetadata'}
-	 */
-	exports.Attribute = decorators_1.makeParamDecorator(di_2.AttributeMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from QueryMetadata.
-	/**
-	 * Declares an injectable parameter to be a live list of directives or variable
-	 * bindings from the content children of a directive.
-	 *
-	 * ### Example ([live demo](http://plnkr.co/edit/lY9m8HLy7z06vDoUaSN2?p=preview))
-	 *
-	 * Assume that `<tabs>` component would like to get a list its children `<pane>`
-	 * components as shown in this example:
-	 *
-	 * ```html
-	 * <tabs>
-	 *   <pane title="Overview">...</pane>
-	 *   <pane *ngFor="let o of objects" [title]="o.title">{{o.text}}</pane>
-	 * </tabs>
-	 * ```
-	 *
-	 * The preferred solution is to query for `Pane` directives using this decorator.
-	 *
-	 * ```javascript
-	 * @Component({
-	 *   selector: 'pane',
-	 *   inputs: ['title']
-	 * })
-	 * class Pane {
-	 *   title:string;
-	 * }
-	 *
-	 * @Component({
-	 *  selector: 'tabs',
-	 *  template: `
-	 *    <ul>
-	 *      <li *ngFor="let pane of panes">{{pane.title}}</li>
-	 *    </ul>
-	 *    <ng-content></ng-content>
-	 *  `
-	 * })
-	 * class Tabs {
-	 *   panes: QueryList<Pane>;
-	 *   constructor(@Query(Pane) panes:QueryList<Pane>) {
-	 *     this.panes = panes;
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * A query can look for variable bindings by passing in a string with desired binding symbol.
-	 *
-	 * ### Example ([live demo](http://plnkr.co/edit/sT2j25cH1dURAyBRCKx1?p=preview))
-	 * ```html
-	 * <seeker>
-	 *   <div #findme>...</div>
-	 * </seeker>
-	 *
-	 * @Component({ selector: 'seeker' })
-	 * class seeker {
-	 *   constructor(@Query('findme') elList: QueryList<ElementRef>) {...}
-	 * }
-	 * ```
-	 *
-	 * In this case the object that is injected depend on the type of the variable
-	 * binding. It can be an ElementRef, a directive or a component.
-	 *
-	 * Passing in a comma separated list of variable bindings will query for all of them.
-	 *
-	 * ```html
-	 * <seeker>
-	 *   <div #findMe>...</div>
-	 *   <div #findMeToo>...</div>
-	 * </seeker>
-	 *
-	 *  @Component({
-	 *   selector: 'seeker'
-	 * })
-	 * class Seeker {
-	 *   constructor(@Query('findMe, findMeToo') elList: QueryList<ElementRef>) {...}
-	 * }
-	 * ```
-	 *
-	 * Configure whether query looks for direct children or all descendants
-	 * of the querying element, by using the `descendants` parameter.
-	 * It is set to `false` by default.
-	 *
-	 * ### Example ([live demo](http://plnkr.co/edit/wtGeB977bv7qvA5FTYl9?p=preview))
-	 * ```html
-	 * <container #first>
-	 *   <item>a</item>
-	 *   <item>b</item>
-	 *   <container #second>
-	 *     <item>c</item>
-	 *   </container>
-	 * </container>
-	 * ```
-	 *
-	 * When querying for items, the first container will see only `a` and `b` by default,
-	 * but with `Query(TextDirective, {descendants: true})` it will see `c` too.
-	 *
-	 * The queried directives are kept in a depth-first pre-order with respect to their
-	 * positions in the DOM.
-	 *
-	 * Query does not look deep into any subcomponent views.
-	 *
-	 * Query is updated as part of the change-detection cycle. Since change detection
-	 * happens after construction of a directive, QueryList will always be empty when observed in the
-	 * constructor.
-	 *
-	 * The injected object is an unmodifiable live list.
-	 * See {@link QueryList} for more details.
-	 */
-	exports.Query = decorators_1.makeParamDecorator(di_2.QueryMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from ContentChildrenMetadata.
-	/**
-	 * Configures a content query.
-	 *
-	 * Content queries are set before the `ngAfterContentInit` callback is called.
-	 *
-	 * ### Example
-	 *
-	 * ```
-	 * @Directive({
-	 *   selector: 'someDir'
-	 * })
-	 * class SomeDir {
-	 *   @ContentChildren(ChildDirective) contentChildren: QueryList<ChildDirective>;
-	 *
-	 *   ngAfterContentInit() {
-	 *     // contentChildren is set
-	 *   }
-	 * }
-	 * ```
-	 */
-	exports.ContentChildren = decorators_1.makePropDecorator(di_2.ContentChildrenMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from ContentChildMetadata.
-	/**
-	 * Configures a content query.
-	 *
-	 * Content queries are set before the `ngAfterContentInit` callback is called.
-	 *
-	 * ### Example
-	 *
-	 * ```
-	 * @Directive({
-	 *   selector: 'someDir'
-	 * })
-	 * class SomeDir {
-	 *   @ContentChild(ChildDirective) contentChild;
-	 *
-	 *   ngAfterContentInit() {
-	 *     // contentChild is set
-	 *   }
-	 * }
-	 * ```
-	 */
-	exports.ContentChild = decorators_1.makePropDecorator(di_2.ContentChildMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from ViewChildrenMetadata.
-	/**
-	 * Declares a list of child element references.
-	 *
-	 * Angular automatically updates the list when the DOM is updated.
-	 *
-	 * `ViewChildren` takes a argument to select elements.
-	 *
-	 * - If the argument is a type, directives or components with the type will be bound.
-	 *
-	 * - If the argument is a string, the string is interpreted as a list of comma-separated selectors.
-	 * For each selector, an element containing the matching template variable (e.g. `#child`) will be
-	 * bound.
-	 *
-	 * View children are set before the `ngAfterViewInit` callback is called.
-	 *
-	 * ### Example
-	 *
-	 * With type selector:
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'child-cmp',
-	 *   template: '<p>child</p>'
-	 * })
-	 * class ChildCmp {
-	 *   doSomething() {}
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'some-cmp',
-	 *   template: `
-	 *     <child-cmp></child-cmp>
-	 *     <child-cmp></child-cmp>
-	 *     <child-cmp></child-cmp>
-	 *   `,
-	 *   directives: [ChildCmp]
-	 * })
-	 * class SomeCmp {
-	 *   @ViewChildren(ChildCmp) children:QueryList<ChildCmp>;
-	 *
-	 *   ngAfterViewInit() {
-	 *     // children are set
-	 *     this.children.toArray().forEach((child)=>child.doSomething());
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * With string selector:
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'child-cmp',
-	 *   template: '<p>child</p>'
-	 * })
-	 * class ChildCmp {
-	 *   doSomething() {}
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'some-cmp',
-	 *   template: `
-	 *     <child-cmp #child1></child-cmp>
-	 *     <child-cmp #child2></child-cmp>
-	 *     <child-cmp #child3></child-cmp>
-	 *   `,
-	 *   directives: [ChildCmp]
-	 * })
-	 * class SomeCmp {
-	 *   @ViewChildren('child1,child2,child3') children:QueryList<ChildCmp>;
-	 *
-	 *   ngAfterViewInit() {
-	 *     // children are set
-	 *     this.children.toArray().forEach((child)=>child.doSomething());
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * See also: [ViewChildrenMetadata]
-	 */
-	exports.ViewChildren = decorators_1.makePropDecorator(di_2.ViewChildrenMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from ViewChildMetadata.
-	/**
-	 * Declares a reference to a child element.
-	 *
-	 * `ViewChildren` takes a argument to select elements.
-	 *
-	 * - If the argument is a type, a directive or a component with the type will be bound.
-	 *
-	 * - If the argument is a string, the string is interpreted as a selector. An element containing the
-	 * matching template variable (e.g. `#child`) will be bound.
-	 *
-	 * In either case, `@ViewChild()` assigns the first (looking from above) element if there are
-	 * multiple matches.
-	 *
-	 * View child is set before the `ngAfterViewInit` callback is called.
-	 *
-	 * ### Example
-	 *
-	 * With type selector:
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'child-cmp',
-	 *   template: '<p>child</p>'
-	 * })
-	 * class ChildCmp {
-	 *   doSomething() {}
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'some-cmp',
-	 *   template: '<child-cmp></child-cmp>',
-	 *   directives: [ChildCmp]
-	 * })
-	 * class SomeCmp {
-	 *   @ViewChild(ChildCmp) child:ChildCmp;
-	 *
-	 *   ngAfterViewInit() {
-	 *     // child is set
-	 *     this.child.doSomething();
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * With string selector:
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'child-cmp',
-	 *   template: '<p>child</p>'
-	 * })
-	 * class ChildCmp {
-	 *   doSomething() {}
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'some-cmp',
-	 *   template: '<child-cmp #child></child-cmp>',
-	 *   directives: [ChildCmp]
-	 * })
-	 * class SomeCmp {
-	 *   @ViewChild('child') child:ChildCmp;
-	 *
-	 *   ngAfterViewInit() {
-	 *     // child is set
-	 *     this.child.doSomething();
-	 *   }
-	 * }
-	 * ```
-	 * See also: [ViewChildMetadata]
-	 */
-	exports.ViewChild = decorators_1.makePropDecorator(di_2.ViewChildMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from ViewQueryMetadata.
-	/**
-	 * Similar to {@link QueryMetadata}, but querying the component view, instead of
-	 * the content children.
-	 *
-	 * ### Example ([live demo](http://plnkr.co/edit/eNsFHDf7YjyM6IzKxM1j?p=preview))
-	 *
-	 * ```javascript
-	 * @Component({
-	 *   ...,
-	 *   template: `
-	 *     <item> a </item>
-	 *     <item> b </item>
-	 *     <item> c </item>
-	 *   `
-	 * })
-	 * class MyComponent {
-	 *   shown: boolean;
-	 *
-	 *   constructor(private @Query(Item) items:QueryList<Item>) {
-	 *     items.changes.subscribe(() => console.log(items.length));
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * Supports the same querying parameters as {@link QueryMetadata}, except
-	 * `descendants`. This always queries the whole view.
-	 *
-	 * As `shown` is flipped between true and false, items will contain zero of one
-	 * items.
-	 *
-	 * Specifies that a {@link QueryList} should be injected.
-	 *
-	 * The injected object is an iterable and observable live list.
-	 * See {@link QueryList} for more details.
-	 */
-	exports.ViewQuery = decorators_1.makeParamDecorator(di_2.ViewQueryMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from PipeMetadata.
-	/**
-	 * Declare reusable pipe function.
-	 *
-	 * ### Example
-	 *
-	 * {@example core/ts/metadata/metadata.ts region='pipe'}
-	 */
-	exports.Pipe = decorators_1.makeDecorator(directives_2.PipeMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from InputMetadata.
-	/**
-	 * Declares a data-bound input property.
-	 *
-	 * Angular automatically updates data-bound properties during change detection.
-	 *
-	 * `InputMetadata` takes an optional parameter that specifies the name
-	 * used when instantiating a component in the template. When not provided,
-	 * the name of the decorated property is used.
-	 *
-	 * ### Example
-	 *
-	 * The following example creates a component with two input properties.
-	 *
-	 * ```typescript
-	 * @Component({
-	 *   selector: 'bank-account',
-	 *   template: `
-	 *     Bank Name: {{bankName}}
-	 *     Account Id: {{id}}
-	 *   `
-	 * })
-	 * class BankAccount {
-	 *   @Input() bankName: string;
-	 *   @Input('account-id') id: string;
-	 *
-	 *   // this property is not bound, and won't be automatically updated by Angular
-	 *   normalizedBankName: string;
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'app',
-	 *   template: `
-	 *     <bank-account bank-name="RBC" account-id="4747"></bank-account>
-	 *   `,
-	 *   directives: [BankAccount]
-	 * })
-	 * class App {}
-	 *
-	 * bootstrap(App);
-	 * ```
-	 */
-	exports.Input = decorators_1.makePropDecorator(directives_2.InputMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from OutputMetadata.
-	/**
-	 * Declares an event-bound output property.
-	 *
-	 * When an output property emits an event, an event handler attached to that event
-	 * the template is invoked.
-	 *
-	 * `OutputMetadata` takes an optional parameter that specifies the name
-	 * used when instantiating a component in the template. When not provided,
-	 * the name of the decorated property is used.
-	 *
-	 * ### Example
-	 *
-	 * ```typescript
-	 * @Directive({
-	 *   selector: 'interval-dir',
-	 * })
-	 * class IntervalDir {
-	 *   @Output() everySecond = new EventEmitter();
-	 *   @Output('everyFiveSeconds') five5Secs = new EventEmitter();
-	 *
-	 *   constructor() {
-	 *     setInterval(() => this.everySecond.emit("event"), 1000);
-	 *     setInterval(() => this.five5Secs.emit("event"), 5000);
-	 *   }
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'app',
-	 *   template: `
-	 *     <interval-dir (everySecond)="everySecond()" (everyFiveSeconds)="everyFiveSeconds()">
-	 *     </interval-dir>
-	 *   `,
-	 *   directives: [IntervalDir]
-	 * })
-	 * class App {
-	 *   everySecond() { console.log('second'); }
-	 *   everyFiveSeconds() { console.log('five seconds'); }
-	 * }
-	 * bootstrap(App);
-	 * ```
-	 */
-	exports.Output = decorators_1.makePropDecorator(directives_2.OutputMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from HostBindingMetadata.
-	/**
-	 * Declares a host property binding.
-	 *
-	 * Angular automatically checks host property bindings during change detection.
-	 * If a binding changes, it will update the host element of the directive.
-	 *
-	 * `HostBindingMetadata` takes an optional parameter that specifies the property
-	 * name of the host element that will be updated. When not provided,
-	 * the class property name is used.
-	 *
-	 * ### Example
-	 *
-	 * The following example creates a directive that sets the `valid` and `invalid` classes
-	 * on the DOM element that has ngModel directive on it.
-	 *
-	 * ```typescript
-	 * @Directive({selector: '[ngModel]'})
-	 * class NgModelStatus {
-	 *   constructor(public control:NgModel) {}
-	 *   @HostBinding('[class.valid]') get valid { return this.control.valid; }
-	 *   @HostBinding('[class.invalid]') get invalid { return this.control.invalid; }
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'app',
-	 *   template: `<input [(ngModel)]="prop">`,
-	 *   directives: [FORM_DIRECTIVES, NgModelStatus]
-	 * })
-	 * class App {
-	 *   prop;
-	 * }
-	 *
-	 * bootstrap(App);
-	 * ```
-	 */
-	exports.HostBinding = decorators_1.makePropDecorator(directives_2.HostBindingMetadata);
-	// TODO(alexeagle): remove the duplication of this doc. It is copied from HostListenerMetadata.
-	/**
-	 * Declares a host listener.
-	 *
-	 * Angular will invoke the decorated method when the host element emits the specified event.
-	 *
-	 * If the decorated method returns `false`, then `preventDefault` is applied on the DOM
-	 * event.
-	 *
-	 * ### Example
-	 *
-	 * The following example declares a directive that attaches a click listener to the button and
-	 * counts clicks.
-	 *
-	 * ```typescript
-	 * @Directive({selector: 'button[counting]'})
-	 * class CountClicks {
-	 *   numberOfClicks = 0;
-	 *
-	 *   @HostListener('click', ['$event.target'])
-	 *   onClick(btn) {
-	 *     console.log("button", btn, "number of clicks:", this.numberOfClicks++);
-	 *   }
-	 * }
-	 *
-	 * @Component({
-	 *   selector: 'app',
-	 *   template: `<button counting>Increment</button>`,
-	 *   directives: [CountClicks]
-	 * })
-	 * class App {}
-	 *
-	 * bootstrap(App);
-	 * ```
-	 */
-	exports.HostListener = decorators_1.makePropDecorator(directives_2.HostListenerMetadata);
-	//# sourceMappingURL=metadata.js.map
-
-/***/ },
-/* 393 */
-/***/ function(module, exports) {
-
-	"use strict";
-	(function (LifecycleHooks) {
-	    LifecycleHooks[LifecycleHooks["OnInit"] = 0] = "OnInit";
-	    LifecycleHooks[LifecycleHooks["OnDestroy"] = 1] = "OnDestroy";
-	    LifecycleHooks[LifecycleHooks["DoCheck"] = 2] = "DoCheck";
-	    LifecycleHooks[LifecycleHooks["OnChanges"] = 3] = "OnChanges";
-	    LifecycleHooks[LifecycleHooks["AfterContentInit"] = 4] = "AfterContentInit";
-	    LifecycleHooks[LifecycleHooks["AfterContentChecked"] = 5] = "AfterContentChecked";
-	    LifecycleHooks[LifecycleHooks["AfterViewInit"] = 6] = "AfterViewInit";
-	    LifecycleHooks[LifecycleHooks["AfterViewChecked"] = 7] = "AfterViewChecked";
-	})(exports.LifecycleHooks || (exports.LifecycleHooks = {}));
-	var LifecycleHooks = exports.LifecycleHooks;
-	/**
-	 * @internal
-	 */
-	exports.LIFECYCLE_HOOKS_VALUES = [
-	    LifecycleHooks.OnInit,
-	    LifecycleHooks.OnDestroy,
-	    LifecycleHooks.DoCheck,
-	    LifecycleHooks.OnChanges,
-	    LifecycleHooks.AfterContentInit,
-	    LifecycleHooks.AfterContentChecked,
-	    LifecycleHooks.AfterViewInit,
-	    LifecycleHooks.AfterViewChecked
-	];
-	//# sourceMappingURL=lifecycle_hooks.js.map
-
-/***/ },
-/* 394 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var console_1 = __webpack_require__(103);
-	var reflection_1 = __webpack_require__(66);
-	var reflector_reader_1 = __webpack_require__(112);
-	var testability_1 = __webpack_require__(114);
-	var application_ref_1 = __webpack_require__(100);
+	var application_ref_1 = __webpack_require__(126);
+	var console_1 = __webpack_require__(77);
+	var reflection_1 = __webpack_require__(136);
+	var reflector_reader_1 = __webpack_require__(137);
+	var testability_1 = __webpack_require__(139);
 	function _reflector() {
 	    return reflection_1.reflector;
 	}
-	var __unused; // prevent missing use Dart warning.
+	var _CORE_PLATFORM_PROVIDERS = [
+	    application_ref_1.PlatformRef_, { provide: application_ref_1.PlatformRef, useExisting: application_ref_1.PlatformRef_ },
+	    { provide: reflection_1.Reflector, useFactory: _reflector, deps: [] },
+	    { provide: reflector_reader_1.ReflectorReader, useExisting: reflection_1.Reflector }, testability_1.TestabilityRegistry, console_1.Console
+	];
+	/**
+	 * This platform has to be included in any other platform
+	 *
+	 * @experimental
+	 */
+	exports.platformCore = application_ref_1.createPlatformFactory(null, 'core', _CORE_PLATFORM_PROVIDERS);
 	/**
 	 * A default set of providers which should be included in any Angular platform.
+	 *
+	 * @deprecated Create platforms via `createPlatformFactory(corePlatform, ...) instead!
 	 */
-	exports.PLATFORM_COMMON_PROVIDERS = [
-	    application_ref_1.PLATFORM_CORE_PROVIDERS,
-	    /*@ts2dart_Provider*/ { provide: reflection_1.Reflector, useFactory: _reflector, deps: [] },
-	    /*@ts2dart_Provider*/ { provide: reflector_reader_1.ReflectorReader, useExisting: reflection_1.Reflector },
-	    testability_1.TestabilityRegistry,
-	    console_1.Console
-	];
-	//# sourceMappingURL=platform_common_providers.js.map
+	exports.PLATFORM_COMMON_PROVIDERS = _CORE_PLATFORM_PROVIDERS;
+	//# sourceMappingURL=platform_core_providers.js.map
 
 /***/ },
-/* 395 */
+/* 446 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var di_1 = __webpack_require__(31);
+	var di_1 = __webpack_require__(20);
 	/**
-	 * A token that can be provided when bootstraping an application to make an array of directives
-	 * available in every component of the application.
-	 *
-	 * ### Example
-	 *
-	 * ```typescript
-	 * import {PLATFORM_DIRECTIVES} from '@angular/core';
-	 * import {OtherDirective} from './myDirectives';
-	 *
-	 * @Component({
-	 *   selector: 'my-component',
-	 *   template: `
-	 *     <!-- can use other directive even though the component does not list it in `directives` -->
-	 *     <other-directive></other-directive>
-	 *   `
-	 * })
-	 * export class MyComponent {
-	 *   ...
-	 * }
-	 *
-	 * bootstrap(MyComponent, [provide(PLATFORM_DIRECTIVES, {useValue: [OtherDirective], multi:true})]);
-	 * ```
-	 */
-	exports.PLATFORM_DIRECTIVES = 
-	/*@ts2dart_const*/ new di_1.OpaqueToken("Platform Directives");
+	  * A token that can be provided when bootstrapping an application to make an array of directives
+	  * available in every component of the application.
+	  *
+	  * ### Example
+	  *
+	  * ```typescript
+	  * import {PLATFORM_DIRECTIVES} from '@angular/core';
+	  * import {OtherDirective} from './myDirectives';
+	  *
+	  * @Component({
+	  *   selector: 'my-component',
+	  *   template: `
+	  *     <!-- can use other directive even though the component does not list it in `directives` -->
+	  *     <other-directive></other-directive>
+	  *   `
+	  * })
+	  * export class MyComponent {
+	  *   ...
+	  * }
+	  *
+	  * bootstrap(MyComponent, [{provide: PLATFORM_DIRECTIVES, useValue: [OtherDirective],
+	  multi:true}]);
+	  * ```
+	  *
+	  * @deprecated Providing platform directives via a provider is deprecated. Provide platform
+	  * directives via an {@link NgModule} instead.
+	  */
+	exports.PLATFORM_DIRECTIVES = new di_1.OpaqueToken('Platform Directives');
 	/**
-	 * A token that can be provided when bootstraping an application to make an array of pipes
-	 * available in every component of the application.
-	 *
-	 * ### Example
-	 *
-	 * ```typescript
-	 * import {PLATFORM_PIPES} from '@angular/core';
-	 * import {OtherPipe} from './myPipe';
-	 *
-	 * @Component({
-	 *   selector: 'my-component',
-	 *   template: `
-	 *     {{123 | other-pipe}}
-	 *   `
-	 * })
-	 * export class MyComponent {
-	 *   ...
-	 * }
-	 *
-	 * bootstrap(MyComponent, [provide(PLATFORM_PIPES, {useValue: [OtherPipe], multi:true})]);
-	 * ```
-	 */
-	exports.PLATFORM_PIPES = new di_1.OpaqueToken("Platform Pipes");
+	  * A token that can be provided when bootstraping an application to make an array of pipes
+	  * available in every component of the application.
+	  *
+	  * ### Example
+	  *
+	  * ```typescript
+	  * import {PLATFORM_PIPES} from '@angular/core';
+	  * import {OtherPipe} from './myPipe';
+	  *
+	  * @Component({
+	  *   selector: 'my-component',
+	  *   template: `
+	  *     {{123 | other-pipe}}
+	  *   `
+	  * })
+	  * export class MyComponent {
+	  *   ...
+	  * }
+	  *
+	  * bootstrap(MyComponent, [{provide: PLATFORM_PIPES, useValue: [OtherPipe], multi:true}]);
+	  * ```
+	  *
+	  * @deprecated Providing platform pipes via a provider is deprecated. Provide platform pipes via an
+	  * {@link NgModule} instead.
+	  */
+	exports.PLATFORM_PIPES = new di_1.OpaqueToken('Platform Pipes');
 	//# sourceMappingURL=platform_directives_and_pipes.js.map
 
 /***/ },
-/* 396 */
+/* 447 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(4);
+	var lang_1 = __webpack_require__(3);
 	var trace;
 	var events;
 	function detectWTF() {
@@ -16894,75 +20999,112 @@
 	//# sourceMappingURL=wtf_impl.js.map
 
 /***/ },
-/* 397 */
+/* 448 */
 /***/ function(module, exports) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	/**
-	* This is here because DART requires it. It is noop in JS.
-	*/
+	 * This is here because DART requires it. It is noop in JS.
+	 */
 	function wtfInit() { }
 	exports.wtfInit = wtfInit;
 	//# sourceMappingURL=wtf_init.js.map
 
 /***/ },
-/* 398 */
+/* 449 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	// Public API for render
-	var api_1 = __webpack_require__(113);
-	exports.RootRenderer = api_1.RootRenderer;
-	exports.Renderer = api_1.Renderer;
+	var api_1 = __webpack_require__(138);
 	exports.RenderComponentType = api_1.RenderComponentType;
+	exports.Renderer = api_1.Renderer;
+	exports.RootRenderer = api_1.RootRenderer;
 	//# sourceMappingURL=render.js.map
 
 /***/ },
-/* 399 */
+/* 450 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	// Public API for util
-	var decorators_1 = __webpack_require__(67);
+	var decorators_1 = __webpack_require__(84);
 	exports.Class = decorators_1.Class;
 	//# sourceMappingURL=util.js.map
 
 /***/ },
-/* 400 */
+/* 451 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	// Public API for Zone
-	var ng_zone_1 = __webpack_require__(115);
+	var ng_zone_1 = __webpack_require__(140);
 	exports.NgZone = ng_zone_1.NgZone;
 	exports.NgZoneError = ng_zone_1.NgZoneError;
 	//# sourceMappingURL=zone.js.map
 
 /***/ },
-/* 401 */,
-/* 402 */,
-/* 403 */,
-/* 404 */,
-/* 405 */,
-/* 406 */,
-/* 407 */,
-/* 408 */,
-/* 409 */,
-/* 410 */,
-/* 411 */,
-/* 412 */,
-/* 413 */,
-/* 414 */,
-/* 415 */,
-/* 416 */,
-/* 417 */,
-/* 418 */,
-/* 419 */,
-/* 420 */,
-/* 421 */,
-/* 422 */,
-/* 423 */,
-/* 424 */
+/* 452 */,
+/* 453 */,
+/* 454 */,
+/* 455 */,
+/* 456 */,
+/* 457 */,
+/* 458 */,
+/* 459 */,
+/* 460 */,
+/* 461 */,
+/* 462 */,
+/* 463 */,
+/* 464 */,
+/* 465 */,
+/* 466 */,
+/* 467 */,
+/* 468 */,
+/* 469 */,
+/* 470 */,
+/* 471 */,
+/* 472 */,
+/* 473 */,
+/* 474 */,
+/* 475 */,
+/* 476 */,
+/* 477 */,
+/* 478 */,
+/* 479 */,
+/* 480 */,
+/* 481 */,
+/* 482 */,
+/* 483 */,
+/* 484 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
@@ -17095,7 +21237,7 @@
 	    function lib$es6$promise$asap$$attemptVertx() {
 	      try {
 	        var r = require;
-	        var vertx = __webpack_require__(469);
+	        var vertx = __webpack_require__(532);
 	        lib$es6$promise$asap$$vertxNext = vertx.runOnLoop || vertx.runOnContext;
 	        return lib$es6$promise$asap$$useVertxTimer();
 	      } catch(e) {
@@ -17913,7 +22055,7 @@
 	    };
 	
 	    /* global define:true module:true window: true */
-	    if ("function" === 'function' && __webpack_require__(467)['amd']) {
+	    if ("function" === 'function' && __webpack_require__(530)['amd']) {
 	      !(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return lib$es6$promise$umd$$ES6Promise; }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof module !== 'undefined' && module['exports']) {
 	      module['exports'] = lib$es6$promise$umd$$ES6Promise;
@@ -17925,10 +22067,10 @@
 	}).call(this);
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(134), (function() { return this; }()), __webpack_require__(142)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(159), (function() { return this; }()), __webpack_require__(165)(module)))
 
 /***/ },
-/* 425 */
+/* 485 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, process) { /*!
@@ -21709,35 +25851,36 @@
 	  return globals;
 	}));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(134)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(159)))
 
 /***/ },
-/* 426 */,
-/* 427 */,
-/* 428 */,
-/* 429 */,
-/* 430 */,
-/* 431 */,
-/* 432 */,
-/* 433 */,
-/* 434 */,
-/* 435 */,
-/* 436 */,
-/* 437 */,
-/* 438 */,
-/* 439 */,
-/* 440 */,
-/* 441 */,
-/* 442 */,
-/* 443 */,
-/* 444 */,
-/* 445 */,
-/* 446 */,
-/* 447 */,
-/* 448 */,
-/* 449 */,
-/* 450 */,
-/* 451 */
+/* 486 */,
+/* 487 */,
+/* 488 */,
+/* 489 */,
+/* 490 */,
+/* 491 */,
+/* 492 */,
+/* 493 */,
+/* 494 */,
+/* 495 */,
+/* 496 */,
+/* 497 */,
+/* 498 */,
+/* 499 */,
+/* 500 */,
+/* 501 */,
+/* 502 */,
+/* 503 */,
+/* 504 */,
+/* 505 */,
+/* 506 */,
+/* 507 */,
+/* 508 */,
+/* 509 */,
+/* 510 */,
+/* 511 */,
+/* 512 */
 /***/ function(module, exports) {
 
 	/*! *****************************************************************************
@@ -22704,7 +26847,7 @@
 	//# sourceMappingURL=Reflect.js.map
 
 /***/ },
-/* 452 */
+/* 513 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22717,7 +26860,7 @@
 	//# sourceMappingURL=Observer.js.map
 
 /***/ },
-/* 453 */
+/* 514 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22726,7 +26869,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscription_1 = __webpack_require__(135);
+	var Subscription_1 = __webpack_require__(160);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @ignore
@@ -22762,11 +26905,154 @@
 	//# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 454 */
+/* 515 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var root_1 = __webpack_require__(44);
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var root_1 = __webpack_require__(56);
+	var Observable_1 = __webpack_require__(55);
+	/**
+	 * We need this JSDoc comment for affecting ESDoc.
+	 * @extends {Ignored}
+	 * @hide true
+	 */
+	var PromiseObservable = (function (_super) {
+	    __extends(PromiseObservable, _super);
+	    function PromiseObservable(promise, scheduler) {
+	        if (scheduler === void 0) { scheduler = null; }
+	        _super.call(this);
+	        this.promise = promise;
+	        this.scheduler = scheduler;
+	    }
+	    /**
+	     * @param promise
+	     * @param scheduler
+	     * @return {PromiseObservable}
+	     * @static true
+	     * @name fromPromise
+	     * @owner Observable
+	     */
+	    PromiseObservable.create = function (promise, scheduler) {
+	        if (scheduler === void 0) { scheduler = null; }
+	        return new PromiseObservable(promise, scheduler);
+	    };
+	    PromiseObservable.prototype._subscribe = function (subscriber) {
+	        var _this = this;
+	        var promise = this.promise;
+	        var scheduler = this.scheduler;
+	        if (scheduler == null) {
+	            if (this._isScalar) {
+	                if (!subscriber.isUnsubscribed) {
+	                    subscriber.next(this.value);
+	                    subscriber.complete();
+	                }
+	            }
+	            else {
+	                promise.then(function (value) {
+	                    _this.value = value;
+	                    _this._isScalar = true;
+	                    if (!subscriber.isUnsubscribed) {
+	                        subscriber.next(value);
+	                        subscriber.complete();
+	                    }
+	                }, function (err) {
+	                    if (!subscriber.isUnsubscribed) {
+	                        subscriber.error(err);
+	                    }
+	                })
+	                    .then(null, function (err) {
+	                    // escape the promise trap, throw unhandled errors
+	                    root_1.root.setTimeout(function () { throw err; });
+	                });
+	            }
+	        }
+	        else {
+	            if (this._isScalar) {
+	                if (!subscriber.isUnsubscribed) {
+	                    return scheduler.schedule(dispatchNext, 0, { value: this.value, subscriber: subscriber });
+	                }
+	            }
+	            else {
+	                promise.then(function (value) {
+	                    _this.value = value;
+	                    _this._isScalar = true;
+	                    if (!subscriber.isUnsubscribed) {
+	                        subscriber.add(scheduler.schedule(dispatchNext, 0, { value: value, subscriber: subscriber }));
+	                    }
+	                }, function (err) {
+	                    if (!subscriber.isUnsubscribed) {
+	                        subscriber.add(scheduler.schedule(dispatchError, 0, { err: err, subscriber: subscriber }));
+	                    }
+	                })
+	                    .then(null, function (err) {
+	                    // escape the promise trap, throw unhandled errors
+	                    root_1.root.setTimeout(function () { throw err; });
+	                });
+	            }
+	        }
+	    };
+	    return PromiseObservable;
+	}(Observable_1.Observable));
+	exports.PromiseObservable = PromiseObservable;
+	function dispatchNext(arg) {
+	    var value = arg.value, subscriber = arg.subscriber;
+	    if (!subscriber.isUnsubscribed) {
+	        subscriber.next(value);
+	        subscriber.complete();
+	    }
+	}
+	function dispatchError(arg) {
+	    var err = arg.err, subscriber = arg.subscriber;
+	    if (!subscriber.isUnsubscribed) {
+	        subscriber.error(err);
+	    }
+	}
+	//# sourceMappingURL=PromiseObservable.js.map
+
+/***/ },
+/* 516 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var root_1 = __webpack_require__(56);
+	/**
+	 * @param PromiseCtor
+	 * @return {Promise<T>}
+	 * @method toPromise
+	 * @owner Observable
+	 */
+	function toPromise(PromiseCtor) {
+	    var _this = this;
+	    if (!PromiseCtor) {
+	        if (root_1.root.Rx && root_1.root.Rx.config && root_1.root.Rx.config.Promise) {
+	            PromiseCtor = root_1.root.Rx.config.Promise;
+	        }
+	        else if (root_1.root.Promise) {
+	            PromiseCtor = root_1.root.Promise;
+	        }
+	    }
+	    if (!PromiseCtor) {
+	        throw new Error('no Promise impl found');
+	    }
+	    return new PromiseCtor(function (resolve, reject) {
+	        var value;
+	        _this.subscribe(function (x) { return value = x; }, function (err) { return reject(err); }, function () { return resolve(value); });
+	    });
+	}
+	exports.toPromise = toPromise;
+	//# sourceMappingURL=toPromise.js.map
+
+/***/ },
+/* 517 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var root_1 = __webpack_require__(56);
 	var Symbol = root_1.root.Symbol;
 	if (typeof Symbol === 'function') {
 	    if (Symbol.observable) {
@@ -22788,7 +27074,7 @@
 	//# sourceMappingURL=observable.js.map
 
 /***/ },
-/* 455 */
+/* 518 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22818,7 +27104,7 @@
 	//# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ },
-/* 456 */
+/* 519 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22845,7 +27131,7 @@
 	//# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-/* 457 */
+/* 520 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22853,7 +27139,7 @@
 	//# sourceMappingURL=isArray.js.map
 
 /***/ },
-/* 458 */
+/* 521 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22864,7 +27150,7 @@
 	//# sourceMappingURL=isObject.js.map
 
 /***/ },
-/* 459 */
+/* 522 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22873,12 +27159,12 @@
 	//# sourceMappingURL=throwError.js.map
 
 /***/ },
-/* 460 */
+/* 523 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Subscriber_1 = __webpack_require__(344);
-	var rxSubscriber_1 = __webpack_require__(138);
+	var Subscriber_1 = __webpack_require__(386);
+	var rxSubscriber_1 = __webpack_require__(161);
 	function toSubscriber(nextOrObserver, error, complete) {
 	    if (nextOrObserver && typeof nextOrObserver === 'object') {
 	        if (nextOrObserver instanceof Subscriber_1.Subscriber) {
@@ -22894,11 +27180,11 @@
 	//# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
-/* 461 */
+/* 524 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var errorObject_1 = __webpack_require__(345);
+	var errorObject_1 = __webpack_require__(387);
 	var tryCatchTarget;
 	function tryCatcher() {
 	    try {
@@ -22918,19 +27204,19 @@
 	//# sourceMappingURL=tryCatch.js.map
 
 /***/ },
-/* 462 */,
-/* 463 */,
-/* 464 */,
-/* 465 */,
-/* 466 */,
-/* 467 */
+/* 525 */,
+/* 526 */,
+/* 527 */,
+/* 528 */,
+/* 529 */,
+/* 530 */
 /***/ function(module, exports) {
 
 	module.exports = function() { throw new Error("define cannot be used indirect"); };
 
 
 /***/ },
-/* 468 */
+/* 531 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/******/ (function(modules) { // webpackBootstrap
@@ -24248,173 +28534,25 @@
 	
 	/***/ }
 	/******/ ]);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(134)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(159)))
 
 /***/ },
-/* 469 */
+/* 532 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
-/* 470 */
-/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var lang_1 = __webpack_require__(__webpack_module_template_argument_0__);
-	var promise_1 = __webpack_require__(__webpack_module_template_argument_1__);
-	exports.PromiseWrapper = promise_1.PromiseWrapper;
-	exports.PromiseCompleter = promise_1.PromiseCompleter;
-	var Subject_1 = __webpack_require__(36);
-	var PromiseObservable_1 = __webpack_require__(136);
-	var toPromise_1 = __webpack_require__(137);
-	var Observable_1 = __webpack_require__(43);
-	exports.Observable = Observable_1.Observable;
-	var Subject_2 = __webpack_require__(36);
-	exports.Subject = Subject_2.Subject;
-	var TimerWrapper = (function () {
-	    function TimerWrapper() {
-	    }
-	    TimerWrapper.setTimeout = function (fn, millis) {
-	        return lang_1.global.setTimeout(fn, millis);
-	    };
-	    TimerWrapper.clearTimeout = function (id) { lang_1.global.clearTimeout(id); };
-	    TimerWrapper.setInterval = function (fn, millis) {
-	        return lang_1.global.setInterval(fn, millis);
-	    };
-	    TimerWrapper.clearInterval = function (id) { lang_1.global.clearInterval(id); };
-	    return TimerWrapper;
-	}());
-	exports.TimerWrapper = TimerWrapper;
-	var ObservableWrapper = (function () {
-	    function ObservableWrapper() {
-	    }
-	    // TODO(vsavkin): when we use rxnext, try inferring the generic type from the first arg
-	    ObservableWrapper.subscribe = function (emitter, onNext, onError, onComplete) {
-	        if (onComplete === void 0) { onComplete = function () { }; }
-	        onError = (typeof onError === "function") && onError || lang_1.noop;
-	        onComplete = (typeof onComplete === "function") && onComplete || lang_1.noop;
-	        return emitter.subscribe({ next: onNext, error: onError, complete: onComplete });
-	    };
-	    ObservableWrapper.isObservable = function (obs) { return !!obs.subscribe; };
-	    /**
-	     * Returns whether `obs` has any subscribers listening to events.
-	     */
-	    ObservableWrapper.hasSubscribers = function (obs) { return obs.observers.length > 0; };
-	    ObservableWrapper.dispose = function (subscription) { subscription.unsubscribe(); };
-	    /**
-	     * @deprecated - use callEmit() instead
-	     */
-	    ObservableWrapper.callNext = function (emitter, value) { emitter.next(value); };
-	    ObservableWrapper.callEmit = function (emitter, value) { emitter.emit(value); };
-	    ObservableWrapper.callError = function (emitter, error) { emitter.error(error); };
-	    ObservableWrapper.callComplete = function (emitter) { emitter.complete(); };
-	    ObservableWrapper.fromPromise = function (promise) {
-	        return PromiseObservable_1.PromiseObservable.create(promise);
-	    };
-	    ObservableWrapper.toPromise = function (obj) { return toPromise_1.toPromise.call(obj); };
-	    return ObservableWrapper;
-	}());
-	exports.ObservableWrapper = ObservableWrapper;
-	/**
-	 * Use by directives and components to emit custom Events.
-	 *
-	 * ### Examples
-	 *
-	 * In the following example, `Zippy` alternatively emits `open` and `close` events when its
-	 * title gets clicked:
-	 *
-	 * ```
-	 * @Component({
-	 *   selector: 'zippy',
-	 *   template: `
-	 *   <div class="zippy">
-	 *     <div (click)="toggle()">Toggle</div>
-	 *     <div [hidden]="!visible">
-	 *       <ng-content></ng-content>
-	 *     </div>
-	 *  </div>`})
-	 * export class Zippy {
-	 *   visible: boolean = true;
-	 *   @Output() open: EventEmitter<any> = new EventEmitter();
-	 *   @Output() close: EventEmitter<any> = new EventEmitter();
-	 *
-	 *   toggle() {
-	 *     this.visible = !this.visible;
-	 *     if (this.visible) {
-	 *       this.open.emit(null);
-	 *     } else {
-	 *       this.close.emit(null);
-	 *     }
-	 *   }
-	 * }
-	 * ```
-	 *
-	 * Use Rx.Observable but provides an adapter to make it work as specified here:
-	 * https://github.com/jhusain/observable-spec
-	 *
-	 * Once a reference implementation of the spec is available, switch to it.
-	 */
-	var EventEmitter = (function (_super) {
-	    __extends(EventEmitter, _super);
-	    /**
-	     * Creates an instance of [EventEmitter], which depending on [isAsync],
-	     * delivers events synchronously or asynchronously.
-	     */
-	    function EventEmitter(isAsync) {
-	        if (isAsync === void 0) { isAsync = true; }
-	        _super.call(this);
-	        this._isAsync = isAsync;
-	    }
-	    EventEmitter.prototype.emit = function (value) { _super.prototype.next.call(this, value); };
-	    /**
-	     * @deprecated - use .emit(value) instead
-	     */
-	    EventEmitter.prototype.next = function (value) { _super.prototype.next.call(this, value); };
-	    EventEmitter.prototype.subscribe = function (generatorOrNext, error, complete) {
-	        var schedulerFn;
-	        var errorFn = function (err) { return null; };
-	        var completeFn = function () { return null; };
-	        if (generatorOrNext && typeof generatorOrNext === 'object') {
-	            schedulerFn = this._isAsync ? function (value) { setTimeout(function () { return generatorOrNext.next(value); }); } :
-	                function (value) { generatorOrNext.next(value); };
-	            if (generatorOrNext.error) {
-	                errorFn = this._isAsync ? function (err) { setTimeout(function () { return generatorOrNext.error(err); }); } :
-	                    function (err) { generatorOrNext.error(err); };
-	            }
-	            if (generatorOrNext.complete) {
-	                completeFn = this._isAsync ? function () { setTimeout(function () { return generatorOrNext.complete(); }); } :
-	                    function () { generatorOrNext.complete(); };
-	            }
-	        }
-	        else {
-	            schedulerFn = this._isAsync ? function (value) { setTimeout(function () { return generatorOrNext(value); }); } :
-	                function (value) { generatorOrNext(value); };
-	            if (error) {
-	                errorFn =
-	                    this._isAsync ? function (err) { setTimeout(function () { return error(err); }); } : function (err) { error(err); };
-	            }
-	            if (complete) {
-	                completeFn =
-	                    this._isAsync ? function () { setTimeout(function () { return complete(); }); } : function () { complete(); };
-	            }
-	        }
-	        return _super.prototype.subscribe.call(this, schedulerFn, errorFn, completeFn);
-	    };
-	    return EventEmitter;
-	}(Subject_1.Subject));
-	exports.EventEmitter = EventEmitter;
-	//# sourceMappingURL=async.js.map
-
-/***/ },
-/* 471 */
+/* 533 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var lang_1 = __webpack_require__(__webpack_module_template_argument_0__);
 	exports.Map = lang_1.global.Map;
@@ -24534,10 +28672,7 @@
 	    StringMapWrapper.set = function (map, key, value) { map[key] = value; };
 	    StringMapWrapper.keys = function (map) { return Object.keys(map); };
 	    StringMapWrapper.values = function (map) {
-	        return Object.keys(map).reduce(function (r, a) {
-	            r.push(map[a]);
-	            return r;
-	        }, []);
+	        return Object.keys(map).map(function (k) { return map[k]; });
 	    };
 	    StringMapWrapper.isEmpty = function (map) {
 	        for (var prop in map) {
@@ -24547,23 +28682,20 @@
 	    };
 	    StringMapWrapper.delete = function (map, key) { delete map[key]; };
 	    StringMapWrapper.forEach = function (map, callback) {
-	        for (var prop in map) {
-	            if (map.hasOwnProperty(prop)) {
-	                callback(map[prop], prop);
-	            }
+	        for (var _i = 0, _a = Object.keys(map); _i < _a.length; _i++) {
+	            var k = _a[_i];
+	            callback(map[k], k);
 	        }
 	    };
 	    StringMapWrapper.merge = function (m1, m2) {
 	        var m = {};
-	        for (var attr in m1) {
-	            if (m1.hasOwnProperty(attr)) {
-	                m[attr] = m1[attr];
-	            }
+	        for (var _i = 0, _a = Object.keys(m1); _i < _a.length; _i++) {
+	            var k = _a[_i];
+	            m[k] = m1[k];
 	        }
-	        for (var attr in m2) {
-	            if (m2.hasOwnProperty(attr)) {
-	                m[attr] = m2[attr];
-	            }
+	        for (var _b = 0, _c = Object.keys(m2); _b < _c.length; _b++) {
+	            var k = _c[_b];
+	            m[k] = m2[k];
 	        }
 	        return m;
 	    };
@@ -24785,13 +28917,20 @@
 	//# sourceMappingURL=collection.js.map
 
 /***/ },
-/* 472 */
+/* 534 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
-	var lang_1 = __webpack_require__(__webpack_module_template_argument_0__);
-	var base_wrapped_exception_1 = __webpack_require__(__webpack_module_template_argument_1__);
-	var collection_1 = __webpack_require__(__webpack_module_template_argument_2__);
+	var base_wrapped_exception_1 = __webpack_require__(__webpack_module_template_argument_0__);
+	var collection_1 = __webpack_require__(__webpack_module_template_argument_1__);
+	var lang_1 = __webpack_require__(__webpack_module_template_argument_2__);
 	var _ArrayLogger = (function () {
 	    function _ArrayLogger() {
 	        this.res = [];
@@ -24820,9 +28959,10 @@
 	 *   }
 	 * }
 	 *
-	 * bootstrap(MyApp, [provide(ExceptionHandler, {useClass: MyExceptionHandler})])
+	 * bootstrap(MyApp, [{provide: ExceptionHandler, useClass: MyExceptionHandler}])
 	 *
 	 * ```
+	 * @stable
 	 */
 	var ExceptionHandler = (function () {
 	    function ExceptionHandler(_logger, _rethrowException) {
@@ -24836,7 +28976,7 @@
 	        var l = new _ArrayLogger();
 	        var e = new ExceptionHandler(l, false);
 	        e.call(exception, stackTrace, reason);
-	        return l.res.join("\n");
+	        return l.res.join('\n');
 	    };
 	    ExceptionHandler.prototype.call = function (exception, stackTrace, reason) {
 	        if (stackTrace === void 0) { stackTrace = null; }
@@ -24846,7 +28986,7 @@
 	        var context = this._findContext(exception);
 	        this._logger.logGroup("EXCEPTION: " + this._extractMessage(exception));
 	        if (lang_1.isPresent(stackTrace) && lang_1.isBlank(originalStack)) {
-	            this._logger.logError("STACKTRACE:");
+	            this._logger.logError('STACKTRACE:');
 	            this._logger.logError(this._longStackTrace(stackTrace));
 	        }
 	        if (lang_1.isPresent(reason)) {
@@ -24856,11 +28996,11 @@
 	            this._logger.logError("ORIGINAL EXCEPTION: " + this._extractMessage(originalException));
 	        }
 	        if (lang_1.isPresent(originalStack)) {
-	            this._logger.logError("ORIGINAL STACKTRACE:");
+	            this._logger.logError('ORIGINAL STACKTRACE:');
 	            this._logger.logError(this._longStackTrace(originalStack));
 	        }
 	        if (lang_1.isPresent(context)) {
-	            this._logger.logError("ERROR CONTEXT:");
+	            this._logger.logError('ERROR CONTEXT:');
 	            this._logger.logError(context);
 	        }
 	        this._logger.logGroupEnd();
@@ -24876,7 +29016,7 @@
 	    };
 	    /** @internal */
 	    ExceptionHandler.prototype._longStackTrace = function (stackTrace) {
-	        return collection_1.isListLikeIterable(stackTrace) ? stackTrace.join("\n\n-----async gap-----\n") :
+	        return collection_1.isListLikeIterable(stackTrace) ? stackTrace.join('\n\n-----async gap-----\n') :
 	            stackTrace.toString();
 	    };
 	    /** @internal */
@@ -24922,9 +29062,16 @@
 	//# sourceMappingURL=exception_handler.js.map
 
 /***/ },
-/* 473 */
+/* 535 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__, __webpack_module_template_argument_1__, __webpack_module_template_argument_2__) {
 
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
 	"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -24935,10 +29082,13 @@
 	var exception_handler_1 = __webpack_require__(__webpack_module_template_argument_1__);
 	var exception_handler_2 = __webpack_require__(__webpack_module_template_argument_2__);
 	exports.ExceptionHandler = exception_handler_2.ExceptionHandler;
+	/**
+	 * @stable
+	 */
 	var BaseException = (function (_super) {
 	    __extends(BaseException, _super);
 	    function BaseException(message) {
-	        if (message === void 0) { message = "--"; }
+	        if (message === void 0) { message = '--'; }
 	        _super.call(this, message);
 	        this.message = message;
 	        this.stack = (new Error(message)).stack;
@@ -24949,10 +29099,11 @@
 	exports.BaseException = BaseException;
 	/**
 	 * Wraps an exception and provides additional context or information.
+	 * @stable
 	 */
 	var WrappedException = (function (_super) {
 	    __extends(WrappedException, _super);
-	    function WrappedException(_wrapperMessage, _originalException, _originalStack, _context) {
+	    function WrappedException(_wrapperMessage, _originalException /** TODO #9100 */, _originalStack /** TODO #9100 */, _context /** TODO #9100 */) {
 	        _super.call(this, _wrapperMessage);
 	        this._wrapperMessage = _wrapperMessage;
 	        this._originalException = _originalException;
@@ -25003,6 +29154,23 @@
 	}
 	exports.unimplemented = unimplemented;
 	//# sourceMappingURL=exceptions.js.map
+
+/***/ },
+/* 536 */
+/***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
+
+	/**
+	 * @license
+	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+	"use strict";
+	var lang_1 = __webpack_require__(__webpack_module_template_argument_0__);
+	exports.Math = lang_1.global.Math;
+	exports.NaN = typeof exports.NaN;
+	//# sourceMappingURL=math.js.map
 
 /***/ }
 /******/ ])));

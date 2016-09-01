@@ -4,17 +4,18 @@ import { OptionsBehavior } from './select-interfaces';
 export declare class SelectComponent implements OnInit {
     allowClear: boolean;
     placeholder: string;
-    initData: Array<any>;
+    idField: string;
+    textField: string;
     multiple: boolean;
     items: Array<any>;
     disabled: boolean;
+    active: Array<any>;
     data: EventEmitter<any>;
     selected: EventEmitter<any>;
     removed: EventEmitter<any>;
     typed: EventEmitter<any>;
     options: Array<SelectItem>;
     itemObjects: Array<SelectItem>;
-    active: Array<SelectItem>;
     activeOption: SelectItem;
     element: ElementRef;
     private inputMode;
@@ -23,6 +24,7 @@ export declare class SelectComponent implements OnInit {
     private inputValue;
     private _items;
     private _disabled;
+    private _active;
     constructor(element: ElementRef);
     inputEvent(e: any, isUpMode?: boolean): void;
     ngOnInit(): any;
