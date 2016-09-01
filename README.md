@@ -11,6 +11,9 @@ Follow me [![twitter](https://img.shields.io/twitter/follow/valorkin.svg?style=s
 [![Throughput Graph](https://graphs.waffle.io/valor-software/ng2-select/throughput.svg)](https://waffle.io/valor-software/ng2-select/metrics)
 
 
+## A Note about this fork
+
+We created this fork to apply open pull requests that fix critical bugs in the library's feature set. These patches are applied on the `lopez` branch, and published to npm under the package name `lw-ng2-select`.
 
 ## Quick start
 
